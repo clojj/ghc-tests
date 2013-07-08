@@ -3,8 +3,7 @@ Bool primops (#6135)
 
 Various programs used for testing my work on [#6135](http://ghc.haskell.org/trac/ghc/ticket/6135).
 
-bool-prim-ops.hs
-================
+== bool-prim-ops.hs ==
 
 With my patch function
 
