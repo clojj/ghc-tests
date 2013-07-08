@@ -3,7 +3,7 @@ Bool primops (#6135)
 
 Various programs used for testing my work on [#6135](http://ghc.haskell.org/trac/ghc/ticket/6135).
 
-== bool-prim-ops.hs ==
+## bool-prim-ops.hs
 
 With my patch function
 
@@ -33,17 +33,14 @@ produces a nice branchless assembly:
   jne    .LBB2_1
 ```
 
-constant-folds.hs
-=================
+## constant-folds.hs
 
 Constant folding for Integer
 
-filter.hs
-=========
+## filter.hs
 
 A proof-of-concept implementation of filter. Lots of hard coded stuff, but significantly faster than stream fusion.
 
-repa-fft.hs
-===========
+## repa-fft.hs
 
 Modified FFT using new primops. No performance difference compared to unmodified version.
