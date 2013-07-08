@@ -39,6 +39,11 @@ constant-folds.hs
 
 Constant folding for Integer
 
+filter.hs
+=========
+
+A proof-of-concept implementation of filter. Lots of hard coded stuff, but significantly faster than stream fusion.
+
 repa-fft.hs
 ===========
 
