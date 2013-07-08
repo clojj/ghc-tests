@@ -1,1 +1,6 @@
+# Executables
+fact/fact
+sumSqrFusion/sumSqrFusion
+
+# Dumped Cmm, Core, assembly, etc.
 *_dump
