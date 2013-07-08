@@ -1,3 +1,8 @@
+Loopification
+=============
+
+Work on loopification during my MSR internship
+
 Factorial
 =========
 

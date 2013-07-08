@@ -16,7 +16,7 @@ f x y width height =
       0# -> 0
 ```
 
-should produce a nice branchless assembly:
+produces a nice branchless assembly:
 
 ```gas
 # BB#0:                                 # %c1oe
