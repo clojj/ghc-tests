@@ -2,7 +2,7 @@
 
 wd=`pwd`
 ghc=ghc
-options="-fforce-recomp -O0 -dcmm-lint"
+options="-fforce-recomp -O2 -dcmm-lint"
 filename=$(basename "$1")
 filename="${filename%.*}"
 dump_dir=$wd/$filename"_dump"
@@ -30,8 +30,8 @@ compileAndDump -ddump-cmm-cfg     cfg     "control flow optimisations"
 compileAndDump -ddump-cmm-cps     cps     "CPS"
 compileAndDump -ddump-cmm-info    info    "setInfoTableStackMap"
 compileAndDump -ddump-cmm-loopify loopify "loopification"
-#compileAndDump -ddump-cmm-proc    proc    ""  # does nothing?
-#compileAndDump -ddump-cmm-procmap procmap ""  # does nothing?
+#compileAndDump -ddump-cmm-proc    proc    ""
+#compileAndDump -ddump-cmm-procmap procmap ""
 compileAndDump -ddump-cmm-raw     raw     "raw cmm"
 compileAndDump -ddump-cmm-rewrite rewrite "sinking assignments"
 compileAndDump -ddump-cmm-sp      sp      "layout stack"
