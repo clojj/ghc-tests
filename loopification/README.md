@@ -43,3 +43,10 @@ cn: R1 = _cj::I32;
 ```
 
 If one of these lines is commented out then compilation succeeds.
+
+This code needs to be compiled with
+
+```
+"inplace/bin/ghc-stage1" -static -optc-DTHREADED_RTS  -H64m -O0 -fasm -Iincludes -Iincludes/dist -Iincludes/dist-derivedconstants/header -Iincludes/dist-ghcconstants/header -Irts -Irts/dist/build -DCOMPILING_RTS -package-name rts -dcmm-lint      -i -irts -irts/dist/build -irts/dist/build/autogen -Irts/dist/build -Irts/dist/build/autogen           -O1    -c /home/t-jastol/tests/loopification/infite-loop.cmm -ddump-cmm > /home/t-jastol/tests/loopification/infite-loop_dump/infinite-loop-dump-noif.cmm
+
+```
