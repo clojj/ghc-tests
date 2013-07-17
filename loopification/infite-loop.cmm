@@ -1,0 +1,41 @@
+
+#include "Cmm.h"
+
+#ifdef __PIC__
+import pthread_mutex_lock;
+import pthread_mutex_unlock;
+#endif
+import base_ControlziExceptionziBase_nestedAtomically_closure;
+import EnterCriticalSection;
+import LeaveCriticalSection;
+import ghczmprim_GHCziTypes_False_closure;
+#if defined(USE_MINIINTERPRETER) || !defined(mingw32_HOST_OS)
+import sm_mutex;
+#endif
+
+stg_atomicModifyMutVarzh ( gcptr mv, gcptr f )
+{
+    W_ z, x, y, r, h;
+
+   z = Hp;
+   SET_HDR(z, stg_ap_2_upd_info, CCCS);
+   LDV_RECORD_CREATE(z);
+   StgThunk_payload(z,0) = f;
+
+   y = z;
+   SET_HDR(y, stg_sel_0_upd_info, CCCS);
+   LDV_RECORD_CREATE(y);
+   StgThunk_payload(y,0) = z;
+
+   r = y;
+   SET_HDR(r, stg_sel_1_upd_info, CCCS);
+   LDV_RECORD_CREATE(r);
+   StgThunk_payload(r,0) = z;
+
+ retry:
+   x = StgMutVar_var(mv);
+   StgThunk_payload(z,1) = x;
+   (h) = ccall cas(mv + SIZEOF_StgHeader + OFFSET_StgMutVar_var, x, y);
+//   if (x != x) { goto retry; }
+   return (r);
+}
