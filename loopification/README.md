@@ -1,37 +1,30 @@
-Loopification
-=============
+Loopification & Copy Propagation
+================================
 
 Work on loopification during my MSR internship
 
-## Factorial
+## Factorial (fact.hs)
 
 Tail-recursive factorial. Used for testing Cmm generation.
 
-## Sum of squares using Stream Fusion
+## Sum of squares using Stream Fusion (sumSqrFusion.hs)
 
-Used for testing Cmm generation. Taken from "Low-level code optimizations in
-Glasgow Haskell Compiler".
+Used for testing Cmm generation. Taken from "Low-level code optimizations
+in Glasgow Haskell Compiler".
 
-## T783
+## Register spilling (reg-spill.hs)
 
-Fails validation with my patch. No difference in generated assembly:
+Demonstrates parameter spilling to the stack. Requires 32bit architecture
+to achieve this results, because on i386 floating point params are passed
+on the stack, not in the register.
+
+## Infinite loop in hand-written Cmm (infinite-loop.cmm)
+
+My copy-propagation pass goes into an infinite loop when compiling this
+hand-written Cmm file with `-O2`. These are the two key lines:
 
 ```
-# diff -y --suppress-common-lines T783-master.s T783-loopify.s
-.file   "/tmp/ghc35391_0/ghc35391_0.bc" |.file   "/tmp/ghc35422_0/ghc35422_0.bc"
-# BB#0:                         # %c2Xh | # BB#0:                       # %c2Xj
-# BB#0:                         # %c3Eg | # BB#0:                       # %c3Mq
-# BB#0:                         # %c6wa | # BB#0:                       # %c6wl
+(h) = ccall cas(mv + SIZEOF_StgHeader + OFFSET_StgMutVar_var, x, y);
+if (x != x) { goto retry; }
 ```
-
-Compiled with `ghc -O2 -fllvm -optlo-O3 -fforce-recomp -keep-s-file`
-
-## T1969
-
-Fails validation with my patch. No difference in generated assembly compared to
-master branch (except for 606 label comments - see T1969.diff).
-
-## T3064
-
-Fails validation with my patch. No difference in generated assembly
-(except for 51 label comments - see T3064.diff).
+If one of these lines is commented out then compilation succeeds.
