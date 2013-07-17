@@ -7,7 +7,7 @@ Various programs used for testing my work on [#6135](http://ghc.haskell.org/trac
 
 With my patch function
 
-```haskel
+```haskell
 f :: Int# -> Int# -> Int# -> Int# -> Int
 f x y width height =
     case (x <$# 0#) `orI#` (x >=$# width) `orI#` (y <$# 0#) `orI#` (y >=$# height) of
