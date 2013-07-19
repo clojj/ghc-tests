@@ -36,6 +36,6 @@ stg_atomicModifyMutVarzh ( gcptr mv, gcptr f )
    x = StgMutVar_var(mv);
    StgThunk_payload(z,1) = x;
    (h) = ccall cas(mv + SIZEOF_StgHeader + OFFSET_StgMutVar_var, x, y);
-//   if (x != x) { goto retry; }
+   if (x != x) { goto retry; }
    return (r);
 }
