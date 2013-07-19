@@ -5,3 +5,7 @@ sumSqrFusion/sumSqrFusion
 # Dumped Cmm, Core, assembly, etc.
 *_dump
 *.s
+*.cmm
+
+# notes
+*.txt
