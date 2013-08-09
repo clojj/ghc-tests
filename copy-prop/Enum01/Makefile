@@ -1,9 +1,5 @@
 GHC=/5playpen/t-jastol/build/inplace/bin/ghc-stage2
 HC_FLAGS=-fforce-recomp
-HC_CP_FLAGS=-fcmm-copy-propagation -fcmm-loopify
-HC_CP_DUMP_FLAGS=-ddump-cmm-loopify -ddump-cmm-copy-prop
-HC_BASELINE_FLAGS=-fcmm-loopify
-HC_BASELINE_DUMP_FLAGS=-ddump-cmm-copy-prop
 MAIN=Main.hs
 
 .PHONY: all copyprop baseline clean
