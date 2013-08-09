@@ -1,0 +1,43 @@
+#include "Cmm.h"
+#include "RaiseAsync.h"
+
+import ghczmprim_GHCziTypes_True_closure;
+
+stg_raisezh
+{
+    W_ handler;
+    W_ frame_type;
+    W_ exception;
+
+   exception = R1;
+
+retry_pop_stack:
+    SAVE_THREAD_STATE();
+    (frame_type) = ccall raiseExceptionHelper(BaseReg "ptr", CurrentTSO "ptr", exception "ptr");
+    LOAD_THREAD_STATE();
+    if (frame_type == ATOMICALLY_FRAME) {
+      W_ trec, outer;
+      W_ r;
+      trec = StgTSO_trec(CurrentTSO);
+      //(r) = ccall stmValidateNestOfTransactions(MyCapability() "ptr", trec "ptr");
+      r = 0;
+      StgTSO_trec(CurrentTSO) = NO_TREC;
+      if (r != 0) {
+        goto retry_pop_stack;
+      }
+
+    }
+    if (frame_type == CATCH_FRAME) {
+      handler = StgCatchFrame_handler(Sp);
+    } else {
+      handler = StgCatchSTMFrame_handler(Sp);
+    }
+
+    Sp_adj(-1);
+    Sp(0) = exception;
+    R1 = handler;
+    Sp_adj(-1);
+    TICK_UNKNOWN_CALL();
+    TICK_SLOW_CALL_fast_pv();
+    jump RET_LBL(stg_ap_pv) [R1];
+}

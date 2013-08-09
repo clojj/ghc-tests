@@ -1,0 +1,23 @@
+#include "Cmm.h"
+stg_PAP_apply
+{
+  W_ Words;
+  W_ pap;
+
+  pap = R1;
+
+  Words = TO_W_(StgPAP_n_args(pap));
+  W_ i;
+  W_ p;
+  p = pap + SIZEOF_StgHeader + OFFSET_StgPAP_payload;
+  i = 0;
+for:
+  if (i < Words) {
+    Sp(i) = W_[p];
+    p = p + WDS(1);
+    i = i + 1;
+    goto for;
+  }
+      jump W_[stg_ap_stack_entries +
+                WDS(TO_W_(StgFunInfoExtra_fun_type(info)))] [R1];
+}
