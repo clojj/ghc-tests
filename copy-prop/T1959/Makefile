@@ -1,6 +1,6 @@
 GHC=/5playpen/t-jastol/build/inplace/bin/ghc-stage2
 HC_FLAGS=-fforce-recomp -dcmm-lint
-MAIN=T2902_B.hs
+MAIN=B.hs
 
 .PHONY: all copyprop baseline clean fulldump-asm
 
@@ -33,4 +33,4 @@ copy-prop-full-dump.asm: $(MAIN)
 	$(GHC) $(HC_FLAGS) $(MAIN) -O -fcmm-loopify -fcmm-copy-propagation -ddump-asm > copy-prop-full-dump.asm 2>&1
 
 clean:
-	rm *.hi *.o T2902_B *.cmm *.asm
+	rm *.hi *.o B *.cmm *.asm
