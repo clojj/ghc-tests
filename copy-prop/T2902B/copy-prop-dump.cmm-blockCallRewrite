@@ -1,0 +1,3656 @@
+[1 of 3] Compiling T2902_Sum        ( T2902_Sum.hs, T2902_Sum.o )
+
+==================== Loopify tail calls ====================
+{offset
+  cfY:
+      _sf2::P32 = P32[(old + 8)];
+      goto cfT;
+  cfT:
+      if (Sp - <highSp> < SpLim) goto cfZ; else goto cg0;
+  cfZ:
+      R1 = T2902_Sum.insert_closure;
+      P32[(old + 8)] = _sf2::P32;
+      call (stg_gc_fun)(R1) args: 8, res: 0, upd: 4;
+  cg0:
+      I32[(young<cfV> + 4)] = cfV;
+      R1 = _sf2::P32;
+      if (R1 & 3 != 0) goto cfV; else goto cfW;
+  cfW:
+      call (I32[R1])(R1) returns to cfV, args: 4, res: 4, upd: 4;
+  cfV:
+      _sf3::P32 = R1;
+      _sf4::P32 = P32[_sf3::P32 + 3];
+      _sf5::P32 = P32[_sf3::P32 + 7];
+      _sf6::P32 = P32[_sf3::P32 + 11];
+      _sf7::P32 = P32[_sf3::P32 + 15];
+      _sf8::P32 = P32[_sf3::P32 + 19];
+      _sf9::P32 = P32[_sf3::P32 + 23];
+      R1 = _sf4::P32;
+      call stg_ap_0_fast(R1) args: 4, res: 0, upd: 4;
+}
+
+
+
+==================== Copy propagation ====================
+{offset
+  cfY:
+      _sf2::P32 = P32[(old + 8)];
+      goto cfT;
+  cfT:
+      if (Sp - <highSp> < SpLim) goto cfZ; else goto cg0;
+  cfZ:
+      R1 = T2902_Sum.insert_closure;
+      P32[(old + 8)] = _sf2::P32;
+      call (stg_gc_fun)(R1) args: 8, res: 0, upd: 4;
+  cg0:
+      I32[(young<cfV> + 4)] = cfV;
+      R1 = _sf2::P32;
+      if (_sf2::P32 & 3 != 0) goto cfV; else goto cfW;
+  cfW:
+      call (I32[_sf2::P32])(R1) returns to cfV, args: 4, res: 4, upd: 4;
+  cfV:
+      _sf3::P32 = R1;
+      _sf4::P32 = P32[R1 + 3];
+      _sf5::P32 = P32[R1 + 7];
+      _sf6::P32 = P32[R1 + 11];
+      _sf7::P32 = P32[R1 + 15];
+      _sf8::P32 = P32[R1 + 19];
+      _sf9::P32 = P32[R1 + 23];
+      R1 = _sf4::P32;
+      call stg_ap_0_fast(R1) args: 4, res: 0, upd: 4;
+}
+
+
+
+==================== Loopify tail calls ====================
+{offset
+  cgi:
+      _sfa::P32 = P32[(old + 8)];
+      goto cgd;
+  cgd:
+      if (Sp - <highSp> < SpLim) goto cgj; else goto cgk;
+  cgj:
+      R1 = T2902_Sum.union_closure;
+      P32[(old + 8)] = _sfa::P32;
+      call (stg_gc_fun)(R1) args: 8, res: 0, upd: 4;
+  cgk:
+      I32[(young<cgf> + 4)] = cgf;
+      R1 = _sfa::P32;
+      if (R1 & 3 != 0) goto cgf; else goto cgg;
+  cgg:
+      call (I32[R1])(R1) returns to cgf, args: 4, res: 4, upd: 4;
+  cgf:
+      _sfb::P32 = R1;
+      _sfc::P32 = P32[_sfb::P32 + 3];
+      _sfd::P32 = P32[_sfb::P32 + 7];
+      _sfe::P32 = P32[_sfb::P32 + 11];
+      _sff::P32 = P32[_sfb::P32 + 15];
+      _sfg::P32 = P32[_sfb::P32 + 19];
+      _sfh::P32 = P32[_sfb::P32 + 23];
+      R1 = _sfd::P32;
+      call stg_ap_0_fast(R1) args: 4, res: 0, upd: 4;
+}
+
+
+
+==================== Copy propagation ====================
+{offset
+  cgi:
+      _sfa::P32 = P32[(old + 8)];
+      goto cgd;
+  cgd:
+      if (Sp - <highSp> < SpLim) goto cgj; else goto cgk;
+  cgj:
+      R1 = T2902_Sum.union_closure;
+      P32[(old + 8)] = _sfa::P32;
+      call (stg_gc_fun)(R1) args: 8, res: 0, upd: 4;
+  cgk:
+      I32[(young<cgf> + 4)] = cgf;
+      R1 = _sfa::P32;
+      if (_sfa::P32 & 3 != 0) goto cgf; else goto cgg;
+  cgg:
+      call (I32[_sfa::P32])(R1) returns to cgf, args: 4, res: 4, upd: 4;
+  cgf:
+      _sfb::P32 = R1;
+      _sfc::P32 = P32[R1 + 3];
+      _sfd::P32 = P32[R1 + 7];
+      _sfe::P32 = P32[R1 + 11];
+      _sff::P32 = P32[R1 + 15];
+      _sfg::P32 = P32[R1 + 19];
+      _sfh::P32 = P32[R1 + 23];
+      R1 = _sfd::P32;
+      call stg_ap_0_fast(R1) args: 4, res: 0, upd: 4;
+}
+
+
+
+==================== Loopify tail calls ====================
+{offset
+  cgC:
+      _sfi::P32 = P32[(old + 8)];
+      goto cgx;
+  cgx:
+      if (Sp - <highSp> < SpLim) goto cgD; else goto cgE;
+  cgD:
+      R1 = T2902_Sum.unions_closure;
+      P32[(old + 8)] = _sfi::P32;
+      call (stg_gc_fun)(R1) args: 8, res: 0, upd: 4;
+  cgE:
+      I32[(young<cgz> + 4)] = cgz;
+      R1 = _sfi::P32;
+      if (R1 & 3 != 0) goto cgz; else goto cgA;
+  cgA:
+      call (I32[R1])(R1) returns to cgz, args: 4, res: 4, upd: 4;
+  cgz:
+      _sfj::P32 = R1;
+      _sfk::P32 = P32[_sfj::P32 + 3];
+      _sfl::P32 = P32[_sfj::P32 + 7];
+      _sfm::P32 = P32[_sfj::P32 + 11];
+      _sfn::P32 = P32[_sfj::P32 + 15];
+      _sfo::P32 = P32[_sfj::P32 + 19];
+      _sfp::P32 = P32[_sfj::P32 + 23];
+      R1 = _sfm::P32;
+      call stg_ap_0_fast(R1) args: 4, res: 0, upd: 4;
+}
+
+
+
+==================== Copy propagation ====================
+{offset
+  cgC:
+      _sfi::P32 = P32[(old + 8)];
+      goto cgx;
+  cgx:
+      if (Sp - <highSp> < SpLim) goto cgD; else goto cgE;
+  cgD:
+      R1 = T2902_Sum.unions_closure;
+      P32[(old + 8)] = _sfi::P32;
+      call (stg_gc_fun)(R1) args: 8, res: 0, upd: 4;
+  cgE:
+      I32[(young<cgz> + 4)] = cgz;
+      R1 = _sfi::P32;
+      if (_sfi::P32 & 3 != 0) goto cgz; else goto cgA;
+  cgA:
+      call (I32[_sfi::P32])(R1) returns to cgz, args: 4, res: 4, upd: 4;
+  cgz:
+      _sfj::P32 = R1;
+      _sfk::P32 = P32[R1 + 3];
+      _sfl::P32 = P32[R1 + 7];
+      _sfm::P32 = P32[R1 + 11];
+      _sfn::P32 = P32[R1 + 15];
+      _sfo::P32 = P32[R1 + 19];
+      _sfp::P32 = P32[R1 + 23];
+      R1 = _sfm::P32;
+      call stg_ap_0_fast(R1) args: 4, res: 0, upd: 4;
+}
+
+
+
+==================== Loopify tail calls ====================
+{offset
+  cgW:
+      _sfq::P32 = P32[(old + 8)];
+      goto cgR;
+  cgR:
+      if (Sp - <highSp> < SpLim) goto cgX; else goto cgY;
+  cgX:
+      R1 = T2902_Sum.extractMin_closure;
+      P32[(old + 8)] = _sfq::P32;
+      call (stg_gc_fun)(R1) args: 8, res: 0, upd: 4;
+  cgY:
+      I32[(young<cgT> + 4)] = cgT;
+      R1 = _sfq::P32;
+      if (R1 & 3 != 0) goto cgT; else goto cgU;
+  cgU:
+      call (I32[R1])(R1) returns to cgT, args: 4, res: 4, upd: 4;
+  cgT:
+      _sfr::P32 = R1;
+      _sfs::P32 = P32[_sfr::P32 + 3];
+      _sft::P32 = P32[_sfr::P32 + 7];
+      _sfu::P32 = P32[_sfr::P32 + 11];
+      _sfv::P32 = P32[_sfr::P32 + 15];
+      _sfw::P32 = P32[_sfr::P32 + 19];
+      _sfx::P32 = P32[_sfr::P32 + 23];
+      R1 = _sfv::P32;
+      call stg_ap_0_fast(R1) args: 4, res: 0, upd: 4;
+}
+
+
+
+==================== Copy propagation ====================
+{offset
+  cgW:
+      _sfq::P32 = P32[(old + 8)];
+      goto cgR;
+  cgR:
+      if (Sp - <highSp> < SpLim) goto cgX; else goto cgY;
+  cgX:
+      R1 = T2902_Sum.extractMin_closure;
+      P32[(old + 8)] = _sfq::P32;
+      call (stg_gc_fun)(R1) args: 8, res: 0, upd: 4;
+  cgY:
+      I32[(young<cgT> + 4)] = cgT;
+      R1 = _sfq::P32;
+      if (_sfq::P32 & 3 != 0) goto cgT; else goto cgU;
+  cgU:
+      call (I32[_sfq::P32])(R1) returns to cgT, args: 4, res: 4, upd: 4;
+  cgT:
+      _sfr::P32 = R1;
+      _sfs::P32 = P32[R1 + 3];
+      _sft::P32 = P32[R1 + 7];
+      _sfu::P32 = P32[R1 + 11];
+      _sfv::P32 = P32[R1 + 15];
+      _sfw::P32 = P32[R1 + 19];
+      _sfx::P32 = P32[R1 + 23];
+      R1 = _sfv::P32;
+      call stg_ap_0_fast(R1) args: 4, res: 0, upd: 4;
+}
+
+
+
+==================== Loopify tail calls ====================
+{offset
+  chg:
+      _sfy::P32 = P32[(old + 8)];
+      goto chb;
+  chb:
+      if (Sp - <highSp> < SpLim) goto chh; else goto chi;
+  chh:
+      R1 = T2902_Sum.fromList_closure;
+      P32[(old + 8)] = _sfy::P32;
+      call (stg_gc_fun)(R1) args: 8, res: 0, upd: 4;
+  chi:
+      I32[(young<chd> + 4)] = chd;
+      R1 = _sfy::P32;
+      if (R1 & 3 != 0) goto chd; else goto che;
+  che:
+      call (I32[R1])(R1) returns to chd, args: 4, res: 4, upd: 4;
+  chd:
+      _sfz::P32 = R1;
+      _sfA::P32 = P32[_sfz::P32 + 3];
+      _sfB::P32 = P32[_sfz::P32 + 7];
+      _sfC::P32 = P32[_sfz::P32 + 11];
+      _sfD::P32 = P32[_sfz::P32 + 15];
+      _sfE::P32 = P32[_sfz::P32 + 19];
+      _sfF::P32 = P32[_sfz::P32 + 23];
+      R1 = _sfE::P32;
+      call stg_ap_0_fast(R1) args: 4, res: 0, upd: 4;
+}
+
+
+
+==================== Copy propagation ====================
+{offset
+  chg:
+      _sfy::P32 = P32[(old + 8)];
+      goto chb;
+  chb:
+      if (Sp - <highSp> < SpLim) goto chh; else goto chi;
+  chh:
+      R1 = T2902_Sum.fromList_closure;
+      P32[(old + 8)] = _sfy::P32;
+      call (stg_gc_fun)(R1) args: 8, res: 0, upd: 4;
+  chi:
+      I32[(young<chd> + 4)] = chd;
+      R1 = _sfy::P32;
+      if (_sfy::P32 & 3 != 0) goto chd; else goto che;
+  che:
+      call (I32[_sfy::P32])(R1) returns to chd, args: 4, res: 4, upd: 4;
+  chd:
+      _sfz::P32 = R1;
+      _sfA::P32 = P32[R1 + 3];
+      _sfB::P32 = P32[R1 + 7];
+      _sfC::P32 = P32[R1 + 11];
+      _sfD::P32 = P32[R1 + 15];
+      _sfE::P32 = P32[R1 + 19];
+      _sfF::P32 = P32[R1 + 23];
+      R1 = _sfE::P32;
+      call stg_ap_0_fast(R1) args: 4, res: 0, upd: 4;
+}
+
+
+
+==================== Loopify tail calls ====================
+{offset
+  chA:
+      _sfG::P32 = P32[(old + 8)];
+      goto chv;
+  chv:
+      if (Sp - <highSp> < SpLim) goto chB; else goto chC;
+  chB:
+      R1 = T2902_Sum.toList_closure;
+      P32[(old + 8)] = _sfG::P32;
+      call (stg_gc_fun)(R1) args: 8, res: 0, upd: 4;
+  chC:
+      I32[(young<chx> + 4)] = chx;
+      R1 = _sfG::P32;
+      if (R1 & 3 != 0) goto chx; else goto chy;
+  chy:
+      call (I32[R1])(R1) returns to chx, args: 4, res: 4, upd: 4;
+  chx:
+      _sfH::P32 = R1;
+      _sfI::P32 = P32[_sfH::P32 + 3];
+      _sfJ::P32 = P32[_sfH::P32 + 7];
+      _sfK::P32 = P32[_sfH::P32 + 11];
+      _sfL::P32 = P32[_sfH::P32 + 15];
+      _sfM::P32 = P32[_sfH::P32 + 19];
+      _sfN::P32 = P32[_sfH::P32 + 23];
+      R1 = _sfN::P32;
+      call stg_ap_0_fast(R1) args: 4, res: 0, upd: 4;
+}
+
+
+
+==================== Copy propagation ====================
+{offset
+  chA:
+      _sfG::P32 = P32[(old + 8)];
+      goto chv;
+  chv:
+      if (Sp - <highSp> < SpLim) goto chB; else goto chC;
+  chB:
+      R1 = T2902_Sum.toList_closure;
+      P32[(old + 8)] = _sfG::P32;
+      call (stg_gc_fun)(R1) args: 8, res: 0, upd: 4;
+  chC:
+      I32[(young<chx> + 4)] = chx;
+      R1 = _sfG::P32;
+      if (_sfG::P32 & 3 != 0) goto chx; else goto chy;
+  chy:
+      call (I32[_sfG::P32])(R1) returns to chx, args: 4, res: 4, upd: 4;
+  chx:
+      _sfH::P32 = R1;
+      _sfI::P32 = P32[R1 + 3];
+      _sfJ::P32 = P32[R1 + 7];
+      _sfK::P32 = P32[R1 + 11];
+      _sfL::P32 = P32[R1 + 15];
+      _sfM::P32 = P32[R1 + 19];
+      _sfN::P32 = P32[R1 + 23];
+      R1 = _sfN::P32;
+      call stg_ap_0_fast(R1) args: 4, res: 0, upd: 4;
+}
+
+
+
+==================== Loopify tail calls ====================
+{offset
+  chP:
+      _B6::P32 = P32[(old + 28)];
+      _B5::P32 = P32[(old + 24)];
+      _B4::P32 = P32[(old + 20)];
+      _B3::P32 = P32[(old + 16)];
+      _B2::P32 = P32[(old + 12)];
+      _B1::P32 = P32[(old + 8)];
+      goto chM;
+  chM:
+      if (Sp - <highSp> < SpLim) goto chQ; else goto chR;
+  chR:
+      Hp = Hp + 28;
+      if (Hp > HpLim) goto chT; else goto chS;
+  chT:
+      HpAlloc = 28;
+      goto chQ;
+  chQ:
+      R1 = T2902_Sum.D:Sum_closure;
+      P32[(old + 28)] = _B6::P32;
+      P32[(old + 24)] = _B5::P32;
+      P32[(old + 20)] = _B4::P32;
+      P32[(old + 16)] = _B3::P32;
+      P32[(old + 12)] = _B2::P32;
+      P32[(old + 8)] = _B1::P32;
+      call (stg_gc_fun)(R1) args: 28, res: 0, upd: 4;
+  chS:
+      I32[Hp - 24] = T2902_Sum.D:Sum_con_info;
+      P32[Hp - 20] = _B6::P32;
+      P32[Hp - 16] = _B5::P32;
+      P32[Hp - 12] = _B4::P32;
+      P32[Hp - 8] = _B3::P32;
+      P32[Hp - 4] = _B2::P32;
+      P32[Hp] = _B1::P32;
+      _chO::P32 = Hp - 23;
+      R1 = _chO::P32;
+      call (P32[(old + 4)])(R1) args: 4, res: 0, upd: 4;
+}
+
+
+
+==================== Copy propagation ====================
+{offset
+  chP:
+      _B6::P32 = P32[(old + 28)];
+      _B5::P32 = P32[(old + 24)];
+      _B4::P32 = P32[(old + 20)];
+      _B3::P32 = P32[(old + 16)];
+      _B2::P32 = P32[(old + 12)];
+      _B1::P32 = P32[(old + 8)];
+      goto chM;
+  chM:
+      if (Sp - <highSp> < SpLim) goto chQ; else goto chR;
+  chR:
+      Hp = Hp + 28;
+      if (Hp > HpLim) goto chT; else goto chS;
+  chT:
+      HpAlloc = 28;
+      goto chQ;
+  chQ:
+      R1 = T2902_Sum.D:Sum_closure;
+      P32[(old + 28)] = _B6::P32;
+      P32[(old + 24)] = _B5::P32;
+      P32[(old + 20)] = _B4::P32;
+      P32[(old + 16)] = _B3::P32;
+      P32[(old + 12)] = _B2::P32;
+      P32[(old + 8)] = _B1::P32;
+      call (stg_gc_fun)(R1) args: 28, res: 0, upd: 4;
+  chS:
+      I32[Hp - 24] = T2902_Sum.D:Sum_con_info;
+      P32[Hp - 20] = _B6::P32;
+      P32[Hp - 16] = _B5::P32;
+      P32[Hp - 12] = _B4::P32;
+      P32[Hp - 8] = _B3::P32;
+      P32[Hp - 4] = _B2::P32;
+      P32[Hp] = _B1::P32;
+      _chO::P32 = Hp - 23;
+      R1 = _chO::P32;
+      call (P32[(old + 4)])(R1) args: 4, res: 0, upd: 4;
+}
+
+
+
+==================== Loopify tail calls ====================
+{offset
+  ci4:
+      R1 = R1 + 1;
+      call (P32[(old + 4)])(R1) args: 4, res: 0, upd: 4;
+}
+
+
+
+==================== Copy propagation ====================
+{offset
+  ci4:
+      R1 = R1 + 1;
+      call (P32[(old + 4)])(R1) args: 4, res: 0, upd: 4;
+}
+
+
+
+==================== Loopify tail calls ====================
+{offset
+  ci5:
+      R1 = R1 + 1;
+      call (P32[(old + 4)])(R1) args: 4, res: 0, upd: 4;
+}
+
+
+
+==================== Copy propagation ====================
+{offset
+  ci5:
+      R1 = R1 + 1;
+      call (P32[(old + 4)])(R1) args: 4, res: 0, upd: 4;
+}
+
+
+[2 of 3] Compiling T2902_B_PairingSum ( T2902_B_PairingSum.hs, T2902_B_PairingSum.o )
+
+==================== Loopify tail calls ====================
+{offset
+  cJP:
+      _sHs::P32 = P32[(old + 20)];
+      _sHt::P32 = P32[(old + 16)];
+      _sHu::P32 = P32[(old + 12)];
+      _sHv::P32 = P32[(old + 8)];
+      goto cJD;
+  cJD:
+      if (Sp - <highSp> < SpLim) goto cJQ; else goto cJR;
+  cJQ:
+      R1 = T2902_B_PairingSum.$fSumPSumab_$cunions_closure;
+      P32[(old + 20)] = _sHs::P32;
+      P32[(old + 16)] = _sHt::P32;
+      P32[(old + 12)] = _sHu::P32;
+      P32[(old + 8)] = _sHv::P32;
+      call (stg_gc_fun)(R1) args: 20, res: 0, upd: 4;
+  cJR:
+      I32[(young<cJF> + 4)] = cJF;
+      R1 = _sHv::P32;
+      if (R1 & 3 != 0) goto cJF; else goto cJG;
+  cJG:
+      call (I32[R1])(R1) returns to cJF, args: 4, res: 4, upd: 4;
+  cJF:
+      _sHw::P32 = R1;
+      _cJL::P32 = _sHw::P32 & 3;
+      if (_cJL::P32 >= 2) goto cJK; else goto cJJ;
+  cJK:
+      _sHx::P32 = P32[_sHw::P32 + 2];
+      _sHy::P32 = P32[_sHw::P32 + 6];
+      I32[(young<cJX> + 4)] = cJX;
+      R1 = _sHy::P32;
+      if (R1 & 3 != 0) goto cJX; else goto cJZ;
+  cJZ:
+      call (I32[R1])(R1) returns to cJX, args: 4, res: 4, upd: 4;
+  cJX:
+      _sHz::P32 = R1;
+      _cKk::P32 = _sHz::P32 & 3;
+      if (_cKk::P32 >= 2) goto cKe; else goto cK5;
+  cKe:
+      _sHA::P32 = P32[_sHz::P32 + 2];
+      _sHB::P32 = P32[_sHz::P32 + 6];
+      I32[(young<cK8> + 4)] = cK8;
+      P32[(young<cK8> + 20)] = _sHs::P32;
+      P32[(young<cK8> + 16)] = _sHt::P32;
+      P32[(young<cK8> + 12)] = _sHu::P32;
+      P32[(young<cK8> + 8)] = _sHB::P32;
+      call T2902_B_PairingSum.$fSumPSumab_$cunions_info() returns to cK8, args: 20, res: 4, upd: 4;
+  cK8:
+      _sHD::P32 = R1;
+      I32[(young<cKc> + 4)] = cKc;
+      P32[(young<cKc> + 24)] = _sHs::P32;
+      P32[(young<cKc> + 20)] = _sHt::P32;
+      P32[(young<cKc> + 16)] = _sHu::P32;
+      P32[(young<cKc> + 12)] = _sHx::P32;
+      P32[(young<cKc> + 8)] = _sHA::P32;
+      call T2902_B_PairingSum.$fSumPSumab_$cunion_info() returns to cKc, args: 24, res: 4, upd: 4;
+  cKc:
+      _sHC::P32 = R1;
+      P32[(old + 24)] = _sHs::P32;
+      P32[(old + 20)] = _sHt::P32;
+      P32[(old + 16)] = _sHu::P32;
+      P32[(old + 12)] = _sHC::P32;
+      P32[(old + 8)] = _sHD::P32;
+      call T2902_B_PairingSum.$fSumPSumab_$cunion_info() args: 24, res: 0, upd: 4;
+  cK5:
+      R1 = _sHx::P32 & (-4);
+      call (I32[R1])(R1) args: 4, res: 0, upd: 4;
+  cJJ:
+      R1 = T2902_B_PairingSum.Empty_closure+1;
+      call (P32[(old + 4)])(R1) args: 4, res: 0, upd: 4;
+}
+
+
+
+==================== Copy propagation ====================
+{offset
+  cJP:
+      _sHs::P32 = P32[(old + 20)];
+      _sHt::P32 = P32[(old + 16)];
+      _sHu::P32 = P32[(old + 12)];
+      _sHv::P32 = P32[(old + 8)];
+      goto cJD;
+  cJD:
+      if (Sp - <highSp> < SpLim) goto cJQ; else goto cJR;
+  cJQ:
+      R1 = T2902_B_PairingSum.$fSumPSumab_$cunions_closure;
+      P32[(old + 20)] = _sHs::P32;
+      P32[(old + 16)] = _sHt::P32;
+      P32[(old + 12)] = _sHu::P32;
+      P32[(old + 8)] = _sHv::P32;
+      call (stg_gc_fun)(R1) args: 20, res: 0, upd: 4;
+  cJR:
+      I32[(young<cJF> + 4)] = cJF;
+      R1 = _sHv::P32;
+      if (_sHv::P32 & 3 != 0) goto cJF; else goto cJG;
+  cJG:
+      call (I32[_sHv::P32])(R1) returns to cJF, args: 4, res: 4, upd: 4;
+  cJF:
+      _sHw::P32 = R1;
+      _cJL::P32 = R1 & 3;
+      if (_cJL::P32 >= 2) goto cJK; else goto cJJ;
+  cJK:
+      _sHx::P32 = P32[R1 + 2];
+      _sHy::P32 = P32[R1 + 6];
+      I32[(young<cJX> + 4)] = cJX;
+      R1 = _sHy::P32;
+      if (_sHy::P32 & 3 != 0) goto cJX; else goto cJZ;
+  cJZ:
+      call (I32[_sHy::P32])(R1) returns to cJX, args: 4, res: 4, upd: 4;
+  cJX:
+      _sHz::P32 = R1;
+      _cKk::P32 = R1 & 3;
+      if (_cKk::P32 >= 2) goto cKe; else goto cK5;
+  cKe:
+      _sHA::P32 = P32[R1 + 2];
+      _sHB::P32 = P32[R1 + 6];
+      I32[(young<cK8> + 4)] = cK8;
+      P32[(young<cK8> + 20)] = _sHs::P32;
+      P32[(young<cK8> + 16)] = _sHt::P32;
+      P32[(young<cK8> + 12)] = _sHu::P32;
+      P32[(young<cK8> + 8)] = _sHB::P32;
+      call T2902_B_PairingSum.$fSumPSumab_$cunions_info() returns to cK8, args: 20, res: 4, upd: 4;
+  cK8:
+      _sHD::P32 = R1;
+      I32[(young<cKc> + 4)] = cKc;
+      P32[(young<cKc> + 24)] = _sHs::P32;
+      P32[(young<cKc> + 20)] = _sHt::P32;
+      P32[(young<cKc> + 16)] = _sHu::P32;
+      P32[(young<cKc> + 12)] = _sHx::P32;
+      P32[(young<cKc> + 8)] = _sHA::P32;
+      call T2902_B_PairingSum.$fSumPSumab_$cunion_info() returns to cKc, args: 24, res: 4, upd: 4;
+  cKc:
+      _sHC::P32 = R1;
+      P32[(old + 24)] = _sHs::P32;
+      P32[(old + 20)] = _sHt::P32;
+      P32[(old + 16)] = _sHu::P32;
+      P32[(old + 12)] = R1;
+      P32[(old + 8)] = _sHD::P32;
+      call T2902_B_PairingSum.$fSumPSumab_$cunion_info() args: 24, res: 0, upd: 4;
+  cK5:
+      R1 = _sHx::P32 & (-4);
+      call (I32[R1])(R1) args: 4, res: 0, upd: 4;
+  cJJ:
+      R1 = T2902_B_PairingSum.Empty_closure+1;
+      call (P32[(old + 4)])(R1) args: 4, res: 0, upd: 4;
+}
+
+
+
+==================== Loopify tail calls ====================
+{offset
+  cKM:
+      _sHT::P32 = R1;
+      goto cKK;
+  cKK:
+      if (Sp - <highSp> < SpLim) goto cKN; else goto cKO;
+  cKN:
+      R1 = _sHT::P32;
+      call (stg_gc_enter_1)(R1) args: 4, res: 0, upd: 4;
+  cKO:
+      I32[(old + 12)] = stg_upd_frame_info;
+      P32[(old + 8)] = _sHT::P32;
+      _sHG::P32 = P32[_sHT::P32 + 8];
+      _sHL::P32 = P32[_sHT::P32 + 12];
+      _sHP::P32 = P32[_sHT::P32 + 16];
+      P32[(old + 28)] = _sHG::P32;
+      I32[(old + 24)] = stg_ap_pp_info;
+      P32[(old + 20)] = _sHP::P32;
+      P32[(old + 16)] = _sHL::P32;
+      call GHC.Num.+_info() args: 28, res: 0, upd: 12;
+}
+
+
+
+==================== Copy propagation ====================
+{offset
+  cKM:
+      _sHT::P32 = R1;
+      goto cKK;
+  cKK:
+      if (Sp - <highSp> < SpLim) goto cKN; else goto cKO;
+  cKN:
+      R1 = R1;
+      call (stg_gc_enter_1)(R1) args: 4, res: 0, upd: 4;
+  cKO:
+      I32[(old + 12)] = stg_upd_frame_info;
+      P32[(old + 8)] = R1;
+      _sHG::P32 = P32[R1 + 8];
+      _sHL::P32 = P32[R1 + 12];
+      _sHP::P32 = P32[R1 + 16];
+      P32[(old + 28)] = _sHG::P32;
+      I32[(old + 24)] = stg_ap_pp_info;
+      P32[(old + 20)] = _sHP::P32;
+      P32[(old + 16)] = _sHL::P32;
+      call GHC.Num.+_info() args: 28, res: 0, upd: 12;
+}
+
+
+
+==================== Loopify tail calls ====================
+{offset
+  cL5:
+      _sHX::P32 = R1;
+      goto cL3;
+  cL3:
+      if (Sp - <highSp> < SpLim) goto cL6; else goto cL7;
+  cL6:
+      R1 = _sHX::P32;
+      call (stg_gc_enter_1)(R1) args: 4, res: 0, upd: 4;
+  cL7:
+      I32[(old + 12)] = stg_upd_frame_info;
+      P32[(old + 8)] = _sHX::P32;
+      _sHG::P32 = P32[_sHX::P32 + 8];
+      P32[(old + 24)] = _sHG::P32;
+      I32[(old + 20)] = stg_ap_p_info;
+      P32[(old + 16)] = lvl_rHo_closure+1;
+      call GHC.Num.fromInteger_info() args: 24, res: 0, upd: 12;
+}
+
+
+
+==================== Copy propagation ====================
+{offset
+  cL5:
+      _sHX::P32 = R1;
+      goto cL3;
+  cL3:
+      if (Sp - <highSp> < SpLim) goto cL6; else goto cL7;
+  cL6:
+      R1 = R1;
+      call (stg_gc_enter_1)(R1) args: 4, res: 0, upd: 4;
+  cL7:
+      I32[(old + 12)] = stg_upd_frame_info;
+      P32[(old + 8)] = R1;
+      _sHG::P32 = P32[R1 + 8];
+      P32[(old + 24)] = _sHG::P32;
+      I32[(old + 20)] = stg_ap_p_info;
+      P32[(old + 16)] = lvl_rHo_closure+1;
+      call GHC.Num.fromInteger_info() args: 24, res: 0, upd: 12;
+}
+
+
+
+==================== Loopify tail calls ====================
+{offset
+  cLf:
+      _sHE::P32 = P32[(old + 24)];
+      _sHF::P32 = P32[(old + 20)];
+      _sHG::P32 = P32[(old + 16)];
+      _sHH::P32 = P32[(old + 12)];
+      _sHI::P32 = P32[(old + 8)];
+      goto cKp;
+  cKp:
+      if (Sp - <highSp> < SpLim) goto cLg; else goto cLh;
+  cLg:
+      R1 = T2902_B_PairingSum.$fSumPSumab_$cunion_closure;
+      P32[(old + 24)] = _sHE::P32;
+      P32[(old + 20)] = _sHF::P32;
+      P32[(old + 16)] = _sHG::P32;
+      P32[(old + 12)] = _sHH::P32;
+      P32[(old + 8)] = _sHI::P32;
+      call (stg_gc_fun)(R1) args: 24, res: 0, upd: 4;
+  cLh:
+      I32[(young<cKr> + 4)] = cKr;
+      R1 = _sHI::P32;
+      if (R1 & 3 != 0) goto cKr; else goto cKs;
+  cKs:
+      call (I32[R1])(R1) returns to cKr, args: 4, res: 4, upd: 4;
+  cKr:
+      _sHJ::P32 = R1;
+      _cLb::P32 = _sHJ::P32 & 3;
+      if (_cLb::P32 >= 2) goto cLa; else goto cL9;
+  cLa:
+      _sHK::P32 = P32[_sHJ::P32 + 2];
+      _sHL::P32 = P32[_sHJ::P32 + 6];
+      _sHM::P32 = P32[_sHJ::P32 + 10];
+      I32[(young<cKx> + 4)] = cKx;
+      R1 = _sHH::P32;
+      if (R1 & 3 != 0) goto cKx; else goto cKy;
+  cKy:
+      call (I32[R1])(R1) returns to cKx, args: 4, res: 4, upd: 4;
+  cKx:
+      _sHN::P32 = R1;
+      _cMc::P32 = _sHN::P32 & 3;
+      if (_cMc::P32 >= 2) goto cLq; else goto cLo;
+  cLq:
+      _sHO::P32 = P32[_sHN::P32 + 2];
+      _sHP::P32 = P32[_sHN::P32 + 6];
+      _sHQ::P32 = P32[_sHN::P32 + 10];
+      I32[(young<cKD> + 4)] = cKD;
+      P32[(young<cKD> + 20)] = _sHE::P32;
+      I32[(young<cKD> + 16)] = stg_ap_pp_info;
+      P32[(young<cKD> + 12)] = _sHO::P32;
+      P32[(young<cKD> + 8)] = _sHK::P32;
+      call GHC.Classes.compare_info() returns to cKD, args: 20, res: 4, upd: 4;
+  cKD:
+      _sHR::P32 = R1;
+      _cM5::P32 = _sHR::P32 & 3;
+      if (_cM5::P32 >= 2) goto cMa; else goto cLv;
+  cMa:
+      if (_cM5::P32 >= 3) goto cM1; else goto cLz;
+  cM1:
+      Hp = Hp + 28;
+      if (Hp > HpLim) goto cM4; else goto cM3;
+  cM3:
+      I32[Hp - 24] = :_con_info;
+      P32[Hp - 20] = _sHN::P32;
+      P32[Hp - 16] = _sHM::P32;
+      _cLZ::P32 = Hp - 22;
+      I32[Hp - 12] = T2902_B_PairingSum.Tree_con_info;
+      P32[Hp - 8] = _sHK::P32;
+      P32[Hp - 4] = _sHL::P32;
+      P32[Hp] = _cLZ::P32;
+      _cM0::P32 = Hp - 10;
+      R1 = _cM0::P32;
+      call (P32[(old + 4)])(R1) args: 4, res: 0, upd: 4;
+  cLz:
+      Hp = Hp + 20;
+      if (Hp > HpLim) goto cLC; else goto cLB;
+  cLC:
+      HpAlloc = 20;
+      goto cM2;
+  cLB:
+      I32[Hp - 16] = ds1_sHT_info;
+      P32[Hp - 8] = _sHG::P32;
+      P32[Hp - 4] = _sHL::P32;
+      P32[Hp] = _sHP::P32;
+      _cKI::P32 = Hp - 16;
+      I32[(young<cKP> + 4)] = cKP;
+      P32[(young<cKP> + 20)] = _sHE::P32;
+      P32[(young<cKP> + 16)] = _sHF::P32;
+      P32[(young<cKP> + 12)] = _sHG::P32;
+      P32[(young<cKP> + 8)] = _sHM::P32;
+      call T2902_B_PairingSum.$fSumPSumab_$cunions_info() returns to cKP, args: 20, res: 4, upd: 4;
+  cKP:
+      _sHW::P32 = R1;
+      I32[(young<cKT> + 4)] = cKT;
+      P32[(young<cKT> + 20)] = _sHE::P32;
+      P32[(young<cKT> + 16)] = _sHF::P32;
+      P32[(young<cKT> + 12)] = _sHG::P32;
+      P32[(young<cKT> + 8)] = _sHQ::P32;
+      call T2902_B_PairingSum.$fSumPSumab_$cunions_info() returns to cKT, args: 20, res: 4, upd: 4;
+  cKT:
+      _sHV::P32 = R1;
+      I32[(young<cKX> + 4)] = cKX;
+      P32[(young<cKX> + 24)] = _sHE::P32;
+      P32[(young<cKX> + 20)] = _sHF::P32;
+      P32[(young<cKX> + 16)] = _sHG::P32;
+      P32[(young<cKX> + 12)] = _sHV::P32;
+      P32[(young<cKX> + 8)] = _sHW::P32;
+      call T2902_B_PairingSum.$fSumPSumab_$cunion_info() returns to cKX, args: 24, res: 4, upd: 4;
+  cKX:
+      _sHU::P32 = R1;
+      Hp = Hp + 12;
+      if (Hp > HpLim) goto cLI; else goto cLH;
+  cLI:
+      HpAlloc = 12;
+      goto cLG;
+  cLG:
+      R1 = _sHU::P32;
+      call stg_gc_unpt_r1(R1) returns to cKX, args: 4, res: 4, upd: 4;
+  cLH:
+      I32[Hp - 8] = sat_sHX_info;
+      P32[Hp] = _sHG::P32;
+      _cL1::P32 = Hp - 8;
+      I32[(young<cLF> + 4)] = cLF;
+      P32[(young<cLF> + 20)] = _sHF::P32;
+      I32[(young<cLF> + 16)] = stg_ap_pp_info;
+      P32[(young<cLF> + 12)] = _cKI::P32;
+      P32[(young<cLF> + 8)] = _cL1::P32;
+      call GHC.Classes.==_info() returns to cLF, args: 20, res: 4, upd: 4;
+  cLF:
+      _sHY::P32 = R1;
+      _cLT::P32 = _sHY::P32 & 3;
+      if (_cLT::P32 >= 2) goto cLS; else goto cLO;
+  cLS:
+      R1 = _sHU::P32 & (-4);
+      call (I32[R1])(R1) args: 4, res: 0, upd: 4;
+  cLO:
+      P32[(old + 28)] = _sHE::P32;
+      P32[(old + 24)] = _sHF::P32;
+      P32[(old + 20)] = _sHG::P32;
+      P32[(old + 16)] = _sHO::P32;
+      P32[(old + 12)] = _cKI::P32;
+      P32[(old + 8)] = _sHU::P32;
+      call T2902_B_PairingSum.$fSumPSumab_$cinsert_info() args: 28, res: 0, upd: 4;
+  cLv:
+      Hp = Hp + 28;
+      if (Hp > HpLim) goto cM4; else goto cLx;
+  cM4:
+      HpAlloc = 28;
+      goto cM2;
+  cM2:
+      R1 = _sHR::P32;
+      call stg_gc_unpt_r1(R1) returns to cKD, args: 4, res: 4, upd: 4;
+  cLx:
+      I32[Hp - 24] = :_con_info;
+      P32[Hp - 20] = _sHJ::P32;
+      P32[Hp - 16] = _sHQ::P32;
+      _cLs::P32 = Hp - 22;
+      I32[Hp - 12] = T2902_B_PairingSum.Tree_con_info;
+      P32[Hp - 8] = _sHO::P32;
+      P32[Hp - 4] = _sHP::P32;
+      P32[Hp] = _cLs::P32;
+      _cLt::P32 = Hp - 10;
+      R1 = _cLt::P32;
+      call (P32[(old + 4)])(R1) args: 4, res: 0, upd: 4;
+  cLo:
+      R1 = _sHJ::P32 & (-4);
+      call (I32[R1])(R1) args: 4, res: 0, upd: 4;
+  cL9:
+      R1 = _sHH::P32 & (-4);
+      call (I32[R1])(R1) args: 4, res: 0, upd: 4;
+}
+
+
+
+==================== Copy propagation ====================
+{offset
+  cLf:
+      _sHE::P32 = P32[(old + 24)];
+      _sHF::P32 = P32[(old + 20)];
+      _sHG::P32 = P32[(old + 16)];
+      _sHH::P32 = P32[(old + 12)];
+      _sHI::P32 = P32[(old + 8)];
+      goto cKp;
+  cKp:
+      if (Sp - <highSp> < SpLim) goto cLg; else goto cLh;
+  cLg:
+      R1 = T2902_B_PairingSum.$fSumPSumab_$cunion_closure;
+      P32[(old + 24)] = _sHE::P32;
+      P32[(old + 20)] = _sHF::P32;
+      P32[(old + 16)] = _sHG::P32;
+      P32[(old + 12)] = _sHH::P32;
+      P32[(old + 8)] = _sHI::P32;
+      call (stg_gc_fun)(R1) args: 24, res: 0, upd: 4;
+  cLh:
+      I32[(young<cKr> + 4)] = cKr;
+      R1 = _sHI::P32;
+      if (_sHI::P32 & 3 != 0) goto cKr; else goto cKs;
+  cKs:
+      call (I32[_sHI::P32])(R1) returns to cKr, args: 4, res: 4, upd: 4;
+  cKr:
+      _sHJ::P32 = R1;
+      _cLb::P32 = R1 & 3;
+      if (_cLb::P32 >= 2) goto cLa; else goto cL9;
+  cLa:
+      _sHK::P32 = P32[R1 + 2];
+      _sHL::P32 = P32[R1 + 6];
+      _sHM::P32 = P32[R1 + 10];
+      I32[(young<cKx> + 4)] = cKx;
+      R1 = _sHH::P32;
+      if (_sHH::P32 & 3 != 0) goto cKx; else goto cKy;
+  cKy:
+      call (I32[_sHH::P32])(R1) returns to cKx, args: 4, res: 4, upd: 4;
+  cKx:
+      _sHN::P32 = R1;
+      _cMc::P32 = R1 & 3;
+      if (_cMc::P32 >= 2) goto cLq; else goto cLo;
+  cLq:
+      _sHO::P32 = P32[R1 + 2];
+      _sHP::P32 = P32[R1 + 6];
+      _sHQ::P32 = P32[R1 + 10];
+      I32[(young<cKD> + 4)] = cKD;
+      P32[(young<cKD> + 20)] = _sHE::P32;
+      I32[(young<cKD> + 16)] = stg_ap_pp_info;
+      P32[(young<cKD> + 12)] = _sHO::P32;
+      P32[(young<cKD> + 8)] = _sHK::P32;
+      call GHC.Classes.compare_info() returns to cKD, args: 20, res: 4, upd: 4;
+  cKD:
+      _sHR::P32 = R1;
+      _cM5::P32 = R1 & 3;
+      if (_cM5::P32 >= 2) goto cMa; else goto cLv;
+  cMa:
+      if (_cM5::P32 >= 3) goto cM1; else goto cLz;
+  cM1:
+      Hp = Hp + 28;
+      if (Hp > HpLim) goto cM4; else goto cM3;
+  cM3:
+      I32[Hp - 24] = :_con_info;
+      P32[Hp - 20] = _sHN::P32;
+      P32[Hp - 16] = _sHM::P32;
+      _cLZ::P32 = Hp - 22;
+      I32[Hp - 12] = T2902_B_PairingSum.Tree_con_info;
+      P32[Hp - 8] = _sHK::P32;
+      P32[Hp - 4] = _sHL::P32;
+      P32[Hp] = _cLZ::P32;
+      _cM0::P32 = Hp - 10;
+      R1 = _cM0::P32;
+      call (P32[(old + 4)])(R1) args: 4, res: 0, upd: 4;
+  cLz:
+      Hp = Hp + 20;
+      if (Hp > HpLim) goto cLC; else goto cLB;
+  cLC:
+      HpAlloc = 20;
+      goto cM2;
+  cLB:
+      I32[Hp - 16] = ds1_sHT_info;
+      P32[Hp - 8] = _sHG::P32;
+      P32[Hp - 4] = _sHL::P32;
+      P32[Hp] = _sHP::P32;
+      _cKI::P32 = Hp - 16;
+      I32[(young<cKP> + 4)] = cKP;
+      P32[(young<cKP> + 20)] = _sHE::P32;
+      P32[(young<cKP> + 16)] = _sHF::P32;
+      P32[(young<cKP> + 12)] = _sHG::P32;
+      P32[(young<cKP> + 8)] = _sHM::P32;
+      call T2902_B_PairingSum.$fSumPSumab_$cunions_info() returns to cKP, args: 20, res: 4, upd: 4;
+  cKP:
+      _sHW::P32 = R1;
+      I32[(young<cKT> + 4)] = cKT;
+      P32[(young<cKT> + 20)] = _sHE::P32;
+      P32[(young<cKT> + 16)] = _sHF::P32;
+      P32[(young<cKT> + 12)] = _sHG::P32;
+      P32[(young<cKT> + 8)] = _sHQ::P32;
+      call T2902_B_PairingSum.$fSumPSumab_$cunions_info() returns to cKT, args: 20, res: 4, upd: 4;
+  cKT:
+      _sHV::P32 = R1;
+      I32[(young<cKX> + 4)] = cKX;
+      P32[(young<cKX> + 24)] = _sHE::P32;
+      P32[(young<cKX> + 20)] = _sHF::P32;
+      P32[(young<cKX> + 16)] = _sHG::P32;
+      P32[(young<cKX> + 12)] = R1;
+      P32[(young<cKX> + 8)] = _sHW::P32;
+      call T2902_B_PairingSum.$fSumPSumab_$cunion_info() returns to cKX, args: 24, res: 4, upd: 4;
+  cKX:
+      _sHU::P32 = R1;
+      Hp = Hp + 12;
+      if (Hp > HpLim) goto cLI; else goto cLH;
+  cLI:
+      HpAlloc = 12;
+      goto cLG;
+  cLG:
+      R1 = R1;
+      call stg_gc_unpt_r1(R1) returns to cKX, args: 4, res: 4, upd: 4;
+  cLH:
+      I32[Hp - 8] = sat_sHX_info;
+      P32[Hp] = _sHG::P32;
+      _cL1::P32 = Hp - 8;
+      I32[(young<cLF> + 4)] = cLF;
+      P32[(young<cLF> + 20)] = _sHF::P32;
+      I32[(young<cLF> + 16)] = stg_ap_pp_info;
+      P32[(young<cLF> + 12)] = _cKI::P32;
+      P32[(young<cLF> + 8)] = _cL1::P32;
+      call GHC.Classes.==_info() returns to cLF, args: 20, res: 4, upd: 4;
+  cLF:
+      _sHY::P32 = R1;
+      _cLT::P32 = R1 & 3;
+      if (_cLT::P32 >= 2) goto cLS; else goto cLO;
+  cLS:
+      R1 = _sHU::P32 & (-4);
+      call (I32[R1])(R1) args: 4, res: 0, upd: 4;
+  cLO:
+      P32[(old + 28)] = _sHE::P32;
+      P32[(old + 24)] = _sHF::P32;
+      P32[(old + 20)] = _sHG::P32;
+      P32[(old + 16)] = _sHO::P32;
+      P32[(old + 12)] = _cKI::P32;
+      P32[(old + 8)] = _sHU::P32;
+      call T2902_B_PairingSum.$fSumPSumab_$cinsert_info() args: 28, res: 0, upd: 4;
+  cLv:
+      Hp = Hp + 28;
+      if (Hp > HpLim) goto cM4; else goto cLx;
+  cM4:
+      HpAlloc = 28;
+      goto cM2;
+  cM2:
+      R1 = R1;
+      call stg_gc_unpt_r1(R1) returns to cKD, args: 4, res: 4, upd: 4;
+  cLx:
+      I32[Hp - 24] = :_con_info;
+      P32[Hp - 20] = _sHJ::P32;
+      P32[Hp - 16] = _sHQ::P32;
+      _cLs::P32 = Hp - 22;
+      I32[Hp - 12] = T2902_B_PairingSum.Tree_con_info;
+      P32[Hp - 8] = _sHO::P32;
+      P32[Hp - 4] = _sHP::P32;
+      P32[Hp] = _cLs::P32;
+      _cLt::P32 = Hp - 10;
+      R1 = _cLt::P32;
+      call (P32[(old + 4)])(R1) args: 4, res: 0, upd: 4;
+  cLo:
+      R1 = _sHJ::P32 & (-4);
+      call (I32[R1])(R1) args: 4, res: 0, upd: 4;
+  cL9:
+      R1 = _sHH::P32 & (-4);
+      call (I32[R1])(R1) args: 4, res: 0, upd: 4;
+}
+
+
+
+==================== Loopify tail calls ====================
+{offset
+  cMk:
+      _sI0::P32 = P32[(old + 28)];
+      _sI1::P32 = P32[(old + 24)];
+      _sI2::P32 = P32[(old + 20)];
+      _sI3::P32 = P32[(old + 16)];
+      _sI4::P32 = P32[(old + 12)];
+      _sI5::P32 = P32[(old + 8)];
+      goto cMh;
+  cMh:
+      if (Sp - <highSp> < SpLim) goto cMl; else goto cMm;
+  cMm:
+      Hp = Hp + 16;
+      if (Hp > HpLim) goto cMo; else goto cMn;
+  cMo:
+      HpAlloc = 16;
+      goto cMl;
+  cMl:
+      R1 = T2902_B_PairingSum.$fSumPSumab_$cinsert_closure;
+      P32[(old + 28)] = _sI0::P32;
+      P32[(old + 24)] = _sI1::P32;
+      P32[(old + 20)] = _sI2::P32;
+      P32[(old + 16)] = _sI3::P32;
+      P32[(old + 12)] = _sI4::P32;
+      P32[(old + 8)] = _sI5::P32;
+      call (stg_gc_fun)(R1) args: 28, res: 0, upd: 4;
+  cMn:
+      I32[Hp - 12] = T2902_B_PairingSum.Tree_con_info;
+      P32[Hp - 8] = _sI3::P32;
+      P32[Hp - 4] = _sI4::P32;
+      P32[Hp] = GHC.Types.[]_closure+1;
+      _cMj::P32 = Hp - 10;
+      P32[(old + 24)] = _sI0::P32;
+      P32[(old + 20)] = _sI1::P32;
+      P32[(old + 16)] = _sI2::P32;
+      P32[(old + 12)] = _cMj::P32;
+      P32[(old + 8)] = _sI5::P32;
+      call T2902_B_PairingSum.$fSumPSumab_$cunion_info() args: 24, res: 0, upd: 4;
+}
+
+
+
+==================== Copy propagation ====================
+{offset
+  cMk:
+      _sI0::P32 = P32[(old + 28)];
+      _sI1::P32 = P32[(old + 24)];
+      _sI2::P32 = P32[(old + 20)];
+      _sI3::P32 = P32[(old + 16)];
+      _sI4::P32 = P32[(old + 12)];
+      _sI5::P32 = P32[(old + 8)];
+      goto cMh;
+  cMh:
+      if (Sp - <highSp> < SpLim) goto cMl; else goto cMm;
+  cMm:
+      Hp = Hp + 16;
+      if (Hp > HpLim) goto cMo; else goto cMn;
+  cMo:
+      HpAlloc = 16;
+      goto cMl;
+  cMl:
+      R1 = T2902_B_PairingSum.$fSumPSumab_$cinsert_closure;
+      P32[(old + 28)] = _sI0::P32;
+      P32[(old + 24)] = _sI1::P32;
+      P32[(old + 20)] = _sI2::P32;
+      P32[(old + 16)] = _sI3::P32;
+      P32[(old + 12)] = _sI4::P32;
+      P32[(old + 8)] = _sI5::P32;
+      call (stg_gc_fun)(R1) args: 28, res: 0, upd: 4;
+  cMn:
+      I32[Hp - 12] = T2902_B_PairingSum.Tree_con_info;
+      P32[Hp - 8] = _sI3::P32;
+      P32[Hp - 4] = _sI4::P32;
+      P32[Hp] = GHC.Types.[]_closure+1;
+      _cMj::P32 = Hp - 10;
+      P32[(old + 24)] = _sI0::P32;
+      P32[(old + 20)] = _sI1::P32;
+      P32[(old + 16)] = _sI2::P32;
+      P32[(old + 12)] = _cMj::P32;
+      P32[(old + 8)] = _sI5::P32;
+      call T2902_B_PairingSum.$fSumPSumab_$cunion_info() args: 24, res: 0, upd: 4;
+}
+
+
+
+==================== Loopify tail calls ====================
+{offset
+  cO4:
+      _sIg::P32 = R1;
+      goto cO2;
+  cO2:
+      if (Sp - <highSp> < SpLim) goto cO5; else goto cO6;
+  cO5:
+      R1 = _sIg::P32;
+      call (stg_gc_enter_1)(R1) args: 4, res: 0, upd: 4;
+  cO6:
+      I32[(old + 12)] = stg_upd_frame_info;
+      P32[(old + 8)] = _sIg::P32;
+      _sI7::P32 = P32[_sIg::P32 + 8];
+      _sI8::P32 = P32[_sIg::P32 + 12];
+      _sI9::P32 = P32[_sIg::P32 + 16];
+      _sIe::P32 = P32[_sIg::P32 + 20];
+      P32[(old + 28)] = _sI7::P32;
+      P32[(old + 24)] = _sI8::P32;
+      P32[(old + 20)] = _sI9::P32;
+      P32[(old + 16)] = _sIe::P32;
+      call T2902_B_PairingSum.$fSumPSumab_$cunions_info() args: 28, res: 0, upd: 12;
+}
+
+
+
+==================== Copy propagation ====================
+{offset
+  cO4:
+      _sIg::P32 = R1;
+      goto cO2;
+  cO2:
+      if (Sp - <highSp> < SpLim) goto cO5; else goto cO6;
+  cO5:
+      R1 = R1;
+      call (stg_gc_enter_1)(R1) args: 4, res: 0, upd: 4;
+  cO6:
+      I32[(old + 12)] = stg_upd_frame_info;
+      P32[(old + 8)] = R1;
+      _sI7::P32 = P32[R1 + 8];
+      _sI8::P32 = P32[R1 + 12];
+      _sI9::P32 = P32[R1 + 16];
+      _sIe::P32 = P32[R1 + 20];
+      P32[(old + 28)] = _sI7::P32;
+      P32[(old + 24)] = _sI8::P32;
+      P32[(old + 20)] = _sI9::P32;
+      P32[(old + 16)] = _sIe::P32;
+      call T2902_B_PairingSum.$fSumPSumab_$cunions_info() args: 28, res: 0, upd: 12;
+}
+
+
+
+==================== Loopify tail calls ====================
+{offset
+  cOe:
+      _sI7::P32 = P32[(old + 20)];
+      _sI8::P32 = P32[(old + 16)];
+      _sI9::P32 = P32[(old + 12)];
+      _sIa::P32 = P32[(old + 8)];
+      goto cNS;
+  cNS:
+      if (Sp - <highSp> < SpLim) goto cOf; else goto cOg;
+  cOf:
+      R1 = T2902_B_PairingSum.$fSumPSumab_$cextractMin_closure;
+      P32[(old + 20)] = _sI7::P32;
+      P32[(old + 16)] = _sI8::P32;
+      P32[(old + 12)] = _sI9::P32;
+      P32[(old + 8)] = _sIa::P32;
+      call (stg_gc_fun)(R1) args: 20, res: 0, upd: 4;
+  cOg:
+      I32[(young<cNU> + 4)] = cNU;
+      R1 = _sIa::P32;
+      if (R1 & 3 != 0) goto cNU; else goto cNV;
+  cNV:
+      call (I32[R1])(R1) returns to cNU, args: 4, res: 4, upd: 4;
+  cNU:
+      _sIb::P32 = R1;
+      _cOa::P32 = _sIb::P32 & 3;
+      if (_cOa::P32 >= 2) goto cO9; else goto cO8;
+  cO9:
+      Hp = Hp + 48;
+      if (Hp > HpLim) goto cOn; else goto cOm;
+  cOn:
+      HpAlloc = 48;
+      goto cOl;
+  cOl:
+      R1 = _sIb::P32;
+      call stg_gc_unpt_r1(R1) returns to cNU, args: 4, res: 4, upd: 4;
+  cOm:
+      _sIc::P32 = P32[_sIb::P32 + 2];
+      _sId::P32 = P32[_sIb::P32 + 6];
+      _sIe::P32 = P32[_sIb::P32 + 10];
+      I32[Hp - 44] = sat_sIg_info;
+      P32[Hp - 36] = _sI7::P32;
+      P32[Hp - 32] = _sI8::P32;
+      P32[Hp - 28] = _sI9::P32;
+      P32[Hp - 24] = _sIe::P32;
+      _cO0::P32 = Hp - 44;
+      I32[Hp - 20] = (,)_con_info;
+      P32[Hp - 16] = _sIc::P32;
+      P32[Hp - 12] = _sId::P32;
+      _cOj::P32 = Hp - 19;
+      I32[Hp - 8] = (,)_con_info;
+      P32[Hp - 4] = _cOj::P32;
+      P32[Hp] = _cO0::P32;
+      _cOk::P32 = Hp - 7;
+      R1 = _cOk::P32;
+      call (P32[(old + 4)])(R1) args: 4, res: 0, upd: 4;
+  cO8:
+      R1 = GHC.Err.undefined_closure;
+      call stg_ap_0_fast(R1) args: 4, res: 0, upd: 4;
+}
+
+
+
+==================== Copy propagation ====================
+{offset
+  cOe:
+      _sI7::P32 = P32[(old + 20)];
+      _sI8::P32 = P32[(old + 16)];
+      _sI9::P32 = P32[(old + 12)];
+      _sIa::P32 = P32[(old + 8)];
+      goto cNS;
+  cNS:
+      if (Sp - <highSp> < SpLim) goto cOf; else goto cOg;
+  cOf:
+      R1 = T2902_B_PairingSum.$fSumPSumab_$cextractMin_closure;
+      P32[(old + 20)] = _sI7::P32;
+      P32[(old + 16)] = _sI8::P32;
+      P32[(old + 12)] = _sI9::P32;
+      P32[(old + 8)] = _sIa::P32;
+      call (stg_gc_fun)(R1) args: 20, res: 0, upd: 4;
+  cOg:
+      I32[(young<cNU> + 4)] = cNU;
+      R1 = _sIa::P32;
+      if (_sIa::P32 & 3 != 0) goto cNU; else goto cNV;
+  cNV:
+      call (I32[_sIa::P32])(R1) returns to cNU, args: 4, res: 4, upd: 4;
+  cNU:
+      _sIb::P32 = R1;
+      _cOa::P32 = R1 & 3;
+      if (_cOa::P32 >= 2) goto cO9; else goto cO8;
+  cO9:
+      Hp = Hp + 48;
+      if (Hp > HpLim) goto cOn; else goto cOm;
+  cOn:
+      HpAlloc = 48;
+      goto cOl;
+  cOl:
+      R1 = R1;
+      call stg_gc_unpt_r1(R1) returns to cNU, args: 4, res: 4, upd: 4;
+  cOm:
+      _sIc::P32 = P32[R1 + 2];
+      _sId::P32 = P32[R1 + 6];
+      _sIe::P32 = P32[R1 + 10];
+      I32[Hp - 44] = sat_sIg_info;
+      P32[Hp - 36] = _sI7::P32;
+      P32[Hp - 32] = _sI8::P32;
+      P32[Hp - 28] = _sI9::P32;
+      P32[Hp - 24] = _sIe::P32;
+      _cO0::P32 = Hp - 44;
+      I32[Hp - 20] = (,)_con_info;
+      P32[Hp - 16] = _sIc::P32;
+      P32[Hp - 12] = _sId::P32;
+      _cOj::P32 = Hp - 19;
+      I32[Hp - 8] = (,)_con_info;
+      P32[Hp - 4] = _cOj::P32;
+      P32[Hp] = _cO0::P32;
+      _cOk::P32 = Hp - 7;
+      R1 = _cOk::P32;
+      call (P32[(old + 4)])(R1) args: 4, res: 0, upd: 4;
+  cO8:
+      R1 = GHC.Err.undefined_closure;
+      call stg_ap_0_fast(R1) args: 4, res: 0, upd: 4;
+}
+
+
+
+==================== Loopify tail calls ====================
+{offset
+  cP7:
+      _sIr::P32 = R1;
+      goto cP3;
+  cP3:
+      if (Sp - <highSp> < SpLim) goto cP8; else goto cP9;
+  cP8:
+      R1 = _sIr::P32;
+      call (stg_gc_enter_1)(R1) args: 4, res: 0, upd: 4;
+  cP9:
+      I32[(old + 12)] = stg_upd_frame_info;
+      P32[(old + 8)] = _sIr::P32;
+      _sIh::P32 = P32[_sIr::P32 + 8];
+      _sIi::P32 = P32[_sIr::P32 + 12];
+      _sIj::P32 = P32[_sIr::P32 + 16];
+      _sIo::P32 = P32[_sIr::P32 + 20];
+      I32[(young<cP5> + 4)] = cP5;
+      P32[(young<cP5> + 20)] = _sIh::P32;
+      P32[(young<cP5> + 16)] = _sIi::P32;
+      P32[(young<cP5> + 12)] = _sIj::P32;
+      P32[(young<cP5> + 8)] = _sIo::P32;
+      call T2902_B_PairingSum.$fSumPSumab_$cunions_info() returns to cP5, args: 20, res: 4, upd: 12;
+  cP5:
+      _sIq::P32 = R1;
+      P32[(old + 28)] = _sIh::P32;
+      P32[(old + 24)] = _sIi::P32;
+      P32[(old + 20)] = _sIj::P32;
+      P32[(old + 16)] = _sIq::P32;
+      call T2902_B_PairingSum.$fSumPSumab_$ctoList_info() args: 28, res: 0, upd: 12;
+}
+
+
+
+==================== Copy propagation ====================
+{offset
+  cP7:
+      _sIr::P32 = R1;
+      goto cP3;
+  cP3:
+      if (Sp - <highSp> < SpLim) goto cP8; else goto cP9;
+  cP8:
+      R1 = R1;
+      call (stg_gc_enter_1)(R1) args: 4, res: 0, upd: 4;
+  cP9:
+      I32[(old + 12)] = stg_upd_frame_info;
+      P32[(old + 8)] = R1;
+      _sIh::P32 = P32[R1 + 8];
+      _sIi::P32 = P32[R1 + 12];
+      _sIj::P32 = P32[R1 + 16];
+      _sIo::P32 = P32[R1 + 20];
+      I32[(young<cP5> + 4)] = cP5;
+      P32[(young<cP5> + 20)] = _sIh::P32;
+      P32[(young<cP5> + 16)] = _sIi::P32;
+      P32[(young<cP5> + 12)] = _sIj::P32;
+      P32[(young<cP5> + 8)] = _sIo::P32;
+      call T2902_B_PairingSum.$fSumPSumab_$cunions_info() returns to cP5, args: 20, res: 4, upd: 12;
+  cP5:
+      _sIq::P32 = R1;
+      P32[(old + 28)] = _sIh::P32;
+      P32[(old + 24)] = _sIi::P32;
+      P32[(old + 20)] = _sIj::P32;
+      P32[(old + 16)] = R1;
+      call T2902_B_PairingSum.$fSumPSumab_$ctoList_info() args: 28, res: 0, upd: 12;
+}
+
+
+
+==================== Loopify tail calls ====================
+{offset
+  cPk:
+      _sIh::P32 = P32[(old + 20)];
+      _sIi::P32 = P32[(old + 16)];
+      _sIj::P32 = P32[(old + 12)];
+      _sIk::P32 = P32[(old + 8)];
+      goto cOT;
+  cOT:
+      if (Sp - <highSp> < SpLim) goto cPl; else goto cPm;
+  cPl:
+      R1 = T2902_B_PairingSum.$fSumPSumab_$ctoList_closure;
+      P32[(old + 20)] = _sIh::P32;
+      P32[(old + 16)] = _sIi::P32;
+      P32[(old + 12)] = _sIj::P32;
+      P32[(old + 8)] = _sIk::P32;
+      call (stg_gc_fun)(R1) args: 20, res: 0, upd: 4;
+  cPm:
+      I32[(young<cOV> + 4)] = cOV;
+      R1 = _sIk::P32;
+      if (R1 & 3 != 0) goto cOV; else goto cOW;
+  cOW:
+      call (I32[R1])(R1) returns to cOV, args: 4, res: 4, upd: 4;
+  cOV:
+      _sIl::P32 = R1;
+      _cPg::P32 = _sIl::P32 & 3;
+      if (_cPg::P32 >= 2) goto cPf; else goto cPe;
+  cPf:
+      Hp = Hp + 48;
+      if (Hp > HpLim) goto cPt; else goto cPs;
+  cPt:
+      HpAlloc = 48;
+      goto cPr;
+  cPr:
+      R1 = _sIl::P32;
+      call stg_gc_unpt_r1(R1) returns to cOV, args: 4, res: 4, upd: 4;
+  cPs:
+      _sIm::P32 = P32[_sIl::P32 + 2];
+      _sIn::P32 = P32[_sIl::P32 + 6];
+      _sIo::P32 = P32[_sIl::P32 + 10];
+      I32[Hp - 44] = sat_sIr_info;
+      P32[Hp - 36] = _sIh::P32;
+      P32[Hp - 32] = _sIi::P32;
+      P32[Hp - 28] = _sIj::P32;
+      P32[Hp - 24] = _sIo::P32;
+      _cP1::P32 = Hp - 44;
+      I32[Hp - 20] = (,)_con_info;
+      P32[Hp - 16] = _sIm::P32;
+      P32[Hp - 12] = _sIn::P32;
+      _cPp::P32 = Hp - 19;
+      I32[Hp - 8] = :_con_info;
+      P32[Hp - 4] = _cPp::P32;
+      P32[Hp] = _cP1::P32;
+      _cPq::P32 = Hp - 6;
+      R1 = _cPq::P32;
+      call (P32[(old + 4)])(R1) args: 4, res: 0, upd: 4;
+  cPe:
+      R1 = []_closure+1;
+      call (P32[(old + 4)])(R1) args: 4, res: 0, upd: 4;
+}
+
+
+
+==================== Copy propagation ====================
+{offset
+  cPk:
+      _sIh::P32 = P32[(old + 20)];
+      _sIi::P32 = P32[(old + 16)];
+      _sIj::P32 = P32[(old + 12)];
+      _sIk::P32 = P32[(old + 8)];
+      goto cOT;
+  cOT:
+      if (Sp - <highSp> < SpLim) goto cPl; else goto cPm;
+  cPl:
+      R1 = T2902_B_PairingSum.$fSumPSumab_$ctoList_closure;
+      P32[(old + 20)] = _sIh::P32;
+      P32[(old + 16)] = _sIi::P32;
+      P32[(old + 12)] = _sIj::P32;
+      P32[(old + 8)] = _sIk::P32;
+      call (stg_gc_fun)(R1) args: 20, res: 0, upd: 4;
+  cPm:
+      I32[(young<cOV> + 4)] = cOV;
+      R1 = _sIk::P32;
+      if (_sIk::P32 & 3 != 0) goto cOV; else goto cOW;
+  cOW:
+      call (I32[_sIk::P32])(R1) returns to cOV, args: 4, res: 4, upd: 4;
+  cOV:
+      _sIl::P32 = R1;
+      _cPg::P32 = R1 & 3;
+      if (_cPg::P32 >= 2) goto cPf; else goto cPe;
+  cPf:
+      Hp = Hp + 48;
+      if (Hp > HpLim) goto cPt; else goto cPs;
+  cPt:
+      HpAlloc = 48;
+      goto cPr;
+  cPr:
+      R1 = R1;
+      call stg_gc_unpt_r1(R1) returns to cOV, args: 4, res: 4, upd: 4;
+  cPs:
+      _sIm::P32 = P32[R1 + 2];
+      _sIn::P32 = P32[R1 + 6];
+      _sIo::P32 = P32[R1 + 10];
+      I32[Hp - 44] = sat_sIr_info;
+      P32[Hp - 36] = _sIh::P32;
+      P32[Hp - 32] = _sIi::P32;
+      P32[Hp - 28] = _sIj::P32;
+      P32[Hp - 24] = _sIo::P32;
+      _cP1::P32 = Hp - 44;
+      I32[Hp - 20] = (,)_con_info;
+      P32[Hp - 16] = _sIm::P32;
+      P32[Hp - 12] = _sIn::P32;
+      _cPp::P32 = Hp - 19;
+      I32[Hp - 8] = :_con_info;
+      P32[Hp - 4] = _cPp::P32;
+      P32[Hp] = _cP1::P32;
+      _cPq::P32 = Hp - 6;
+      R1 = _cPq::P32;
+      call (P32[(old + 4)])(R1) args: 4, res: 0, upd: 4;
+  cPe:
+      R1 = []_closure+1;
+      call (P32[(old + 4)])(R1) args: 4, res: 0, upd: 4;
+}
+
+
+
+==================== Loopify tail calls ====================
+{offset
+  cQd:
+      _sIs::P32 = P32[(old + 20)];
+      _sIt::P32 = P32[(old + 16)];
+      _sIu::P32 = P32[(old + 12)];
+      _sIv::P32 = P32[(old + 8)];
+      goto cQ1;
+  cQ1:
+      if (Sp - <highSp> < SpLim) goto cQe; else goto cQf;
+  cQe:
+      R1 = T2902_B_PairingSum.$fSumPSumab_$cfromList_closure;
+      P32[(old + 20)] = _sIs::P32;
+      P32[(old + 16)] = _sIt::P32;
+      P32[(old + 12)] = _sIu::P32;
+      P32[(old + 8)] = _sIv::P32;
+      call (stg_gc_fun)(R1) args: 20, res: 0, upd: 4;
+  cQf:
+      I32[(young<cQ3> + 4)] = cQ3;
+      R1 = _sIv::P32;
+      if (R1 & 3 != 0) goto cQ3; else goto cQ4;
+  cQ4:
+      call (I32[R1])(R1) returns to cQ3, args: 4, res: 4, upd: 4;
+  cQ3:
+      _sIw::P32 = R1;
+      _cQ9::P32 = _sIw::P32 & 3;
+      if (_cQ9::P32 >= 2) goto cQ8; else goto cQ7;
+  cQ8:
+      _sIx::P32 = P32[_sIw::P32 + 2];
+      _sIy::P32 = P32[_sIw::P32 + 6];
+      I32[(young<cQl> + 4)] = cQl;
+      R1 = _sIx::P32;
+      if (R1 & 3 != 0) goto cQl; else goto cQm;
+  cQm:
+      call (I32[R1])(R1) returns to cQl, args: 4, res: 4, upd: 4;
+  cQl:
+      _sIz::P32 = R1;
+      _sIA::P32 = P32[_sIz::P32 + 3];
+      _sIB::P32 = P32[_sIz::P32 + 7];
+      I32[(young<cQq> + 4)] = cQq;
+      P32[(young<cQq> + 20)] = _sIs::P32;
+      P32[(young<cQq> + 16)] = _sIt::P32;
+      P32[(young<cQq> + 12)] = _sIu::P32;
+      P32[(young<cQq> + 8)] = _sIy::P32;
+      call T2902_B_PairingSum.$fSumPSumab_$cfromList_info() returns to cQq, args: 20, res: 4, upd: 4;
+  cQq:
+      _sIC::P32 = R1;
+      P32[(old + 28)] = _sIs::P32;
+      P32[(old + 24)] = _sIt::P32;
+      P32[(old + 20)] = _sIu::P32;
+      P32[(old + 16)] = _sIA::P32;
+      P32[(old + 12)] = _sIB::P32;
+      P32[(old + 8)] = _sIC::P32;
+      call T2902_B_PairingSum.$fSumPSumab_$cinsert_info() args: 28, res: 0, upd: 4;
+  cQ7:
+      R1 = T2902_B_PairingSum.Empty_closure+1;
+      call (P32[(old + 4)])(R1) args: 4, res: 0, upd: 4;
+}
+
+
+
+==================== Copy propagation ====================
+{offset
+  cQd:
+      _sIs::P32 = P32[(old + 20)];
+      _sIt::P32 = P32[(old + 16)];
+      _sIu::P32 = P32[(old + 12)];
+      _sIv::P32 = P32[(old + 8)];
+      goto cQ1;
+  cQ1:
+      if (Sp - <highSp> < SpLim) goto cQe; else goto cQf;
+  cQe:
+      R1 = T2902_B_PairingSum.$fSumPSumab_$cfromList_closure;
+      P32[(old + 20)] = _sIs::P32;
+      P32[(old + 16)] = _sIt::P32;
+      P32[(old + 12)] = _sIu::P32;
+      P32[(old + 8)] = _sIv::P32;
+      call (stg_gc_fun)(R1) args: 20, res: 0, upd: 4;
+  cQf:
+      I32[(young<cQ3> + 4)] = cQ3;
+      R1 = _sIv::P32;
+      if (_sIv::P32 & 3 != 0) goto cQ3; else goto cQ4;
+  cQ4:
+      call (I32[_sIv::P32])(R1) returns to cQ3, args: 4, res: 4, upd: 4;
+  cQ3:
+      _sIw::P32 = R1;
+      _cQ9::P32 = R1 & 3;
+      if (_cQ9::P32 >= 2) goto cQ8; else goto cQ7;
+  cQ8:
+      _sIx::P32 = P32[R1 + 2];
+      _sIy::P32 = P32[R1 + 6];
+      I32[(young<cQl> + 4)] = cQl;
+      R1 = _sIx::P32;
+      if (_sIx::P32 & 3 != 0) goto cQl; else goto cQm;
+  cQm:
+      call (I32[_sIx::P32])(R1) returns to cQl, args: 4, res: 4, upd: 4;
+  cQl:
+      _sIz::P32 = R1;
+      _sIA::P32 = P32[R1 + 3];
+      _sIB::P32 = P32[R1 + 7];
+      I32[(young<cQq> + 4)] = cQq;
+      P32[(young<cQq> + 20)] = _sIs::P32;
+      P32[(young<cQq> + 16)] = _sIt::P32;
+      P32[(young<cQq> + 12)] = _sIu::P32;
+      P32[(young<cQq> + 8)] = _sIy::P32;
+      call T2902_B_PairingSum.$fSumPSumab_$cfromList_info() returns to cQq, args: 20, res: 4, upd: 4;
+  cQq:
+      _sIC::P32 = R1;
+      P32[(old + 28)] = _sIs::P32;
+      P32[(old + 24)] = _sIt::P32;
+      P32[(old + 20)] = _sIu::P32;
+      P32[(old + 16)] = _sIA::P32;
+      P32[(old + 12)] = _sIB::P32;
+      P32[(old + 8)] = R1;
+      call T2902_B_PairingSum.$fSumPSumab_$cinsert_info() args: 28, res: 0, upd: 4;
+  cQ7:
+      R1 = T2902_B_PairingSum.Empty_closure+1;
+      call (P32[(old + 4)])(R1) args: 4, res: 0, upd: 4;
+}
+
+
+
+==================== Loopify tail calls ====================
+{offset
+  cQW:
+      _sIL::P32 = R1;
+      _B1::P32 = P32[(old + 8)];
+      goto cQU;
+  cQU:
+      if (Sp - <highSp> < SpLim) goto cQX; else goto cQY;
+  cQX:
+      R1 = _sIL::P32;
+      P32[(old + 8)] = _B1::P32;
+      call (stg_gc_fun)(R1) args: 8, res: 0, upd: 4;
+  cQY:
+      _sID::P32 = P32[_sIL::P32 + 3];
+      _sIE::P32 = P32[_sIL::P32 + 7];
+      _sIF::P32 = P32[_sIL::P32 + 11];
+      P32[(old + 20)] = _sID::P32;
+      P32[(old + 16)] = _sIE::P32;
+      P32[(old + 12)] = _sIF::P32;
+      P32[(old + 8)] = _B1::P32;
+      call T2902_B_PairingSum.$fSumPSumab_$ctoList_info() args: 20, res: 0, upd: 4;
+}
+
+
+
+==================== Copy propagation ====================
+{offset
+  cQW:
+      _sIL::P32 = R1;
+      _B1::P32 = P32[(old + 8)];
+      goto cQU;
+  cQU:
+      if (Sp - <highSp> < SpLim) goto cQX; else goto cQY;
+  cQX:
+      R1 = R1;
+      P32[(old + 8)] = _B1::P32;
+      call (stg_gc_fun)(R1) args: 8, res: 0, upd: 4;
+  cQY:
+      _sID::P32 = P32[R1 + 3];
+      _sIE::P32 = P32[R1 + 7];
+      _sIF::P32 = P32[R1 + 11];
+      P32[(old + 20)] = _sID::P32;
+      P32[(old + 16)] = _sIE::P32;
+      P32[(old + 12)] = _sIF::P32;
+      P32[(old + 8)] = _B1::P32;
+      call T2902_B_PairingSum.$fSumPSumab_$ctoList_info() args: 20, res: 0, upd: 4;
+}
+
+
+
+==================== Loopify tail calls ====================
+{offset
+  cR3:
+      _sIK::P32 = R1;
+      _B1::P32 = P32[(old + 8)];
+      goto cR1;
+  cR1:
+      if (Sp - <highSp> < SpLim) goto cR4; else goto cR5;
+  cR4:
+      R1 = _sIK::P32;
+      P32[(old + 8)] = _B1::P32;
+      call (stg_gc_fun)(R1) args: 8, res: 0, upd: 4;
+  cR5:
+      _sID::P32 = P32[_sIK::P32 + 3];
+      _sIE::P32 = P32[_sIK::P32 + 7];
+      _sIF::P32 = P32[_sIK::P32 + 11];
+      P32[(old + 20)] = _sID::P32;
+      P32[(old + 16)] = _sIE::P32;
+      P32[(old + 12)] = _sIF::P32;
+      P32[(old + 8)] = _B1::P32;
+      call T2902_B_PairingSum.$fSumPSumab_$cfromList_info() args: 20, res: 0, upd: 4;
+}
+
+
+
+==================== Copy propagation ====================
+{offset
+  cR3:
+      _sIK::P32 = R1;
+      _B1::P32 = P32[(old + 8)];
+      goto cR1;
+  cR1:
+      if (Sp - <highSp> < SpLim) goto cR4; else goto cR5;
+  cR4:
+      R1 = R1;
+      P32[(old + 8)] = _B1::P32;
+      call (stg_gc_fun)(R1) args: 8, res: 0, upd: 4;
+  cR5:
+      _sID::P32 = P32[R1 + 3];
+      _sIE::P32 = P32[R1 + 7];
+      _sIF::P32 = P32[R1 + 11];
+      P32[(old + 20)] = _sID::P32;
+      P32[(old + 16)] = _sIE::P32;
+      P32[(old + 12)] = _sIF::P32;
+      P32[(old + 8)] = _B1::P32;
+      call T2902_B_PairingSum.$fSumPSumab_$cfromList_info() args: 20, res: 0, upd: 4;
+}
+
+
+
+==================== Loopify tail calls ====================
+{offset
+  cRa:
+      _sIJ::P32 = R1;
+      _B1::P32 = P32[(old + 8)];
+      goto cR8;
+  cR8:
+      if (Sp - <highSp> < SpLim) goto cRb; else goto cRc;
+  cRb:
+      R1 = _sIJ::P32;
+      P32[(old + 8)] = _B1::P32;
+      call (stg_gc_fun)(R1) args: 8, res: 0, upd: 4;
+  cRc:
+      _sID::P32 = P32[_sIJ::P32 + 3];
+      _sIE::P32 = P32[_sIJ::P32 + 7];
+      _sIF::P32 = P32[_sIJ::P32 + 11];
+      P32[(old + 20)] = _sID::P32;
+      P32[(old + 16)] = _sIE::P32;
+      P32[(old + 12)] = _sIF::P32;
+      P32[(old + 8)] = _B1::P32;
+      call T2902_B_PairingSum.$fSumPSumab_$cextractMin_info() args: 20, res: 0, upd: 4;
+}
+
+
+
+==================== Copy propagation ====================
+{offset
+  cRa:
+      _sIJ::P32 = R1;
+      _B1::P32 = P32[(old + 8)];
+      goto cR8;
+  cR8:
+      if (Sp - <highSp> < SpLim) goto cRb; else goto cRc;
+  cRb:
+      R1 = R1;
+      P32[(old + 8)] = _B1::P32;
+      call (stg_gc_fun)(R1) args: 8, res: 0, upd: 4;
+  cRc:
+      _sID::P32 = P32[R1 + 3];
+      _sIE::P32 = P32[R1 + 7];
+      _sIF::P32 = P32[R1 + 11];
+      P32[(old + 20)] = _sID::P32;
+      P32[(old + 16)] = _sIE::P32;
+      P32[(old + 12)] = _sIF::P32;
+      P32[(old + 8)] = _B1::P32;
+      call T2902_B_PairingSum.$fSumPSumab_$cextractMin_info() args: 20, res: 0, upd: 4;
+}
+
+
+
+==================== Loopify tail calls ====================
+{offset
+  cRh:
+      _sII::P32 = R1;
+      _B1::P32 = P32[(old + 8)];
+      goto cRf;
+  cRf:
+      if (Sp - <highSp> < SpLim) goto cRi; else goto cRj;
+  cRi:
+      R1 = _sII::P32;
+      P32[(old + 8)] = _B1::P32;
+      call (stg_gc_fun)(R1) args: 8, res: 0, upd: 4;
+  cRj:
+      _sID::P32 = P32[_sII::P32 + 3];
+      _sIE::P32 = P32[_sII::P32 + 7];
+      _sIF::P32 = P32[_sII::P32 + 11];
+      P32[(old + 20)] = _sID::P32;
+      P32[(old + 16)] = _sIE::P32;
+      P32[(old + 12)] = _sIF::P32;
+      P32[(old + 8)] = _B1::P32;
+      call T2902_B_PairingSum.$fSumPSumab_$cunions_info() args: 20, res: 0, upd: 4;
+}
+
+
+
+==================== Copy propagation ====================
+{offset
+  cRh:
+      _sII::P32 = R1;
+      _B1::P32 = P32[(old + 8)];
+      goto cRf;
+  cRf:
+      if (Sp - <highSp> < SpLim) goto cRi; else goto cRj;
+  cRi:
+      R1 = R1;
+      P32[(old + 8)] = _B1::P32;
+      call (stg_gc_fun)(R1) args: 8, res: 0, upd: 4;
+  cRj:
+      _sID::P32 = P32[R1 + 3];
+      _sIE::P32 = P32[R1 + 7];
+      _sIF::P32 = P32[R1 + 11];
+      P32[(old + 20)] = _sID::P32;
+      P32[(old + 16)] = _sIE::P32;
+      P32[(old + 12)] = _sIF::P32;
+      P32[(old + 8)] = _B1::P32;
+      call T2902_B_PairingSum.$fSumPSumab_$cunions_info() args: 20, res: 0, upd: 4;
+}
+
+
+
+==================== Loopify tail calls ====================
+{offset
+  cRo:
+      _sIH::P32 = R1;
+      _B2::P32 = P32[(old + 12)];
+      _B1::P32 = P32[(old + 8)];
+      goto cRm;
+  cRm:
+      if (Sp - <highSp> < SpLim) goto cRp; else goto cRq;
+  cRp:
+      R1 = _sIH::P32;
+      P32[(old + 12)] = _B2::P32;
+      P32[(old + 8)] = _B1::P32;
+      call (stg_gc_fun)(R1) args: 12, res: 0, upd: 4;
+  cRq:
+      _sID::P32 = P32[_sIH::P32 + 2];
+      _sIE::P32 = P32[_sIH::P32 + 6];
+      _sIF::P32 = P32[_sIH::P32 + 10];
+      P32[(old + 24)] = _sID::P32;
+      P32[(old + 20)] = _sIE::P32;
+      P32[(old + 16)] = _sIF::P32;
+      P32[(old + 12)] = _B2::P32;
+      P32[(old + 8)] = _B1::P32;
+      call T2902_B_PairingSum.$fSumPSumab_$cunion_info() args: 24, res: 0, upd: 4;
+}
+
+
+
+==================== Copy propagation ====================
+{offset
+  cRo:
+      _sIH::P32 = R1;
+      _B2::P32 = P32[(old + 12)];
+      _B1::P32 = P32[(old + 8)];
+      goto cRm;
+  cRm:
+      if (Sp - <highSp> < SpLim) goto cRp; else goto cRq;
+  cRp:
+      R1 = R1;
+      P32[(old + 12)] = _B2::P32;
+      P32[(old + 8)] = _B1::P32;
+      call (stg_gc_fun)(R1) args: 12, res: 0, upd: 4;
+  cRq:
+      _sID::P32 = P32[R1 + 2];
+      _sIE::P32 = P32[R1 + 6];
+      _sIF::P32 = P32[R1 + 10];
+      P32[(old + 24)] = _sID::P32;
+      P32[(old + 20)] = _sIE::P32;
+      P32[(old + 16)] = _sIF::P32;
+      P32[(old + 12)] = _B2::P32;
+      P32[(old + 8)] = _B1::P32;
+      call T2902_B_PairingSum.$fSumPSumab_$cunion_info() args: 24, res: 0, upd: 4;
+}
+
+
+
+==================== Loopify tail calls ====================
+{offset
+  cRv:
+      _sIG::P32 = R1;
+      _B3::P32 = P32[(old + 16)];
+      _B2::P32 = P32[(old + 12)];
+      _B1::P32 = P32[(old + 8)];
+      goto cRt;
+  cRt:
+      if (Sp - <highSp> < SpLim) goto cRw; else goto cRx;
+  cRw:
+      R1 = _sIG::P32;
+      P32[(old + 16)] = _B3::P32;
+      P32[(old + 12)] = _B2::P32;
+      P32[(old + 8)] = _B1::P32;
+      call (stg_gc_fun)(R1) args: 16, res: 0, upd: 4;
+  cRx:
+      _sID::P32 = P32[_sIG::P32 + 1];
+      _sIE::P32 = P32[_sIG::P32 + 5];
+      _sIF::P32 = P32[_sIG::P32 + 9];
+      P32[(old + 28)] = _sID::P32;
+      P32[(old + 24)] = _sIE::P32;
+      P32[(old + 20)] = _sIF::P32;
+      P32[(old + 16)] = _B3::P32;
+      P32[(old + 12)] = _B2::P32;
+      P32[(old + 8)] = _B1::P32;
+      call T2902_B_PairingSum.$fSumPSumab_$cinsert_info() args: 28, res: 0, upd: 4;
+}
+
+
+
+==================== Copy propagation ====================
+{offset
+  cRv:
+      _sIG::P32 = R1;
+      _B3::P32 = P32[(old + 16)];
+      _B2::P32 = P32[(old + 12)];
+      _B1::P32 = P32[(old + 8)];
+      goto cRt;
+  cRt:
+      if (Sp - <highSp> < SpLim) goto cRw; else goto cRx;
+  cRw:
+      R1 = R1;
+      P32[(old + 16)] = _B3::P32;
+      P32[(old + 12)] = _B2::P32;
+      P32[(old + 8)] = _B1::P32;
+      call (stg_gc_fun)(R1) args: 16, res: 0, upd: 4;
+  cRx:
+      _sID::P32 = P32[R1 + 1];
+      _sIE::P32 = P32[R1 + 5];
+      _sIF::P32 = P32[R1 + 9];
+      P32[(old + 28)] = _sID::P32;
+      P32[(old + 24)] = _sIE::P32;
+      P32[(old + 20)] = _sIF::P32;
+      P32[(old + 16)] = _B3::P32;
+      P32[(old + 12)] = _B2::P32;
+      P32[(old + 8)] = _B1::P32;
+      call T2902_B_PairingSum.$fSumPSumab_$cinsert_info() args: 28, res: 0, upd: 4;
+}
+
+
+
+==================== Loopify tail calls ====================
+{offset
+  cRz:
+      _sID::P32 = P32[(old + 16)];
+      _sIE::P32 = P32[(old + 12)];
+      _sIF::P32 = P32[(old + 8)];
+      goto cQQ;
+  cQQ:
+      if (Sp - <highSp> < SpLim) goto cRA; else goto cRB;
+  cRB:
+      Hp = Hp + 124;
+      if (Hp > HpLim) goto cRD; else goto cRC;
+  cRD:
+      HpAlloc = 124;
+      goto cRA;
+  cRA:
+      R1 = T2902_B_PairingSum.$fSumPSumab_closure;
+      P32[(old + 16)] = _sID::P32;
+      P32[(old + 12)] = _sIE::P32;
+      P32[(old + 8)] = _sIF::P32;
+      call (stg_gc_fun)(R1) args: 16, res: 0, upd: 4;
+  cRC:
+      I32[Hp - 120] = sat_sIL_info;
+      P32[Hp - 116] = _sID::P32;
+      P32[Hp - 112] = _sIE::P32;
+      P32[Hp - 108] = _sIF::P32;
+      _cQS::P32 = Hp - 119;
+      I32[Hp - 104] = sat_sIK_info;
+      P32[Hp - 100] = _sID::P32;
+      P32[Hp - 96] = _sIE::P32;
+      P32[Hp - 92] = _sIF::P32;
+      _cQZ::P32 = Hp - 103;
+      I32[Hp - 88] = sat_sIJ_info;
+      P32[Hp - 84] = _sID::P32;
+      P32[Hp - 80] = _sIE::P32;
+      P32[Hp - 76] = _sIF::P32;
+      _cR6::P32 = Hp - 87;
+      I32[Hp - 72] = sat_sII_info;
+      P32[Hp - 68] = _sID::P32;
+      P32[Hp - 64] = _sIE::P32;
+      P32[Hp - 60] = _sIF::P32;
+      _cRd::P32 = Hp - 71;
+      I32[Hp - 56] = sat_sIH_info;
+      P32[Hp - 52] = _sID::P32;
+      P32[Hp - 48] = _sIE::P32;
+      P32[Hp - 44] = _sIF::P32;
+      _cRk::P32 = Hp - 54;
+      I32[Hp - 40] = sat_sIG_info;
+      P32[Hp - 36] = _sID::P32;
+      P32[Hp - 32] = _sIE::P32;
+      P32[Hp - 28] = _sIF::P32;
+      _cRr::P32 = Hp - 37;
+      I32[Hp - 24] = T2902_Sum.D:Sum_con_info;
+      P32[Hp - 20] = _cRr::P32;
+      P32[Hp - 16] = _cRk::P32;
+      P32[Hp - 12] = _cRd::P32;
+      P32[Hp - 8] = _cR6::P32;
+      P32[Hp - 4] = _cQZ::P32;
+      P32[Hp] = _cQS::P32;
+      _cRy::P32 = Hp - 23;
+      R1 = _cRy::P32;
+      call (P32[(old + 4)])(R1) args: 4, res: 0, upd: 4;
+}
+
+
+
+==================== Copy propagation ====================
+{offset
+  cRz:
+      _sID::P32 = P32[(old + 16)];
+      _sIE::P32 = P32[(old + 12)];
+      _sIF::P32 = P32[(old + 8)];
+      goto cQQ;
+  cQQ:
+      if (Sp - <highSp> < SpLim) goto cRA; else goto cRB;
+  cRB:
+      Hp = Hp + 124;
+      if (Hp > HpLim) goto cRD; else goto cRC;
+  cRD:
+      HpAlloc = 124;
+      goto cRA;
+  cRA:
+      R1 = T2902_B_PairingSum.$fSumPSumab_closure;
+      P32[(old + 16)] = _sID::P32;
+      P32[(old + 12)] = _sIE::P32;
+      P32[(old + 8)] = _sIF::P32;
+      call (stg_gc_fun)(R1) args: 16, res: 0, upd: 4;
+  cRC:
+      I32[Hp - 120] = sat_sIL_info;
+      P32[Hp - 116] = _sID::P32;
+      P32[Hp - 112] = _sIE::P32;
+      P32[Hp - 108] = _sIF::P32;
+      _cQS::P32 = Hp - 119;
+      I32[Hp - 104] = sat_sIK_info;
+      P32[Hp - 100] = _sID::P32;
+      P32[Hp - 96] = _sIE::P32;
+      P32[Hp - 92] = _sIF::P32;
+      _cQZ::P32 = Hp - 103;
+      I32[Hp - 88] = sat_sIJ_info;
+      P32[Hp - 84] = _sID::P32;
+      P32[Hp - 80] = _sIE::P32;
+      P32[Hp - 76] = _sIF::P32;
+      _cR6::P32 = Hp - 87;
+      I32[Hp - 72] = sat_sII_info;
+      P32[Hp - 68] = _sID::P32;
+      P32[Hp - 64] = _sIE::P32;
+      P32[Hp - 60] = _sIF::P32;
+      _cRd::P32 = Hp - 71;
+      I32[Hp - 56] = sat_sIH_info;
+      P32[Hp - 52] = _sID::P32;
+      P32[Hp - 48] = _sIE::P32;
+      P32[Hp - 44] = _sIF::P32;
+      _cRk::P32 = Hp - 54;
+      I32[Hp - 40] = sat_sIG_info;
+      P32[Hp - 36] = _sID::P32;
+      P32[Hp - 32] = _sIE::P32;
+      P32[Hp - 28] = _sIF::P32;
+      _cRr::P32 = Hp - 37;
+      I32[Hp - 24] = T2902_Sum.D:Sum_con_info;
+      P32[Hp - 20] = _cRr::P32;
+      P32[Hp - 16] = _cRk::P32;
+      P32[Hp - 12] = _cRd::P32;
+      P32[Hp - 8] = _cR6::P32;
+      P32[Hp - 4] = _cQZ::P32;
+      P32[Hp] = _cQS::P32;
+      _cRy::P32 = Hp - 23;
+      R1 = _cRy::P32;
+      call (P32[(old + 4)])(R1) args: 4, res: 0, upd: 4;
+}
+
+
+
+==================== Loopify tail calls ====================
+{offset
+  cSw:
+      _B3::P32 = P32[(old + 16)];
+      _B2::P32 = P32[(old + 12)];
+      _B1::P32 = P32[(old + 8)];
+      goto cSt;
+  cSt:
+      if (Sp - <highSp> < SpLim) goto cSx; else goto cSy;
+  cSy:
+      Hp = Hp + 16;
+      if (Hp > HpLim) goto cSA; else goto cSz;
+  cSA:
+      HpAlloc = 16;
+      goto cSx;
+  cSx:
+      R1 = T2902_B_PairingSum.Tree_closure;
+      P32[(old + 16)] = _B3::P32;
+      P32[(old + 12)] = _B2::P32;
+      P32[(old + 8)] = _B1::P32;
+      call (stg_gc_fun)(R1) args: 16, res: 0, upd: 4;
+  cSz:
+      I32[Hp - 12] = T2902_B_PairingSum.Tree_con_info;
+      P32[Hp - 8] = _B3::P32;
+      P32[Hp - 4] = _B2::P32;
+      P32[Hp] = _B1::P32;
+      _cSv::P32 = Hp - 10;
+      R1 = _cSv::P32;
+      call (P32[(old + 4)])(R1) args: 4, res: 0, upd: 4;
+}
+
+
+
+==================== Copy propagation ====================
+{offset
+  cSw:
+      _B3::P32 = P32[(old + 16)];
+      _B2::P32 = P32[(old + 12)];
+      _B1::P32 = P32[(old + 8)];
+      goto cSt;
+  cSt:
+      if (Sp - <highSp> < SpLim) goto cSx; else goto cSy;
+  cSy:
+      Hp = Hp + 16;
+      if (Hp > HpLim) goto cSA; else goto cSz;
+  cSA:
+      HpAlloc = 16;
+      goto cSx;
+  cSx:
+      R1 = T2902_B_PairingSum.Tree_closure;
+      P32[(old + 16)] = _B3::P32;
+      P32[(old + 12)] = _B2::P32;
+      P32[(old + 8)] = _B1::P32;
+      call (stg_gc_fun)(R1) args: 16, res: 0, upd: 4;
+  cSz:
+      I32[Hp - 12] = T2902_B_PairingSum.Tree_con_info;
+      P32[Hp - 8] = _B3::P32;
+      P32[Hp - 4] = _B2::P32;
+      P32[Hp] = _B1::P32;
+      _cSv::P32 = Hp - 10;
+      R1 = _cSv::P32;
+      call (P32[(old + 4)])(R1) args: 4, res: 0, upd: 4;
+}
+
+
+
+==================== Loopify tail calls ====================
+{offset
+  cSI:
+      R1 = R1 + 1;
+      call (P32[(old + 4)])(R1) args: 4, res: 0, upd: 4;
+}
+
+
+
+==================== Copy propagation ====================
+{offset
+  cSI:
+      R1 = R1 + 1;
+      call (P32[(old + 4)])(R1) args: 4, res: 0, upd: 4;
+}
+
+
+
+==================== Loopify tail calls ====================
+{offset
+  cSN:
+      R1 = R1 + 2;
+      call (P32[(old + 4)])(R1) args: 4, res: 0, upd: 4;
+}
+
+
+
+==================== Copy propagation ====================
+{offset
+  cSN:
+      R1 = R1 + 2;
+      call (P32[(old + 4)])(R1) args: 4, res: 0, upd: 4;
+}
+
+
+
+==================== Loopify tail calls ====================
+{offset
+  cSO:
+      R1 = R1 + 2;
+      call (P32[(old + 4)])(R1) args: 4, res: 0, upd: 4;
+}
+
+
+
+==================== Copy propagation ====================
+{offset
+  cSO:
+      R1 = R1 + 2;
+      call (P32[(old + 4)])(R1) args: 4, res: 0, upd: 4;
+}
+
+
+[3 of 3] Compiling Main             ( T2902_B.hs, T2902_B.o )
+
+==================== Loopify tail calls ====================
+{offset
+  c25k:
+      _s23Y::P32 = P32[(old + 16)];
+      _s23Z::P32 = P32[(old + 12)];
+      _s240::P32 = P32[(old + 8)];
+      goto c258;
+  c258:
+      if (Sp - <highSp> < SpLim) goto c25l; else goto c25m;
+  c25l:
+      R1 = lvl_r23Q_closure;
+      P32[(old + 16)] = _s23Y::P32;
+      P32[(old + 12)] = _s23Z::P32;
+      P32[(old + 8)] = _s240::P32;
+      call (stg_gc_fun)(R1) args: 16, res: 0, upd: 4;
+  c25m:
+      I32[(young<c25a> + 4)] = c25a;
+      R1 = _s240::P32;
+      if (R1 & 3 != 0) goto c25a; else goto c25b;
+  c25b:
+      call (I32[R1])(R1) returns to c25a, args: 4, res: 4, upd: 4;
+  c25a:
+      _s241::P32 = R1;
+      _c25g::P32 = _s241::P32 & 3;
+      if (_c25g::P32 >= 2) goto c25f; else goto c25e;
+  c25f:
+      Hp = Hp + 40;
+      if (Hp > HpLim) goto c25x; else goto c25w;
+  c25x:
+      HpAlloc = 40;
+      goto c25v;
+  c25v:
+      R1 = _s241::P32;
+      call stg_gc_unpt_r1(R1) returns to c25a, args: 4, res: 4, upd: 4;
+  c25w:
+      _s242::P32 = P32[_s241::P32 + 2];
+      _s243::P32 = P32[_s241::P32 + 6];
+      I32[Hp - 36] = stg_ap_2_upd_info;
+      P32[Hp - 28] = _s23Z::P32;
+      P32[Hp - 24] = _s243::P32;
+      _c25s::P32 = Hp - 36;
+      I32[Hp - 20] = (,)_con_info;
+      P32[Hp - 16] = _s23Y::P32;
+      P32[Hp - 12] = _s242::P32;
+      _c25t::P32 = Hp - 19;
+      I32[Hp - 8] = :_con_info;
+      P32[Hp - 4] = _c25t::P32;
+      P32[Hp] = _c25s::P32;
+      _c25u::P32 = Hp - 6;
+      R1 = _c25u::P32;
+      call (P32[(old + 4)])(R1) args: 4, res: 0, upd: 4;
+  c25e:
+      R1 = []_closure+1;
+      call (P32[(old + 4)])(R1) args: 4, res: 0, upd: 4;
+}
+
+
+
+==================== Copy propagation ====================
+{offset
+  c25k:
+      _s23Y::P32 = P32[(old + 16)];
+      _s23Z::P32 = P32[(old + 12)];
+      _s240::P32 = P32[(old + 8)];
+      goto c258;
+  c258:
+      if (Sp - <highSp> < SpLim) goto c25l; else goto c25m;
+  c25l:
+      R1 = lvl_r23Q_closure;
+      P32[(old + 16)] = _s23Y::P32;
+      P32[(old + 12)] = _s23Z::P32;
+      P32[(old + 8)] = _s240::P32;
+      call (stg_gc_fun)(R1) args: 16, res: 0, upd: 4;
+  c25m:
+      I32[(young<c25a> + 4)] = c25a;
+      R1 = _s240::P32;
+      if (_s240::P32 & 3 != 0) goto c25a; else goto c25b;
+  c25b:
+      call (I32[_s240::P32])(R1) returns to c25a, args: 4, res: 4, upd: 4;
+  c25a:
+      _s241::P32 = R1;
+      _c25g::P32 = R1 & 3;
+      if (_c25g::P32 >= 2) goto c25f; else goto c25e;
+  c25f:
+      Hp = Hp + 40;
+      if (Hp > HpLim) goto c25x; else goto c25w;
+  c25x:
+      HpAlloc = 40;
+      goto c25v;
+  c25v:
+      R1 = R1;
+      call stg_gc_unpt_r1(R1) returns to c25a, args: 4, res: 4, upd: 4;
+  c25w:
+      _s242::P32 = P32[R1 + 2];
+      _s243::P32 = P32[R1 + 6];
+      I32[Hp - 36] = stg_ap_2_upd_info;
+      P32[Hp - 28] = _s23Z::P32;
+      P32[Hp - 24] = _s243::P32;
+      _c25s::P32 = Hp - 36;
+      I32[Hp - 20] = (,)_con_info;
+      P32[Hp - 16] = _s23Y::P32;
+      P32[Hp - 12] = _s242::P32;
+      _c25t::P32 = Hp - 19;
+      I32[Hp - 8] = :_con_info;
+      P32[Hp - 4] = _c25t::P32;
+      P32[Hp] = _c25s::P32;
+      _c25u::P32 = Hp - 6;
+      R1 = _c25u::P32;
+      call (P32[(old + 4)])(R1) args: 4, res: 0, upd: 4;
+  c25e:
+      R1 = []_closure+1;
+      call (P32[(old + 4)])(R1) args: 4, res: 0, upd: 4;
+}
+
+
+
+==================== Loopify tail calls ====================
+{offset
+  c25N:
+      _s246::P32 = P32[(old + 8)];
+      goto c25L;
+  c25L:
+      if (Sp - <highSp> < SpLim) goto c25O; else goto c25P;
+  c25O:
+      R1 = n_r23R_closure;
+      P32[(old + 8)] = _s246::P32;
+      call (stg_gc_fun)(R1) args: 8, res: 0, upd: 4;
+  c25P:
+      R1 = []_closure+1;
+      call (P32[(old + 4)])(R1) args: 4, res: 0, upd: 4;
+}
+
+
+
+==================== Copy propagation ====================
+{offset
+  c25N:
+      _s246::P32 = P32[(old + 8)];
+      goto c25L;
+  c25L:
+      if (Sp - <highSp> < SpLim) goto c25O; else goto c25P;
+  c25O:
+      R1 = n_r23R_closure;
+      P32[(old + 8)] = _s246::P32;
+      call (stg_gc_fun)(R1) args: 8, res: 0, upd: 4;
+  c25P:
+      R1 = []_closure+1;
+      call (P32[(old + 4)])(R1) args: 4, res: 0, upd: 4;
+}
+
+
+
+==================== Loopify tail calls ====================
+{offset
+  c25Y:
+      _B1::P32 = P32[(old + 8)];
+      goto c25W;
+  c25W:
+      if (Sp - <highSp> < SpLim) goto c25Z; else goto c260;
+  c25Z:
+      R1 = n1_r23S_closure;
+      P32[(old + 8)] = _B1::P32;
+      call (stg_gc_fun)(R1) args: 8, res: 0, upd: 4;
+  c260:
+      P32[(old + 8)] = _B1::P32;
+      call n_r23R_info() args: 8, res: 0, upd: 4;
+}
+
+
+
+==================== Copy propagation ====================
+{offset
+  c25Y:
+      _B1::P32 = P32[(old + 8)];
+      goto c25W;
+  c25W:
+      if (Sp - <highSp> < SpLim) goto c25Z; else goto c260;
+  c25Z:
+      R1 = n1_r23S_closure;
+      P32[(old + 8)] = _B1::P32;
+      call (stg_gc_fun)(R1) args: 8, res: 0, upd: 4;
+  c260:
+      P32[(old + 8)] = _B1::P32;
+      call n_r23R_info() args: 8, res: 0, upd: 4;
+}
+
+
+
+==================== Loopify tail calls ====================
+{offset
+  c26c:
+      _r23T::P32 = R1;
+      goto c267;
+  c267:
+      if (Sp - <highSp> < SpLim) goto c26d; else goto c26e;
+  c26e:
+      Hp = Hp + 8;
+      if (Hp > HpLim) goto c26g; else goto c26f;
+  c26g:
+      HpAlloc = 8;
+      goto c26d;
+  c26d:
+      R1 = _r23T::P32;
+      call (stg_gc_enter_1)(R1) args: 4, res: 0, upd: 4;
+  c26f:
+      I32[Hp - 4] = stg_CAF_BLACKHOLE_info;
+      I32[Hp] = CurrentTSO;
+      (_c269::I32) = call "ccall" arg hints:  [PtrHint, PtrHint,
+                                               PtrHint]  result hints:  [] newCAF(BaseReg, _r23T::P32, Hp - 4);
+      if (_c269::I32 == 0) goto c26b; else goto c26a;
+  c26b:
+      call (I32[_r23T::P32])() args: 4, res: 0, upd: 4;
+  c26a:
+      I32[(old + 12)] = stg_bh_upd_frame_info;
+      P32[(old + 8)] = Hp - 4;
+      P32[(old + 28)] = GHC.Classes.$fOrdInt_closure;
+      P32[(old + 24)] = GHC.Classes.$fEqInt_closure;
+      P32[(old + 20)] = GHC.Num.$fNumInt_closure;
+      P32[(old + 16)] = GHC.Types.[]_closure+1;
+      call T2902_B_PairingSum.$fSumPSumab_$cfromList_info() args: 28, res: 0, upd: 12;
+}
+
+
+
+==================== Copy propagation ====================
+{offset
+  c26c:
+      _r23T::P32 = R1;
+      goto c267;
+  c267:
+      if (Sp - <highSp> < SpLim) goto c26d; else goto c26e;
+  c26e:
+      Hp = Hp + 8;
+      if (Hp > HpLim) goto c26g; else goto c26f;
+  c26g:
+      HpAlloc = 8;
+      goto c26d;
+  c26d:
+      R1 = R1;
+      call (stg_gc_enter_1)(R1) args: 4, res: 0, upd: 4;
+  c26f:
+      I32[Hp - 4] = stg_CAF_BLACKHOLE_info;
+      I32[Hp] = CurrentTSO;
+      (_c269::I32) = call "ccall" arg hints:  [PtrHint, PtrHint,
+                                               PtrHint]  result hints:  [] newCAF(BaseReg, R1, Hp - 4);
+      if (_c269::I32 == 0) goto c26b; else goto c26a;
+  c26b:
+      call (I32[_r23T::P32])() args: 4, res: 0, upd: 4;
+  c26a:
+      I32[(old + 12)] = stg_bh_upd_frame_info;
+      P32[(old + 8)] = Hp - 4;
+      P32[(old + 28)] = GHC.Classes.$fOrdInt_closure;
+      P32[(old + 24)] = GHC.Classes.$fEqInt_closure;
+      P32[(old + 20)] = GHC.Num.$fNumInt_closure;
+      P32[(old + 16)] = GHC.Types.[]_closure+1;
+      call T2902_B_PairingSum.$fSumPSumab_$cfromList_info() args: 28, res: 0, upd: 12;
+}
+
+
+
+==================== Loopify tail calls ====================
+{offset
+  c26W:
+      _s24g::P32 = R1;
+      goto c26Q;
+  c26Q:
+      if (Sp - <highSp> < SpLim) goto c26X; else goto c26Y;
+  c26X:
+      R1 = _s24g::P32;
+      call (stg_gc_enter_1)(R1) args: 4, res: 0, upd: 4;
+  c26Y:
+      I32[(old + 12)] = stg_upd_frame_info;
+      P32[(old + 8)] = _s24g::P32;
+      _s24b::P32 = P32[_s24g::P32 + 8];
+      _s247::I32 = I32[_s24g::P32 + 12];
+      _s24e::I32 = _s247::I32;
+      if (_s24e::I32 != 20) goto c26U; else goto c26V;
+  c26U:
+      _c270::I32 = _s24e::I32 + 1;
+      _s24f::I32 = _c270::I32;
+      I32[(old + 20)] = _s24f::I32;
+      P32[(old + 16)] = _s24b::P32;
+      call go_r23U_info() args: 20, res: 0, upd: 12;
+  c26V:
+      R1 = []_closure+1;
+      call (P32[(old + 12)])(R1) args: 12, res: 0, upd: 12;
+}
+
+
+
+==================== Copy propagation ====================
+{offset
+  c26W:
+      _s24g::P32 = R1;
+      goto c26Q;
+  c26Q:
+      if (Sp - <highSp> < SpLim) goto c26X; else goto c26Y;
+  c26X:
+      R1 = R1;
+      call (stg_gc_enter_1)(R1) args: 4, res: 0, upd: 4;
+  c26Y:
+      I32[(old + 12)] = stg_upd_frame_info;
+      P32[(old + 8)] = R1;
+      _s24b::P32 = P32[R1 + 8];
+      _s247::I32 = I32[R1 + 12];
+      _s24e::I32 = _s247::I32;
+      if (_s247::I32 != 20) goto c26U; else goto c26V;
+  c26U:
+      _c270::I32 = _s247::I32 + 1;
+      _s24f::I32 = _c270::I32;
+      I32[(old + 20)] = _c270::I32;
+      P32[(old + 16)] = _s24b::P32;
+      call go_r23U_info() args: 20, res: 0, upd: 12;
+  c26V:
+      R1 = []_closure+1;
+      call (P32[(old + 12)])(R1) args: 12, res: 0, upd: 12;
+}
+
+
+
+==================== Loopify tail calls ====================
+{offset
+  c278:
+      _s247::I32 = I32[(old + 12)];
+      _s248::P32 = P32[(old + 8)];
+      goto c26G;
+  c26G:
+      if (Sp - <highSp> < SpLim) goto c279; else goto c27a;
+  c279:
+      R1 = go_r23U_closure;
+      I32[(old + 12)] = _s247::I32;
+      P32[(old + 8)] = _s248::P32;
+      call (stg_gc_fun)(R1) args: 12, res: 0, upd: 4;
+  c27a:
+      I32[(young<c26I> + 4)] = c26I;
+      R1 = _s248::P32;
+      if (R1 & 3 != 0) goto c26I; else goto c26J;
+  c26J:
+      call (I32[R1])(R1) returns to c26I, args: 4, res: 4, upd: 4;
+  c26I:
+      _s249::P32 = R1;
+      _c274::P32 = _s249::P32 & 3;
+      if (_c274::P32 >= 2) goto c273; else goto c272;
+  c273:
+      Hp = Hp + 48;
+      if (Hp > HpLim) goto c27i; else goto c27h;
+  c27i:
+      HpAlloc = 48;
+      goto c27g;
+  c27g:
+      R1 = _s249::P32;
+      call stg_gc_unpt_r1(R1) returns to c26I, args: 4, res: 4, upd: 4;
+  c27h:
+      _s24a::P32 = P32[_s249::P32 + 2];
+      _s24b::P32 = P32[_s249::P32 + 6];
+      I32[Hp - 44] = sat_s24g_info;
+      P32[Hp - 36] = _s24b::P32;
+      I32[Hp - 32] = _s247::I32;
+      _c26O::P32 = Hp - 44;
+      I32[Hp - 28] = GHC.Types.I#_con_info;
+      I32[Hp - 24] = _s247::I32;
+      _c27d::P32 = Hp - 27;
+      I32[Hp - 20] = (,)_con_info;
+      P32[Hp - 16] = _c27d::P32;
+      P32[Hp - 12] = _s24a::P32;
+      _c27e::P32 = Hp - 19;
+      I32[Hp - 8] = :_con_info;
+      P32[Hp - 4] = _c27e::P32;
+      P32[Hp] = _c26O::P32;
+      _c27f::P32 = Hp - 6;
+      R1 = _c27f::P32;
+      call (P32[(old + 4)])(R1) args: 4, res: 0, upd: 4;
+  c272:
+      R1 = []_closure+1;
+      call (P32[(old + 4)])(R1) args: 4, res: 0, upd: 4;
+}
+
+
+
+==================== Copy propagation ====================
+{offset
+  c278:
+      _s247::I32 = I32[(old + 12)];
+      _s248::P32 = P32[(old + 8)];
+      goto c26G;
+  c26G:
+      if (Sp - <highSp> < SpLim) goto c279; else goto c27a;
+  c279:
+      R1 = go_r23U_closure;
+      I32[(old + 12)] = _s247::I32;
+      P32[(old + 8)] = _s248::P32;
+      call (stg_gc_fun)(R1) args: 12, res: 0, upd: 4;
+  c27a:
+      I32[(young<c26I> + 4)] = c26I;
+      R1 = _s248::P32;
+      if (_s248::P32 & 3 != 0) goto c26I; else goto c26J;
+  c26J:
+      call (I32[_s248::P32])(R1) returns to c26I, args: 4, res: 4, upd: 4;
+  c26I:
+      _s249::P32 = R1;
+      _c274::P32 = R1 & 3;
+      if (_c274::P32 >= 2) goto c273; else goto c272;
+  c273:
+      Hp = Hp + 48;
+      if (Hp > HpLim) goto c27i; else goto c27h;
+  c27i:
+      HpAlloc = 48;
+      goto c27g;
+  c27g:
+      R1 = R1;
+      call stg_gc_unpt_r1(R1) returns to c26I, args: 4, res: 4, upd: 4;
+  c27h:
+      _s24a::P32 = P32[R1 + 2];
+      _s24b::P32 = P32[R1 + 6];
+      I32[Hp - 44] = sat_s24g_info;
+      P32[Hp - 36] = _s24b::P32;
+      I32[Hp - 32] = _s247::I32;
+      _c26O::P32 = Hp - 44;
+      I32[Hp - 28] = GHC.Types.I#_con_info;
+      I32[Hp - 24] = _s247::I32;
+      _c27d::P32 = Hp - 27;
+      I32[Hp - 20] = (,)_con_info;
+      P32[Hp - 16] = _c27d::P32;
+      P32[Hp - 12] = _s24a::P32;
+      _c27e::P32 = Hp - 19;
+      I32[Hp - 8] = :_con_info;
+      P32[Hp - 4] = _c27e::P32;
+      P32[Hp] = _c26O::P32;
+      _c27f::P32 = Hp - 6;
+      R1 = _c27f::P32;
+      call (P32[(old + 4)])(R1) args: 4, res: 0, upd: 4;
+  c272:
+      R1 = []_closure+1;
+      call (P32[(old + 4)])(R1) args: 4, res: 0, upd: 4;
+}
+
+
+
+==================== Loopify tail calls ====================
+{offset
+  c27U:
+      _s24B::P32 = R1;
+      goto c27O;
+  c27O:
+      if (Sp - <highSp> < SpLim) goto c27V; else goto c27W;
+  c27V:
+      R1 = _s24B::P32;
+      call (stg_gc_enter_1)(R1) args: 4, res: 0, upd: 4;
+  c27W:
+      I32[(old + 12)] = stg_upd_frame_info;
+      P32[(old + 8)] = _s24B::P32;
+      _s24h::I32 = I32[_s24B::P32 + 8];
+      _s24z::I32 = _s24h::I32;
+      if (_s24z::I32 != 20) goto c27S; else goto c27T;
+  c27S:
+      _c27Y::I32 = _s24z::I32 + 1;
+      _s24A::I32 = _c27Y::I32;
+      I32[(old + 16)] = _s24A::I32;
+      call Main.main_go_info() args: 16, res: 0, upd: 12;
+  c27T:
+      R1 = []_closure+1;
+      call (P32[(old + 12)])(R1) args: 12, res: 0, upd: 12;
+}
+
+
+
+==================== Copy propagation ====================
+{offset
+  c27U:
+      _s24B::P32 = R1;
+      goto c27O;
+  c27O:
+      if (Sp - <highSp> < SpLim) goto c27V; else goto c27W;
+  c27V:
+      R1 = R1;
+      call (stg_gc_enter_1)(R1) args: 4, res: 0, upd: 4;
+  c27W:
+      I32[(old + 12)] = stg_upd_frame_info;
+      P32[(old + 8)] = R1;
+      _s24h::I32 = I32[R1 + 8];
+      _s24z::I32 = _s24h::I32;
+      if (_s24h::I32 != 20) goto c27S; else goto c27T;
+  c27S:
+      _c27Y::I32 = _s24h::I32 + 1;
+      _s24A::I32 = _c27Y::I32;
+      I32[(old + 16)] = _c27Y::I32;
+      call Main.main_go_info() args: 16, res: 0, upd: 12;
+  c27T:
+      R1 = []_closure+1;
+      call (P32[(old + 12)])(R1) args: 12, res: 0, upd: 12;
+}
+
+
+
+==================== Loopify tail calls ====================
+{offset
+  c293:
+      _s24u::P32 = R1;
+      goto c28k;
+  c28k:
+      if (Sp - <highSp> < SpLim) goto c294; else goto c29l;
+  c294:
+      R1 = _s24u::P32;
+      call (stg_gc_enter_1)(R1) args: 4, res: 0, upd: 4;
+  c29l:
+      I32[(old + 12)] = stg_upd_frame_info;
+      P32[(old + 8)] = _s24u::P32;
+      _s24h::I32 = I32[_s24u::P32 + 8];
+      _c28m::I32 = 3 + _s24h::I32;
+      _s24q::I32 = _c28m::I32;
+      _c28p::I32 = %MO_S_Ge_W32(_s24q::I32, _s24h::I32);
+      if (_c28p::I32 >= 1) goto c29g; else goto c299;
+  c29g:
+      I32[(young<c29f> + 4)] = c29f;
+      P32[(young<c29f> + 32)] = lvl_r23Q_closure+3;
+      P32[(young<c29f> + 28)] = n1_r23S_closure+1;
+      I32[(young<c29f> + 24)] = _s24h::I32;
+      I32[(young<c29f> + 20)] = _s24q::I32;
+      I32[(young<c29f> + 16)] = 20;
+      I32[(young<c29f> + 12)] = stg_ap_p_info;
+      P32[(young<c29f> + 8)] = xs2_r23P_closure+2;
+      call GHC.Enum.efdtIntUpFB_info() returns to c29f, args: 32, res: 4, upd: 12;
+  c29f:
+      _s24t::P32 = R1;
+      P32[(old + 28)] = GHC.Classes.$fOrdInt_closure;
+      P32[(old + 24)] = GHC.Classes.$fEqInt_closure;
+      P32[(old + 20)] = GHC.Num.$fNumInt_closure;
+      P32[(old + 16)] = _s24t::P32;
+      call T2902_B_PairingSum.$fSumPSumab_$cfromList_info() args: 28, res: 0, upd: 12;
+  c299:
+      I32[(young<c297> + 4)] = c297;
+      P32[(young<c297> + 32)] = lvl_r23Q_closure+3;
+      P32[(young<c297> + 28)] = n1_r23S_closure+1;
+      I32[(young<c297> + 24)] = _s24h::I32;
+      I32[(young<c297> + 20)] = _s24q::I32;
+      I32[(young<c297> + 16)] = 20;
+      I32[(young<c297> + 12)] = stg_ap_p_info;
+      P32[(young<c297> + 8)] = xs2_r23P_closure+2;
+      call GHC.Enum.efdtIntDnFB_info() returns to c297, args: 32, res: 4, upd: 12;
+  c297:
+      _s24s::P32 = R1;
+      P32[(old + 28)] = GHC.Classes.$fOrdInt_closure;
+      P32[(old + 24)] = GHC.Classes.$fEqInt_closure;
+      P32[(old + 20)] = GHC.Num.$fNumInt_closure;
+      P32[(old + 16)] = _s24s::P32;
+      call T2902_B_PairingSum.$fSumPSumab_$cfromList_info() args: 28, res: 0, upd: 12;
+}
+
+
+
+==================== Copy propagation ====================
+{offset
+  c293:
+      _s24u::P32 = R1;
+      goto c28k;
+  c28k:
+      if (Sp - <highSp> < SpLim) goto c294; else goto c29l;
+  c294:
+      R1 = R1;
+      call (stg_gc_enter_1)(R1) args: 4, res: 0, upd: 4;
+  c29l:
+      I32[(old + 12)] = stg_upd_frame_info;
+      P32[(old + 8)] = R1;
+      _s24h::I32 = I32[R1 + 8];
+      _c28m::I32 = 3 + _s24h::I32;
+      _s24q::I32 = _c28m::I32;
+      _c28p::I32 = %MO_S_Ge_W32(_c28m::I32, _s24h::I32);
+      if (_c28p::I32 >= 1) goto c29g; else goto c299;
+  c29g:
+      I32[(young<c29f> + 4)] = c29f;
+      P32[(young<c29f> + 32)] = lvl_r23Q_closure+3;
+      P32[(young<c29f> + 28)] = n1_r23S_closure+1;
+      I32[(young<c29f> + 24)] = _s24h::I32;
+      I32[(young<c29f> + 20)] = _c28m::I32;
+      I32[(young<c29f> + 16)] = 20;
+      I32[(young<c29f> + 12)] = stg_ap_p_info;
+      P32[(young<c29f> + 8)] = xs2_r23P_closure+2;
+      call GHC.Enum.efdtIntUpFB_info() returns to c29f, args: 32, res: 4, upd: 12;
+  c29f:
+      _s24t::P32 = R1;
+      P32[(old + 28)] = GHC.Classes.$fOrdInt_closure;
+      P32[(old + 24)] = GHC.Classes.$fEqInt_closure;
+      P32[(old + 20)] = GHC.Num.$fNumInt_closure;
+      P32[(old + 16)] = R1;
+      call T2902_B_PairingSum.$fSumPSumab_$cfromList_info() args: 28, res: 0, upd: 12;
+  c299:
+      I32[(young<c297> + 4)] = c297;
+      P32[(young<c297> + 32)] = lvl_r23Q_closure+3;
+      P32[(young<c297> + 28)] = n1_r23S_closure+1;
+      I32[(young<c297> + 24)] = _s24h::I32;
+      I32[(young<c297> + 20)] = _c28m::I32;
+      I32[(young<c297> + 16)] = 20;
+      I32[(young<c297> + 12)] = stg_ap_p_info;
+      P32[(young<c297> + 8)] = xs2_r23P_closure+2;
+      call GHC.Enum.efdtIntDnFB_info() returns to c297, args: 32, res: 4, upd: 12;
+  c297:
+      _s24s::P32 = R1;
+      P32[(old + 28)] = GHC.Classes.$fOrdInt_closure;
+      P32[(old + 24)] = GHC.Classes.$fEqInt_closure;
+      P32[(old + 20)] = GHC.Num.$fNumInt_closure;
+      P32[(old + 16)] = R1;
+      call T2902_B_PairingSum.$fSumPSumab_$cfromList_info() args: 28, res: 0, upd: 12;
+}
+
+
+
+==================== Loopify tail calls ====================
+{offset
+  c29p:
+      _s24p::P32 = R1;
+      goto c28I;
+  c28I:
+      if (Sp - <highSp> < SpLim) goto c29q; else goto c29H;
+  c29q:
+      R1 = _s24p::P32;
+      call (stg_gc_enter_1)(R1) args: 4, res: 0, upd: 4;
+  c29H:
+      I32[(old + 12)] = stg_upd_frame_info;
+      P32[(old + 8)] = _s24p::P32;
+      _s24h::I32 = I32[_s24p::P32 + 8];
+      _c28K::I32 = 2 + _s24h::I32;
+      _s24l::I32 = _c28K::I32;
+      _c28N::I32 = %MO_S_Ge_W32(_s24l::I32, _s24h::I32);
+      if (_c28N::I32 >= 1) goto c29C; else goto c29v;
+  c29C:
+      I32[(young<c29B> + 4)] = c29B;
+      P32[(young<c29B> + 32)] = lvl_r23Q_closure+3;
+      P32[(young<c29B> + 28)] = n_r23R_closure+1;
+      I32[(young<c29B> + 24)] = _s24h::I32;
+      I32[(young<c29B> + 20)] = _s24l::I32;
+      I32[(young<c29B> + 16)] = 20;
+      I32[(young<c29B> + 12)] = stg_ap_p_info;
+      P32[(young<c29B> + 8)] = xs1_r23N_closure+2;
+      call GHC.Enum.efdtIntUpFB_info() returns to c29B, args: 32, res: 4, upd: 12;
+  c29B:
+      _s24o::P32 = R1;
+      P32[(old + 28)] = GHC.Classes.$fOrdInt_closure;
+      P32[(old + 24)] = GHC.Classes.$fEqInt_closure;
+      P32[(old + 20)] = GHC.Num.$fNumInt_closure;
+      P32[(old + 16)] = _s24o::P32;
+      call T2902_B_PairingSum.$fSumPSumab_$cfromList_info() args: 28, res: 0, upd: 12;
+  c29v:
+      I32[(young<c29t> + 4)] = c29t;
+      P32[(young<c29t> + 32)] = lvl_r23Q_closure+3;
+      P32[(young<c29t> + 28)] = n_r23R_closure+1;
+      I32[(young<c29t> + 24)] = _s24h::I32;
+      I32[(young<c29t> + 20)] = _s24l::I32;
+      I32[(young<c29t> + 16)] = 20;
+      I32[(young<c29t> + 12)] = stg_ap_p_info;
+      P32[(young<c29t> + 8)] = xs1_r23N_closure+2;
+      call GHC.Enum.efdtIntDnFB_info() returns to c29t, args: 32, res: 4, upd: 12;
+  c29t:
+      _s24n::P32 = R1;
+      P32[(old + 28)] = GHC.Classes.$fOrdInt_closure;
+      P32[(old + 24)] = GHC.Classes.$fEqInt_closure;
+      P32[(old + 20)] = GHC.Num.$fNumInt_closure;
+      P32[(old + 16)] = _s24n::P32;
+      call T2902_B_PairingSum.$fSumPSumab_$cfromList_info() args: 28, res: 0, upd: 12;
+}
+
+
+
+==================== Copy propagation ====================
+{offset
+  c29p:
+      _s24p::P32 = R1;
+      goto c28I;
+  c28I:
+      if (Sp - <highSp> < SpLim) goto c29q; else goto c29H;
+  c29q:
+      R1 = R1;
+      call (stg_gc_enter_1)(R1) args: 4, res: 0, upd: 4;
+  c29H:
+      I32[(old + 12)] = stg_upd_frame_info;
+      P32[(old + 8)] = R1;
+      _s24h::I32 = I32[R1 + 8];
+      _c28K::I32 = 2 + _s24h::I32;
+      _s24l::I32 = _c28K::I32;
+      _c28N::I32 = %MO_S_Ge_W32(_c28K::I32, _s24h::I32);
+      if (_c28N::I32 >= 1) goto c29C; else goto c29v;
+  c29C:
+      I32[(young<c29B> + 4)] = c29B;
+      P32[(young<c29B> + 32)] = lvl_r23Q_closure+3;
+      P32[(young<c29B> + 28)] = n_r23R_closure+1;
+      I32[(young<c29B> + 24)] = _s24h::I32;
+      I32[(young<c29B> + 20)] = _c28K::I32;
+      I32[(young<c29B> + 16)] = 20;
+      I32[(young<c29B> + 12)] = stg_ap_p_info;
+      P32[(young<c29B> + 8)] = xs1_r23N_closure+2;
+      call GHC.Enum.efdtIntUpFB_info() returns to c29B, args: 32, res: 4, upd: 12;
+  c29B:
+      _s24o::P32 = R1;
+      P32[(old + 28)] = GHC.Classes.$fOrdInt_closure;
+      P32[(old + 24)] = GHC.Classes.$fEqInt_closure;
+      P32[(old + 20)] = GHC.Num.$fNumInt_closure;
+      P32[(old + 16)] = R1;
+      call T2902_B_PairingSum.$fSumPSumab_$cfromList_info() args: 28, res: 0, upd: 12;
+  c29v:
+      I32[(young<c29t> + 4)] = c29t;
+      P32[(young<c29t> + 32)] = lvl_r23Q_closure+3;
+      P32[(young<c29t> + 28)] = n_r23R_closure+1;
+      I32[(young<c29t> + 24)] = _s24h::I32;
+      I32[(young<c29t> + 20)] = _c28K::I32;
+      I32[(young<c29t> + 16)] = 20;
+      I32[(young<c29t> + 12)] = stg_ap_p_info;
+      P32[(young<c29t> + 8)] = xs1_r23N_closure+2;
+      call GHC.Enum.efdtIntDnFB_info() returns to c29t, args: 32, res: 4, upd: 12;
+  c29t:
+      _s24n::P32 = R1;
+      P32[(old + 28)] = GHC.Classes.$fOrdInt_closure;
+      P32[(old + 24)] = GHC.Classes.$fEqInt_closure;
+      P32[(old + 20)] = GHC.Num.$fNumInt_closure;
+      P32[(old + 16)] = R1;
+      call T2902_B_PairingSum.$fSumPSumab_$cfromList_info() args: 28, res: 0, upd: 12;
+}
+
+
+
+==================== Loopify tail calls ====================
+{offset
+  c29S:
+      _s24k::P32 = R1;
+      goto c290;
+  c290:
+      if (Sp - <highSp> < SpLim) goto c29T; else goto c2a0;
+  c29T:
+      R1 = _s24k::P32;
+      call (stg_gc_enter_1)(R1) args: 4, res: 0, upd: 4;
+  c2a0:
+      I32[(old + 12)] = stg_upd_frame_info;
+      P32[(old + 8)] = _s24k::P32;
+      _s24h::I32 = I32[_s24k::P32 + 8];
+      _c292::I32 = %MO_S_Gt_W32(_s24h::I32, 20);
+      if (_c292::I32 >= 1) goto c29O; else goto c29N;
+  c29O:
+      R1 = lvl1_r23T_closure;
+      call (I32[R1])(R1) args: 12, res: 0, upd: 12;
+  c29N:
+      I32[(young<c29V> + 4)] = c29V;
+      I32[(young<c29V> + 12)] = _s24h::I32;
+      P32[(young<c29V> + 8)] = xs_r23L_closure+2;
+      call go_r23U_info() returns to c29V, args: 12, res: 4, upd: 12;
+  c29V:
+      _s24j::P32 = R1;
+      P32[(old + 28)] = GHC.Classes.$fOrdInt_closure;
+      P32[(old + 24)] = GHC.Classes.$fEqInt_closure;
+      P32[(old + 20)] = GHC.Num.$fNumInt_closure;
+      P32[(old + 16)] = _s24j::P32;
+      call T2902_B_PairingSum.$fSumPSumab_$cfromList_info() args: 28, res: 0, upd: 12;
+}
+
+
+
+==================== Copy propagation ====================
+{offset
+  c29S:
+      _s24k::P32 = R1;
+      goto c290;
+  c290:
+      if (Sp - <highSp> < SpLim) goto c29T; else goto c2a0;
+  c29T:
+      R1 = R1;
+      call (stg_gc_enter_1)(R1) args: 4, res: 0, upd: 4;
+  c2a0:
+      I32[(old + 12)] = stg_upd_frame_info;
+      P32[(old + 8)] = R1;
+      _s24h::I32 = I32[R1 + 8];
+      _c292::I32 = %MO_S_Gt_W32(_s24h::I32, 20);
+      if (_c292::I32 >= 1) goto c29O; else goto c29N;
+  c29O:
+      R1 = lvl1_r23T_closure;
+      call (I32[lvl1_r23T_closure])(R1) args: 12, res: 0, upd: 12;
+  c29N:
+      I32[(young<c29V> + 4)] = c29V;
+      I32[(young<c29V> + 12)] = _s24h::I32;
+      P32[(young<c29V> + 8)] = xs_r23L_closure+2;
+      call go_r23U_info() returns to c29V, args: 12, res: 4, upd: 12;
+  c29V:
+      _s24j::P32 = R1;
+      P32[(old + 28)] = GHC.Classes.$fOrdInt_closure;
+      P32[(old + 24)] = GHC.Classes.$fEqInt_closure;
+      P32[(old + 20)] = GHC.Num.$fNumInt_closure;
+      P32[(old + 16)] = R1;
+      call T2902_B_PairingSum.$fSumPSumab_$cfromList_info() args: 28, res: 0, upd: 12;
+}
+
+
+
+==================== Loopify tail calls ====================
+{offset
+  c2a2:
+      _s24y::P32 = R1;
+      goto c28g;
+  c28g:
+      if (Sp - <highSp> < SpLim) goto c2a3; else goto c2a4;
+  c2a4:
+      Hp = Hp + 72;
+      if (Hp > HpLim) goto c2a6; else goto c2a5;
+  c2a6:
+      HpAlloc = 72;
+      goto c2a3;
+  c2a3:
+      R1 = _s24y::P32;
+      call (stg_gc_enter_1)(R1) args: 4, res: 0, upd: 4;
+  c2a5:
+      I32[(old + 12)] = stg_upd_frame_info;
+      P32[(old + 8)] = _s24y::P32;
+      _s24h::I32 = I32[_s24y::P32 + 8];
+      I32[Hp - 68] = sat_s24u_info;
+      I32[Hp - 60] = _s24h::I32;
+      _c28i::P32 = Hp - 68;
+      I32[Hp - 56] = :_con_info;
+      P32[Hp - 52] = _c28i::P32;
+      P32[Hp - 48] = GHC.Types.[]_closure+1;
+      _c28F::P32 = Hp - 54;
+      I32[Hp - 44] = sat_s24p_info;
+      I32[Hp - 36] = _s24h::I32;
+      _c28G::P32 = Hp - 44;
+      I32[Hp - 32] = :_con_info;
+      P32[Hp - 28] = _c28G::P32;
+      P32[Hp - 24] = _c28F::P32;
+      _c28X::P32 = Hp - 30;
+      I32[Hp - 20] = sat_s24k_info;
+      I32[Hp - 12] = _s24h::I32;
+      _c28Y::P32 = Hp - 20;
+      I32[Hp - 8] = :_con_info;
+      P32[Hp - 4] = _c28Y::P32;
+      P32[Hp] = _c28X::P32;
+      _c2a1::P32 = Hp - 6;
+      P32[(old + 28)] = GHC.Classes.$fOrdInt_closure;
+      P32[(old + 24)] = GHC.Classes.$fEqInt_closure;
+      P32[(old + 20)] = GHC.Num.$fNumInt_closure;
+      P32[(old + 16)] = _c2a1::P32;
+      call T2902_B_PairingSum.$fSumPSumab_$cunions_info() args: 28, res: 0, upd: 12;
+}
+
+
+
+==================== Copy propagation ====================
+{offset
+  c2a2:
+      _s24y::P32 = R1;
+      goto c28g;
+  c28g:
+      if (Sp - <highSp> < SpLim) goto c2a3; else goto c2a4;
+  c2a4:
+      Hp = Hp + 72;
+      if (Hp > HpLim) goto c2a6; else goto c2a5;
+  c2a6:
+      HpAlloc = 72;
+      goto c2a3;
+  c2a3:
+      R1 = R1;
+      call (stg_gc_enter_1)(R1) args: 4, res: 0, upd: 4;
+  c2a5:
+      I32[(old + 12)] = stg_upd_frame_info;
+      P32[(old + 8)] = R1;
+      _s24h::I32 = I32[R1 + 8];
+      I32[Hp - 68] = sat_s24u_info;
+      I32[Hp - 60] = _s24h::I32;
+      _c28i::P32 = Hp - 68;
+      I32[Hp - 56] = :_con_info;
+      P32[Hp - 52] = _c28i::P32;
+      P32[Hp - 48] = GHC.Types.[]_closure+1;
+      _c28F::P32 = Hp - 54;
+      I32[Hp - 44] = sat_s24p_info;
+      I32[Hp - 36] = _s24h::I32;
+      _c28G::P32 = Hp - 44;
+      I32[Hp - 32] = :_con_info;
+      P32[Hp - 28] = _c28G::P32;
+      P32[Hp - 24] = _c28F::P32;
+      _c28X::P32 = Hp - 30;
+      I32[Hp - 20] = sat_s24k_info;
+      I32[Hp - 12] = _s24h::I32;
+      _c28Y::P32 = Hp - 20;
+      I32[Hp - 8] = :_con_info;
+      P32[Hp - 4] = _c28Y::P32;
+      P32[Hp] = _c28X::P32;
+      _c2a1::P32 = Hp - 6;
+      P32[(old + 28)] = GHC.Classes.$fOrdInt_closure;
+      P32[(old + 24)] = GHC.Classes.$fEqInt_closure;
+      P32[(old + 20)] = GHC.Num.$fNumInt_closure;
+      P32[(old + 16)] = _c2a1::P32;
+      call T2902_B_PairingSum.$fSumPSumab_$cunions_info() args: 28, res: 0, upd: 12;
+}
+
+
+
+==================== Loopify tail calls ====================
+{offset
+  c2a8:
+      _s24h::I32 = I32[(old + 8)];
+      goto c27K;
+  c27K:
+      if (Sp - <highSp> < SpLim) goto c2a9; else goto c2aa;
+  c2aa:
+      Hp = Hp + 36;
+      if (Hp > HpLim) goto c2ac; else goto c2ab;
+  c2ac:
+      HpAlloc = 36;
+      goto c2a9;
+  c2a9:
+      R1 = Main.main_go_closure;
+      I32[(old + 8)] = _s24h::I32;
+      call (stg_gc_fun)(R1) args: 8, res: 0, upd: 4;
+  c2ab:
+      I32[Hp - 32] = sat_s24B_info;
+      I32[Hp - 24] = _s24h::I32;
+      _c27M::P32 = Hp - 32;
+      I32[Hp - 20] = sat_s24y_info;
+      I32[Hp - 12] = _s24h::I32;
+      _c28e::P32 = Hp - 20;
+      I32[Hp - 8] = :_con_info;
+      P32[Hp - 4] = _c28e::P32;
+      P32[Hp] = _c27M::P32;
+      _c2a7::P32 = Hp - 6;
+      R1 = _c2a7::P32;
+      call (P32[(old + 4)])(R1) args: 4, res: 0, upd: 4;
+}
+
+
+
+==================== Copy propagation ====================
+{offset
+  c2a8:
+      _s24h::I32 = I32[(old + 8)];
+      goto c27K;
+  c27K:
+      if (Sp - <highSp> < SpLim) goto c2a9; else goto c2aa;
+  c2aa:
+      Hp = Hp + 36;
+      if (Hp > HpLim) goto c2ac; else goto c2ab;
+  c2ac:
+      HpAlloc = 36;
+      goto c2a9;
+  c2a9:
+      R1 = Main.main_go_closure;
+      I32[(old + 8)] = _s24h::I32;
+      call (stg_gc_fun)(R1) args: 8, res: 0, upd: 4;
+  c2ab:
+      I32[Hp - 32] = sat_s24B_info;
+      I32[Hp - 24] = _s24h::I32;
+      _c27M::P32 = Hp - 32;
+      I32[Hp - 20] = sat_s24y_info;
+      I32[Hp - 12] = _s24h::I32;
+      _c28e::P32 = Hp - 20;
+      I32[Hp - 8] = :_con_info;
+      P32[Hp - 4] = _c28e::P32;
+      P32[Hp] = _c27M::P32;
+      _c2a7::P32 = Hp - 6;
+      R1 = _c2a7::P32;
+      call (P32[(old + 4)])(R1) args: 4, res: 0, upd: 4;
+}
+
+
+
+==================== Loopify tail calls ====================
+{offset
+  c2aM:
+      _r23H::P32 = R1;
+      goto c2aH;
+  c2aH:
+      if (Sp - <highSp> < SpLim) goto c2aN; else goto c2aO;
+  c2aO:
+      Hp = Hp + 8;
+      if (Hp > HpLim) goto c2aQ; else goto c2aP;
+  c2aQ:
+      HpAlloc = 8;
+      goto c2aN;
+  c2aN:
+      R1 = _r23H::P32;
+      call (stg_gc_enter_1)(R1) args: 4, res: 0, upd: 4;
+  c2aP:
+      I32[Hp - 4] = stg_CAF_BLACKHOLE_info;
+      I32[Hp] = CurrentTSO;
+      (_c2aJ::I32) = call "ccall" arg hints:  [PtrHint, PtrHint,
+                                               PtrHint]  result hints:  [] newCAF(BaseReg, _r23H::P32, Hp - 4);
+      if (_c2aJ::I32 == 0) goto c2aL; else goto c2aK;
+  c2aL:
+      call (I32[_r23H::P32])() args: 4, res: 0, upd: 4;
+  c2aK:
+      I32[(old + 12)] = stg_bh_upd_frame_info;
+      P32[(old + 8)] = Hp - 4;
+      I32[(old + 16)] = 1;
+      call Main.main_go_info() args: 16, res: 0, upd: 12;
+}
+
+
+
+==================== Copy propagation ====================
+{offset
+  c2aM:
+      _r23H::P32 = R1;
+      goto c2aH;
+  c2aH:
+      if (Sp - <highSp> < SpLim) goto c2aN; else goto c2aO;
+  c2aO:
+      Hp = Hp + 8;
+      if (Hp > HpLim) goto c2aQ; else goto c2aP;
+  c2aQ:
+      HpAlloc = 8;
+      goto c2aN;
+  c2aN:
+      R1 = R1;
+      call (stg_gc_enter_1)(R1) args: 4, res: 0, upd: 4;
+  c2aP:
+      I32[Hp - 4] = stg_CAF_BLACKHOLE_info;
+      I32[Hp] = CurrentTSO;
+      (_c2aJ::I32) = call "ccall" arg hints:  [PtrHint, PtrHint,
+                                               PtrHint]  result hints:  [] newCAF(BaseReg, R1, Hp - 4);
+      if (_c2aJ::I32 == 0) goto c2aL; else goto c2aK;
+  c2aL:
+      call (I32[_r23H::P32])() args: 4, res: 0, upd: 4;
+  c2aK:
+      I32[(old + 12)] = stg_bh_upd_frame_info;
+      P32[(old + 8)] = Hp - 4;
+      I32[(old + 16)] = 1;
+      call Main.main_go_info() args: 16, res: 0, upd: 12;
+}
+
+
+
+==================== Loopify tail calls ====================
+{offset
+  c2b6:
+      _r23G::P32 = R1;
+      goto c2b1;
+  c2b1:
+      if (Sp - <highSp> < SpLim) goto c2b7; else goto c2b8;
+  c2b8:
+      Hp = Hp + 8;
+      if (Hp > HpLim) goto c2ba; else goto c2b9;
+  c2ba:
+      HpAlloc = 8;
+      goto c2b7;
+  c2b7:
+      R1 = _r23G::P32;
+      call (stg_gc_enter_1)(R1) args: 4, res: 0, upd: 4;
+  c2b9:
+      I32[Hp - 4] = stg_CAF_BLACKHOLE_info;
+      I32[Hp] = CurrentTSO;
+      (_c2b3::I32) = call "ccall" arg hints:  [PtrHint, PtrHint,
+                                               PtrHint]  result hints:  [] newCAF(BaseReg, _r23G::P32, Hp - 4);
+      if (_c2b3::I32 == 0) goto c2b5; else goto c2b4;
+  c2b5:
+      call (I32[_r23G::P32])() args: 4, res: 0, upd: 4;
+  c2b4:
+      I32[(old + 12)] = stg_bh_upd_frame_info;
+      P32[(old + 8)] = Hp - 4;
+      P32[(old + 28)] = GHC.Classes.$fOrdInt_closure;
+      P32[(old + 24)] = GHC.Classes.$fEqInt_closure;
+      P32[(old + 20)] = GHC.Num.$fNumInt_closure;
+      P32[(old + 16)] = Main.main6_closure;
+      call T2902_B_PairingSum.$fSumPSumab_$cunions_info() args: 28, res: 0, upd: 12;
+}
+
+
+
+==================== Copy propagation ====================
+{offset
+  c2b6:
+      _r23G::P32 = R1;
+      goto c2b1;
+  c2b1:
+      if (Sp - <highSp> < SpLim) goto c2b7; else goto c2b8;
+  c2b8:
+      Hp = Hp + 8;
+      if (Hp > HpLim) goto c2ba; else goto c2b9;
+  c2ba:
+      HpAlloc = 8;
+      goto c2b7;
+  c2b7:
+      R1 = R1;
+      call (stg_gc_enter_1)(R1) args: 4, res: 0, upd: 4;
+  c2b9:
+      I32[Hp - 4] = stg_CAF_BLACKHOLE_info;
+      I32[Hp] = CurrentTSO;
+      (_c2b3::I32) = call "ccall" arg hints:  [PtrHint, PtrHint,
+                                               PtrHint]  result hints:  [] newCAF(BaseReg, R1, Hp - 4);
+      if (_c2b3::I32 == 0) goto c2b5; else goto c2b4;
+  c2b5:
+      call (I32[_r23G::P32])() args: 4, res: 0, upd: 4;
+  c2b4:
+      I32[(old + 12)] = stg_bh_upd_frame_info;
+      P32[(old + 8)] = Hp - 4;
+      P32[(old + 28)] = GHC.Classes.$fOrdInt_closure;
+      P32[(old + 24)] = GHC.Classes.$fEqInt_closure;
+      P32[(old + 20)] = GHC.Num.$fNumInt_closure;
+      P32[(old + 16)] = Main.main6_closure;
+      call T2902_B_PairingSum.$fSumPSumab_$cunions_info() args: 28, res: 0, upd: 12;
+}
+
+
+
+==================== Loopify tail calls ====================
+{offset
+  c2bq:
+      _r23F::P32 = R1;
+      goto c2bl;
+  c2bl:
+      if (Sp - <highSp> < SpLim) goto c2br; else goto c2bs;
+  c2bs:
+      Hp = Hp + 8;
+      if (Hp > HpLim) goto c2bu; else goto c2bt;
+  c2bu:
+      HpAlloc = 8;
+      goto c2br;
+  c2br:
+      R1 = _r23F::P32;
+      call (stg_gc_enter_1)(R1) args: 4, res: 0, upd: 4;
+  c2bt:
+      I32[Hp - 4] = stg_CAF_BLACKHOLE_info;
+      I32[Hp] = CurrentTSO;
+      (_c2bn::I32) = call "ccall" arg hints:  [PtrHint, PtrHint,
+                                               PtrHint]  result hints:  [] newCAF(BaseReg, _r23F::P32, Hp - 4);
+      if (_c2bn::I32 == 0) goto c2bp; else goto c2bo;
+  c2bp:
+      call (I32[_r23F::P32])() args: 4, res: 0, upd: 4;
+  c2bo:
+      I32[(old + 12)] = stg_bh_upd_frame_info;
+      P32[(old + 8)] = Hp - 4;
+      P32[(old + 28)] = GHC.Classes.$fOrdInt_closure;
+      P32[(old + 24)] = GHC.Classes.$fEqInt_closure;
+      P32[(old + 20)] = GHC.Num.$fNumInt_closure;
+      P32[(old + 16)] = Main.main5_closure;
+      call T2902_B_PairingSum.$fSumPSumab_$ctoList_info() args: 28, res: 0, upd: 12;
+}
+
+
+
+==================== Copy propagation ====================
+{offset
+  c2bq:
+      _r23F::P32 = R1;
+      goto c2bl;
+  c2bl:
+      if (Sp - <highSp> < SpLim) goto c2br; else goto c2bs;
+  c2bs:
+      Hp = Hp + 8;
+      if (Hp > HpLim) goto c2bu; else goto c2bt;
+  c2bu:
+      HpAlloc = 8;
+      goto c2br;
+  c2br:
+      R1 = R1;
+      call (stg_gc_enter_1)(R1) args: 4, res: 0, upd: 4;
+  c2bt:
+      I32[Hp - 4] = stg_CAF_BLACKHOLE_info;
+      I32[Hp] = CurrentTSO;
+      (_c2bn::I32) = call "ccall" arg hints:  [PtrHint, PtrHint,
+                                               PtrHint]  result hints:  [] newCAF(BaseReg, R1, Hp - 4);
+      if (_c2bn::I32 == 0) goto c2bp; else goto c2bo;
+  c2bp:
+      call (I32[_r23F::P32])() args: 4, res: 0, upd: 4;
+  c2bo:
+      I32[(old + 12)] = stg_bh_upd_frame_info;
+      P32[(old + 8)] = Hp - 4;
+      P32[(old + 28)] = GHC.Classes.$fOrdInt_closure;
+      P32[(old + 24)] = GHC.Classes.$fEqInt_closure;
+      P32[(old + 20)] = GHC.Num.$fNumInt_closure;
+      P32[(old + 16)] = Main.main5_closure;
+      call T2902_B_PairingSum.$fSumPSumab_$ctoList_info() args: 28, res: 0, upd: 12;
+}
+
+
+
+==================== Loopify tail calls ====================
+{offset
+  c2bK:
+      _r23E::P32 = R1;
+      goto c2bF;
+  c2bF:
+      if (Sp - <highSp> < SpLim) goto c2bL; else goto c2bM;
+  c2bM:
+      Hp = Hp + 8;
+      if (Hp > HpLim) goto c2bO; else goto c2bN;
+  c2bO:
+      HpAlloc = 8;
+      goto c2bL;
+  c2bL:
+      R1 = _r23E::P32;
+      call (stg_gc_enter_1)(R1) args: 4, res: 0, upd: 4;
+  c2bN:
+      I32[Hp - 4] = stg_CAF_BLACKHOLE_info;
+      I32[Hp] = CurrentTSO;
+      (_c2bH::I32) = call "ccall" arg hints:  [PtrHint, PtrHint,
+                                               PtrHint]  result hints:  [] newCAF(BaseReg, _r23E::P32, Hp - 4);
+      if (_c2bH::I32 == 0) goto c2bJ; else goto c2bI;
+  c2bJ:
+      call (I32[_r23E::P32])() args: 4, res: 0, upd: 4;
+  c2bI:
+      I32[(old + 12)] = stg_bh_upd_frame_info;
+      P32[(old + 8)] = Hp - 4;
+      I32[(old + 20)] = 20;
+      P32[(old + 16)] = Main.main4_closure;
+      call GHC.List.take_unsafe_UInt_info() args: 20, res: 0, upd: 12;
+}
+
+
+
+==================== Copy propagation ====================
+{offset
+  c2bK:
+      _r23E::P32 = R1;
+      goto c2bF;
+  c2bF:
+      if (Sp - <highSp> < SpLim) goto c2bL; else goto c2bM;
+  c2bM:
+      Hp = Hp + 8;
+      if (Hp > HpLim) goto c2bO; else goto c2bN;
+  c2bO:
+      HpAlloc = 8;
+      goto c2bL;
+  c2bL:
+      R1 = R1;
+      call (stg_gc_enter_1)(R1) args: 4, res: 0, upd: 4;
+  c2bN:
+      I32[Hp - 4] = stg_CAF_BLACKHOLE_info;
+      I32[Hp] = CurrentTSO;
+      (_c2bH::I32) = call "ccall" arg hints:  [PtrHint, PtrHint,
+                                               PtrHint]  result hints:  [] newCAF(BaseReg, R1, Hp - 4);
+      if (_c2bH::I32 == 0) goto c2bJ; else goto c2bI;
+  c2bJ:
+      call (I32[_r23E::P32])() args: 4, res: 0, upd: 4;
+  c2bI:
+      I32[(old + 12)] = stg_bh_upd_frame_info;
+      P32[(old + 8)] = Hp - 4;
+      I32[(old + 20)] = 20;
+      P32[(old + 16)] = Main.main4_closure;
+      call GHC.List.take_unsafe_UInt_info() args: 20, res: 0, upd: 12;
+}
+
+
+
+==================== Loopify tail calls ====================
+{offset
+  c2c4:
+      _r23D::P32 = R1;
+      goto c2bZ;
+  c2bZ:
+      if (Sp - <highSp> < SpLim) goto c2c5; else goto c2c6;
+  c2c6:
+      Hp = Hp + 8;
+      if (Hp > HpLim) goto c2c8; else goto c2c7;
+  c2c8:
+      HpAlloc = 8;
+      goto c2c5;
+  c2c5:
+      R1 = _r23D::P32;
+      call (stg_gc_enter_1)(R1) args: 4, res: 0, upd: 4;
+  c2c7:
+      I32[Hp - 4] = stg_CAF_BLACKHOLE_info;
+      I32[Hp] = CurrentTSO;
+      (_c2c1::I32) = call "ccall" arg hints:  [PtrHint, PtrHint,
+                                               PtrHint]  result hints:  [] newCAF(BaseReg, _r23D::P32, Hp - 4);
+      if (_c2c1::I32 == 0) goto c2c3; else goto c2c2;
+  c2c3:
+      call (I32[_r23D::P32])() args: 4, res: 0, upd: 4;
+  c2c2:
+      I32[(old + 12)] = stg_bh_upd_frame_info;
+      P32[(old + 8)] = Hp - 4;
+      P32[(old + 28)] = GHC.Show.$fShowInt_closure;
+      P32[(old + 24)] = GHC.Show.$fShowInt_closure;
+      P32[(old + 20)] = Main.main3_closure;
+      P32[(old + 16)] = GHC.Types.[]_closure+1;
+      call GHC.Show.$fShow(,)_$cshowList_info() args: 28, res: 0, upd: 12;
+}
+
+
+
+==================== Copy propagation ====================
+{offset
+  c2c4:
+      _r23D::P32 = R1;
+      goto c2bZ;
+  c2bZ:
+      if (Sp - <highSp> < SpLim) goto c2c5; else goto c2c6;
+  c2c6:
+      Hp = Hp + 8;
+      if (Hp > HpLim) goto c2c8; else goto c2c7;
+  c2c8:
+      HpAlloc = 8;
+      goto c2c5;
+  c2c5:
+      R1 = R1;
+      call (stg_gc_enter_1)(R1) args: 4, res: 0, upd: 4;
+  c2c7:
+      I32[Hp - 4] = stg_CAF_BLACKHOLE_info;
+      I32[Hp] = CurrentTSO;
+      (_c2c1::I32) = call "ccall" arg hints:  [PtrHint, PtrHint,
+                                               PtrHint]  result hints:  [] newCAF(BaseReg, R1, Hp - 4);
+      if (_c2c1::I32 == 0) goto c2c3; else goto c2c2;
+  c2c3:
+      call (I32[_r23D::P32])() args: 4, res: 0, upd: 4;
+  c2c2:
+      I32[(old + 12)] = stg_bh_upd_frame_info;
+      P32[(old + 8)] = Hp - 4;
+      P32[(old + 28)] = GHC.Show.$fShowInt_closure;
+      P32[(old + 24)] = GHC.Show.$fShowInt_closure;
+      P32[(old + 20)] = Main.main3_closure;
+      P32[(old + 16)] = GHC.Types.[]_closure+1;
+      call GHC.Show.$fShow(,)_$cshowList_info() args: 28, res: 0, upd: 12;
+}
+
+
+
+==================== Loopify tail calls ====================
+{offset
+  c2cj:
+      if (Sp - <highSp> < SpLim) goto c2cm; else goto c2cn;
+  c2cm:
+      R1 = Main.main1_closure;
+      call (stg_gc_fun)(R1) args: 4, res: 0, upd: 4;
+  c2cn:
+      P32[(old + 16)] = GHC.IO.Handle.FD.stdout_closure;
+      P32[(old + 12)] = Main.main2_closure;
+      P32[(old + 8)] = GHC.Types.True_closure+2;
+      call GHC.IO.Handle.Text.hPutStr2_info() args: 16, res: 0, upd: 4;
+}
+
+
+
+==================== Copy propagation ====================
+{offset
+  c2cj:
+      if (Sp - <highSp> < SpLim) goto c2cm; else goto c2cn;
+  c2cm:
+      R1 = Main.main1_closure;
+      call (stg_gc_fun)(R1) args: 4, res: 0, upd: 4;
+  c2cn:
+      P32[(old + 16)] = GHC.IO.Handle.FD.stdout_closure;
+      P32[(old + 12)] = Main.main2_closure;
+      P32[(old + 8)] = GHC.Types.True_closure+2;
+      call GHC.IO.Handle.Text.hPutStr2_info() args: 16, res: 0, upd: 4;
+}
+
+
+
+==================== Loopify tail calls ====================
+{offset
+  c2cv:
+      if (Sp - <highSp> < SpLim) goto c2cy; else goto c2cz;
+  c2cy:
+      R1 = Main.main_closure;
+      call (stg_gc_fun)(R1) args: 4, res: 0, upd: 4;
+  c2cz:
+      call Main.main1_info() args: 4, res: 0, upd: 4;
+}
+
+
+
+==================== Copy propagation ====================
+{offset
+  c2cv:
+      if (Sp - <highSp> < SpLim) goto c2cy; else goto c2cz;
+  c2cy:
+      R1 = Main.main_closure;
+      call (stg_gc_fun)(R1) args: 4, res: 0, upd: 4;
+  c2cz:
+      call Main.main1_info() args: 4, res: 0, upd: 4;
+}
+
+
+
+==================== Loopify tail calls ====================
+{offset
+  c2cG:
+      if (Sp - <highSp> < SpLim) goto c2cJ; else goto c2cK;
+  c2cJ:
+      R1 = Main.main7_closure;
+      call (stg_gc_fun)(R1) args: 4, res: 0, upd: 4;
+  c2cK:
+      P32[(old + 8)] = Main.main1_closure+1;
+      call GHC.TopHandler.runMainIO1_info() args: 8, res: 0, upd: 4;
+}
+
+
+
+==================== Copy propagation ====================
+{offset
+  c2cG:
+      if (Sp - <highSp> < SpLim) goto c2cJ; else goto c2cK;
+  c2cJ:
+      R1 = Main.main7_closure;
+      call (stg_gc_fun)(R1) args: 4, res: 0, upd: 4;
+  c2cK:
+      P32[(old + 8)] = Main.main1_closure+1;
+      call GHC.TopHandler.runMainIO1_info() args: 8, res: 0, upd: 4;
+}
+
+
+
+==================== Loopify tail calls ====================
+{offset
+  c2cS:
+      if (Sp - <highSp> < SpLim) goto c2cV; else goto c2cW;
+  c2cV:
+      R1 = :Main.main_closure;
+      call (stg_gc_fun)(R1) args: 4, res: 0, upd: 4;
+  c2cW:
+      call Main.main7_info() args: 4, res: 0, upd: 4;
+}
+
+
+
+==================== Copy propagation ====================
+{offset
+  c2cS:
+      if (Sp - <highSp> < SpLim) goto c2cV; else goto c2cW;
+  c2cV:
+      R1 = :Main.main_closure;
+      call (stg_gc_fun)(R1) args: 4, res: 0, upd: 4;
+  c2cW:
+      call Main.main7_info() args: 4, res: 0, upd: 4;
+}
+
+
+Linking T2902_B ...

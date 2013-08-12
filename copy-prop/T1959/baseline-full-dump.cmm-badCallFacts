@@ -1,0 +1,2177 @@
+[1 of 4] Compiling E                ( E.hs, E.o )
+
+==================== Cmm produced by new codegen ====================
+[section "data" { __stginit_main:E:
+ }]
+
+
+
+==================== Post CPS Cmm ====================
+[section "data" { __stginit_main:E:
+ }]
+
+
+
+==================== Output Cmm ====================
+[section "data" { __stginit_main:E:
+ }]
+
+
+
+==================== Cmm produced by new codegen ====================
+[section "data" {
+     E.h_closure:
+         const E.h_info;
+ },
+ E.h_entry() //  []
+         { info_tbl: [(cgd,
+                       label: E.h_info
+                       rep:HeapRep static { Fun {arity: 1 fun_type: ArgSpec 5} })]
+           stack_info: arg_space: 8 updfr_space: Just 4
+         }
+     {offset
+       cgd:
+           _sfy::P32 = P32[(old + 8)];
+           goto cg8;
+       cg8:
+           if (Sp - <highSp> < SpLim) goto cgC; else goto cgD;
+       cgC:
+           R1 = E.h_closure;
+           P32[(old + 8)] = _sfy::P32;
+           call (stg_gc_fun)(R1) args: 8, res: 0, upd: 4;
+       cgD:
+           I32[(young<cga> + 4)] = cga;
+           R1 = _sfy::P32;
+           if (R1 & 3 != 0) goto cga; else goto cgb;
+       cgb:
+           call (I32[R1])(R1) returns to cga, args: 4, res: 4, upd: 4;
+       cga:
+           _sfz::P32 = R1;
+           Hp = Hp + 8;
+           if (Hp > HpLim) goto cgG; else goto cgF;
+       cgG:
+           HpAlloc = 8;
+           goto cgE;
+       cgE:
+           R1 = _sfz::P32;
+           call stg_gc_unpt_r1(R1) returns to cga, args: 4, res: 4, upd: 4;
+       cgF:
+           _sfA::I32 = I32[_sfz::P32 + 3];
+           _cgg::I32 = _sfA::I32 + _sfA::I32;
+           _sfB::I32 = _cgg::I32;
+           _cgj::I32 = _sfB::I32 + _sfA::I32;
+           _sfC::I32 = _cgj::I32;
+           _cgm::I32 = _sfC::I32 + _sfA::I32;
+           _sfD::I32 = _cgm::I32;
+           _cgp::I32 = _sfD::I32 + _sfA::I32;
+           _sfE::I32 = _cgp::I32;
+           _cgs::I32 = _sfE::I32 + _sfA::I32;
+           _sfF::I32 = _cgs::I32;
+           _cgv::I32 = _sfF::I32 + _sfA::I32;
+           _sfG::I32 = _cgv::I32;
+           _cgy::I32 = _sfG::I32 + _sfA::I32;
+           _sfH::I32 = _cgy::I32;
+           I32[Hp - 4] = GHC.Types.I#_con_info;
+           I32[Hp] = _sfH::I32;
+           _cgB::P32 = Hp - 3;
+           R1 = _cgB::P32;
+           call (P32[(old + 4)])(R1) args: 4, res: 0, upd: 4;
+     }
+ }]
+
+
+
+==================== Post control-flow optimisations ====================
+{offset
+  cgd:
+      _sfy::P32 = P32[(old + 8)];
+      goto cg8;
+  cg8:
+      if (Sp - <highSp> < SpLim) goto cgC; else goto cgD;
+  cgC:
+      R1 = E.h_closure;
+      P32[(old + 8)] = _sfy::P32;
+      call (stg_gc_fun)(R1) args: 8, res: 0, upd: 4;
+  cgD:
+      I32[(young<cga> + 4)] = cga;
+      R1 = _sfy::P32;
+      if (R1 & 3 != 0) goto cga; else goto cgb;
+  cgb:
+      call (I32[R1])(R1) returns to cga, args: 4, res: 4, upd: 4;
+  cga:
+      _sfz::P32 = R1;
+      Hp = Hp + 8;
+      if (Hp > HpLim) goto cgG; else goto cgF;
+  cgG:
+      HpAlloc = 8;
+      goto cgE;
+  cgE:
+      R1 = _sfz::P32;
+      call stg_gc_unpt_r1(R1) returns to cga, args: 4, res: 4, upd: 4;
+  cgF:
+      _sfA::I32 = I32[_sfz::P32 + 3];
+      _cgg::I32 = _sfA::I32 + _sfA::I32;
+      _sfB::I32 = _cgg::I32;
+      _cgj::I32 = _sfB::I32 + _sfA::I32;
+      _sfC::I32 = _cgj::I32;
+      _cgm::I32 = _sfC::I32 + _sfA::I32;
+      _sfD::I32 = _cgm::I32;
+      _cgp::I32 = _sfD::I32 + _sfA::I32;
+      _sfE::I32 = _cgp::I32;
+      _cgs::I32 = _sfE::I32 + _sfA::I32;
+      _sfF::I32 = _cgs::I32;
+      _cgv::I32 = _sfF::I32 + _sfA::I32;
+      _sfG::I32 = _cgv::I32;
+      _cgy::I32 = _sfG::I32 + _sfA::I32;
+      _sfH::I32 = _cgy::I32;
+      I32[Hp - 4] = GHC.Types.I#_con_info;
+      I32[Hp] = _sfH::I32;
+      _cgB::P32 = Hp - 3;
+      R1 = _cgB::P32;
+      call (P32[(old + 4)])(R1) args: 4, res: 0, upd: 4;
+}
+
+
+
+==================== Post common block elimination ====================
+{offset
+  cgd:
+      _sfy::P32 = P32[(old + 8)];
+      goto cg8;
+  cg8:
+      if (Sp - <highSp> < SpLim) goto cgC; else goto cgD;
+  cgC:
+      R1 = E.h_closure;
+      P32[(old + 8)] = _sfy::P32;
+      call (stg_gc_fun)(R1) args: 8, res: 0, upd: 4;
+  cgD:
+      I32[(young<cga> + 4)] = cga;
+      R1 = _sfy::P32;
+      if (R1 & 3 != 0) goto cga; else goto cgb;
+  cgb:
+      call (I32[R1])(R1) returns to cga, args: 4, res: 4, upd: 4;
+  cga:
+      _sfz::P32 = R1;
+      Hp = Hp + 8;
+      if (Hp > HpLim) goto cgG; else goto cgF;
+  cgG:
+      HpAlloc = 8;
+      goto cgE;
+  cgE:
+      R1 = _sfz::P32;
+      call stg_gc_unpt_r1(R1) returns to cga, args: 4, res: 4, upd: 4;
+  cgF:
+      _sfA::I32 = I32[_sfz::P32 + 3];
+      _cgg::I32 = _sfA::I32 + _sfA::I32;
+      _sfB::I32 = _cgg::I32;
+      _cgj::I32 = _sfB::I32 + _sfA::I32;
+      _sfC::I32 = _cgj::I32;
+      _cgm::I32 = _sfC::I32 + _sfA::I32;
+      _sfD::I32 = _cgm::I32;
+      _cgp::I32 = _sfD::I32 + _sfA::I32;
+      _sfE::I32 = _cgp::I32;
+      _cgs::I32 = _sfE::I32 + _sfA::I32;
+      _sfF::I32 = _cgs::I32;
+      _cgv::I32 = _sfF::I32 + _sfA::I32;
+      _sfG::I32 = _cgv::I32;
+      _cgy::I32 = _sfG::I32 + _sfA::I32;
+      _sfH::I32 = _cgy::I32;
+      I32[Hp - 4] = GHC.Types.I#_con_info;
+      I32[Hp] = _sfH::I32;
+      _cgB::P32 = Hp - 3;
+      R1 = _cgB::P32;
+      call (P32[(old + 4)])(R1) args: 4, res: 0, upd: 4;
+}
+
+
+
+==================== Loopify tail calls ====================
+{offset
+  cgd:
+      _sfy::P32 = P32[(old + 8)];
+      goto cg8;
+  cg8:
+      if (Sp - <highSp> < SpLim) goto cgC; else goto cgD;
+  cgC:
+      R1 = E.h_closure;
+      P32[(old + 8)] = _sfy::P32;
+      call (stg_gc_fun)(R1) args: 8, res: 0, upd: 4;
+  cgD:
+      I32[(young<cga> + 4)] = cga;
+      R1 = _sfy::P32;
+      if (R1 & 3 != 0) goto cga; else goto cgb;
+  cgb:
+      call (I32[R1])(R1) returns to cga, args: 4, res: 4, upd: 4;
+  cga:
+      _sfz::P32 = R1;
+      Hp = Hp + 8;
+      if (Hp > HpLim) goto cgG; else goto cgF;
+  cgG:
+      HpAlloc = 8;
+      goto cgE;
+  cgE:
+      R1 = _sfz::P32;
+      call stg_gc_unpt_r1(R1) returns to cga, args: 4, res: 4, upd: 4;
+  cgF:
+      _sfA::I32 = I32[_sfz::P32 + 3];
+      _cgg::I32 = _sfA::I32 + _sfA::I32;
+      _sfB::I32 = _cgg::I32;
+      _cgj::I32 = _sfB::I32 + _sfA::I32;
+      _sfC::I32 = _cgj::I32;
+      _cgm::I32 = _sfC::I32 + _sfA::I32;
+      _sfD::I32 = _cgm::I32;
+      _cgp::I32 = _sfD::I32 + _sfA::I32;
+      _sfE::I32 = _cgp::I32;
+      _cgs::I32 = _sfE::I32 + _sfA::I32;
+      _sfF::I32 = _cgs::I32;
+      _cgv::I32 = _sfF::I32 + _sfA::I32;
+      _sfG::I32 = _cgv::I32;
+      _cgy::I32 = _sfG::I32 + _sfA::I32;
+      _sfH::I32 = _cgy::I32;
+      I32[Hp - 4] = GHC.Types.I#_con_info;
+      I32[Hp] = _sfH::I32;
+      _cgB::P32 = Hp - 3;
+      R1 = _cgB::P32;
+      call (P32[(old + 4)])(R1) args: 4, res: 0, upd: 4;
+}
+
+
+
+==================== Layout Stack ====================
+{offset
+  cgd:
+      _sfy::P32 = P32[Sp];
+      goto cg8;
+  cg8:
+      goto cgD;
+  cgD:
+      I32[Sp] = cga;
+      R1 = _sfy::P32;
+      if (R1 & 3 != 0) goto cga; else goto cgb;
+  cgb:
+      call (I32[R1])(R1) returns to cga, args: 4, res: 4, upd: 4;
+  cga:
+      _sfz::P32 = R1;
+      Hp = Hp + 8;
+      if (Hp > HpLim) goto cgG; else goto cgF;
+  cgG:
+      HpAlloc = 8;
+      goto cgE;
+  cgE:
+      R1 = _sfz::P32;
+      call stg_gc_unpt_r1(R1) returns to cga, args: 4, res: 4, upd: 4;
+  cgF:
+      _sfA::I32 = I32[_sfz::P32 + 3];
+      _cgg::I32 = _sfA::I32 + _sfA::I32;
+      _sfB::I32 = _cgg::I32;
+      _cgj::I32 = _sfB::I32 + _sfA::I32;
+      _sfC::I32 = _cgj::I32;
+      _cgm::I32 = _sfC::I32 + _sfA::I32;
+      _sfD::I32 = _cgm::I32;
+      _cgp::I32 = _sfD::I32 + _sfA::I32;
+      _sfE::I32 = _cgp::I32;
+      _cgs::I32 = _sfE::I32 + _sfA::I32;
+      _sfF::I32 = _cgs::I32;
+      _cgv::I32 = _sfF::I32 + _sfA::I32;
+      _sfG::I32 = _cgv::I32;
+      _cgy::I32 = _sfG::I32 + _sfA::I32;
+      _sfH::I32 = _cgy::I32;
+      I32[Hp - 4] = GHC.Types.I#_con_info;
+      I32[Hp] = _sfH::I32;
+      _cgB::P32 = Hp - 3;
+      R1 = _cgB::P32;
+      Sp = Sp + 4;
+      call (P32[Sp])(R1) args: 4, res: 0, upd: 4;
+}
+
+
+
+==================== Sink assignments (2) ====================
+{offset
+  cgd:
+      goto cg8;
+  cg8:
+      goto cgD;
+  cgD:
+      _sfy::P32 = P32[Sp];
+      I32[Sp] = cga;
+      R1 = _sfy::P32;
+      if (R1 & 3 != 0) goto cga; else goto cgb;
+  cgb:
+      call (I32[R1])(R1) returns to cga, args: 4, res: 4, upd: 4;
+  cga:
+      Hp = Hp + 8;
+      _sfz::P32 = R1;
+      if (Hp > HpLim) goto cgG; else goto cgF;
+  cgG:
+      HpAlloc = 8;
+      goto cgE;
+  cgE:
+      R1 = _sfz::P32;
+      call stg_gc_unpt_r1(R1) returns to cga, args: 4, res: 4, upd: 4;
+  cgF:
+      _sfA::I32 = I32[_sfz::P32 + 3];
+      I32[Hp - 4] = GHC.Types.I#_con_info;
+      I32[Hp] = _sfA::I32 + (_sfA::I32 + (_sfA::I32 + (_sfA::I32 + (_sfA::I32 + (_sfA::I32 + (_sfA::I32 + _sfA::I32))))));
+      R1 = Hp - 3;
+      Sp = Sp + 4;
+      call (P32[Sp])(R1) args: 4, res: 0, upd: 4;
+}
+
+
+
+==================== CAFEnv ====================
+[(cg8, {}), (cga, {}), (cgb, {}), (cgd, {}), (cgD, {}), (cgE, {}),
+ (cgF, {}), (cgG, {})]
+
+
+
+==================== after setInfoTableStackMap ====================
+E.h_entry() //  []
+        { info_tbl: [(cga,
+                      label: block_cga_info
+                      rep:StackRep []),
+                     (cgd,
+                      label: E.h_info
+                      rep:HeapRep static { Fun {arity: 1 fun_type: ArgSpec 5} })]
+          stack_info: arg_space: 8 updfr_space: Just 4
+        }
+    {offset
+      cgd:
+          goto cg8;
+      cg8:
+          goto cgD;
+      cgD:
+          _sfy::P32 = P32[Sp];
+          I32[Sp] = cga;
+          R1 = _sfy::P32;
+          if (R1 & 3 != 0) goto cga; else goto cgb;
+      cgb:
+          call (I32[R1])(R1) returns to cga, args: 4, res: 4, upd: 4;
+      cga:
+          Hp = Hp + 8;
+          _sfz::P32 = R1;
+          if (Hp > HpLim) goto cgG; else goto cgF;
+      cgG:
+          HpAlloc = 8;
+          goto cgE;
+      cgE:
+          R1 = _sfz::P32;
+          call stg_gc_unpt_r1(R1) returns to cga, args: 4, res: 4, upd: 4;
+      cgF:
+          _sfA::I32 = I32[_sfz::P32 + 3];
+          I32[Hp - 4] = GHC.Types.I#_con_info;
+          I32[Hp] = _sfA::I32 + (_sfA::I32 + (_sfA::I32 + (_sfA::I32 + (_sfA::I32 + (_sfA::I32 + (_sfA::I32 + _sfA::I32))))));
+          R1 = Hp - 3;
+          Sp = Sp + 4;
+          call (P32[Sp])(R1) args: 4, res: 0, upd: 4;
+    }
+}
+
+
+
+==================== Post control-flow optimisations ====================
+E.h_entry() //  []
+        { info_tbl: [(cga,
+                      label: block_cga_info
+                      rep:StackRep []),
+                     (cgD,
+                      label: E.h_info
+                      rep:HeapRep static { Fun {arity: 1 fun_type: ArgSpec 5} })]
+          stack_info: arg_space: 8 updfr_space: Just 4
+        }
+    {offset
+      cgD:
+          _sfy::P32 = P32[Sp];
+          I32[Sp] = cga;
+          R1 = _sfy::P32;
+          if (R1 & 3 != 0) goto cga; else goto cgb;
+      cgb:
+          call (I32[R1])(R1) returns to cga, args: 4, res: 4, upd: 4;
+      cga:
+          Hp = Hp + 8;
+          _sfz::P32 = R1;
+          if (Hp > HpLim) goto cgG; else goto cgF;
+      cgG:
+          HpAlloc = 8;
+          goto cgE;
+      cgE:
+          R1 = _sfz::P32;
+          call stg_gc_unpt_r1(R1) returns to cga, args: 4, res: 4, upd: 4;
+      cgF:
+          _sfA::I32 = I32[_sfz::P32 + 3];
+          I32[Hp - 4] = GHC.Types.I#_con_info;
+          I32[Hp] = _sfA::I32 + (_sfA::I32 + (_sfA::I32 + (_sfA::I32 + (_sfA::I32 + (_sfA::I32 + (_sfA::I32 + _sfA::I32))))));
+          R1 = Hp - 3;
+          Sp = Sp + 4;
+          call (P32[Sp])(R1) args: 4, res: 0, upd: 4;
+    }
+}
+
+
+
+==================== Post CPS Cmm ====================
+[section "data" {
+     E.h_closure:
+         const E.h_info;
+ },
+ E.h_entry() //  []
+         { info_tbl: [(cga,
+                       label: block_cga_info
+                       rep:StackRep []),
+                      (cgD,
+                       label: E.h_info
+                       rep:HeapRep static { Fun {arity: 1 fun_type: ArgSpec 5} })]
+           stack_info: arg_space: 8 updfr_space: Just 4
+         }
+     {offset
+       cgD:
+           _sfy::P32 = P32[Sp];
+           I32[Sp] = cga;
+           R1 = _sfy::P32;
+           if (R1 & 3 != 0) goto cga; else goto cgb;
+       cgb:
+           call (I32[R1])(R1) returns to cga, args: 4, res: 4, upd: 4;
+       cga:
+           Hp = Hp + 8;
+           _sfz::P32 = R1;
+           if (Hp > HpLim) goto cgG; else goto cgF;
+       cgG:
+           HpAlloc = 8;
+           goto cgE;
+       cgE:
+           R1 = _sfz::P32;
+           call stg_gc_unpt_r1(R1) returns to cga, args: 4, res: 4, upd: 4;
+       cgF:
+           _sfA::I32 = I32[_sfz::P32 + 3];
+           I32[Hp - 4] = GHC.Types.I#_con_info;
+           I32[Hp] = _sfA::I32 + (_sfA::I32 + (_sfA::I32 + (_sfA::I32 + (_sfA::I32 + (_sfA::I32 + (_sfA::I32 + _sfA::I32))))));
+           R1 = Hp - 3;
+           Sp = Sp + 4;
+           call (P32[Sp])(R1) args: 4, res: 0, upd: 4;
+     }
+ }]
+
+
+
+==================== Output Cmm ====================
+[section "data" {
+     E.h_closure:
+         const E.h_info;
+ },
+ E.h_entry() //  []
+         { info_tbl: [(cga,
+                       label: block_cga_info
+                       rep:StackRep []),
+                      (cgD,
+                       label: E.h_info
+                       rep:HeapRep static { Fun {arity: 1 fun_type: ArgSpec 5} })]
+           stack_info: arg_space: 8 updfr_space: Just 4
+         }
+     {offset
+       cgD:
+           _sfy::P32 = P32[Sp];
+           I32[Sp] = cga;
+           R1 = _sfy::P32;
+           if (R1 & 3 != 0) goto cga; else goto cgb;
+       cgb:
+           call (I32[R1])(R1) returns to cga, args: 4, res: 4, upd: 4;
+       cga:
+           Hp = Hp + 8;
+           _sfz::P32 = R1;
+           if (Hp > HpLim) goto cgG; else goto cgF;
+       cgG:
+           HpAlloc = 8;
+           goto cgE;
+       cgE:
+           R1 = _sfz::P32;
+           call stg_gc_unpt_r1(R1) returns to cga, args: 4, res: 4, upd: 4;
+       cgF:
+           _sfA::I32 = I32[_sfz::P32 + 3];
+           I32[Hp - 4] = GHC.Types.I#_con_info;
+           I32[Hp] = _sfA::I32 + (_sfA::I32 + (_sfA::I32 + (_sfA::I32 + (_sfA::I32 + (_sfA::I32 + (_sfA::I32 + _sfA::I32))))));
+           R1 = Hp - 3;
+           Sp = Sp + 4;
+           call (P32[Sp])(R1) args: 4, res: 0, upd: 4;
+     }
+ }]
+
+
+
+==================== Output Cmm ====================
+[section "relreadonly" { SgZ_srt:
+ }]
+
+
+[2 of 4] Compiling D                ( D.hs, D.o )
+
+==================== Cmm produced by new codegen ====================
+[section "data" { __stginit_main:D:
+ }]
+
+
+
+==================== Post CPS Cmm ====================
+[section "data" { __stginit_main:D:
+ }]
+
+
+
+==================== Output Cmm ====================
+[section "data" { __stginit_main:D:
+ }]
+
+
+
+==================== Cmm produced by new codegen ====================
+[section "data" {
+     D.f_closure:
+         const D.f_info;
+ },
+ D.f_entry() //  []
+         { info_tbl: [(chf,
+                       label: D.f_info
+                       rep:HeapRep static { Fun {arity: 1 fun_type: ArgSpec 5} })]
+           stack_info: arg_space: 8 updfr_space: Just 4
+         }
+     {offset
+       chf:
+           _B1::P32 = P32[(old + 8)];
+           goto chd;
+       chd:
+           if (Sp - <highSp> < SpLim) goto chg; else goto chh;
+       chg:
+           R1 = D.f_closure;
+           P32[(old + 8)] = _B1::P32;
+           call (stg_gc_fun)(R1) args: 8, res: 0, upd: 4;
+       chh:
+           P32[(old + 8)] = _B1::P32;
+           call E.h_info() args: 8, res: 0, upd: 4;
+     }
+ }]
+
+
+
+==================== Post control-flow optimisations ====================
+{offset
+  chf:
+      _B1::P32 = P32[(old + 8)];
+      goto chd;
+  chd:
+      if (Sp - <highSp> < SpLim) goto chg; else goto chh;
+  chg:
+      R1 = D.f_closure;
+      P32[(old + 8)] = _B1::P32;
+      call (stg_gc_fun)(R1) args: 8, res: 0, upd: 4;
+  chh:
+      P32[(old + 8)] = _B1::P32;
+      call E.h_info() args: 8, res: 0, upd: 4;
+}
+
+
+
+==================== Post common block elimination ====================
+{offset
+  chf:
+      _B1::P32 = P32[(old + 8)];
+      goto chd;
+  chd:
+      if (Sp - <highSp> < SpLim) goto chg; else goto chh;
+  chg:
+      R1 = D.f_closure;
+      P32[(old + 8)] = _B1::P32;
+      call (stg_gc_fun)(R1) args: 8, res: 0, upd: 4;
+  chh:
+      P32[(old + 8)] = _B1::P32;
+      call E.h_info() args: 8, res: 0, upd: 4;
+}
+
+
+
+==================== Loopify tail calls ====================
+{offset
+  chf:
+      _B1::P32 = P32[(old + 8)];
+      goto chd;
+  chd:
+      if (Sp - <highSp> < SpLim) goto chg; else goto chh;
+  chg:
+      R1 = D.f_closure;
+      P32[(old + 8)] = _B1::P32;
+      call (stg_gc_fun)(R1) args: 8, res: 0, upd: 4;
+  chh:
+      P32[(old + 8)] = _B1::P32;
+      call E.h_info() args: 8, res: 0, upd: 4;
+}
+
+
+
+==================== Layout Stack ====================
+{offset
+  chf:
+      _B1::P32 = P32[Sp];
+      goto chd;
+  chd:
+      goto chh;
+  chh:
+      call E.h_info() args: 8, res: 0, upd: 4;
+}
+
+
+
+==================== Sink assignments (2) ====================
+{offset
+  chf:
+      goto chd;
+  chd:
+      goto chh;
+  chh:
+      call E.h_info() args: 8, res: 0, upd: 4;
+}
+
+
+
+==================== CAFEnv ====================
+[(chd, {}), (chf, {}), (chh, {})]
+
+
+
+==================== after setInfoTableStackMap ====================
+D.f_entry() //  []
+        { info_tbl: [(chf,
+                      label: D.f_info
+                      rep:HeapRep static { Fun {arity: 1 fun_type: ArgSpec 5} })]
+          stack_info: arg_space: 8 updfr_space: Just 4
+        }
+    {offset
+      chf:
+          goto chd;
+      chd:
+          goto chh;
+      chh:
+          call E.h_info() args: 8, res: 0, upd: 4;
+    }
+}
+
+
+
+==================== Post control-flow optimisations ====================
+D.f_entry() //  []
+        { info_tbl: [(chh,
+                      label: D.f_info
+                      rep:HeapRep static { Fun {arity: 1 fun_type: ArgSpec 5} })]
+          stack_info: arg_space: 8 updfr_space: Just 4
+        }
+    {offset
+      chh:
+          call E.h_info() args: 8, res: 0, upd: 4;
+    }
+}
+
+
+
+==================== Post CPS Cmm ====================
+[section "data" {
+     D.f_closure:
+         const D.f_info;
+ },
+ D.f_entry() //  []
+         { info_tbl: [(chh,
+                       label: D.f_info
+                       rep:HeapRep static { Fun {arity: 1 fun_type: ArgSpec 5} })]
+           stack_info: arg_space: 8 updfr_space: Just 4
+         }
+     {offset
+       chh:
+           call E.h_info() args: 8, res: 0, upd: 4;
+     }
+ }]
+
+
+
+==================== Output Cmm ====================
+[section "data" {
+     D.f_closure:
+         const D.f_info;
+ },
+ D.f_entry() //  []
+         { info_tbl: [(chh,
+                       label: D.f_info
+                       rep:HeapRep static { Fun {arity: 1 fun_type: ArgSpec 5} })]
+           stack_info: arg_space: 8 updfr_space: Just 4
+         }
+     {offset
+       chh:
+           call E.h_info() args: 8, res: 0, upd: 4;
+     }
+ }]
+
+
+
+==================== Output Cmm ====================
+[section "relreadonly" { Shm_srt:
+ }]
+
+
+[3 of 4] Compiling C                ( C.hs, C.o )
+
+==================== Cmm produced by new codegen ====================
+[section "data" { __stginit_main:C:
+ }]
+
+
+
+==================== Post CPS Cmm ====================
+[section "data" { __stginit_main:C:
+ }]
+
+
+
+==================== Output Cmm ====================
+[section "data" { __stginit_main:C:
+ }]
+
+
+
+==================== Cmm produced by new codegen ====================
+[section "data" {
+     C.x_closure:
+         const GHC.Types.I#_static_info;
+         const 16;
+ }]
+
+
+
+==================== Post CPS Cmm ====================
+[section "data" {
+     C.x_closure:
+         const GHC.Types.I#_static_info;
+         const 16;
+ }]
+
+
+
+==================== Output Cmm ====================
+[section "data" {
+     C.x_closure:
+         const GHC.Types.I#_static_info;
+         const 16;
+ }]
+
+
+
+==================== Output Cmm ====================
+[section "relreadonly" { ShE_srt:
+ }]
+
+
+[4 of 4] Compiling Main             ( B.hs, B.o )
+
+==================== Cmm produced by new codegen ====================
+[section "data" { __stginit_main:Main:
+ }]
+
+
+
+==================== Post CPS Cmm ====================
+[section "data" { __stginit_main:Main:
+ }]
+
+
+
+==================== Output Cmm ====================
+[section "data" { __stginit_main:Main:
+ }]
+
+
+
+==================== Cmm produced by new codegen ====================
+[section "data" {
+     Main.main2_closure:
+         const Main.main2_info;
+         const 0;
+         const 0;
+         const 0;
+ },
+ Main.main2_entry() //  [R1]
+         { info_tbl: [(c1gg,
+                       label: Main.main2_info
+                       rep:HeapRep static { Thunk })]
+           stack_info: arg_space: 4 updfr_space: Just 4
+         }
+     {offset
+       c1gg:
+           _rhI::P32 = R1;
+           goto c1g8;
+       c1g8:
+           if (Sp - <highSp> < SpLim) goto c1gh; else goto c1gi;
+       c1gi:
+           Hp = Hp + 8;
+           if (Hp > HpLim) goto c1gk; else goto c1gj;
+       c1gk:
+           HpAlloc = 8;
+           goto c1gh;
+       c1gh:
+           R1 = _rhI::P32;
+           call (stg_gc_enter_1)(R1) args: 4, res: 0, upd: 4;
+       c1gj:
+           I32[Hp - 4] = stg_CAF_BLACKHOLE_info;
+           I32[Hp] = CurrentTSO;
+           (_c1ga::I32) = call "ccall" arg hints:  [PtrHint, PtrHint,
+                                                    PtrHint]  result hints:  [] newCAF(BaseReg, _rhI::P32, Hp - 4);
+           if (_c1ga::I32 == 0) goto c1gc; else goto c1gb;
+       c1gc:
+           call (I32[_rhI::P32])() args: 4, res: 0, upd: 4;
+       c1gb:
+           I32[(old + 12)] = stg_bh_upd_frame_info;
+           P32[(old + 8)] = Hp - 4;
+           I32[(young<c1gd> + 4)] = c1gd;
+           I32[(young<c1gd> + 16)] = 0;
+           I32[(young<c1gd> + 12)] = 16;
+           P32[(young<c1gd> + 8)] = GHC.Types.[]_closure+1;
+           call GHC.Show.$wshowSignedInt_info() returns to c1gd, args: 16, res: 8, upd: 12;
+       c1gd:
+           _s1g2::P32 = R1;
+           _s1g3::P32 = P32[(young<c1gd> + 8)];
+           Hp = Hp + 12;
+           if (Hp > HpLim) goto c1gn; else goto c1gm;
+       c1gn:
+           HpAlloc = 12;
+           goto c1gl;
+       c1gl:
+           R1 = _s1g2::P32;
+           P32[(young<c1gd> + 8)] = _s1g3::P32;
+           call stg_gc_pp(R1) returns to c1gd, args: 8, res: 8, upd: 12;
+       c1gm:
+           I32[Hp - 8] = :_con_info;
+           P32[Hp - 4] = _s1g2::P32;
+           P32[Hp] = _s1g3::P32;
+           _c1gf::P32 = Hp - 6;
+           R1 = _c1gf::P32;
+           call (P32[(old + 12)])(R1) args: 12, res: 0, upd: 12;
+     }
+ }]
+
+
+
+==================== Post control-flow optimisations ====================
+{offset
+  c1gg:
+      _rhI::P32 = R1;
+      goto c1g8;
+  c1g8:
+      if (Sp - <highSp> < SpLim) goto c1gh; else goto c1gi;
+  c1gi:
+      Hp = Hp + 8;
+      if (Hp > HpLim) goto c1gk; else goto c1gj;
+  c1gk:
+      HpAlloc = 8;
+      goto c1gh;
+  c1gh:
+      R1 = _rhI::P32;
+      call (stg_gc_enter_1)(R1) args: 4, res: 0, upd: 4;
+  c1gj:
+      I32[Hp - 4] = stg_CAF_BLACKHOLE_info;
+      I32[Hp] = CurrentTSO;
+      (_c1ga::I32) = call "ccall" arg hints:  [PtrHint, PtrHint,
+                                               PtrHint]  result hints:  [] newCAF(BaseReg, _rhI::P32, Hp - 4);
+      if (_c1ga::I32 == 0) goto c1gc; else goto c1gb;
+  c1gc:
+      call (I32[_rhI::P32])() args: 4, res: 0, upd: 4;
+  c1gb:
+      I32[(old + 12)] = stg_bh_upd_frame_info;
+      P32[(old + 8)] = Hp - 4;
+      I32[(young<c1gd> + 4)] = c1gd;
+      I32[(young<c1gd> + 16)] = 0;
+      I32[(young<c1gd> + 12)] = 16;
+      P32[(young<c1gd> + 8)] = GHC.Types.[]_closure+1;
+      call GHC.Show.$wshowSignedInt_info() returns to c1gd, args: 16, res: 8, upd: 12;
+  c1gd:
+      _s1g2::P32 = R1;
+      _s1g3::P32 = P32[(young<c1gd> + 8)];
+      Hp = Hp + 12;
+      if (Hp > HpLim) goto c1gn; else goto c1gm;
+  c1gn:
+      HpAlloc = 12;
+      goto c1gl;
+  c1gl:
+      R1 = _s1g2::P32;
+      P32[(young<c1gd> + 8)] = _s1g3::P32;
+      call stg_gc_pp(R1) returns to c1gd, args: 8, res: 8, upd: 12;
+  c1gm:
+      I32[Hp - 8] = :_con_info;
+      P32[Hp - 4] = _s1g2::P32;
+      P32[Hp] = _s1g3::P32;
+      _c1gf::P32 = Hp - 6;
+      R1 = _c1gf::P32;
+      call (P32[(old + 12)])(R1) args: 12, res: 0, upd: 12;
+}
+
+
+
+==================== Post common block elimination ====================
+{offset
+  c1gg:
+      _rhI::P32 = R1;
+      goto c1g8;
+  c1g8:
+      if (Sp - <highSp> < SpLim) goto c1gh; else goto c1gi;
+  c1gi:
+      Hp = Hp + 8;
+      if (Hp > HpLim) goto c1gk; else goto c1gj;
+  c1gk:
+      HpAlloc = 8;
+      goto c1gh;
+  c1gh:
+      R1 = _rhI::P32;
+      call (stg_gc_enter_1)(R1) args: 4, res: 0, upd: 4;
+  c1gj:
+      I32[Hp - 4] = stg_CAF_BLACKHOLE_info;
+      I32[Hp] = CurrentTSO;
+      (_c1ga::I32) = call "ccall" arg hints:  [PtrHint, PtrHint,
+                                               PtrHint]  result hints:  [] newCAF(BaseReg, _rhI::P32, Hp - 4);
+      if (_c1ga::I32 == 0) goto c1gc; else goto c1gb;
+  c1gc:
+      call (I32[_rhI::P32])() args: 4, res: 0, upd: 4;
+  c1gb:
+      I32[(old + 12)] = stg_bh_upd_frame_info;
+      P32[(old + 8)] = Hp - 4;
+      I32[(young<c1gd> + 4)] = c1gd;
+      I32[(young<c1gd> + 16)] = 0;
+      I32[(young<c1gd> + 12)] = 16;
+      P32[(young<c1gd> + 8)] = GHC.Types.[]_closure+1;
+      call GHC.Show.$wshowSignedInt_info() returns to c1gd, args: 16, res: 8, upd: 12;
+  c1gd:
+      _s1g2::P32 = R1;
+      _s1g3::P32 = P32[(young<c1gd> + 8)];
+      Hp = Hp + 12;
+      if (Hp > HpLim) goto c1gn; else goto c1gm;
+  c1gn:
+      HpAlloc = 12;
+      goto c1gl;
+  c1gl:
+      R1 = _s1g2::P32;
+      P32[(young<c1gd> + 8)] = _s1g3::P32;
+      call stg_gc_pp(R1) returns to c1gd, args: 8, res: 8, upd: 12;
+  c1gm:
+      I32[Hp - 8] = :_con_info;
+      P32[Hp - 4] = _s1g2::P32;
+      P32[Hp] = _s1g3::P32;
+      _c1gf::P32 = Hp - 6;
+      R1 = _c1gf::P32;
+      call (P32[(old + 12)])(R1) args: 12, res: 0, upd: 12;
+}
+
+
+
+==================== Loopify tail calls ====================
+{offset
+  c1gg:
+      _rhI::P32 = R1;
+      goto c1g8;
+  c1g8:
+      if (Sp - <highSp> < SpLim) goto c1gh; else goto c1gi;
+  c1gi:
+      Hp = Hp + 8;
+      if (Hp > HpLim) goto c1gk; else goto c1gj;
+  c1gk:
+      HpAlloc = 8;
+      goto c1gh;
+  c1gh:
+      R1 = _rhI::P32;
+      call (stg_gc_enter_1)(R1) args: 4, res: 0, upd: 4;
+  c1gj:
+      I32[Hp - 4] = stg_CAF_BLACKHOLE_info;
+      I32[Hp] = CurrentTSO;
+      (_c1ga::I32) = call "ccall" arg hints:  [PtrHint, PtrHint,
+                                               PtrHint]  result hints:  [] newCAF(BaseReg, _rhI::P32, Hp - 4);
+      if (_c1ga::I32 == 0) goto c1gc; else goto c1gb;
+  c1gc:
+      call (I32[_rhI::P32])() args: 4, res: 0, upd: 4;
+  c1gb:
+      I32[(old + 12)] = stg_bh_upd_frame_info;
+      P32[(old + 8)] = Hp - 4;
+      I32[(young<c1gd> + 4)] = c1gd;
+      I32[(young<c1gd> + 16)] = 0;
+      I32[(young<c1gd> + 12)] = 16;
+      P32[(young<c1gd> + 8)] = GHC.Types.[]_closure+1;
+      call GHC.Show.$wshowSignedInt_info() returns to c1gd, args: 16, res: 8, upd: 12;
+  c1gd:
+      _s1g2::P32 = R1;
+      _s1g3::P32 = P32[(young<c1gd> + 8)];
+      Hp = Hp + 12;
+      if (Hp > HpLim) goto c1gn; else goto c1gm;
+  c1gn:
+      HpAlloc = 12;
+      goto c1gl;
+  c1gl:
+      R1 = _s1g2::P32;
+      P32[(young<c1gd> + 8)] = _s1g3::P32;
+      call stg_gc_pp(R1) returns to c1gd, args: 8, res: 8, upd: 12;
+  c1gm:
+      I32[Hp - 8] = :_con_info;
+      P32[Hp - 4] = _s1g2::P32;
+      P32[Hp] = _s1g3::P32;
+      _c1gf::P32 = Hp - 6;
+      R1 = _c1gf::P32;
+      call (P32[(old + 12)])(R1) args: 12, res: 0, upd: 12;
+}
+
+
+
+==================== Layout Stack ====================
+{offset
+  c1gg:
+      _rhI::P32 = R1;
+      goto c1g8;
+  c1g8:
+      if (Sp - 24 < SpLim) goto c1gh; else goto c1gi;
+  c1gi:
+      Hp = Hp + 8;
+      if (Hp > HpLim) goto c1gk; else goto c1gj;
+  c1gk:
+      HpAlloc = 8;
+      goto c1gh;
+  c1gh:
+      R1 = _rhI::P32;
+      call (stg_gc_enter_1)(R1) args: 4, res: 0, upd: 4;
+  c1gj:
+      I32[Hp - 4] = stg_CAF_BLACKHOLE_info;
+      I32[Hp] = CurrentTSO;
+      (_c1ga::I32) = call "ccall" arg hints:  [PtrHint, PtrHint,
+                                               PtrHint]  result hints:  [] newCAF(BaseReg, _rhI::P32, Hp - 4);
+      if (_c1ga::I32 == 0) goto c1gc; else goto c1gb;
+  c1gc:
+      call (I32[_rhI::P32])() args: 4, res: 0, upd: 4;
+  c1gb:
+      I32[Sp - 8] = stg_bh_upd_frame_info;
+      P32[Sp - 4] = Hp - 4;
+      I32[Sp - 12] = c1gd;
+      I32[Sp - 24] = 0;
+      I32[Sp - 20] = 16;
+      P32[Sp - 16] = GHC.Types.[]_closure+1;
+      Sp = Sp - 24;
+      call GHC.Show.$wshowSignedInt_info() returns to c1gd, args: 16, res: 8, upd: 12;
+  c1gd:
+      _s1g2::P32 = R1;
+      _s1g3::P32 = P32[Sp];
+      Hp = Hp + 12;
+      if (Hp > HpLim) goto c1gn; else goto c1gm;
+  c1gn:
+      HpAlloc = 12;
+      goto c1gl;
+  c1gl:
+      R1 = _s1g2::P32;
+      call stg_gc_pp(R1) returns to c1gd, args: 8, res: 8, upd: 12;
+  c1gm:
+      I32[Hp - 8] = :_con_info;
+      P32[Hp - 4] = _s1g2::P32;
+      P32[Hp] = _s1g3::P32;
+      _c1gf::P32 = Hp - 6;
+      R1 = _c1gf::P32;
+      Sp = Sp + 8;
+      call (P32[Sp])(R1) args: 12, res: 0, upd: 12;
+}
+
+
+
+==================== Sink assignments (2) ====================
+{offset
+  c1gg:
+      goto c1g8;
+  c1g8:
+      _rhI::P32 = R1;
+      if ((Sp + -24) < SpLim) goto c1gh; else goto c1gi;
+  c1gi:
+      Hp = Hp + 8;
+      if (Hp > HpLim) goto c1gk; else goto c1gj;
+  c1gk:
+      HpAlloc = 8;
+      goto c1gh;
+  c1gh:
+      R1 = _rhI::P32;
+      call (stg_gc_enter_1)(R1) args: 4, res: 0, upd: 4;
+  c1gj:
+      I32[Hp - 4] = stg_CAF_BLACKHOLE_info;
+      I32[Hp] = CurrentTSO;
+      (_c1ga::I32) = call "ccall" arg hints:  [PtrHint, PtrHint,
+                                               PtrHint]  result hints:  [] newCAF(BaseReg, _rhI::P32, Hp - 4);
+      if (_c1ga::I32 == 0) goto c1gc; else goto c1gb;
+  c1gc:
+      call (I32[_rhI::P32])() args: 4, res: 0, upd: 4;
+  c1gb:
+      I32[Sp - 8] = stg_bh_upd_frame_info;
+      P32[Sp - 4] = Hp - 4;
+      I32[Sp - 12] = c1gd;
+      I32[Sp - 24] = 0;
+      I32[Sp - 20] = 16;
+      P32[Sp - 16] = GHC.Types.[]_closure+1;
+      Sp = Sp - 24;
+      call GHC.Show.$wshowSignedInt_info() returns to c1gd, args: 16, res: 8, upd: 12;
+  c1gd:
+      Hp = Hp + 12;
+      _s1g2::P32 = R1;
+      if (Hp > HpLim) goto c1gn; else goto c1gm;
+  c1gn:
+      HpAlloc = 12;
+      goto c1gl;
+  c1gl:
+      R1 = _s1g2::P32;
+      call stg_gc_pp(R1) returns to c1gd, args: 8, res: 8, upd: 12;
+  c1gm:
+      I32[Hp - 8] = :_con_info;
+      P32[Hp - 4] = _s1g2::P32;
+      P32[Hp] = P32[Sp];
+      R1 = Hp - 6;
+      Sp = Sp + 8;
+      call (P32[Sp])(R1) args: 12, res: 0, upd: 12;
+}
+
+
+
+==================== CAFEnv ====================
+[(c1g8, {}), (c1gb, {}), (c1gc, {}), (c1gd, {}), (c1gg, {}),
+ (c1gh, {}), (c1gi, {}), (c1gj, {}), (c1gk, {}), (c1gl, {}),
+ (c1gm, {}), (c1gn, {})]
+
+
+
+==================== after setInfoTableStackMap ====================
+Main.main2_entry() //  [R1]
+        { info_tbl: [(c1gd,
+                      label: block_c1gd_info
+                      rep:StackRep []),
+                     (c1gg,
+                      label: Main.main2_info
+                      rep:HeapRep static { Thunk })]
+          stack_info: arg_space: 4 updfr_space: Just 4
+        }
+    {offset
+      c1gg:
+          goto c1g8;
+      c1g8:
+          _rhI::P32 = R1;
+          if ((Sp + -24) < SpLim) goto c1gh; else goto c1gi;
+      c1gi:
+          Hp = Hp + 8;
+          if (Hp > HpLim) goto c1gk; else goto c1gj;
+      c1gk:
+          HpAlloc = 8;
+          goto c1gh;
+      c1gh:
+          R1 = _rhI::P32;
+          call (stg_gc_enter_1)(R1) args: 4, res: 0, upd: 4;
+      c1gj:
+          I32[Hp - 4] = stg_CAF_BLACKHOLE_info;
+          I32[Hp] = CurrentTSO;
+          (_c1ga::I32) = call "ccall" arg hints:  [PtrHint, PtrHint,
+                                                   PtrHint]  result hints:  [] newCAF(BaseReg, _rhI::P32, Hp - 4);
+          if (_c1ga::I32 == 0) goto c1gc; else goto c1gb;
+      c1gc:
+          call (I32[_rhI::P32])() args: 4, res: 0, upd: 4;
+      c1gb:
+          I32[Sp - 8] = stg_bh_upd_frame_info;
+          P32[Sp - 4] = Hp - 4;
+          I32[Sp - 12] = c1gd;
+          I32[Sp - 24] = 0;
+          I32[Sp - 20] = 16;
+          P32[Sp - 16] = GHC.Types.[]_closure+1;
+          Sp = Sp - 24;
+          call GHC.Show.$wshowSignedInt_info() returns to c1gd, args: 16, res: 8, upd: 12;
+      c1gd:
+          Hp = Hp + 12;
+          _s1g2::P32 = R1;
+          if (Hp > HpLim) goto c1gn; else goto c1gm;
+      c1gn:
+          HpAlloc = 12;
+          goto c1gl;
+      c1gl:
+          R1 = _s1g2::P32;
+          call stg_gc_pp(R1) returns to c1gd, args: 8, res: 8, upd: 12;
+      c1gm:
+          I32[Hp - 8] = :_con_info;
+          P32[Hp - 4] = _s1g2::P32;
+          P32[Hp] = P32[Sp];
+          R1 = Hp - 6;
+          Sp = Sp + 8;
+          call (P32[Sp])(R1) args: 12, res: 0, upd: 12;
+    }
+}
+
+
+
+==================== Post control-flow optimisations ====================
+Main.main2_entry() //  [R1]
+        { info_tbl: [(c1g8,
+                      label: Main.main2_info
+                      rep:HeapRep static { Thunk }),
+                     (c1gd,
+                      label: block_c1gd_info
+                      rep:StackRep [])]
+          stack_info: arg_space: 4 updfr_space: Just 4
+        }
+    {offset
+      c1g8:
+          _rhI::P32 = R1;
+          if ((Sp + -24) < SpLim) goto c1gh; else goto c1gi;
+      c1gi:
+          Hp = Hp + 8;
+          if (Hp > HpLim) goto c1gk; else goto c1gj;
+      c1gk:
+          HpAlloc = 8;
+          goto c1gh;
+      c1gh:
+          R1 = _rhI::P32;
+          call (stg_gc_enter_1)(R1) args: 4, res: 0, upd: 4;
+      c1gj:
+          I32[Hp - 4] = stg_CAF_BLACKHOLE_info;
+          I32[Hp] = CurrentTSO;
+          (_c1ga::I32) = call "ccall" arg hints:  [PtrHint, PtrHint,
+                                                   PtrHint]  result hints:  [] newCAF(BaseReg, _rhI::P32, Hp - 4);
+          if (_c1ga::I32 == 0) goto c1gc; else goto c1gb;
+      c1gc:
+          call (I32[_rhI::P32])() args: 4, res: 0, upd: 4;
+      c1gb:
+          I32[Sp - 8] = stg_bh_upd_frame_info;
+          P32[Sp - 4] = Hp - 4;
+          I32[Sp - 12] = c1gd;
+          I32[Sp - 24] = 0;
+          I32[Sp - 20] = 16;
+          P32[Sp - 16] = GHC.Types.[]_closure+1;
+          Sp = Sp - 24;
+          call GHC.Show.$wshowSignedInt_info() returns to c1gd, args: 16, res: 8, upd: 12;
+      c1gd:
+          Hp = Hp + 12;
+          _s1g2::P32 = R1;
+          if (Hp > HpLim) goto c1gn; else goto c1gm;
+      c1gn:
+          HpAlloc = 12;
+          goto c1gl;
+      c1gl:
+          R1 = _s1g2::P32;
+          call stg_gc_pp(R1) returns to c1gd, args: 8, res: 8, upd: 12;
+      c1gm:
+          I32[Hp - 8] = :_con_info;
+          P32[Hp - 4] = _s1g2::P32;
+          P32[Hp] = P32[Sp];
+          R1 = Hp - 6;
+          Sp = Sp + 8;
+          call (P32[Sp])(R1) args: 12, res: 0, upd: 12;
+    }
+}
+
+
+
+==================== Post CPS Cmm ====================
+[section "data" {
+     Main.main2_closure:
+         const Main.main2_info;
+         const 0;
+         const 0;
+         const 0;
+ },
+ Main.main2_entry() //  [R1]
+         { info_tbl: [(c1g8,
+                       label: Main.main2_info
+                       rep:HeapRep static { Thunk }),
+                      (c1gd,
+                       label: block_c1gd_info
+                       rep:StackRep [])]
+           stack_info: arg_space: 4 updfr_space: Just 4
+         }
+     {offset
+       c1g8:
+           _rhI::P32 = R1;
+           if ((Sp + -24) < SpLim) goto c1gh; else goto c1gi;
+       c1gi:
+           Hp = Hp + 8;
+           if (Hp > HpLim) goto c1gk; else goto c1gj;
+       c1gk:
+           HpAlloc = 8;
+           goto c1gh;
+       c1gh:
+           R1 = _rhI::P32;
+           call (stg_gc_enter_1)(R1) args: 4, res: 0, upd: 4;
+       c1gj:
+           I32[Hp - 4] = stg_CAF_BLACKHOLE_info;
+           I32[Hp] = CurrentTSO;
+           (_c1ga::I32) = call "ccall" arg hints:  [PtrHint, PtrHint,
+                                                    PtrHint]  result hints:  [] newCAF(BaseReg, _rhI::P32, Hp - 4);
+           if (_c1ga::I32 == 0) goto c1gc; else goto c1gb;
+       c1gc:
+           call (I32[_rhI::P32])() args: 4, res: 0, upd: 4;
+       c1gb:
+           I32[Sp - 8] = stg_bh_upd_frame_info;
+           P32[Sp - 4] = Hp - 4;
+           I32[Sp - 12] = c1gd;
+           I32[Sp - 24] = 0;
+           I32[Sp - 20] = 16;
+           P32[Sp - 16] = GHC.Types.[]_closure+1;
+           Sp = Sp - 24;
+           call GHC.Show.$wshowSignedInt_info() returns to c1gd, args: 16, res: 8, upd: 12;
+       c1gd:
+           Hp = Hp + 12;
+           _s1g2::P32 = R1;
+           if (Hp > HpLim) goto c1gn; else goto c1gm;
+       c1gn:
+           HpAlloc = 12;
+           goto c1gl;
+       c1gl:
+           R1 = _s1g2::P32;
+           call stg_gc_pp(R1) returns to c1gd, args: 8, res: 8, upd: 12;
+       c1gm:
+           I32[Hp - 8] = :_con_info;
+           P32[Hp - 4] = _s1g2::P32;
+           P32[Hp] = P32[Sp];
+           R1 = Hp - 6;
+           Sp = Sp + 8;
+           call (P32[Sp])(R1) args: 12, res: 0, upd: 12;
+     }
+ }]
+
+
+
+==================== Output Cmm ====================
+[section "data" {
+     Main.main2_closure:
+         const Main.main2_info;
+         const 0;
+         const 0;
+         const 0;
+ },
+ Main.main2_entry() //  [R1]
+         { info_tbl: [(c1g8,
+                       label: Main.main2_info
+                       rep:HeapRep static { Thunk }),
+                      (c1gd,
+                       label: block_c1gd_info
+                       rep:StackRep [])]
+           stack_info: arg_space: 4 updfr_space: Just 4
+         }
+     {offset
+       c1g8:
+           _rhI::P32 = R1;
+           if ((Sp + -24) < SpLim) goto c1gh; else goto c1gi;
+       c1gi:
+           Hp = Hp + 8;
+           if (Hp > HpLim) goto c1gk; else goto c1gj;
+       c1gk:
+           HpAlloc = 8;
+           goto c1gh;
+       c1gh:
+           R1 = _rhI::P32;
+           call (stg_gc_enter_1)(R1) args: 4, res: 0, upd: 4;
+       c1gj:
+           I32[Hp - 4] = stg_CAF_BLACKHOLE_info;
+           I32[Hp] = CurrentTSO;
+           (_c1ga::I32) = call "ccall" arg hints:  [PtrHint, PtrHint,
+                                                    PtrHint]  result hints:  [] newCAF(BaseReg, _rhI::P32, Hp - 4);
+           if (_c1ga::I32 == 0) goto c1gc; else goto c1gb;
+       c1gc:
+           call (I32[_rhI::P32])() args: 4, res: 0, upd: 4;
+       c1gb:
+           I32[Sp - 8] = stg_bh_upd_frame_info;
+           P32[Sp - 4] = Hp - 4;
+           I32[Sp - 12] = c1gd;
+           I32[Sp - 24] = 0;
+           I32[Sp - 20] = 16;
+           P32[Sp - 16] = GHC.Types.[]_closure+1;
+           Sp = Sp - 24;
+           call GHC.Show.$wshowSignedInt_info() returns to c1gd, args: 16, res: 8, upd: 12;
+       c1gd:
+           Hp = Hp + 12;
+           _s1g2::P32 = R1;
+           if (Hp > HpLim) goto c1gn; else goto c1gm;
+       c1gn:
+           HpAlloc = 12;
+           goto c1gl;
+       c1gl:
+           R1 = _s1g2::P32;
+           call stg_gc_pp(R1) returns to c1gd, args: 8, res: 8, upd: 12;
+       c1gm:
+           I32[Hp - 8] = :_con_info;
+           P32[Hp - 4] = _s1g2::P32;
+           P32[Hp] = P32[Sp];
+           R1 = Hp - 6;
+           Sp = Sp + 8;
+           call (P32[Sp])(R1) args: 12, res: 0, upd: 12;
+     }
+ }]
+
+
+
+==================== Cmm produced by new codegen ====================
+[section "data" {
+     Main.main1_closure:
+         const Main.main1_info;
+         const 0;
+ },
+ Main.main1_entry() //  []
+         { info_tbl: [(c1gB,
+                       label: Main.main1_info
+                       rep:HeapRep static { Fun {arity: 1 fun_type: ArgSpec 3} })]
+           stack_info: arg_space: 4 updfr_space: Just 4
+         }
+     {offset
+       c1gB:
+           goto c1gz;
+       c1gz:
+           if (Sp - <highSp> < SpLim) goto c1gC; else goto c1gD;
+       c1gC:
+           R1 = Main.main1_closure;
+           call (stg_gc_fun)(R1) args: 4, res: 0, upd: 4;
+       c1gD:
+           P32[(old + 16)] = GHC.IO.Handle.FD.stdout_closure;
+           P32[(old + 12)] = Main.main2_closure;
+           P32[(old + 8)] = GHC.Types.True_closure+2;
+           call GHC.IO.Handle.Text.hPutStr2_info() args: 16, res: 0, upd: 4;
+     }
+ }]
+
+
+
+==================== Post control-flow optimisations ====================
+{offset
+  c1gz:
+      if (Sp - <highSp> < SpLim) goto c1gC; else goto c1gD;
+  c1gC:
+      R1 = Main.main1_closure;
+      call (stg_gc_fun)(R1) args: 4, res: 0, upd: 4;
+  c1gD:
+      P32[(old + 16)] = GHC.IO.Handle.FD.stdout_closure;
+      P32[(old + 12)] = Main.main2_closure;
+      P32[(old + 8)] = GHC.Types.True_closure+2;
+      call GHC.IO.Handle.Text.hPutStr2_info() args: 16, res: 0, upd: 4;
+}
+
+
+
+==================== Post common block elimination ====================
+{offset
+  c1gz:
+      if (Sp - <highSp> < SpLim) goto c1gC; else goto c1gD;
+  c1gC:
+      R1 = Main.main1_closure;
+      call (stg_gc_fun)(R1) args: 4, res: 0, upd: 4;
+  c1gD:
+      P32[(old + 16)] = GHC.IO.Handle.FD.stdout_closure;
+      P32[(old + 12)] = Main.main2_closure;
+      P32[(old + 8)] = GHC.Types.True_closure+2;
+      call GHC.IO.Handle.Text.hPutStr2_info() args: 16, res: 0, upd: 4;
+}
+
+
+
+==================== Loopify tail calls ====================
+{offset
+  c1gz:
+      if (Sp - <highSp> < SpLim) goto c1gC; else goto c1gD;
+  c1gC:
+      R1 = Main.main1_closure;
+      call (stg_gc_fun)(R1) args: 4, res: 0, upd: 4;
+  c1gD:
+      P32[(old + 16)] = GHC.IO.Handle.FD.stdout_closure;
+      P32[(old + 12)] = Main.main2_closure;
+      P32[(old + 8)] = GHC.Types.True_closure+2;
+      call GHC.IO.Handle.Text.hPutStr2_info() args: 16, res: 0, upd: 4;
+}
+
+
+
+==================== Layout Stack ====================
+{offset
+  c1gz:
+      if (Sp - 12 < SpLim) goto c1gC; else goto c1gD;
+  c1gC:
+      R1 = Main.main1_closure;
+      call (stg_gc_fun)(R1) args: 4, res: 0, upd: 4;
+  c1gD:
+      P32[Sp - 12] = GHC.IO.Handle.FD.stdout_closure;
+      P32[Sp - 8] = Main.main2_closure;
+      P32[Sp - 4] = GHC.Types.True_closure+2;
+      Sp = Sp - 12;
+      call GHC.IO.Handle.Text.hPutStr2_info() args: 16, res: 0, upd: 4;
+}
+
+
+
+==================== Sink assignments (2) ====================
+{offset
+  c1gz:
+      if ((Sp + -12) < SpLim) goto c1gC; else goto c1gD;
+  c1gC:
+      R1 = Main.main1_closure;
+      call (stg_gc_fun)(R1) args: 4, res: 0, upd: 4;
+  c1gD:
+      P32[Sp - 12] = GHC.IO.Handle.FD.stdout_closure;
+      P32[Sp - 8] = Main.main2_closure;
+      P32[Sp - 4] = GHC.Types.True_closure+2;
+      Sp = Sp - 12;
+      call GHC.IO.Handle.Text.hPutStr2_info() args: 16, res: 0, upd: 4;
+}
+
+
+
+==================== CAFEnv ====================
+[(c1gz,
+  {Main.main2_closure, GHC.IO.Handle.FD.stdout_closure,
+   GHC.IO.Handle.Text.hPutStr2_closure, Main.main1_closure}),
+ (c1gC, {Main.main1_closure}),
+ (c1gD,
+  {Main.main2_closure, GHC.IO.Handle.FD.stdout_closure,
+   GHC.IO.Handle.Text.hPutStr2_closure})]
+
+
+
+==================== after setInfoTableStackMap ====================
+Main.main1_entry() //  []
+        { info_tbl: [(c1gz,
+                      label: Main.main1_info
+                      rep:HeapRep static { Fun {arity: 1 fun_type: ArgSpec 3} })]
+          stack_info: arg_space: 4 updfr_space: Just 4
+        }
+    {offset
+      c1gz:
+          if ((Sp + -12) < SpLim) goto c1gC; else goto c1gD;
+      c1gC:
+          R1 = Main.main1_closure;
+          call (stg_gc_fun)(R1) args: 4, res: 0, upd: 4;
+      c1gD:
+          P32[Sp - 12] = GHC.IO.Handle.FD.stdout_closure;
+          P32[Sp - 8] = Main.main2_closure;
+          P32[Sp - 4] = GHC.Types.True_closure+2;
+          Sp = Sp - 12;
+          call GHC.IO.Handle.Text.hPutStr2_info() args: 16, res: 0, upd: 4;
+    }
+}
+
+
+
+==================== Post control-flow optimisations ====================
+Main.main1_entry() //  []
+        { info_tbl: [(c1gz,
+                      label: Main.main1_info
+                      rep:HeapRep static { Fun {arity: 1 fun_type: ArgSpec 3} })]
+          stack_info: arg_space: 4 updfr_space: Just 4
+        }
+    {offset
+      c1gz:
+          if ((Sp + -12) < SpLim) goto c1gC; else goto c1gD;
+      c1gC:
+          R1 = Main.main1_closure;
+          call (stg_gc_fun)(R1) args: 4, res: 0, upd: 4;
+      c1gD:
+          P32[Sp - 12] = GHC.IO.Handle.FD.stdout_closure;
+          P32[Sp - 8] = Main.main2_closure;
+          P32[Sp - 4] = GHC.Types.True_closure+2;
+          Sp = Sp - 12;
+          call GHC.IO.Handle.Text.hPutStr2_info() args: 16, res: 0, upd: 4;
+    }
+}
+
+
+
+==================== Post CPS Cmm ====================
+[section "data" {
+     Main.main1_closure:
+         const Main.main1_info;
+         const 0;
+ },
+ Main.main1_entry() //  []
+         { info_tbl: [(c1gz,
+                       label: Main.main1_info
+                       rep:HeapRep static { Fun {arity: 1 fun_type: ArgSpec 3} })]
+           stack_info: arg_space: 4 updfr_space: Just 4
+         }
+     {offset
+       c1gz:
+           if ((Sp + -12) < SpLim) goto c1gC; else goto c1gD;
+       c1gC:
+           R1 = Main.main1_closure;
+           call (stg_gc_fun)(R1) args: 4, res: 0, upd: 4;
+       c1gD:
+           P32[Sp - 12] = GHC.IO.Handle.FD.stdout_closure;
+           P32[Sp - 8] = Main.main2_closure;
+           P32[Sp - 4] = GHC.Types.True_closure+2;
+           Sp = Sp - 12;
+           call GHC.IO.Handle.Text.hPutStr2_info() args: 16, res: 0, upd: 4;
+     }
+ }]
+
+
+
+==================== Output Cmm ====================
+[section "data" {
+     Main.main1_closure:
+         const Main.main1_info;
+         const 0;
+ },
+ Main.main1_entry() //  []
+         { info_tbl: [(c1gz,
+                       label: Main.main1_info
+                       rep:HeapRep static { Fun {arity: 1 fun_type: ArgSpec 3} })]
+           stack_info: arg_space: 4 updfr_space: Just 4
+         }
+     {offset
+       c1gz:
+           if ((Sp + -12) < SpLim) goto c1gC; else goto c1gD;
+       c1gC:
+           R1 = Main.main1_closure;
+           call (stg_gc_fun)(R1) args: 4, res: 0, upd: 4;
+       c1gD:
+           P32[Sp - 12] = GHC.IO.Handle.FD.stdout_closure;
+           P32[Sp - 8] = Main.main2_closure;
+           P32[Sp - 4] = GHC.Types.True_closure+2;
+           Sp = Sp - 12;
+           call GHC.IO.Handle.Text.hPutStr2_info() args: 16, res: 0, upd: 4;
+     }
+ }]
+
+
+
+==================== Cmm produced by new codegen ====================
+[section "data" {
+     Main.main_closure:
+         const Main.main_info;
+         const 0;
+ },
+ Main.main_entry() //  []
+         { info_tbl: [(c1gO,
+                       label: Main.main_info
+                       rep:HeapRep static { Fun {arity: 1 fun_type: ArgSpec 3} })]
+           stack_info: arg_space: 4 updfr_space: Just 4
+         }
+     {offset
+       c1gO:
+           goto c1gM;
+       c1gM:
+           if (Sp - <highSp> < SpLim) goto c1gP; else goto c1gQ;
+       c1gP:
+           R1 = Main.main_closure;
+           call (stg_gc_fun)(R1) args: 4, res: 0, upd: 4;
+       c1gQ:
+           call Main.main1_info() args: 4, res: 0, upd: 4;
+     }
+ }]
+
+
+
+==================== Post control-flow optimisations ====================
+{offset
+  c1gM:
+      if (Sp - <highSp> < SpLim) goto c1gP; else goto c1gQ;
+  c1gP:
+      R1 = Main.main_closure;
+      call (stg_gc_fun)(R1) args: 4, res: 0, upd: 4;
+  c1gQ:
+      call Main.main1_info() args: 4, res: 0, upd: 4;
+}
+
+
+
+==================== Post common block elimination ====================
+{offset
+  c1gM:
+      if (Sp - <highSp> < SpLim) goto c1gP; else goto c1gQ;
+  c1gP:
+      R1 = Main.main_closure;
+      call (stg_gc_fun)(R1) args: 4, res: 0, upd: 4;
+  c1gQ:
+      call Main.main1_info() args: 4, res: 0, upd: 4;
+}
+
+
+
+==================== Loopify tail calls ====================
+{offset
+  c1gM:
+      if (Sp - <highSp> < SpLim) goto c1gP; else goto c1gQ;
+  c1gP:
+      R1 = Main.main_closure;
+      call (stg_gc_fun)(R1) args: 4, res: 0, upd: 4;
+  c1gQ:
+      call Main.main1_info() args: 4, res: 0, upd: 4;
+}
+
+
+
+==================== Layout Stack ====================
+{offset
+  c1gM:
+      goto c1gQ;
+  c1gQ:
+      call Main.main1_info() args: 4, res: 0, upd: 4;
+}
+
+
+
+==================== Sink assignments (2) ====================
+{offset
+  c1gM:
+      goto c1gQ;
+  c1gQ:
+      call Main.main1_info() args: 4, res: 0, upd: 4;
+}
+
+
+
+==================== CAFEnv ====================
+[(c1gM, {Main.main1_closure}), (c1gQ, {Main.main1_closure})]
+
+
+
+==================== after setInfoTableStackMap ====================
+Main.main_entry() //  []
+        { info_tbl: [(c1gM,
+                      label: Main.main_info
+                      rep:HeapRep static { Fun {arity: 1 fun_type: ArgSpec 3} })]
+          stack_info: arg_space: 4 updfr_space: Just 4
+        }
+    {offset
+      c1gM:
+          goto c1gQ;
+      c1gQ:
+          call Main.main1_info() args: 4, res: 0, upd: 4;
+    }
+}
+
+
+
+==================== Post control-flow optimisations ====================
+Main.main_entry() //  []
+        { info_tbl: [(c1gQ,
+                      label: Main.main_info
+                      rep:HeapRep static { Fun {arity: 1 fun_type: ArgSpec 3} })]
+          stack_info: arg_space: 4 updfr_space: Just 4
+        }
+    {offset
+      c1gQ:
+          call Main.main1_info() args: 4, res: 0, upd: 4;
+    }
+}
+
+
+
+==================== Post CPS Cmm ====================
+[section "data" {
+     Main.main_closure:
+         const Main.main_info;
+         const 0;
+ },
+ Main.main_entry() //  []
+         { info_tbl: [(c1gQ,
+                       label: Main.main_info
+                       rep:HeapRep static { Fun {arity: 1 fun_type: ArgSpec 3} })]
+           stack_info: arg_space: 4 updfr_space: Just 4
+         }
+     {offset
+       c1gQ:
+           call Main.main1_info() args: 4, res: 0, upd: 4;
+     }
+ }]
+
+
+
+==================== Output Cmm ====================
+[section "data" {
+     Main.main_closure:
+         const Main.main_info;
+         const 0;
+ },
+ Main.main_entry() //  []
+         { info_tbl: [(c1gQ,
+                       label: Main.main_info
+                       rep:HeapRep static { Fun {arity: 1 fun_type: ArgSpec 3} })]
+           stack_info: arg_space: 4 updfr_space: Just 4
+         }
+     {offset
+       c1gQ:
+           call Main.main1_info() args: 4, res: 0, upd: 4;
+     }
+ }]
+
+
+
+==================== Cmm produced by new codegen ====================
+[section "data" {
+     Main.main3_closure:
+         const Main.main3_info;
+         const 0;
+ },
+ Main.main3_entry() //  []
+         { info_tbl: [(c1gZ,
+                       label: Main.main3_info
+                       rep:HeapRep static { Fun {arity: 1 fun_type: ArgSpec 3} })]
+           stack_info: arg_space: 4 updfr_space: Just 4
+         }
+     {offset
+       c1gZ:
+           goto c1gX;
+       c1gX:
+           if (Sp - <highSp> < SpLim) goto c1h0; else goto c1h1;
+       c1h0:
+           R1 = Main.main3_closure;
+           call (stg_gc_fun)(R1) args: 4, res: 0, upd: 4;
+       c1h1:
+           P32[(old + 8)] = Main.main1_closure+1;
+           call GHC.TopHandler.runMainIO1_info() args: 8, res: 0, upd: 4;
+     }
+ }]
+
+
+
+==================== Post control-flow optimisations ====================
+{offset
+  c1gX:
+      if (Sp - <highSp> < SpLim) goto c1h0; else goto c1h1;
+  c1h0:
+      R1 = Main.main3_closure;
+      call (stg_gc_fun)(R1) args: 4, res: 0, upd: 4;
+  c1h1:
+      P32[(old + 8)] = Main.main1_closure+1;
+      call GHC.TopHandler.runMainIO1_info() args: 8, res: 0, upd: 4;
+}
+
+
+
+==================== Post common block elimination ====================
+{offset
+  c1gX:
+      if (Sp - <highSp> < SpLim) goto c1h0; else goto c1h1;
+  c1h0:
+      R1 = Main.main3_closure;
+      call (stg_gc_fun)(R1) args: 4, res: 0, upd: 4;
+  c1h1:
+      P32[(old + 8)] = Main.main1_closure+1;
+      call GHC.TopHandler.runMainIO1_info() args: 8, res: 0, upd: 4;
+}
+
+
+
+==================== Loopify tail calls ====================
+{offset
+  c1gX:
+      if (Sp - <highSp> < SpLim) goto c1h0; else goto c1h1;
+  c1h0:
+      R1 = Main.main3_closure;
+      call (stg_gc_fun)(R1) args: 4, res: 0, upd: 4;
+  c1h1:
+      P32[(old + 8)] = Main.main1_closure+1;
+      call GHC.TopHandler.runMainIO1_info() args: 8, res: 0, upd: 4;
+}
+
+
+
+==================== Layout Stack ====================
+{offset
+  c1gX:
+      if (Sp - 4 < SpLim) goto c1h0; else goto c1h1;
+  c1h0:
+      R1 = Main.main3_closure;
+      call (stg_gc_fun)(R1) args: 4, res: 0, upd: 4;
+  c1h1:
+      P32[Sp - 4] = Main.main1_closure+1;
+      Sp = Sp - 4;
+      call GHC.TopHandler.runMainIO1_info() args: 8, res: 0, upd: 4;
+}
+
+
+
+==================== Sink assignments (2) ====================
+{offset
+  c1gX:
+      if ((Sp + -4) < SpLim) goto c1h0; else goto c1h1;
+  c1h0:
+      R1 = Main.main3_closure;
+      call (stg_gc_fun)(R1) args: 4, res: 0, upd: 4;
+  c1h1:
+      P32[Sp - 4] = Main.main1_closure+1;
+      Sp = Sp - 4;
+      call GHC.TopHandler.runMainIO1_info() args: 8, res: 0, upd: 4;
+}
+
+
+
+==================== CAFEnv ====================
+[(c1gX,
+  {GHC.TopHandler.runMainIO1_closure, Main.main1_closure,
+   Main.main3_closure}),
+ (c1h0, {Main.main3_closure}),
+ (c1h1, {GHC.TopHandler.runMainIO1_closure, Main.main1_closure})]
+
+
+
+==================== after setInfoTableStackMap ====================
+Main.main3_entry() //  []
+        { info_tbl: [(c1gX,
+                      label: Main.main3_info
+                      rep:HeapRep static { Fun {arity: 1 fun_type: ArgSpec 3} })]
+          stack_info: arg_space: 4 updfr_space: Just 4
+        }
+    {offset
+      c1gX:
+          if ((Sp + -4) < SpLim) goto c1h0; else goto c1h1;
+      c1h0:
+          R1 = Main.main3_closure;
+          call (stg_gc_fun)(R1) args: 4, res: 0, upd: 4;
+      c1h1:
+          P32[Sp - 4] = Main.main1_closure+1;
+          Sp = Sp - 4;
+          call GHC.TopHandler.runMainIO1_info() args: 8, res: 0, upd: 4;
+    }
+}
+
+
+
+==================== Post control-flow optimisations ====================
+Main.main3_entry() //  []
+        { info_tbl: [(c1gX,
+                      label: Main.main3_info
+                      rep:HeapRep static { Fun {arity: 1 fun_type: ArgSpec 3} })]
+          stack_info: arg_space: 4 updfr_space: Just 4
+        }
+    {offset
+      c1gX:
+          if ((Sp + -4) < SpLim) goto c1h0; else goto c1h1;
+      c1h0:
+          R1 = Main.main3_closure;
+          call (stg_gc_fun)(R1) args: 4, res: 0, upd: 4;
+      c1h1:
+          P32[Sp - 4] = Main.main1_closure+1;
+          Sp = Sp - 4;
+          call GHC.TopHandler.runMainIO1_info() args: 8, res: 0, upd: 4;
+    }
+}
+
+
+
+==================== Post CPS Cmm ====================
+[section "data" {
+     Main.main3_closure:
+         const Main.main3_info;
+         const 0;
+ },
+ Main.main3_entry() //  []
+         { info_tbl: [(c1gX,
+                       label: Main.main3_info
+                       rep:HeapRep static { Fun {arity: 1 fun_type: ArgSpec 3} })]
+           stack_info: arg_space: 4 updfr_space: Just 4
+         }
+     {offset
+       c1gX:
+           if ((Sp + -4) < SpLim) goto c1h0; else goto c1h1;
+       c1h0:
+           R1 = Main.main3_closure;
+           call (stg_gc_fun)(R1) args: 4, res: 0, upd: 4;
+       c1h1:
+           P32[Sp - 4] = Main.main1_closure+1;
+           Sp = Sp - 4;
+           call GHC.TopHandler.runMainIO1_info() args: 8, res: 0, upd: 4;
+     }
+ }]
+
+
+
+==================== Output Cmm ====================
+[section "data" {
+     Main.main3_closure:
+         const Main.main3_info;
+         const 0;
+ },
+ Main.main3_entry() //  []
+         { info_tbl: [(c1gX,
+                       label: Main.main3_info
+                       rep:HeapRep static { Fun {arity: 1 fun_type: ArgSpec 3} })]
+           stack_info: arg_space: 4 updfr_space: Just 4
+         }
+     {offset
+       c1gX:
+           if ((Sp + -4) < SpLim) goto c1h0; else goto c1h1;
+       c1h0:
+           R1 = Main.main3_closure;
+           call (stg_gc_fun)(R1) args: 4, res: 0, upd: 4;
+       c1h1:
+           P32[Sp - 4] = Main.main1_closure+1;
+           Sp = Sp - 4;
+           call GHC.TopHandler.runMainIO1_info() args: 8, res: 0, upd: 4;
+     }
+ }]
+
+
+
+==================== Cmm produced by new codegen ====================
+[section "data" {
+     :Main.main_closure:
+         const :Main.main_info;
+         const 0;
+ },
+ :Main.main_entry() //  []
+         { info_tbl: [(c1hb,
+                       label: :Main.main_info
+                       rep:HeapRep static { Fun {arity: 1 fun_type: ArgSpec 3} })]
+           stack_info: arg_space: 4 updfr_space: Just 4
+         }
+     {offset
+       c1hb:
+           goto c1h9;
+       c1h9:
+           if (Sp - <highSp> < SpLim) goto c1hc; else goto c1hd;
+       c1hc:
+           R1 = :Main.main_closure;
+           call (stg_gc_fun)(R1) args: 4, res: 0, upd: 4;
+       c1hd:
+           call Main.main3_info() args: 4, res: 0, upd: 4;
+     }
+ }]
+
+
+
+==================== Post control-flow optimisations ====================
+{offset
+  c1h9:
+      if (Sp - <highSp> < SpLim) goto c1hc; else goto c1hd;
+  c1hc:
+      R1 = :Main.main_closure;
+      call (stg_gc_fun)(R1) args: 4, res: 0, upd: 4;
+  c1hd:
+      call Main.main3_info() args: 4, res: 0, upd: 4;
+}
+
+
+
+==================== Post common block elimination ====================
+{offset
+  c1h9:
+      if (Sp - <highSp> < SpLim) goto c1hc; else goto c1hd;
+  c1hc:
+      R1 = :Main.main_closure;
+      call (stg_gc_fun)(R1) args: 4, res: 0, upd: 4;
+  c1hd:
+      call Main.main3_info() args: 4, res: 0, upd: 4;
+}
+
+
+
+==================== Loopify tail calls ====================
+{offset
+  c1h9:
+      if (Sp - <highSp> < SpLim) goto c1hc; else goto c1hd;
+  c1hc:
+      R1 = :Main.main_closure;
+      call (stg_gc_fun)(R1) args: 4, res: 0, upd: 4;
+  c1hd:
+      call Main.main3_info() args: 4, res: 0, upd: 4;
+}
+
+
+
+==================== Layout Stack ====================
+{offset
+  c1h9:
+      goto c1hd;
+  c1hd:
+      call Main.main3_info() args: 4, res: 0, upd: 4;
+}
+
+
+
+==================== Sink assignments (2) ====================
+{offset
+  c1h9:
+      goto c1hd;
+  c1hd:
+      call Main.main3_info() args: 4, res: 0, upd: 4;
+}
+
+
+
+==================== CAFEnv ====================
+[(c1h9, {Main.main3_closure}), (c1hd, {Main.main3_closure})]
+
+
+
+==================== after setInfoTableStackMap ====================
+:Main.main_entry() //  []
+        { info_tbl: [(c1h9,
+                      label: :Main.main_info
+                      rep:HeapRep static { Fun {arity: 1 fun_type: ArgSpec 3} })]
+          stack_info: arg_space: 4 updfr_space: Just 4
+        }
+    {offset
+      c1h9:
+          goto c1hd;
+      c1hd:
+          call Main.main3_info() args: 4, res: 0, upd: 4;
+    }
+}
+
+
+
+==================== Post control-flow optimisations ====================
+:Main.main_entry() //  []
+        { info_tbl: [(c1hd,
+                      label: :Main.main_info
+                      rep:HeapRep static { Fun {arity: 1 fun_type: ArgSpec 3} })]
+          stack_info: arg_space: 4 updfr_space: Just 4
+        }
+    {offset
+      c1hd:
+          call Main.main3_info() args: 4, res: 0, upd: 4;
+    }
+}
+
+
+
+==================== Post CPS Cmm ====================
+[section "data" {
+     :Main.main_closure:
+         const :Main.main_info;
+         const 0;
+ },
+ :Main.main_entry() //  []
+         { info_tbl: [(c1hd,
+                       label: :Main.main_info
+                       rep:HeapRep static { Fun {arity: 1 fun_type: ArgSpec 3} })]
+           stack_info: arg_space: 4 updfr_space: Just 4
+         }
+     {offset
+       c1hd:
+           call Main.main3_info() args: 4, res: 0, upd: 4;
+     }
+ }]
+
+
+
+==================== Output Cmm ====================
+[section "data" {
+     :Main.main_closure:
+         const :Main.main_info;
+         const 0;
+ },
+ :Main.main_entry() //  []
+         { info_tbl: [(c1hd,
+                       label: :Main.main_info
+                       rep:HeapRep static { Fun {arity: 1 fun_type: ArgSpec 3} })]
+           stack_info: arg_space: 4 updfr_space: Just 4
+         }
+     {offset
+       c1hd:
+           call Main.main3_info() args: 4, res: 0, upd: 4;
+     }
+ }]
+
+
+
+==================== Output Cmm ====================
+[section "relreadonly" {
+     S1gE_srt:
+         const Main.main2_closure;
+         const GHC.IO.Handle.FD.stdout_closure;
+         const GHC.IO.Handle.Text.hPutStr2_closure;
+         const Main.main1_closure;
+         const GHC.TopHandler.runMainIO1_closure;
+         const Main.main3_closure;
+ }]
+
+
+Linking B ...

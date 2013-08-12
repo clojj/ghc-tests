@@ -1,0 +1,324 @@
+[1 of 4] Compiling E                ( E.hs, E.o )
+
+==================== Asm code ====================
+.data
+	.align 4
+.align 1
+.globl __stginit_main:E
+.type __stginit_main:E, @object
+__stginit_main:E:
+.data
+	.align 4
+.align 1
+.globl E.h_closure
+.type E.h_closure, @object
+E.h_closure:
+	.long	E.h_info
+.text
+	.align 4,0x90
+	.long	65541
+	.long	0
+	.long	15
+.globl E.h_info
+.type E.h_info, @object
+E.h_info:
+_cgD:
+	movl (%ebp),%eax
+	movl $block_cga_info,(%ebp)
+	movl %eax,%esi
+	testl $3,%eax
+	jne _cga
+_cgb:
+	jmp *(%eax)
+.text
+	.align 4,0x90
+	.long	0
+	.long	32
+block_cga_info:
+_cga:
+	addl $8,%edi
+	cmpl 228(%ebx),%edi
+	ja _cgG
+_cgF:
+	movl 3(%esi),%eax
+	movl $GHC.Types.I#_con_info,-4(%edi)
+	movl %eax,%ecx
+	addl %eax,%ecx
+	movl %eax,%edx
+	addl %ecx,%edx
+	movl %eax,%ecx
+	addl %edx,%ecx
+	movl %eax,%edx
+	addl %ecx,%edx
+	movl %eax,%ecx
+	addl %edx,%ecx
+	movl %eax,%edx
+	addl %ecx,%edx
+	addl %edx,%eax
+	movl %eax,(%edi)
+	leal -3(%edi),%esi
+	addl $4,%ebp
+	jmp *(%ebp)
+_cgG:
+	movl $8,252(%ebx)
+	jmp stg_gc_unpt_r1
+	.size E.h_info, .-E.h_info
+.section .data
+	.align 4
+.align 1
+Sh0_srt:
+
+
+[2 of 4] Compiling D                ( D.hs, D.o )
+
+==================== Asm code ====================
+.data
+	.align 4
+.align 1
+.globl __stginit_main:D
+.type __stginit_main:D, @object
+__stginit_main:D:
+.data
+	.align 4
+.align 1
+.globl D.f_closure
+.type D.f_closure, @object
+D.f_closure:
+	.long	D.f_info
+.text
+	.align 4,0x90
+	.long	65541
+	.long	0
+	.long	15
+.globl D.f_info
+.type D.f_info, @object
+D.f_info:
+_chh:
+	jmp E.h_info
+	.size D.f_info, .-D.f_info
+.section .data
+	.align 4
+.align 1
+Shn_srt:
+
+
+[3 of 4] Compiling C                ( C.hs, C.o )
+
+==================== Asm code ====================
+.data
+	.align 4
+.align 1
+.globl __stginit_main:C
+.type __stginit_main:C, @object
+__stginit_main:C:
+.data
+	.align 4
+.align 1
+.globl C.x_closure
+.type C.x_closure, @object
+C.x_closure:
+	.long	GHC.Types.I#_static_info
+	.long	16
+.section .data
+	.align 4
+.align 1
+ShF_srt:
+
+
+[4 of 4] Compiling Main             ( B.hs, B.o )
+
+==================== Asm code ====================
+.data
+	.align 4
+.align 1
+.globl __stginit_main:Main
+.type __stginit_main:Main, @object
+__stginit_main:Main:
+.data
+	.align 4
+.align 1
+.globl Main.main2_closure
+.type Main.main2_closure, @object
+Main.main2_closure:
+	.long	Main.main2_info
+	.long	0
+	.long	0
+	.long	0
+.text
+	.align 4,0x90
+	.long	0
+	.long	22
+.globl Main.main2_info
+.type Main.main2_info, @object
+Main.main2_info:
+_c1g8:
+	leal -24(%ebp),%eax
+	cmpl 220(%ebx),%eax
+	jb _c1gh
+_c1gi:
+	addl $8,%edi
+	cmpl 228(%ebx),%edi
+	ja _c1gk
+_c1gj:
+	movl $stg_CAF_BLACKHOLE_info,-4(%edi)
+	movl 236(%ebx),%eax
+	movl %eax,(%edi)
+	leal -4(%edi),%eax
+	pushl %eax
+	pushl %esi
+	pushl %ebx
+	call newCAF
+	addl $12,%esp
+	testl %eax,%eax
+	je _c1gc
+_c1gb:
+	movl $stg_bh_upd_frame_info,-8(%ebp)
+	leal -4(%edi),%eax
+	movl %eax,-4(%ebp)
+	movl $block_c1gd_info,-12(%ebp)
+	movl $0,-24(%ebp)
+	movl $16,-20(%ebp)
+	movl $GHC.Types.[]_closure+1,-16(%ebp)
+	addl $-24,%ebp
+	jmp GHC.Show.$wshowSignedInt_info
+_c1gc:
+	jmp *(%esi)
+.text
+	.align 4,0x90
+	.long	0
+	.long	32
+block_c1gd_info:
+_c1gd:
+	addl $12,%edi
+	cmpl 228(%ebx),%edi
+	ja _c1gn
+_c1gm:
+	movl $:_con_info,-8(%edi)
+	movl %esi,-4(%edi)
+	movl $GHC.Types.[]_closure+1,(%edi)
+	leal -6(%edi),%esi
+	addl $8,%ebp
+	jmp stg_bh_upd_frame_info
+_c1gk:
+	movl $8,252(%ebx)
+_c1gh:
+	jmp *-8(%ebx)
+_c1gn:
+	movl $12,252(%ebx)
+_c1gl:
+	movl $GHC.Types.[]_closure+1,(%ebp)
+	jmp stg_gc_pp
+	.size Main.main2_info, .-Main.main2_info
+.data
+	.align 4
+.align 1
+.globl Main.main1_closure
+.type Main.main1_closure, @object
+Main.main1_closure:
+	.long	Main.main1_info
+	.long	0
+.text
+	.align 4,0x90
+	.long	S1gD_srt-(Main.main1_info)+0
+	.long	65539
+	.long	0
+	.long	983055
+.globl Main.main1_info
+.type Main.main1_info, @object
+Main.main1_info:
+_c1gy:
+	leal -12(%ebp),%eax
+	cmpl 220(%ebx),%eax
+	jb _c1gB
+_c1gC:
+	movl $GHC.IO.Handle.FD.stdout_closure,-12(%ebp)
+	movl $Main.main2_closure,-8(%ebp)
+	movl $GHC.Types.True_closure+2,-4(%ebp)
+	addl $-12,%ebp
+	jmp GHC.IO.Handle.Text.hPutStr2_info
+_c1gB:
+	movl $Main.main1_closure,%esi
+	jmp *-4(%ebx)
+	.size Main.main1_info, .-Main.main1_info
+.data
+	.align 4
+.align 1
+.globl Main.main_closure
+.type Main.main_closure, @object
+Main.main_closure:
+	.long	Main.main_info
+	.long	0
+.text
+	.align 4,0x90
+	.long	S1gD_srt-(Main.main_info)+12
+	.long	65539
+	.long	0
+	.long	65551
+.globl Main.main_info
+.type Main.main_info, @object
+Main.main_info:
+_c1gP:
+	jmp Main.main1_info
+	.size Main.main_info, .-Main.main_info
+.data
+	.align 4
+.align 1
+.globl Main.main3_closure
+.type Main.main3_closure, @object
+Main.main3_closure:
+	.long	Main.main3_info
+	.long	0
+.text
+	.align 4,0x90
+	.long	S1gD_srt-(Main.main3_info)+12
+	.long	65539
+	.long	0
+	.long	458767
+.globl Main.main3_info
+.type Main.main3_info, @object
+Main.main3_info:
+_c1gW:
+	leal -4(%ebp),%eax
+	cmpl 220(%ebx),%eax
+	jb _c1gZ
+_c1h0:
+	movl $Main.main1_closure+1,-4(%ebp)
+	addl $-4,%ebp
+	jmp GHC.TopHandler.runMainIO1_info
+_c1gZ:
+	movl $Main.main3_closure,%esi
+	jmp *-4(%ebx)
+	.size Main.main3_info, .-Main.main3_info
+.data
+	.align 4
+.align 1
+.globl :Main.main_closure
+.type :Main.main_closure, @object
+:Main.main_closure:
+	.long	:Main.main_info
+	.long	0
+.text
+	.align 4,0x90
+	.long	S1gD_srt-(:Main.main_info)+20
+	.long	65539
+	.long	0
+	.long	65551
+.globl :Main.main_info
+.type :Main.main_info, @object
+:Main.main_info:
+_c1hc:
+	jmp Main.main3_info
+	.size :Main.main_info, .-:Main.main_info
+.section .data
+	.align 4
+.align 1
+S1gD_srt:
+	.long	Main.main2_closure
+	.long	GHC.IO.Handle.FD.stdout_closure
+	.long	GHC.IO.Handle.Text.hPutStr2_closure
+	.long	Main.main1_closure
+	.long	GHC.TopHandler.runMainIO1_closure
+	.long	Main.main3_closure
+
+
+Linking B ...

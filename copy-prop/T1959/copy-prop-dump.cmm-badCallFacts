@@ -1,0 +1,367 @@
+[1 of 4] Compiling E                ( E.hs, E.o )
+
+==================== Loopify tail calls ====================
+{offset
+  cgd:
+      _sfy::P32 = P32[(old + 8)];
+      goto cg8;
+  cg8:
+      if (Sp - <highSp> < SpLim) goto cgC; else goto cgD;
+  cgC:
+      R1 = E.h_closure;
+      P32[(old + 8)] = _sfy::P32;
+      call (stg_gc_fun)(R1) args: 8, res: 0, upd: 4;
+  cgD:
+      I32[(young<cga> + 4)] = cga;
+      R1 = _sfy::P32;
+      if (R1 & 3 != 0) goto cga; else goto cgb;
+  cgb:
+      call (I32[R1])(R1) returns to cga, args: 4, res: 4, upd: 4;
+  cga:
+      _sfz::P32 = R1;
+      Hp = Hp + 8;
+      if (Hp > HpLim) goto cgG; else goto cgF;
+  cgG:
+      HpAlloc = 8;
+      goto cgE;
+  cgE:
+      R1 = _sfz::P32;
+      call stg_gc_unpt_r1(R1) returns to cga, args: 4, res: 4, upd: 4;
+  cgF:
+      _sfA::I32 = I32[_sfz::P32 + 3];
+      _cgg::I32 = _sfA::I32 + _sfA::I32;
+      _sfB::I32 = _cgg::I32;
+      _cgj::I32 = _sfB::I32 + _sfA::I32;
+      _sfC::I32 = _cgj::I32;
+      _cgm::I32 = _sfC::I32 + _sfA::I32;
+      _sfD::I32 = _cgm::I32;
+      _cgp::I32 = _sfD::I32 + _sfA::I32;
+      _sfE::I32 = _cgp::I32;
+      _cgs::I32 = _sfE::I32 + _sfA::I32;
+      _sfF::I32 = _cgs::I32;
+      _cgv::I32 = _sfF::I32 + _sfA::I32;
+      _sfG::I32 = _cgv::I32;
+      _cgy::I32 = _sfG::I32 + _sfA::I32;
+      _sfH::I32 = _cgy::I32;
+      I32[Hp - 4] = GHC.Types.I#_con_info;
+      I32[Hp] = _sfH::I32;
+      _cgB::P32 = Hp - 3;
+      R1 = _cgB::P32;
+      call (P32[(old + 4)])(R1) args: 4, res: 0, upd: 4;
+}
+
+
+
+==================== Copy propagation ====================
+{offset
+  cgd:
+      _sfy::P32 = P32[(old + 8)];
+      goto cg8;
+  cg8:
+      if (Sp - <highSp> < SpLim) goto cgC; else goto cgD;
+  cgC:
+      R1 = E.h_closure;
+      P32[(old + 8)] = _sfy::P32;
+      call (stg_gc_fun)(R1) args: 8, res: 0, upd: 4;
+  cgD:
+      I32[(young<cga> + 4)] = cga;
+      R1 = _sfy::P32;
+      if (_sfy::P32 & 3 != 0) goto cga; else goto cgb;
+  cgb:
+      call (I32[_sfy::P32])(R1) returns to cga, args: 4, res: 4, upd: 4;
+  cga:
+      _sfz::P32 = R1;
+      Hp = Hp + 8;
+      if (Hp > HpLim) goto cgG; else goto cgF;
+  cgG:
+      HpAlloc = 8;
+      goto cgE;
+  cgE:
+      R1 = R1;
+      call stg_gc_unpt_r1(R1) returns to cga, args: 4, res: 4, upd: 4;
+  cgF:
+      _sfA::I32 = I32[R1 + 3];
+      _cgg::I32 = _sfA::I32 + _sfA::I32;
+      _sfB::I32 = _cgg::I32;
+      _cgj::I32 = _cgg::I32 + _sfA::I32;
+      _sfC::I32 = _cgj::I32;
+      _cgm::I32 = _cgj::I32 + _sfA::I32;
+      _sfD::I32 = _cgm::I32;
+      _cgp::I32 = _cgm::I32 + _sfA::I32;
+      _sfE::I32 = _cgp::I32;
+      _cgs::I32 = _cgp::I32 + _sfA::I32;
+      _sfF::I32 = _cgs::I32;
+      _cgv::I32 = _cgs::I32 + _sfA::I32;
+      _sfG::I32 = _cgv::I32;
+      _cgy::I32 = _cgv::I32 + _sfA::I32;
+      _sfH::I32 = _cgy::I32;
+      I32[Hp - 4] = GHC.Types.I#_con_info;
+      I32[Hp] = _cgy::I32;
+      _cgB::P32 = Hp - 3;
+      R1 = _cgB::P32;
+      call (P32[(old + 4)])(R1) args: 4, res: 0, upd: 4;
+}
+
+
+[2 of 4] Compiling D                ( D.hs, D.o )
+
+==================== Loopify tail calls ====================
+{offset
+  chf:
+      _B1::P32 = P32[(old + 8)];
+      goto chd;
+  chd:
+      if (Sp - <highSp> < SpLim) goto chg; else goto chh;
+  chg:
+      R1 = D.f_closure;
+      P32[(old + 8)] = _B1::P32;
+      call (stg_gc_fun)(R1) args: 8, res: 0, upd: 4;
+  chh:
+      P32[(old + 8)] = _B1::P32;
+      call E.h_info() args: 8, res: 0, upd: 4;
+}
+
+
+
+==================== Copy propagation ====================
+{offset
+  chf:
+      _B1::P32 = P32[(old + 8)];
+      goto chd;
+  chd:
+      if (Sp - <highSp> < SpLim) goto chg; else goto chh;
+  chg:
+      R1 = D.f_closure;
+      P32[(old + 8)] = _B1::P32;
+      call (stg_gc_fun)(R1) args: 8, res: 0, upd: 4;
+  chh:
+      P32[(old + 8)] = _B1::P32;
+      call E.h_info() args: 8, res: 0, upd: 4;
+}
+
+
+[3 of 4] Compiling C                ( C.hs, C.o )
+[4 of 4] Compiling Main             ( B.hs, B.o )
+
+==================== Loopify tail calls ====================
+{offset
+  c1gg:
+      _r1fW::P32 = R1;
+      goto c1g8;
+  c1g8:
+      if (Sp - <highSp> < SpLim) goto c1gh; else goto c1gi;
+  c1gi:
+      Hp = Hp + 8;
+      if (Hp > HpLim) goto c1gk; else goto c1gj;
+  c1gk:
+      HpAlloc = 8;
+      goto c1gh;
+  c1gh:
+      R1 = _r1fW::P32;
+      call (stg_gc_enter_1)(R1) args: 4, res: 0, upd: 4;
+  c1gj:
+      I32[Hp - 4] = stg_CAF_BLACKHOLE_info;
+      I32[Hp] = CurrentTSO;
+      (_c1ga::I32) = call "ccall" arg hints:  [PtrHint, PtrHint,
+                                               PtrHint]  result hints:  [] newCAF(BaseReg, _r1fW::P32, Hp - 4);
+      if (_c1ga::I32 == 0) goto c1gc; else goto c1gb;
+  c1gc:
+      call (I32[_r1fW::P32])() args: 4, res: 0, upd: 4;
+  c1gb:
+      I32[(old + 12)] = stg_bh_upd_frame_info;
+      P32[(old + 8)] = Hp - 4;
+      I32[(young<c1gd> + 4)] = c1gd;
+      I32[(young<c1gd> + 16)] = 0;
+      I32[(young<c1gd> + 12)] = 16;
+      P32[(young<c1gd> + 8)] = GHC.Types.[]_closure+1;
+      call GHC.Show.$wshowSignedInt_info() returns to c1gd, args: 16, res: 8, upd: 12;
+  c1gd:
+      _s1g2::P32 = R1;
+      _s1g3::P32 = P32[(young<c1gd> + 8)];
+      Hp = Hp + 12;
+      if (Hp > HpLim) goto c1gn; else goto c1gm;
+  c1gn:
+      HpAlloc = 12;
+      goto c1gl;
+  c1gl:
+      R1 = _s1g2::P32;
+      P32[(young<c1gd> + 8)] = _s1g3::P32;
+      call stg_gc_pp(R1) returns to c1gd, args: 8, res: 8, upd: 12;
+  c1gm:
+      I32[Hp - 8] = :_con_info;
+      P32[Hp - 4] = _s1g2::P32;
+      P32[Hp] = _s1g3::P32;
+      _c1gf::P32 = Hp - 6;
+      R1 = _c1gf::P32;
+      call (P32[(old + 12)])(R1) args: 12, res: 0, upd: 12;
+}
+
+
+
+==================== Copy propagation ====================
+{offset
+  c1gg:
+      _r1fW::P32 = R1;
+      goto c1g8;
+  c1g8:
+      if (Sp - <highSp> < SpLim) goto c1gh; else goto c1gi;
+  c1gi:
+      Hp = Hp + 8;
+      if (Hp > HpLim) goto c1gk; else goto c1gj;
+  c1gk:
+      HpAlloc = 8;
+      goto c1gh;
+  c1gh:
+      R1 = R1;
+      call (stg_gc_enter_1)(R1) args: 4, res: 0, upd: 4;
+  c1gj:
+      I32[Hp - 4] = stg_CAF_BLACKHOLE_info;
+      I32[Hp] = CurrentTSO;
+      (_c1ga::I32) = call "ccall" arg hints:  [PtrHint, PtrHint,
+                                               PtrHint]  result hints:  [] newCAF(BaseReg, R1, Hp - 4);
+      if (_c1ga::I32 == 0) goto c1gc; else goto c1gb;
+  c1gc:
+      call (I32[R1])() args: 4, res: 0, upd: 4;
+  c1gb:
+      I32[(old + 12)] = stg_bh_upd_frame_info;
+      P32[(old + 8)] = Hp - 4;
+      I32[(young<c1gd> + 4)] = c1gd;
+      I32[(young<c1gd> + 16)] = 0;
+      I32[(young<c1gd> + 12)] = 16;
+      P32[(young<c1gd> + 8)] = GHC.Types.[]_closure+1;
+      call GHC.Show.$wshowSignedInt_info() returns to c1gd, args: 16, res: 8, upd: 12;
+  c1gd:
+      _s1g2::P32 = R1;
+      _s1g3::P32 = GHC.Types.[]_closure+1;
+      Hp = Hp + 12;
+      if (Hp > HpLim) goto c1gn; else goto c1gm;
+  c1gn:
+      HpAlloc = 12;
+      goto c1gl;
+  c1gl:
+      R1 = R1;
+      P32[(young<c1gd> + 8)] = GHC.Types.[]_closure+1;
+      call stg_gc_pp(R1) returns to c1gd, args: 8, res: 8, upd: 12;
+  c1gm:
+      I32[Hp - 8] = :_con_info;
+      P32[Hp - 4] = R1;
+      P32[Hp] = GHC.Types.[]_closure+1;
+      _c1gf::P32 = Hp - 6;
+      R1 = _c1gf::P32;
+      call stg_bh_upd_frame_info(R1) args: 12, res: 0, upd: 12;
+}
+
+
+
+==================== Loopify tail calls ====================
+{offset
+  c1gy:
+      if (Sp - <highSp> < SpLim) goto c1gB; else goto c1gC;
+  c1gB:
+      R1 = Main.main1_closure;
+      call (stg_gc_fun)(R1) args: 4, res: 0, upd: 4;
+  c1gC:
+      P32[(old + 16)] = GHC.IO.Handle.FD.stdout_closure;
+      P32[(old + 12)] = Main.main2_closure;
+      P32[(old + 8)] = GHC.Types.True_closure+2;
+      call GHC.IO.Handle.Text.hPutStr2_info() args: 16, res: 0, upd: 4;
+}
+
+
+
+==================== Copy propagation ====================
+{offset
+  c1gy:
+      if (Sp - <highSp> < SpLim) goto c1gB; else goto c1gC;
+  c1gB:
+      R1 = Main.main1_closure;
+      call (stg_gc_fun)(R1) args: 4, res: 0, upd: 4;
+  c1gC:
+      P32[(old + 16)] = GHC.IO.Handle.FD.stdout_closure;
+      P32[(old + 12)] = Main.main2_closure;
+      P32[(old + 8)] = GHC.Types.True_closure+2;
+      call GHC.IO.Handle.Text.hPutStr2_info() args: 16, res: 0, upd: 4;
+}
+
+
+
+==================== Loopify tail calls ====================
+{offset
+  c1gL:
+      if (Sp - <highSp> < SpLim) goto c1gO; else goto c1gP;
+  c1gO:
+      R1 = Main.main_closure;
+      call (stg_gc_fun)(R1) args: 4, res: 0, upd: 4;
+  c1gP:
+      call Main.main1_info() args: 4, res: 0, upd: 4;
+}
+
+
+
+==================== Copy propagation ====================
+{offset
+  c1gL:
+      if (Sp - <highSp> < SpLim) goto c1gO; else goto c1gP;
+  c1gO:
+      R1 = Main.main_closure;
+      call (stg_gc_fun)(R1) args: 4, res: 0, upd: 4;
+  c1gP:
+      call Main.main1_info() args: 4, res: 0, upd: 4;
+}
+
+
+
+==================== Loopify tail calls ====================
+{offset
+  c1gW:
+      if (Sp - <highSp> < SpLim) goto c1gZ; else goto c1h0;
+  c1gZ:
+      R1 = Main.main3_closure;
+      call (stg_gc_fun)(R1) args: 4, res: 0, upd: 4;
+  c1h0:
+      P32[(old + 8)] = Main.main1_closure+1;
+      call GHC.TopHandler.runMainIO1_info() args: 8, res: 0, upd: 4;
+}
+
+
+
+==================== Copy propagation ====================
+{offset
+  c1gW:
+      if (Sp - <highSp> < SpLim) goto c1gZ; else goto c1h0;
+  c1gZ:
+      R1 = Main.main3_closure;
+      call (stg_gc_fun)(R1) args: 4, res: 0, upd: 4;
+  c1h0:
+      P32[(old + 8)] = Main.main1_closure+1;
+      call GHC.TopHandler.runMainIO1_info() args: 8, res: 0, upd: 4;
+}
+
+
+
+==================== Loopify tail calls ====================
+{offset
+  c1h8:
+      if (Sp - <highSp> < SpLim) goto c1hb; else goto c1hc;
+  c1hb:
+      R1 = :Main.main_closure;
+      call (stg_gc_fun)(R1) args: 4, res: 0, upd: 4;
+  c1hc:
+      call Main.main3_info() args: 4, res: 0, upd: 4;
+}
+
+
+
+==================== Copy propagation ====================
+{offset
+  c1h8:
+      if (Sp - <highSp> < SpLim) goto c1hb; else goto c1hc;
+  c1hb:
+      R1 = :Main.main_closure;
+      call (stg_gc_fun)(R1) args: 4, res: 0, upd: 4;
+  c1hc:
+      call Main.main3_info() args: 4, res: 0, upd: 4;
+}
+
+
+Linking B ...

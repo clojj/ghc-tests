@@ -1,0 +1,2638 @@
+[1 of 3] Compiling T2902_Sum        ( T2902_Sum.hs, T2902_Sum.o )
+
+==================== Asm code ====================
+.data
+	.align 4
+.align 1
+.globl __stginit_main:T2902_Sum
+.type __stginit_main:T2902_Sum, @object
+__stginit_main:T2902_Sum:
+.data
+	.align 4
+.align 1
+.globl T2902_Sum.insert_closure
+.type T2902_Sum.insert_closure, @object
+T2902_Sum.insert_closure:
+	.long	T2902_Sum.insert_info
+.text
+	.align 4,0x90
+	.long	65541
+	.long	0
+	.long	15
+.globl T2902_Sum.insert_info
+.type T2902_Sum.insert_info, @object
+T2902_Sum.insert_info:
+_cg0:
+	movl (%ebp),%eax
+	movl $block_cfV_info,(%ebp)
+	movl %eax,%esi
+	testl $3,%esi
+	jne _cfV
+_cfW:
+	jmp *(%esi)
+.text
+	.align 4,0x90
+	.long	0
+	.long	32
+block_cfV_info:
+_cfV:
+	movl 3(%esi),%esi
+	addl $4,%ebp
+	jmp stg_ap_0_fast
+	.size T2902_Sum.insert_info, .-T2902_Sum.insert_info
+.data
+	.align 4
+.align 1
+.globl T2902_Sum.union_closure
+.type T2902_Sum.union_closure, @object
+T2902_Sum.union_closure:
+	.long	T2902_Sum.union_info
+.text
+	.align 4,0x90
+	.long	65541
+	.long	0
+	.long	15
+.globl T2902_Sum.union_info
+.type T2902_Sum.union_info, @object
+T2902_Sum.union_info:
+_cgk:
+	movl (%ebp),%eax
+	movl $block_cgf_info,(%ebp)
+	movl %eax,%esi
+	testl $3,%esi
+	jne _cgf
+_cgg:
+	jmp *(%esi)
+.text
+	.align 4,0x90
+	.long	0
+	.long	32
+block_cgf_info:
+_cgf:
+	movl 7(%esi),%esi
+	addl $4,%ebp
+	jmp stg_ap_0_fast
+	.size T2902_Sum.union_info, .-T2902_Sum.union_info
+.data
+	.align 4
+.align 1
+.globl T2902_Sum.unions_closure
+.type T2902_Sum.unions_closure, @object
+T2902_Sum.unions_closure:
+	.long	T2902_Sum.unions_info
+.text
+	.align 4,0x90
+	.long	65541
+	.long	0
+	.long	15
+.globl T2902_Sum.unions_info
+.type T2902_Sum.unions_info, @object
+T2902_Sum.unions_info:
+_cgE:
+	movl (%ebp),%eax
+	movl $block_cgz_info,(%ebp)
+	movl %eax,%esi
+	testl $3,%esi
+	jne _cgz
+_cgA:
+	jmp *(%esi)
+.text
+	.align 4,0x90
+	.long	0
+	.long	32
+block_cgz_info:
+_cgz:
+	movl 11(%esi),%esi
+	addl $4,%ebp
+	jmp stg_ap_0_fast
+	.size T2902_Sum.unions_info, .-T2902_Sum.unions_info
+.data
+	.align 4
+.align 1
+.globl T2902_Sum.extractMin_closure
+.type T2902_Sum.extractMin_closure, @object
+T2902_Sum.extractMin_closure:
+	.long	T2902_Sum.extractMin_info
+.text
+	.align 4,0x90
+	.long	65541
+	.long	0
+	.long	15
+.globl T2902_Sum.extractMin_info
+.type T2902_Sum.extractMin_info, @object
+T2902_Sum.extractMin_info:
+_cgY:
+	movl (%ebp),%eax
+	movl $block_cgT_info,(%ebp)
+	movl %eax,%esi
+	testl $3,%esi
+	jne _cgT
+_cgU:
+	jmp *(%esi)
+.text
+	.align 4,0x90
+	.long	0
+	.long	32
+block_cgT_info:
+_cgT:
+	movl 15(%esi),%esi
+	addl $4,%ebp
+	jmp stg_ap_0_fast
+	.size T2902_Sum.extractMin_info, .-T2902_Sum.extractMin_info
+.data
+	.align 4
+.align 1
+.globl T2902_Sum.fromList_closure
+.type T2902_Sum.fromList_closure, @object
+T2902_Sum.fromList_closure:
+	.long	T2902_Sum.fromList_info
+.text
+	.align 4,0x90
+	.long	65541
+	.long	0
+	.long	15
+.globl T2902_Sum.fromList_info
+.type T2902_Sum.fromList_info, @object
+T2902_Sum.fromList_info:
+_chi:
+	movl (%ebp),%eax
+	movl $block_chd_info,(%ebp)
+	movl %eax,%esi
+	testl $3,%esi
+	jne _chd
+_che:
+	jmp *(%esi)
+.text
+	.align 4,0x90
+	.long	0
+	.long	32
+block_chd_info:
+_chd:
+	movl 19(%esi),%esi
+	addl $4,%ebp
+	jmp stg_ap_0_fast
+	.size T2902_Sum.fromList_info, .-T2902_Sum.fromList_info
+.data
+	.align 4
+.align 1
+.globl T2902_Sum.toList_closure
+.type T2902_Sum.toList_closure, @object
+T2902_Sum.toList_closure:
+	.long	T2902_Sum.toList_info
+.text
+	.align 4,0x90
+	.long	65541
+	.long	0
+	.long	15
+.globl T2902_Sum.toList_info
+.type T2902_Sum.toList_info, @object
+T2902_Sum.toList_info:
+_chC:
+	movl (%ebp),%eax
+	movl $block_chx_info,(%ebp)
+	movl %eax,%esi
+	testl $3,%esi
+	jne _chx
+_chy:
+	jmp *(%esi)
+.text
+	.align 4,0x90
+	.long	0
+	.long	32
+block_chx_info:
+_chx:
+	movl 23(%esi),%esi
+	addl $4,%ebp
+	jmp stg_ap_0_fast
+	.size T2902_Sum.toList_info, .-T2902_Sum.toList_info
+.data
+	.align 4
+.align 1
+.globl T2902_Sum.D:Sum_closure
+.type T2902_Sum.D:Sum_closure, @object
+T2902_Sum.D:Sum_closure:
+	.long	T2902_Sum.D:Sum_info
+.text
+	.align 4,0x90
+	.long	393240
+	.long	0
+	.long	15
+T2902_Sum.D:Sum_info:
+_chR:
+	addl $28,%edi
+	cmpl 228(%ebx),%edi
+	ja _chT
+_chS:
+	movl $T2902_Sum.D:Sum_con_info,-24(%edi)
+	movl (%ebp),%eax
+	movl %eax,-20(%edi)
+	movl 4(%ebp),%eax
+	movl %eax,-16(%edi)
+	movl 8(%ebp),%eax
+	movl %eax,-12(%edi)
+	movl 12(%ebp),%eax
+	movl %eax,-8(%edi)
+	movl 16(%ebp),%eax
+	movl %eax,-4(%edi)
+	movl 20(%ebp),%eax
+	movl %eax,(%edi)
+	leal -23(%edi),%esi
+	addl $24,%ebp
+	jmp *(%ebp)
+_chT:
+	movl $28,252(%ebx)
+_chQ:
+	movl $T2902_Sum.D:Sum_closure,%esi
+	jmp *-4(%ebx)
+	.size T2902_Sum.D:Sum_info, .-T2902_Sum.D:Sum_info
+.section .rodata
+	.align 4
+.align 1
+ii6_str:
+	.byte	109
+	.byte	97
+	.byte	105
+	.byte	110
+	.byte	58
+	.byte	84
+	.byte	50
+	.byte	57
+	.byte	48
+	.byte	50
+	.byte	95
+	.byte	83
+	.byte	117
+	.byte	109
+	.byte	46
+	.byte	68
+	.byte	58
+	.byte	83
+	.byte	117
+	.byte	109
+	.byte	0
+.text
+	.align 4,0x90
+	.long	ii6_str-(T2902_Sum.D:Sum_con_info)+0
+	.long	6
+	.long	1
+.globl T2902_Sum.D:Sum_con_info
+.type T2902_Sum.D:Sum_con_info, @object
+T2902_Sum.D:Sum_con_info:
+_ci4:
+	incl %esi
+	jmp *(%ebp)
+	.size T2902_Sum.D:Sum_con_info, .-T2902_Sum.D:Sum_con_info
+.section .rodata
+	.align 4
+.align 1
+ii7_str:
+	.byte	109
+	.byte	97
+	.byte	105
+	.byte	110
+	.byte	58
+	.byte	84
+	.byte	50
+	.byte	57
+	.byte	48
+	.byte	50
+	.byte	95
+	.byte	83
+	.byte	117
+	.byte	109
+	.byte	46
+	.byte	68
+	.byte	58
+	.byte	83
+	.byte	117
+	.byte	109
+	.byte	0
+.text
+	.align 4,0x90
+	.long	ii7_str-(T2902_Sum.D:Sum_static_info)+0
+	.long	6
+	.long	7
+.globl T2902_Sum.D:Sum_static_info
+.type T2902_Sum.D:Sum_static_info, @object
+T2902_Sum.D:Sum_static_info:
+_ci5:
+	incl %esi
+	jmp *(%ebp)
+	.size T2902_Sum.D:Sum_static_info, .-T2902_Sum.D:Sum_static_info
+.section .data
+	.align 4
+.align 1
+Sif_srt:
+
+
+[2 of 3] Compiling T2902_B_PairingSum ( T2902_B_PairingSum.hs, T2902_B_PairingSum.o )
+
+==================== Asm code ====================
+.data
+	.align 4
+.align 1
+.globl __stginit_main:T2902_B_PairingSum
+.type __stginit_main:T2902_B_PairingSum, @object
+__stginit_main:T2902_B_PairingSum:
+.data
+	.align 4
+.align 1
+lvl_rHo_closure:
+	.long	GHC.Integer.Type.S#_static_info
+	.long	0
+.data
+	.align 4
+.align 1
+.globl T2902_B_PairingSum.$fSumPSumab_$cunions_closure
+.type T2902_B_PairingSum.$fSumPSumab_$cunions_closure, @object
+T2902_B_PairingSum.$fSumPSumab_$cunions_closure:
+	.long	T2902_B_PairingSum.$fSumPSumab_$cunions_info
+	.long	0
+.text
+	.align 4,0x90
+	.long	SMp_srt-(T2902_B_PairingSum.$fSumPSumab_$cunions_info)+0
+	.long	262166
+	.long	0
+	.long	196623
+.globl T2902_B_PairingSum.$fSumPSumab_$cunions_info
+.type T2902_B_PairingSum.$fSumPSumab_$cunions_info, @object
+T2902_B_PairingSum.$fSumPSumab_$cunions_info:
+_cJD:
+	leal -24(%ebp),%eax
+	cmpl 220(%ebx),%eax
+	jb _cJQ
+_cJR:
+	movl $block_cJF_info,-4(%ebp)
+	movl 12(%ebp),%esi
+	addl $-4,%ebp
+	testl $3,%esi
+	jne _cJF
+_cJG:
+	jmp *(%esi)
+.text
+	.align 4,0x90
+	.long	SMp_srt-(block_cJF_info)+0
+	.long	260
+	.long	196640
+block_cJF_info:
+_cJF:
+	movl %esi,%eax
+	movl %eax,%ecx
+	andl $3,%ecx
+	cmpl $2,%ecx
+	jae _cJK
+_cJJ:
+	movl $T2902_B_PairingSum.Empty_closure+1,%esi
+	addl $20,%ebp
+	jmp *(%ebp)
+_cJK:
+	movl $block_cJX_info,(%ebp)
+	movl 6(%eax),%esi
+	movl 2(%eax),%eax
+	movl %eax,16(%ebp)
+	testl $3,%esi
+	jne _cJX
+_cJZ:
+	jmp *(%esi)
+_cJQ:
+	movl $T2902_B_PairingSum.$fSumPSumab_$cunions_closure,%esi
+	jmp *-4(%ebx)
+.text
+	.align 4,0x90
+	.long	SMp_srt-(block_cJX_info)+0
+	.long	4
+	.long	196640
+block_cJX_info:
+_cJX:
+	movl %esi,%eax
+	movl %eax,%ecx
+	andl $3,%ecx
+	cmpl $2,%ecx
+	jae _cKe
+_cK5:
+	movl 16(%ebp),%esi
+	andl $-4,%esi
+	addl $20,%ebp
+	jmp *(%esi)
+.text
+	.align 4,0x90
+	.long	SMp_srt-(block_cK8_info)+4
+	.long	5
+	.long	65568
+block_cK8_info:
+_cK8:
+	movl 4(%ebp),%eax
+	movl $block_cKc_info,4(%ebp)
+	movl 8(%ebp),%ecx
+	movl %ecx,-16(%ebp)
+	movl 12(%ebp),%ecx
+	movl %ecx,-12(%ebp)
+	movl 16(%ebp),%ecx
+	movl %ecx,-8(%ebp)
+	movl 20(%ebp),%ecx
+	movl %ecx,-4(%ebp)
+	movl %eax,(%ebp)
+	movl %esi,20(%ebp)
+	addl $-16,%ebp
+	jmp T2902_B_PairingSum.$fSumPSumab_$cunion_info
+.text
+	.align 4,0x90
+	.long	SMp_srt-(block_cKc_info)+4
+	.long	4
+	.long	65568
+block_cKc_info:
+_cKc:
+	movl 4(%ebp),%eax
+	movl %eax,(%ebp)
+	movl 8(%ebp),%eax
+	movl %eax,4(%ebp)
+	movl 12(%ebp),%eax
+	movl %eax,8(%ebp)
+	movl %esi,12(%ebp)
+	jmp T2902_B_PairingSum.$fSumPSumab_$cunion_info
+_cKe:
+	movl $block_cK8_info,-4(%ebp)
+	movl 4(%ebp),%ecx
+	movl %ecx,-20(%ebp)
+	movl 8(%ebp),%ecx
+	movl %ecx,-16(%ebp)
+	movl 12(%ebp),%ecx
+	movl %ecx,-12(%ebp)
+	movl 6(%eax),%ecx
+	movl %ecx,-8(%ebp)
+	movl 2(%eax),%eax
+	movl %eax,(%ebp)
+	addl $-20,%ebp
+	jmp T2902_B_PairingSum.$fSumPSumab_$cunions_info
+	.size T2902_B_PairingSum.$fSumPSumab_$cunions_info, .-T2902_B_PairingSum.$fSumPSumab_$cunions_info
+.data
+	.align 4
+.align 1
+.globl T2902_B_PairingSum.$fSumPSumab_$cunion_closure
+.type T2902_B_PairingSum.$fSumPSumab_$cunion_closure, @object
+T2902_B_PairingSum.$fSumPSumab_$cunion_closure:
+	.long	T2902_B_PairingSum.$fSumPSumab_$cunion_info
+	.long	0
+.text
+	.align 4,0x90
+	.long	3
+	.long	16
+ds1_sHT_info:
+_cKK:
+	movl %esi,%eax
+	leal -24(%ebp),%ecx
+	cmpl 220(%ebx),%ecx
+	jb _cKN
+_cKO:
+	movl $stg_upd_frame_info,-8(%ebp)
+	movl %eax,-4(%ebp)
+	movl 8(%eax),%ecx
+	movl %ecx,-24(%ebp)
+	movl $stg_ap_pp_info,-20(%ebp)
+	movl 16(%eax),%ecx
+	movl %ecx,-16(%ebp)
+	movl 12(%eax),%eax
+	movl %eax,-12(%ebp)
+	addl $-24,%ebp
+	jmp GHC.Num.+_info
+_cKN:
+	movl %eax,%esi
+	jmp *-8(%ebx)
+	.size ds1_sHT_info, .-ds1_sHT_info
+.text
+	.align 4,0x90
+	.long	SMp_srt-(sat_sHX_info)+8
+	.long	1
+	.long	65553
+sat_sHX_info:
+_cL3:
+	movl %esi,%eax
+	leal -20(%ebp),%ecx
+	cmpl 220(%ebx),%ecx
+	jb _cL6
+_cL7:
+	movl $stg_upd_frame_info,-8(%ebp)
+	movl %eax,-4(%ebp)
+	movl 8(%eax),%eax
+	movl %eax,-20(%ebp)
+	movl $stg_ap_p_info,-16(%ebp)
+	movl $lvl_rHo_closure+1,-12(%ebp)
+	addl $-20,%ebp
+	jmp GHC.Num.fromInteger_info
+_cL6:
+	movl %eax,%esi
+	jmp *-8(%ebx)
+	.size sat_sHX_info, .-sat_sHX_info
+.text
+	.align 4,0x90
+	.long	SMp_srt-(T2902_B_PairingSum.$fSumPSumab_$cunion_info)+0
+	.long	327703
+	.long	0
+	.long	983055
+.globl T2902_B_PairingSum.$fSumPSumab_$cunion_info
+.type T2902_B_PairingSum.$fSumPSumab_$cunion_info, @object
+T2902_B_PairingSum.$fSumPSumab_$cunion_info:
+_cKp:
+	leal -48(%ebp),%eax
+	cmpl 220(%ebx),%eax
+	jb _cLg
+_cLh:
+	movl $block_cKr_info,-4(%ebp)
+	movl 16(%ebp),%esi
+	addl $-4,%ebp
+	testl $3,%esi
+	jne _cKr
+_cKs:
+	jmp *(%esi)
+.text
+	.align 4,0x90
+	.long	SMp_srt-(block_cKr_info)+0
+	.long	517
+	.long	983072
+block_cKr_info:
+_cKr:
+	movl 16(%ebp),%eax
+	movl %esi,%ecx
+	movl %ecx,%edx
+	andl $3,%edx
+	cmpl $2,%edx
+	jae _cLa
+_cL9:
+	movl %eax,%esi
+	andl $-4,%esi
+	addl $24,%ebp
+	jmp *(%esi)
+.text
+	.align 4,0x90
+	.long	SMp_srt-(block_cKx_info)+0
+	.long	7
+	.long	983072
+block_cKx_info:
+_cKx:
+	movl %esi,%eax
+	movl %eax,%ecx
+	andl $3,%ecx
+	cmpl $2,%ecx
+	jae _cLq
+_cLo:
+	movl 28(%ebp),%esi
+	andl $-4,%esi
+	addl $32,%ebp
+	jmp *(%esi)
+_cLa:
+	movl $block_cKx_info,-8(%ebp)
+	movl %eax,%esi
+	movl 10(%ecx),%eax
+	movl %eax,-4(%ebp)
+	movl 6(%ecx),%eax
+	movl %eax,(%ebp)
+	movl 2(%ecx),%eax
+	movl %eax,16(%ebp)
+	movl %ecx,20(%ebp)
+	addl $-8,%ebp
+	testl $3,%esi
+	jne _cKx
+_cKy:
+	jmp *(%esi)
+.text
+	.align 4,0x90
+	.long	SMp_srt-(block_cKD_info)+0
+	.long	11
+	.long	983072
+block_cKD_info:
+_cKD:
+	movl 8(%ebp),%eax
+	movl %esi,%ecx
+	movl %ecx,%edx
+	andl $3,%edx
+	cmpl $2,%edx
+	jae _cMa
+_cLv:
+	addl $28,%edi
+	cmpl 228(%ebx),%edi
+	ja _cM4
+_cLx:
+	movl $:_con_info,-24(%edi)
+	movl 44(%ebp),%ecx
+	movl %ecx,-20(%edi)
+	movl 12(%ebp),%ecx
+	movl %ecx,-16(%edi)
+	movl $T2902_B_PairingSum.Tree_con_info,-12(%edi)
+	movl 4(%ebp),%ecx
+	movl %ecx,-8(%edi)
+	movl %eax,-4(%edi)
+	leal -22(%edi),%eax
+	movl %eax,(%edi)
+	leal -10(%edi),%esi
+	addl $48,%ebp
+	jmp *(%ebp)
+.text
+	.align 4,0x90
+	.long	SMp_srt-(block_cKP_info)+0
+	.long	18251
+	.long	983072
+block_cKP_info:
+_cKP:
+	movl $block_cKT_info,(%ebp)
+	movl 28(%ebp),%eax
+	movl %eax,-16(%ebp)
+	movl 32(%ebp),%eax
+	movl %eax,-12(%ebp)
+	movl 36(%ebp),%eax
+	movl %eax,-8(%ebp)
+	movl 12(%ebp),%eax
+	movl %eax,-4(%ebp)
+	movl %esi,40(%ebp)
+	addl $-16,%ebp
+	jmp T2902_B_PairingSum.$fSumPSumab_$cunions_info
+.text
+	.align 4,0x90
+	.long	SMp_srt-(block_cKT_info)+4
+	.long	1995
+	.long	458784
+block_cKT_info:
+_cKT:
+	movl $block_cKX_info,(%ebp)
+	movl 28(%ebp),%eax
+	movl %eax,-20(%ebp)
+	movl 32(%ebp),%eax
+	movl %eax,-16(%ebp)
+	movl 36(%ebp),%eax
+	movl %eax,-12(%ebp)
+	movl %esi,-8(%ebp)
+	movl 40(%ebp),%eax
+	movl %eax,-4(%ebp)
+	addl $-20,%ebp
+	jmp T2902_B_PairingSum.$fSumPSumab_$cunion_info
+.text
+	.align 4,0x90
+	.long	SMp_srt-(block_cKX_info)+8
+	.long	18379
+	.long	196640
+block_cKX_info:
+_cKX:
+	addl $12,%edi
+	movl %esi,%eax
+	cmpl 228(%ebx),%edi
+	ja _cLI
+_cLH:
+	movl $sat_sHX_info,-8(%edi)
+	movl 36(%ebp),%ecx
+	movl %ecx,(%edi)
+	movl $block_cLF_info,(%ebp)
+	movl 32(%ebp),%ecx
+	movl %ecx,-16(%ebp)
+	movl $stg_ap_pp_info,-12(%ebp)
+	movl 44(%ebp),%ecx
+	movl %ecx,-8(%ebp)
+	leal -8(%edi),%ecx
+	movl %ecx,-4(%ebp)
+	movl %eax,40(%ebp)
+	addl $-16,%ebp
+	jmp GHC.Classes.==_info
+_cLg:
+	movl $T2902_B_PairingSum.$fSumPSumab_$cunion_closure,%esi
+	jmp *-4(%ebx)
+_cLq:
+	movl $block_cKD_info,-16(%ebp)
+	movl 12(%ebp),%ecx
+	movl %ecx,-32(%ebp)
+	movl $stg_ap_pp_info,-28(%ebp)
+	movl 2(%eax),%ecx
+	movl %ecx,-24(%ebp)
+	movl 24(%ebp),%edx
+	movl %edx,-20(%ebp)
+	movl %ecx,-12(%ebp)
+	movl 6(%eax),%ecx
+	movl %ecx,-8(%ebp)
+	movl 10(%eax),%ecx
+	movl %ecx,-4(%ebp)
+	movl %eax,(%ebp)
+	addl $-32,%ebp
+	jmp GHC.Classes.compare_info
+_cMa:
+	movl %edx,64(%esp)
+	movl 24(%ebp),%edx
+	movl %edx,76(%esp)
+	movl 20(%ebp),%edx
+	movl %edx,88(%esp)
+	movl 64(%esp),%edx
+	cmpl $3,%edx
+	jae _cM1
+_cLz:
+	addl $20,%edi
+	cmpl 228(%ebx),%edi
+	ja _cLC
+_cLB:
+	movl $ds1_sHT_info,-16(%edi)
+	movl 36(%ebp),%ecx
+	movl %ecx,-8(%edi)
+	movl 76(%esp),%edx
+	movl %edx,-4(%edi)
+	movl %eax,(%edi)
+	movl $block_cKP_info,(%ebp)
+	movl 28(%ebp),%eax
+	movl %eax,-16(%ebp)
+	movl 32(%ebp),%eax
+	movl %eax,-12(%ebp)
+	movl %ecx,-8(%ebp)
+	movl 88(%esp),%eax
+	movl %eax,-4(%ebp)
+	leal -16(%edi),%eax
+	movl %eax,44(%ebp)
+	addl $-16,%ebp
+	jmp T2902_B_PairingSum.$fSumPSumab_$cunions_info
+_cLC:
+	movl $20,252(%ebx)
+_cM2:
+	movl %ecx,%esi
+	jmp stg_gc_unpt_r1
+.text
+	.align 4,0x90
+	.long	SMp_srt-(block_cLF_info)+12
+	.long	1995
+	.long	65568
+block_cLF_info:
+_cLF:
+	movl 40(%ebp),%eax
+	movl %esi,%ecx
+	andl $3,%ecx
+	cmpl $2,%ecx
+	jae _cLS
+_cLO:
+	movl 28(%ebp),%ecx
+	movl %ecx,24(%ebp)
+	movl 32(%ebp),%ecx
+	movl %ecx,28(%ebp)
+	movl 36(%ebp),%ecx
+	movl %ecx,32(%ebp)
+	movl 4(%ebp),%ecx
+	movl %ecx,36(%ebp)
+	movl 44(%ebp),%ecx
+	movl %ecx,40(%ebp)
+	movl %eax,44(%ebp)
+	addl $24,%ebp
+	jmp T2902_B_PairingSum.$fSumPSumab_$cinsert_info
+_cLI:
+	movl $12,252(%ebx)
+_cLG:
+	movl %eax,%esi
+	jmp stg_gc_unpt_r1
+_cLS:
+	movl %eax,%esi
+	andl $-4,%esi
+	addl $48,%ebp
+	jmp *(%esi)
+_cM1:
+	addl $28,%edi
+	cmpl 228(%ebx),%edi
+	ja _cM4
+_cM3:
+	movl $:_con_info,-24(%edi)
+	movl 16(%ebp),%eax
+	movl %eax,-20(%edi)
+	movl 88(%esp),%eax
+	movl %eax,-16(%edi)
+	movl $T2902_B_PairingSum.Tree_con_info,-12(%edi)
+	movl 40(%ebp),%eax
+	movl %eax,-8(%edi)
+	movl 76(%esp),%eax
+	movl %eax,-4(%edi)
+	leal -22(%edi),%eax
+	movl %eax,(%edi)
+	leal -10(%edi),%esi
+	addl $48,%ebp
+	jmp *(%ebp)
+_cM4:
+	movl $28,252(%ebx)
+	jmp _cM2
+	.size T2902_B_PairingSum.$fSumPSumab_$cunion_info, .-T2902_B_PairingSum.$fSumPSumab_$cunion_info
+.data
+	.align 4
+.align 1
+.globl T2902_B_PairingSum.$fSumPSumab_$cinsert_closure
+.type T2902_B_PairingSum.$fSumPSumab_$cinsert_closure, @object
+T2902_B_PairingSum.$fSumPSumab_$cinsert_closure:
+	.long	T2902_B_PairingSum.$fSumPSumab_$cinsert_info
+	.long	0
+.text
+	.align 4,0x90
+	.long	SMp_srt-(T2902_B_PairingSum.$fSumPSumab_$cinsert_info)+4
+	.long	393240
+	.long	0
+	.long	327695
+.globl T2902_B_PairingSum.$fSumPSumab_$cinsert_info
+.type T2902_B_PairingSum.$fSumPSumab_$cinsert_info, @object
+T2902_B_PairingSum.$fSumPSumab_$cinsert_info:
+_cMm:
+	addl $16,%edi
+	cmpl 228(%ebx),%edi
+	ja _cMo
+_cMn:
+	movl $T2902_B_PairingSum.Tree_con_info,-12(%edi)
+	movl 12(%ebp),%eax
+	movl %eax,-8(%edi)
+	movl 16(%ebp),%eax
+	movl %eax,-4(%edi)
+	movl $GHC.Types.[]_closure+1,(%edi)
+	movl 4(%ebp),%eax
+	movl (%ebp),%ecx
+	movl %ecx,4(%ebp)
+	movl 8(%ebp),%ecx
+	movl %eax,8(%ebp)
+	movl %ecx,12(%ebp)
+	leal -10(%edi),%eax
+	movl %eax,16(%ebp)
+	addl $4,%ebp
+	jmp T2902_B_PairingSum.$fSumPSumab_$cunion_info
+_cMo:
+	movl $16,252(%ebx)
+_cMl:
+	movl $T2902_B_PairingSum.$fSumPSumab_$cinsert_closure,%esi
+	jmp *-4(%ebx)
+	.size T2902_B_PairingSum.$fSumPSumab_$cinsert_info, .-T2902_B_PairingSum.$fSumPSumab_$cinsert_info
+.data
+	.align 4
+.align 1
+.globl T2902_B_PairingSum.$fSumPSumab_$cextractMin_closure
+.type T2902_B_PairingSum.$fSumPSumab_$cextractMin_closure, @object
+T2902_B_PairingSum.$fSumPSumab_$cextractMin_closure:
+	.long	T2902_B_PairingSum.$fSumPSumab_$cextractMin_info
+	.long	0
+.text
+	.align 4,0x90
+	.long	SMp_srt-(sat_sIg_info)+0
+	.long	4
+	.long	65552
+sat_sIg_info:
+_cO6:
+	movl %esi,%eax
+	leal -24(%ebp),%ecx
+	cmpl 220(%ebx),%ecx
+	jb _cO9
+_cOa:
+	movl $stg_upd_frame_info,-8(%ebp)
+	movl %eax,-4(%ebp)
+	movl 8(%eax),%ecx
+	movl %ecx,-24(%ebp)
+	movl 12(%eax),%ecx
+	movl %ecx,-20(%ebp)
+	movl 16(%eax),%ecx
+	movl %ecx,-16(%ebp)
+	movl 20(%eax),%eax
+	movl %eax,-12(%ebp)
+	addl $-24,%ebp
+	jmp T2902_B_PairingSum.$fSumPSumab_$cunions_info
+_cO9:
+	movl %eax,%esi
+	jmp *-8(%ebx)
+	.size sat_sIg_info, .-sat_sIg_info
+.text
+	.align 4,0x90
+	.long	SMp_srt-(T2902_B_PairingSum.$fSumPSumab_$cextractMin_info)+0
+	.long	262166
+	.long	0
+	.long	3211279
+.globl T2902_B_PairingSum.$fSumPSumab_$cextractMin_info
+.type T2902_B_PairingSum.$fSumPSumab_$cextractMin_info, @object
+T2902_B_PairingSum.$fSumPSumab_$cextractMin_info:
+_cNW:
+	leal -4(%ebp),%eax
+	cmpl 220(%ebx),%eax
+	jb _cOj
+_cOk:
+	movl $block_cNY_info,-4(%ebp)
+	movl 12(%ebp),%esi
+	addl $-4,%ebp
+	testl $3,%esi
+	jne _cNY
+_cNZ:
+	jmp *(%esi)
+.text
+	.align 4,0x90
+	.long	SMp_srt-(block_cNY_info)+0
+	.long	260
+	.long	1114144
+block_cNY_info:
+_cNY:
+	movl %esi,%eax
+	movl %eax,%ecx
+	andl $3,%ecx
+	cmpl $2,%ecx
+	jae _cOd
+_cOc:
+	movl $GHC.Err.undefined_closure,%esi
+	addl $20,%ebp
+	jmp stg_ap_0_fast
+_cOd:
+	addl $48,%edi
+	cmpl 228(%ebx),%edi
+	ja _cOr
+_cOq:
+	movl 2(%eax),%ecx
+	movl 6(%eax),%edx
+	movl 10(%eax),%eax
+	movl $sat_sIg_info,-44(%edi)
+	movl %ecx,64(%esp)
+	movl 4(%ebp),%ecx
+	movl %ecx,-36(%edi)
+	movl 8(%ebp),%ecx
+	movl %ecx,-32(%edi)
+	movl 12(%ebp),%ecx
+	movl %ecx,-28(%edi)
+	movl %eax,-24(%edi)
+	movl $(,)_con_info,-20(%edi)
+	movl 64(%esp),%eax
+	movl %eax,-16(%edi)
+	movl %edx,-12(%edi)
+	movl $(,)_con_info,-8(%edi)
+	leal -19(%edi),%eax
+	movl %eax,-4(%edi)
+	leal -44(%edi),%eax
+	movl %eax,(%edi)
+	leal -7(%edi),%esi
+	addl $20,%ebp
+	jmp *(%ebp)
+_cOj:
+	movl $T2902_B_PairingSum.$fSumPSumab_$cextractMin_closure,%esi
+	jmp *-4(%ebx)
+_cOr:
+	movl $48,252(%ebx)
+_cOp:
+	movl %eax,%esi
+	jmp stg_gc_unpt_r1
+	.size T2902_B_PairingSum.$fSumPSumab_$cextractMin_info, .-T2902_B_PairingSum.$fSumPSumab_$cextractMin_info
+.data
+	.align 4
+.align 1
+.globl T2902_B_PairingSum.$fSumPSumab_$ctoList_closure
+.type T2902_B_PairingSum.$fSumPSumab_$ctoList_closure, @object
+T2902_B_PairingSum.$fSumPSumab_$ctoList_closure:
+	.long	T2902_B_PairingSum.$fSumPSumab_$ctoList_info
+	.long	0
+.text
+	.align 4,0x90
+	.long	SMp_srt-(sat_sIr_info)+0
+	.long	4
+	.long	4259856
+sat_sIr_info:
+_cP7:
+	movl %esi,%eax
+	leal -40(%ebp),%ecx
+	cmpl 220(%ebx),%ecx
+	jb _cPc
+_cPd:
+	movl $stg_upd_frame_info,-8(%ebp)
+	movl %eax,-4(%ebp)
+	movl $block_cP9_info,-24(%ebp)
+	movl 8(%eax),%ecx
+	movl %ecx,-40(%ebp)
+	movl 12(%eax),%edx
+	movl %edx,-36(%ebp)
+	movl %ecx,64(%esp)
+	movl 16(%eax),%ecx
+	movl %ecx,-32(%ebp)
+	movl 20(%eax),%eax
+	movl %eax,-28(%ebp)
+	movl 64(%esp),%eax
+	movl %eax,-20(%ebp)
+	movl %edx,-16(%ebp)
+	movl %ecx,-12(%ebp)
+	addl $-40,%ebp
+	jmp T2902_B_PairingSum.$fSumPSumab_$cunions_info
+.text
+	.align 4,0x90
+	.long	SMp_srt-(block_cP9_info)+24
+	.long	3
+	.long	65568
+block_cP9_info:
+_cP9:
+	movl 4(%ebp),%eax
+	movl %eax,(%ebp)
+	movl 8(%ebp),%eax
+	movl %eax,4(%ebp)
+	movl 12(%ebp),%eax
+	movl %eax,8(%ebp)
+	movl %esi,12(%ebp)
+	jmp T2902_B_PairingSum.$fSumPSumab_$ctoList_info
+_cPc:
+	movl %eax,%esi
+	jmp *-8(%ebx)
+	.size sat_sIr_info, .-sat_sIr_info
+.text
+	.align 4,0x90
+	.long	SMp_srt-(T2902_B_PairingSum.$fSumPSumab_$ctoList_info)+0
+	.long	262166
+	.long	0
+	.long	4259855
+.globl T2902_B_PairingSum.$fSumPSumab_$ctoList_info
+.type T2902_B_PairingSum.$fSumPSumab_$ctoList_info, @object
+T2902_B_PairingSum.$fSumPSumab_$ctoList_info:
+_cOX:
+	leal -4(%ebp),%eax
+	cmpl 220(%ebx),%eax
+	jb _cPp
+_cPq:
+	movl $block_cOZ_info,-4(%ebp)
+	movl 12(%ebp),%esi
+	addl $-4,%ebp
+	testl $3,%esi
+	jne _cOZ
+_cP0:
+	jmp *(%esi)
+.text
+	.align 4,0x90
+	.long	SMp_srt-(block_cOZ_info)+0
+	.long	260
+	.long	4259872
+block_cOZ_info:
+_cOZ:
+	movl %esi,%eax
+	movl %eax,%ecx
+	andl $3,%ecx
+	cmpl $2,%ecx
+	jae _cPj
+_cPi:
+	movl $[]_closure+1,%esi
+	addl $20,%ebp
+	jmp *(%ebp)
+_cPj:
+	addl $48,%edi
+	cmpl 228(%ebx),%edi
+	ja _cPx
+_cPw:
+	movl 2(%eax),%ecx
+	movl 6(%eax),%edx
+	movl 10(%eax),%eax
+	movl $sat_sIr_info,-44(%edi)
+	movl %ecx,64(%esp)
+	movl 4(%ebp),%ecx
+	movl %ecx,-36(%edi)
+	movl 8(%ebp),%ecx
+	movl %ecx,-32(%edi)
+	movl 12(%ebp),%ecx
+	movl %ecx,-28(%edi)
+	movl %eax,-24(%edi)
+	movl $(,)_con_info,-20(%edi)
+	movl 64(%esp),%eax
+	movl %eax,-16(%edi)
+	movl %edx,-12(%edi)
+	movl $:_con_info,-8(%edi)
+	leal -19(%edi),%eax
+	movl %eax,-4(%edi)
+	leal -44(%edi),%eax
+	movl %eax,(%edi)
+	leal -6(%edi),%esi
+	addl $20,%ebp
+	jmp *(%ebp)
+_cPp:
+	movl $T2902_B_PairingSum.$fSumPSumab_$ctoList_closure,%esi
+	jmp *-4(%ebx)
+_cPx:
+	movl $48,252(%ebx)
+_cPv:
+	movl %eax,%esi
+	jmp stg_gc_unpt_r1
+	.size T2902_B_PairingSum.$fSumPSumab_$ctoList_info, .-T2902_B_PairingSum.$fSumPSumab_$ctoList_info
+.data
+	.align 4
+.align 1
+.globl T2902_B_PairingSum.$fSumPSumab_$cfromList_closure
+.type T2902_B_PairingSum.$fSumPSumab_$cfromList_closure, @object
+T2902_B_PairingSum.$fSumPSumab_$cfromList_closure:
+	.long	T2902_B_PairingSum.$fSumPSumab_$cfromList_info
+	.long	0
+.text
+	.align 4,0x90
+	.long	SMp_srt-(T2902_B_PairingSum.$fSumPSumab_$cfromList_info)+12
+	.long	262166
+	.long	0
+	.long	1114127
+.globl T2902_B_PairingSum.$fSumPSumab_$cfromList_info
+.type T2902_B_PairingSum.$fSumPSumab_$cfromList_info, @object
+T2902_B_PairingSum.$fSumPSumab_$cfromList_info:
+_cQ5:
+	leal -24(%ebp),%eax
+	cmpl 220(%ebx),%eax
+	jb _cQi
+_cQj:
+	movl $block_cQ7_info,-4(%ebp)
+	movl 12(%ebp),%esi
+	addl $-4,%ebp
+	testl $3,%esi
+	jne _cQ7
+_cQ8:
+	jmp *(%esi)
+.text
+	.align 4,0x90
+	.long	SMp_srt-(block_cQ7_info)+12
+	.long	260
+	.long	1114144
+block_cQ7_info:
+_cQ7:
+	movl %esi,%eax
+	movl %eax,%ecx
+	andl $3,%ecx
+	cmpl $2,%ecx
+	jae _cQc
+_cQb:
+	movl $T2902_B_PairingSum.Empty_closure+1,%esi
+	addl $20,%ebp
+	jmp *(%ebp)
+_cQc:
+	movl $block_cQp_info,(%ebp)
+	movl 2(%eax),%esi
+	movl 6(%eax),%eax
+	movl %eax,16(%ebp)
+	testl $3,%esi
+	jne _cQp
+_cQq:
+	jmp *(%esi)
+_cQi:
+	movl $T2902_B_PairingSum.$fSumPSumab_$cfromList_closure,%esi
+	jmp *-4(%ebx)
+.text
+	.align 4,0x90
+	.long	SMp_srt-(block_cQp_info)+12
+	.long	4
+	.long	1114144
+block_cQp_info:
+_cQp:
+	movl $block_cQu_info,-4(%ebp)
+	movl 4(%ebp),%eax
+	movl %eax,-20(%ebp)
+	movl 8(%ebp),%eax
+	movl %eax,-16(%ebp)
+	movl 12(%ebp),%eax
+	movl %eax,-12(%ebp)
+	movl 16(%ebp),%eax
+	movl %eax,-8(%ebp)
+	movl %esi,%eax
+	movl 7(%eax),%ecx
+	movl %ecx,(%ebp)
+	movl 3(%eax),%eax
+	movl %eax,16(%ebp)
+	addl $-20,%ebp
+	jmp T2902_B_PairingSum.$fSumPSumab_$cfromList_info
+.text
+	.align 4,0x90
+	.long	SMp_srt-(block_cQu_info)+12
+	.long	5
+	.long	65568
+block_cQu_info:
+_cQu:
+	movl 8(%ebp),%eax
+	movl %eax,(%ebp)
+	movl 4(%ebp),%eax
+	movl 12(%ebp),%ecx
+	movl %ecx,4(%ebp)
+	movl 16(%ebp),%ecx
+	movl %ecx,8(%ebp)
+	movl 20(%ebp),%ecx
+	movl %ecx,12(%ebp)
+	movl %eax,16(%ebp)
+	movl %esi,20(%ebp)
+	jmp T2902_B_PairingSum.$fSumPSumab_$cinsert_info
+	.size T2902_B_PairingSum.$fSumPSumab_$cfromList_info, .-T2902_B_PairingSum.$fSumPSumab_$cfromList_info
+.data
+	.align 4
+.align 1
+.globl T2902_B_PairingSum.$fSumPSumab_closure
+.type T2902_B_PairingSum.$fSumPSumab_closure, @object
+T2902_B_PairingSum.$fSumPSumab_closure:
+	.long	T2902_B_PairingSum.$fSumPSumab_info
+	.long	0
+.text
+	.align 4,0x90
+	.long	SMp_srt-(sat_sIL_info)+24
+	.long	65541
+	.long	3
+	.long	65545
+sat_sIL_info:
+_cQZ:
+	movl %esi,%eax
+	leal -12(%ebp),%ecx
+	cmpl 220(%ebx),%ecx
+	jb _cR2
+_cR3:
+	movl 3(%eax),%ecx
+	movl %ecx,-12(%ebp)
+	movl 7(%eax),%ecx
+	movl %ecx,-8(%ebp)
+	movl 11(%eax),%eax
+	movl %eax,-4(%ebp)
+	addl $-12,%ebp
+	jmp T2902_B_PairingSum.$fSumPSumab_$ctoList_info
+_cR2:
+	movl %eax,%esi
+	jmp *-4(%ebx)
+	.size sat_sIL_info, .-sat_sIL_info
+.text
+	.align 4,0x90
+	.long	SMp_srt-(sat_sIK_info)+28
+	.long	65541
+	.long	3
+	.long	65545
+sat_sIK_info:
+_cR6:
+	movl %esi,%eax
+	leal -12(%ebp),%ecx
+	cmpl 220(%ebx),%ecx
+	jb _cR9
+_cRa:
+	movl 3(%eax),%ecx
+	movl %ecx,-12(%ebp)
+	movl 7(%eax),%ecx
+	movl %ecx,-8(%ebp)
+	movl 11(%eax),%eax
+	movl %eax,-4(%ebp)
+	addl $-12,%ebp
+	jmp T2902_B_PairingSum.$fSumPSumab_$cfromList_info
+_cR9:
+	movl %eax,%esi
+	jmp *-4(%ebx)
+	.size sat_sIK_info, .-sat_sIK_info
+.text
+	.align 4,0x90
+	.long	SMp_srt-(sat_sIJ_info)+20
+	.long	65541
+	.long	3
+	.long	65545
+sat_sIJ_info:
+_cRd:
+	movl %esi,%eax
+	leal -12(%ebp),%ecx
+	cmpl 220(%ebx),%ecx
+	jb _cRg
+_cRh:
+	movl 3(%eax),%ecx
+	movl %ecx,-12(%ebp)
+	movl 7(%eax),%ecx
+	movl %ecx,-8(%ebp)
+	movl 11(%eax),%eax
+	movl %eax,-4(%ebp)
+	addl $-12,%ebp
+	jmp T2902_B_PairingSum.$fSumPSumab_$cextractMin_info
+_cRg:
+	movl %eax,%esi
+	jmp *-4(%ebx)
+	.size sat_sIJ_info, .-sat_sIJ_info
+.text
+	.align 4,0x90
+	.long	SMp_srt-(sat_sII_info)+0
+	.long	65541
+	.long	3
+	.long	65545
+sat_sII_info:
+_cRk:
+	movl %esi,%eax
+	leal -12(%ebp),%ecx
+	cmpl 220(%ebx),%ecx
+	jb _cRn
+_cRo:
+	movl 3(%eax),%ecx
+	movl %ecx,-12(%ebp)
+	movl 7(%eax),%ecx
+	movl %ecx,-8(%ebp)
+	movl 11(%eax),%eax
+	movl %eax,-4(%ebp)
+	addl $-12,%ebp
+	jmp T2902_B_PairingSum.$fSumPSumab_$cunions_info
+_cRn:
+	movl %eax,%esi
+	jmp *-4(%ebx)
+	.size sat_sII_info, .-sat_sII_info
+.text
+	.align 4,0x90
+	.long	SMp_srt-(sat_sIH_info)+4
+	.long	131085
+	.long	3
+	.long	65545
+sat_sIH_info:
+_cRr:
+	movl %esi,%eax
+	leal -12(%ebp),%ecx
+	cmpl 220(%ebx),%ecx
+	jb _cRu
+_cRv:
+	movl 2(%eax),%ecx
+	movl %ecx,-12(%ebp)
+	movl 6(%eax),%ecx
+	movl %ecx,-8(%ebp)
+	movl 10(%eax),%eax
+	movl %eax,-4(%ebp)
+	addl $-12,%ebp
+	jmp T2902_B_PairingSum.$fSumPSumab_$cunion_info
+_cRu:
+	movl %eax,%esi
+	jmp *-4(%ebx)
+	.size sat_sIH_info, .-sat_sIH_info
+.text
+	.align 4,0x90
+	.long	SMp_srt-(sat_sIG_info)+12
+	.long	196629
+	.long	3
+	.long	65545
+sat_sIG_info:
+_cRy:
+	movl %esi,%eax
+	leal -12(%ebp),%ecx
+	cmpl 220(%ebx),%ecx
+	jb _cRB
+_cRC:
+	movl 1(%eax),%ecx
+	movl %ecx,-12(%ebp)
+	movl 5(%eax),%ecx
+	movl %ecx,-8(%ebp)
+	movl 9(%eax),%eax
+	movl %eax,-4(%ebp)
+	addl $-12,%ebp
+	jmp T2902_B_PairingSum.$fSumPSumab_$cinsert_info
+_cRB:
+	movl %eax,%esi
+	jmp *-4(%ebx)
+	.size sat_sIG_info, .-sat_sIG_info
+.text
+	.align 4,0x90
+	.long	SMp_srt-(T2902_B_PairingSum.$fSumPSumab_info)+0
+	.long	196629
+	.long	0
+	.long	32178191
+.globl T2902_B_PairingSum.$fSumPSumab_info
+.type T2902_B_PairingSum.$fSumPSumab_info, @object
+T2902_B_PairingSum.$fSumPSumab_info:
+_cRG:
+	addl $124,%edi
+	cmpl 228(%ebx),%edi
+	ja _cRI
+_cRH:
+	movl $sat_sIL_info,-120(%edi)
+	movl (%ebp),%eax
+	movl %eax,-116(%edi)
+	movl 4(%ebp),%ecx
+	movl %ecx,-112(%edi)
+	movl 8(%ebp),%edx
+	movl %edx,-108(%edi)
+	movl $sat_sIK_info,-104(%edi)
+	movl %eax,-100(%edi)
+	movl %ecx,-96(%edi)
+	movl %edx,-92(%edi)
+	movl $sat_sIJ_info,-88(%edi)
+	movl %eax,-84(%edi)
+	movl %ecx,-80(%edi)
+	movl %edx,-76(%edi)
+	movl $sat_sII_info,-72(%edi)
+	movl %eax,-68(%edi)
+	movl %ecx,-64(%edi)
+	movl %edx,-60(%edi)
+	movl $sat_sIH_info,-56(%edi)
+	movl %eax,-52(%edi)
+	movl %ecx,-48(%edi)
+	movl %edx,-44(%edi)
+	movl $sat_sIG_info,-40(%edi)
+	movl %eax,-36(%edi)
+	movl %ecx,-32(%edi)
+	movl %edx,-28(%edi)
+	movl $T2902_Sum.D:Sum_con_info,-24(%edi)
+	leal -37(%edi),%eax
+	movl %eax,-20(%edi)
+	leal -54(%edi),%eax
+	movl %eax,-16(%edi)
+	leal -71(%edi),%eax
+	movl %eax,-12(%edi)
+	leal -87(%edi),%eax
+	movl %eax,-8(%edi)
+	leal -103(%edi),%eax
+	movl %eax,-4(%edi)
+	leal -119(%edi),%eax
+	movl %eax,(%edi)
+	leal -23(%edi),%esi
+	addl $12,%ebp
+	jmp *(%ebp)
+_cRI:
+	movl $124,252(%ebx)
+_cRF:
+	movl $T2902_B_PairingSum.$fSumPSumab_closure,%esi
+	jmp *-4(%ebx)
+	.size T2902_B_PairingSum.$fSumPSumab_info, .-T2902_B_PairingSum.$fSumPSumab_info
+.data
+	.align 4
+.align 1
+.globl T2902_B_PairingSum.Empty_closure
+.type T2902_B_PairingSum.Empty_closure, @object
+T2902_B_PairingSum.Empty_closure:
+	.long	T2902_B_PairingSum.Empty_static_info
+.data
+	.align 4
+.align 1
+.globl T2902_B_PairingSum.Tree_closure
+.type T2902_B_PairingSum.Tree_closure, @object
+T2902_B_PairingSum.Tree_closure:
+	.long	T2902_B_PairingSum.Tree_info
+.text
+	.align 4,0x90
+	.long	196629
+	.long	0
+	.long	15
+T2902_B_PairingSum.Tree_info:
+_cSD:
+	addl $16,%edi
+	cmpl 228(%ebx),%edi
+	ja _cSF
+_cSE:
+	movl $T2902_B_PairingSum.Tree_con_info,-12(%edi)
+	movl (%ebp),%eax
+	movl %eax,-8(%edi)
+	movl 4(%ebp),%eax
+	movl %eax,-4(%edi)
+	movl 8(%ebp),%eax
+	movl %eax,(%edi)
+	leal -10(%edi),%esi
+	addl $12,%ebp
+	jmp *(%ebp)
+_cSF:
+	movl $16,252(%ebx)
+_cSC:
+	movl $T2902_B_PairingSum.Tree_closure,%esi
+	jmp *-4(%ebx)
+	.size T2902_B_PairingSum.Tree_info, .-T2902_B_PairingSum.Tree_info
+.section .rodata
+	.align 4
+.align 1
+iSO_str:
+	.byte	109
+	.byte	97
+	.byte	105
+	.byte	110
+	.byte	58
+	.byte	84
+	.byte	50
+	.byte	57
+	.byte	48
+	.byte	50
+	.byte	95
+	.byte	66
+	.byte	95
+	.byte	80
+	.byte	97
+	.byte	105
+	.byte	114
+	.byte	105
+	.byte	110
+	.byte	103
+	.byte	83
+	.byte	117
+	.byte	109
+	.byte	46
+	.byte	69
+	.byte	109
+	.byte	112
+	.byte	116
+	.byte	121
+	.byte	0
+.text
+	.align 4,0x90
+	.long	iSO_str-(T2902_B_PairingSum.Empty_static_info)+0
+	.long	0
+	.long	8
+.globl T2902_B_PairingSum.Empty_static_info
+.type T2902_B_PairingSum.Empty_static_info, @object
+T2902_B_PairingSum.Empty_static_info:
+_cSN:
+	incl %esi
+	jmp *(%ebp)
+	.size T2902_B_PairingSum.Empty_static_info, .-T2902_B_PairingSum.Empty_static_info
+.section .rodata
+	.align 4
+.align 1
+iSU_str:
+	.byte	109
+	.byte	97
+	.byte	105
+	.byte	110
+	.byte	58
+	.byte	84
+	.byte	50
+	.byte	57
+	.byte	48
+	.byte	50
+	.byte	95
+	.byte	66
+	.byte	95
+	.byte	80
+	.byte	97
+	.byte	105
+	.byte	114
+	.byte	105
+	.byte	110
+	.byte	103
+	.byte	83
+	.byte	117
+	.byte	109
+	.byte	46
+	.byte	84
+	.byte	114
+	.byte	101
+	.byte	101
+	.byte	0
+.text
+	.align 4,0x90
+	.long	iSU_str-(T2902_B_PairingSum.Tree_con_info)+0
+	.long	3
+	.long	65537
+.globl T2902_B_PairingSum.Tree_con_info
+.type T2902_B_PairingSum.Tree_con_info, @object
+T2902_B_PairingSum.Tree_con_info:
+_cSS:
+	addl $2,%esi
+	jmp *(%ebp)
+	.size T2902_B_PairingSum.Tree_con_info, .-T2902_B_PairingSum.Tree_con_info
+.section .rodata
+	.align 4
+.align 1
+iSV_str:
+	.byte	109
+	.byte	97
+	.byte	105
+	.byte	110
+	.byte	58
+	.byte	84
+	.byte	50
+	.byte	57
+	.byte	48
+	.byte	50
+	.byte	95
+	.byte	66
+	.byte	95
+	.byte	80
+	.byte	97
+	.byte	105
+	.byte	114
+	.byte	105
+	.byte	110
+	.byte	103
+	.byte	83
+	.byte	117
+	.byte	109
+	.byte	46
+	.byte	84
+	.byte	114
+	.byte	101
+	.byte	101
+	.byte	0
+.text
+	.align 4,0x90
+	.long	iSV_str-(T2902_B_PairingSum.Tree_static_info)+0
+	.long	3
+	.long	65543
+.globl T2902_B_PairingSum.Tree_static_info
+.type T2902_B_PairingSum.Tree_static_info, @object
+T2902_B_PairingSum.Tree_static_info:
+_cST:
+	addl $2,%esi
+	jmp *(%ebp)
+	.size T2902_B_PairingSum.Tree_static_info, .-T2902_B_PairingSum.Tree_static_info
+.section .data
+	.align 4
+.align 1
+SMp_srt:
+	.long	T2902_B_PairingSum.$fSumPSumab_$cunions_closure
+	.long	T2902_B_PairingSum.$fSumPSumab_$cunion_closure
+	.long	lvl_rHo_closure
+	.long	T2902_B_PairingSum.$fSumPSumab_$cinsert_closure
+	.long	GHC.Err.undefined_closure
+	.long	T2902_B_PairingSum.$fSumPSumab_$cextractMin_closure
+	.long	T2902_B_PairingSum.$fSumPSumab_$ctoList_closure
+	.long	T2902_B_PairingSum.$fSumPSumab_$cfromList_closure
+	.long	T2902_B_PairingSum.$fSumPSumab_closure
+
+
+[3 of 3] Compiling Main             ( T2902_B.hs, T2902_B.o )
+
+==================== Asm code ====================
+.data
+	.align 4
+.align 1
+.globl __stginit_main:Main
+.type __stginit_main:Main, @object
+__stginit_main:Main:
+.data
+	.align 4
+.align 1
+x_r23P_closure:
+	.long	GHC.Types.I#_static_info
+	.long	1
+.data
+	.align 4
+.align 1
+xs_r23Q_closure:
+	.long	:_static_info
+	.long	x_r23P_closure+1
+	.long	xs_r23Q_closure+2
+	.long	1
+.data
+	.align 4
+.align 1
+x1_r23R_closure:
+	.long	GHC.Types.I#_static_info
+	.long	2
+.data
+	.align 4
+.align 1
+xs1_r23S_closure:
+	.long	:_static_info
+	.long	x1_r23R_closure+1
+	.long	xs1_r23S_closure+2
+	.long	1
+.data
+	.align 4
+.align 1
+x2_r23T_closure:
+	.long	GHC.Types.I#_static_info
+	.long	3
+.data
+	.align 4
+.align 1
+xs2_r23U_closure:
+	.long	:_static_info
+	.long	x2_r23T_closure+1
+	.long	xs2_r23U_closure+2
+	.long	1
+.data
+	.align 4
+.align 1
+lvl_r23V_closure:
+	.long	lvl_r23V_info
+.text
+	.align 4,0x90
+	.long	196629
+	.long	0
+	.long	15
+lvl_r23V_info:
+_c25d:
+	leal -4(%ebp),%eax
+	cmpl 220(%ebx),%eax
+	jb _c25q
+_c25r:
+	movl $block_c25f_info,-4(%ebp)
+	movl 8(%ebp),%esi
+	addl $-4,%ebp
+	testl $3,%esi
+	jne _c25f
+_c25g:
+	jmp *(%esi)
+.text
+	.align 4,0x90
+	.long	131
+	.long	32
+block_c25f_info:
+_c25f:
+	movl %esi,%eax
+	movl %eax,%ecx
+	andl $3,%ecx
+	cmpl $2,%ecx
+	jae _c25k
+_c25j:
+	movl $[]_closure+1,%esi
+	addl $16,%ebp
+	jmp *(%ebp)
+_c25k:
+	addl $40,%edi
+	cmpl 228(%ebx),%edi
+	ja _c25C
+_c25B:
+	movl 2(%eax),%ecx
+	movl 6(%eax),%eax
+	movl $stg_ap_2_upd_info,-36(%edi)
+	movl 8(%ebp),%edx
+	movl %edx,-28(%edi)
+	movl %eax,-24(%edi)
+	movl $(,)_con_info,-20(%edi)
+	movl 4(%ebp),%eax
+	movl %eax,-16(%edi)
+	movl %ecx,-12(%edi)
+	movl $:_con_info,-8(%edi)
+	leal -19(%edi),%eax
+	movl %eax,-4(%edi)
+	leal -36(%edi),%eax
+	movl %eax,(%edi)
+	leal -6(%edi),%esi
+	addl $16,%ebp
+	jmp *(%ebp)
+_c25q:
+	movl $lvl_r23V_closure,%esi
+	jmp *-4(%ebx)
+_c25C:
+	movl $40,252(%ebx)
+_c25A:
+	movl %eax,%esi
+	jmp stg_gc_unpt_r1
+	.size lvl_r23V_info, .-lvl_r23V_info
+.data
+	.align 4
+.align 1
+n_r23W_closure:
+	.long	n_r23W_info
+.text
+	.align 4,0x90
+	.long	65541
+	.long	0
+	.long	15
+n_r23W_info:
+_c25U:
+	movl $[]_closure+1,%esi
+	addl $4,%ebp
+	jmp *(%ebp)
+	.size n_r23W_info, .-n_r23W_info
+.data
+	.align 4
+.align 1
+n1_r23X_closure:
+	.long	n1_r23X_info
+.text
+	.align 4,0x90
+	.long	65541
+	.long	0
+	.long	15
+n1_r23X_info:
+_c265:
+	jmp n_r23W_info
+	.size n1_r23X_info, .-n1_r23X_info
+.data
+	.align 4
+.align 1
+lvl1_r23Y_closure:
+	.long	lvl1_r23Y_info
+	.long	0
+	.long	0
+	.long	0
+.text
+	.align 4,0x90
+	.long	S26m_srt-(lvl1_r23Y_info)+0
+	.long	0
+	.long	65558
+lvl1_r23Y_info:
+_c26c:
+	movl %esi,%eax
+	leal -24(%ebp),%ecx
+	cmpl 220(%ebx),%ecx
+	jb _c26i
+_c26j:
+	addl $8,%edi
+	cmpl 228(%ebx),%edi
+	ja _c26l
+_c26k:
+	movl $stg_CAF_BLACKHOLE_info,-4(%edi)
+	movl 236(%ebx),%ecx
+	movl %ecx,(%edi)
+	leal -4(%edi),%ecx
+	pushl %ecx
+	pushl %eax
+	pushl %ebx
+	movl %eax,76(%esp)
+	call newCAF
+	addl $12,%esp
+	testl %eax,%eax
+	je _c26g
+_c26f:
+	movl $stg_bh_upd_frame_info,-8(%ebp)
+	leal -4(%edi),%eax
+	movl %eax,-4(%ebp)
+	movl $GHC.Classes.$fOrdInt_closure,-24(%ebp)
+	movl $GHC.Classes.$fEqInt_closure,-20(%ebp)
+	movl $GHC.Num.$fNumInt_closure,-16(%ebp)
+	movl $GHC.Types.[]_closure+1,-12(%ebp)
+	addl $-24,%ebp
+	jmp T2902_B_PairingSum.$fSumPSumab_$cfromList_info
+_c26g:
+	movl 64(%esp),%eax
+	jmp *(%eax)
+_c26l:
+	movl $8,252(%ebx)
+_c26i:
+	movl %eax,%esi
+	jmp *-8(%ebx)
+	.size lvl1_r23Y_info, .-lvl1_r23Y_info
+.data
+	.align 4
+.align 1
+go_r23Z_closure:
+	.long	go_r23Z_info
+.text
+	.align 4,0x90
+	.long	65537
+	.long	20
+sat_s24l_info:
+_c26V:
+	movl %esi,%eax
+	leal -16(%ebp),%ecx
+	cmpl 220(%ebx),%ecx
+	jb _c272
+_c273:
+	movl $stg_upd_frame_info,-8(%ebp)
+	movl %eax,-4(%ebp)
+	movl 12(%eax),%ecx
+	cmpl $20,%ecx
+	jne _c26Z
+_c270:
+	movl $[]_closure+1,%esi
+	addl $-8,%ebp
+	jmp *(%ebp)
+_c26Z:
+	incl %ecx
+	movl %ecx,-16(%ebp)
+	movl 8(%eax),%eax
+	movl %eax,-12(%ebp)
+	addl $-16,%ebp
+	jmp go_r23Z_info
+_c272:
+	movl %eax,%esi
+	jmp *-8(%ebx)
+	.size sat_s24l_info, .-sat_s24l_info
+.text
+	.align 4,0x90
+	.long	131083
+	.long	0
+	.long	15
+go_r23Z_info:
+_c26L:
+	leal -4(%ebp),%eax
+	cmpl 220(%ebx),%eax
+	jb _c27e
+_c27f:
+	movl $block_c26N_info,-4(%ebp)
+	movl 4(%ebp),%esi
+	addl $-4,%ebp
+	testl $3,%esi
+	jne _c26N
+_c26O:
+	jmp *(%esi)
+.text
+	.align 4,0x90
+	.long	98
+	.long	32
+block_c26N_info:
+_c26N:
+	movl %esi,%eax
+	movl %eax,%ecx
+	andl $3,%ecx
+	cmpl $2,%ecx
+	jae _c278
+_c277:
+	movl $[]_closure+1,%esi
+	addl $12,%ebp
+	jmp *(%ebp)
+_c278:
+	addl $48,%edi
+	cmpl 228(%ebx),%edi
+	ja _c27n
+_c27m:
+	movl 2(%eax),%ecx
+	movl 6(%eax),%eax
+	movl $sat_s24l_info,-44(%edi)
+	movl %eax,-36(%edi)
+	movl 4(%ebp),%eax
+	movl %eax,-32(%edi)
+	movl $GHC.Types.I#_con_info,-28(%edi)
+	movl %eax,-24(%edi)
+	movl $(,)_con_info,-20(%edi)
+	leal -27(%edi),%eax
+	movl %eax,-16(%edi)
+	movl %ecx,-12(%edi)
+	movl $:_con_info,-8(%edi)
+	leal -19(%edi),%eax
+	movl %eax,-4(%edi)
+	leal -44(%edi),%eax
+	movl %eax,(%edi)
+	leal -6(%edi),%esi
+	addl $12,%ebp
+	jmp *(%ebp)
+_c27e:
+	movl $go_r23Z_closure,%esi
+	jmp *-4(%ebx)
+_c27n:
+	movl $48,252(%ebx)
+_c27l:
+	movl %eax,%esi
+	jmp stg_gc_unpt_r1
+	.size go_r23Z_info, .-go_r23Z_info
+.data
+	.align 4
+.align 1
+.globl Main.main_go_closure
+.type Main.main_go_closure, @object
+Main.main_go_closure:
+	.long	Main.main_go_info
+	.long	0
+.text
+	.align 4,0x90
+	.long	S26m_srt-(sat_s24G_info)+4
+	.long	65536
+	.long	65554
+sat_s24G_info:
+_c27T:
+	movl %esi,%eax
+	leal -12(%ebp),%ecx
+	cmpl 220(%ebx),%ecx
+	jb _c280
+_c281:
+	movl $stg_upd_frame_info,-8(%ebp)
+	movl %eax,-4(%ebp)
+	movl 8(%eax),%eax
+	cmpl $20,%eax
+	jne _c27X
+_c27Y:
+	movl $[]_closure+1,%esi
+	addl $-8,%ebp
+	jmp *(%ebp)
+_c27X:
+	incl %eax
+	movl %eax,-12(%ebp)
+	addl $-12,%ebp
+	jmp Main.main_go_info
+_c280:
+	movl %eax,%esi
+	jmp *-8(%ebx)
+	.size sat_s24G_info, .-sat_s24G_info
+.text
+	.align 4,0x90
+	.long	S26m_srt-(sat_s24z_info)+0
+	.long	65536
+	.long	65554
+sat_s24z_info:
+_c28p:
+	movl %esi,%eax
+	leal -40(%ebp),%ecx
+	cmpl 220(%ebx),%ecx
+	jb _c299
+_c29q:
+	movl $stg_upd_frame_info,-8(%ebp)
+	movl %eax,-4(%ebp)
+	movl 8(%eax),%eax
+	leal 3(%eax),%ecx
+	cmpl %eax,%ecx
+	jge _c29l
+_c29e:
+	movl $block_c29c_info,-12(%ebp)
+	movl $lvl_r23V_closure+3,-40(%ebp)
+	movl $n1_r23X_closure+1,-36(%ebp)
+	movl %eax,-32(%ebp)
+	movl %ecx,-28(%ebp)
+	movl $20,-24(%ebp)
+	movl $stg_ap_p_info,-20(%ebp)
+	movl $xs2_r23U_closure+2,-16(%ebp)
+	addl $-40,%ebp
+	jmp GHC.Enum.efdtIntDnFB_info
+_c299:
+	movl %eax,%esi
+	jmp *-8(%ebx)
+.text
+	.align 4,0x90
+	.long	S26m_srt-(block_c29c_info)+0
+	.long	0
+	.long	65568
+block_c29c_info:
+_c29c:
+	movl $GHC.Classes.$fOrdInt_closure,-12(%ebp)
+	movl $GHC.Classes.$fEqInt_closure,-8(%ebp)
+	movl $GHC.Num.$fNumInt_closure,-4(%ebp)
+	movl %esi,(%ebp)
+	addl $-12,%ebp
+	jmp T2902_B_PairingSum.$fSumPSumab_$cfromList_info
+.text
+	.align 4,0x90
+	.long	S26m_srt-(block_c29k_info)+0
+	.long	0
+	.long	65568
+block_c29k_info:
+_c29k:
+	movl $GHC.Classes.$fOrdInt_closure,-12(%ebp)
+	movl $GHC.Classes.$fEqInt_closure,-8(%ebp)
+	movl $GHC.Num.$fNumInt_closure,-4(%ebp)
+	movl %esi,(%ebp)
+	addl $-12,%ebp
+	jmp T2902_B_PairingSum.$fSumPSumab_$cfromList_info
+_c29l:
+	movl $block_c29k_info,-12(%ebp)
+	movl $lvl_r23V_closure+3,-40(%ebp)
+	movl $n1_r23X_closure+1,-36(%ebp)
+	movl %eax,-32(%ebp)
+	movl %ecx,-28(%ebp)
+	movl $20,-24(%ebp)
+	movl $stg_ap_p_info,-20(%ebp)
+	movl $xs2_r23U_closure+2,-16(%ebp)
+	addl $-40,%ebp
+	jmp GHC.Enum.efdtIntUpFB_info
+	.size sat_s24z_info, .-sat_s24z_info
+.text
+	.align 4,0x90
+	.long	S26m_srt-(sat_s24u_info)+0
+	.long	65536
+	.long	65554
+sat_s24u_info:
+_c28N:
+	movl %esi,%eax
+	leal -40(%ebp),%ecx
+	cmpl 220(%ebx),%ecx
+	jb _c29v
+_c29M:
+	movl $stg_upd_frame_info,-8(%ebp)
+	movl %eax,-4(%ebp)
+	movl 8(%eax),%eax
+	leal 2(%eax),%ecx
+	cmpl %eax,%ecx
+	jge _c29H
+_c29A:
+	movl $block_c29y_info,-12(%ebp)
+	movl $lvl_r23V_closure+3,-40(%ebp)
+	movl $n_r23W_closure+1,-36(%ebp)
+	movl %eax,-32(%ebp)
+	movl %ecx,-28(%ebp)
+	movl $20,-24(%ebp)
+	movl $stg_ap_p_info,-20(%ebp)
+	movl $xs1_r23S_closure+2,-16(%ebp)
+	addl $-40,%ebp
+	jmp GHC.Enum.efdtIntDnFB_info
+_c29v:
+	movl %eax,%esi
+	jmp *-8(%ebx)
+.text
+	.align 4,0x90
+	.long	S26m_srt-(block_c29y_info)+0
+	.long	0
+	.long	65568
+block_c29y_info:
+_c29y:
+	movl $GHC.Classes.$fOrdInt_closure,-12(%ebp)
+	movl $GHC.Classes.$fEqInt_closure,-8(%ebp)
+	movl $GHC.Num.$fNumInt_closure,-4(%ebp)
+	movl %esi,(%ebp)
+	addl $-12,%ebp
+	jmp T2902_B_PairingSum.$fSumPSumab_$cfromList_info
+.text
+	.align 4,0x90
+	.long	S26m_srt-(block_c29G_info)+0
+	.long	0
+	.long	65568
+block_c29G_info:
+_c29G:
+	movl $GHC.Classes.$fOrdInt_closure,-12(%ebp)
+	movl $GHC.Classes.$fEqInt_closure,-8(%ebp)
+	movl $GHC.Num.$fNumInt_closure,-4(%ebp)
+	movl %esi,(%ebp)
+	addl $-12,%ebp
+	jmp T2902_B_PairingSum.$fSumPSumab_$cfromList_info
+_c29H:
+	movl $block_c29G_info,-12(%ebp)
+	movl $lvl_r23V_closure+3,-40(%ebp)
+	movl $n_r23W_closure+1,-36(%ebp)
+	movl %eax,-32(%ebp)
+	movl %ecx,-28(%ebp)
+	movl $20,-24(%ebp)
+	movl $stg_ap_p_info,-20(%ebp)
+	movl $xs1_r23S_closure+2,-16(%ebp)
+	addl $-40,%ebp
+	jmp GHC.Enum.efdtIntUpFB_info
+	.size sat_s24u_info, .-sat_s24u_info
+.text
+	.align 4,0x90
+	.long	S26m_srt-(sat_s24p_info)+0
+	.long	65536
+	.long	327698
+sat_s24p_info:
+_c295:
+	movl %esi,%eax
+	leal -24(%ebp),%ecx
+	cmpl 220(%ebx),%ecx
+	jb _c29Y
+_c2a5:
+	movl $stg_upd_frame_info,-8(%ebp)
+	movl %eax,-4(%ebp)
+	movl 8(%eax),%eax
+	cmpl $20,%eax
+	jg _c29T
+_c29S:
+	movl $block_c2a0_info,-12(%ebp)
+	movl %eax,-20(%ebp)
+	movl $xs_r23Q_closure+2,-16(%ebp)
+	addl $-20,%ebp
+	jmp go_r23Z_info
+_c29T:
+	movl $lvl1_r23Y_closure,%esi
+	addl $-8,%ebp
+	jmp *(%esi)
+_c29Y:
+	movl %eax,%esi
+	jmp *-8(%ebx)
+.text
+	.align 4,0x90
+	.long	S26m_srt-(block_c2a0_info)+0
+	.long	0
+	.long	65568
+block_c2a0_info:
+_c2a0:
+	movl $GHC.Classes.$fOrdInt_closure,-12(%ebp)
+	movl $GHC.Classes.$fEqInt_closure,-8(%ebp)
+	movl $GHC.Num.$fNumInt_closure,-4(%ebp)
+	movl %esi,(%ebp)
+	addl $-12,%ebp
+	jmp T2902_B_PairingSum.$fSumPSumab_$cfromList_info
+	.size sat_s24p_info, .-sat_s24p_info
+.text
+	.align 4,0x90
+	.long	S26m_srt-(sat_s24D_info)+0
+	.long	65536
+	.long	851986
+sat_s24D_info:
+_c28l:
+	movl %esi,%eax
+	leal -24(%ebp),%ecx
+	cmpl 220(%ebx),%ecx
+	jb _c2a8
+_c2a9:
+	addl $72,%edi
+	cmpl 228(%ebx),%edi
+	ja _c2ab
+_c2aa:
+	movl $stg_upd_frame_info,-8(%ebp)
+	movl %eax,-4(%ebp)
+	movl 8(%eax),%eax
+	movl $sat_s24z_info,-68(%edi)
+	movl %eax,-60(%edi)
+	movl $:_con_info,-56(%edi)
+	leal -68(%edi),%ecx
+	movl %ecx,-52(%edi)
+	movl $GHC.Types.[]_closure+1,-48(%edi)
+	movl $sat_s24u_info,-44(%edi)
+	movl %eax,-36(%edi)
+	movl $:_con_info,-32(%edi)
+	leal -44(%edi),%ecx
+	movl %ecx,-28(%edi)
+	leal -54(%edi),%ecx
+	movl %ecx,-24(%edi)
+	movl $sat_s24p_info,-20(%edi)
+	movl %eax,-12(%edi)
+	movl $:_con_info,-8(%edi)
+	leal -20(%edi),%eax
+	movl %eax,-4(%edi)
+	leal -30(%edi),%eax
+	movl %eax,(%edi)
+	movl $GHC.Classes.$fOrdInt_closure,-24(%ebp)
+	movl $GHC.Classes.$fEqInt_closure,-20(%ebp)
+	movl $GHC.Num.$fNumInt_closure,-16(%ebp)
+	leal -6(%edi),%eax
+	movl %eax,-12(%ebp)
+	addl $-24,%ebp
+	jmp T2902_B_PairingSum.$fSumPSumab_$cunions_info
+_c2ab:
+	movl $72,252(%ebx)
+_c2a8:
+	movl %eax,%esi
+	jmp *-8(%ebx)
+	.size sat_s24D_info, .-sat_s24D_info
+.text
+	.align 4,0x90
+	.long	S26m_srt-(Main.main_go_info)+0
+	.long	65540
+	.long	0
+	.long	983055
+.globl Main.main_go_info
+.type Main.main_go_info, @object
+Main.main_go_info:
+_c2af:
+	addl $36,%edi
+	cmpl 228(%ebx),%edi
+	ja _c2ah
+_c2ag:
+	movl $sat_s24G_info,-32(%edi)
+	movl (%ebp),%eax
+	movl %eax,-24(%edi)
+	movl $sat_s24D_info,-20(%edi)
+	movl %eax,-12(%edi)
+	movl $:_con_info,-8(%edi)
+	leal -20(%edi),%eax
+	movl %eax,-4(%edi)
+	leal -32(%edi),%eax
+	movl %eax,(%edi)
+	leal -6(%edi),%esi
+	addl $4,%ebp
+	jmp *(%ebp)
+_c2ah:
+	movl $36,252(%ebx)
+_c2ae:
+	movl $Main.main_go_closure,%esi
+	jmp *-4(%ebx)
+	.size Main.main_go_info, .-Main.main_go_info
+.data
+	.align 4
+.align 1
+.globl Main.main6_closure
+.type Main.main6_closure, @object
+Main.main6_closure:
+	.long	Main.main6_info
+	.long	0
+	.long	0
+	.long	0
+.text
+	.align 4,0x90
+	.long	S26m_srt-(Main.main6_info)+4
+	.long	0
+	.long	65558
+.globl Main.main6_info
+.type Main.main6_info, @object
+Main.main6_info:
+_c2aM:
+	movl %esi,%eax
+	leal -12(%ebp),%ecx
+	cmpl 220(%ebx),%ecx
+	jb _c2aS
+_c2aT:
+	addl $8,%edi
+	cmpl 228(%ebx),%edi
+	ja _c2aV
+_c2aU:
+	movl $stg_CAF_BLACKHOLE_info,-4(%edi)
+	movl 236(%ebx),%ecx
+	movl %ecx,(%edi)
+	leal -4(%edi),%ecx
+	pushl %ecx
+	pushl %eax
+	pushl %ebx
+	movl %eax,76(%esp)
+	call newCAF
+	addl $12,%esp
+	testl %eax,%eax
+	je _c2aQ
+_c2aP:
+	movl $stg_bh_upd_frame_info,-8(%ebp)
+	leal -4(%edi),%eax
+	movl %eax,-4(%ebp)
+	movl $1,-12(%ebp)
+	addl $-12,%ebp
+	jmp Main.main_go_info
+_c2aQ:
+	movl 64(%esp),%eax
+	jmp *(%eax)
+_c2aV:
+	movl $8,252(%ebx)
+_c2aS:
+	movl %eax,%esi
+	jmp *-8(%ebx)
+	.size Main.main6_info, .-Main.main6_info
+.data
+	.align 4
+.align 1
+.globl Main.main5_closure
+.type Main.main5_closure, @object
+Main.main5_closure:
+	.long	Main.main5_info
+	.long	0
+	.long	0
+	.long	0
+.text
+	.align 4,0x90
+	.long	S26m_srt-(Main.main5_info)+12
+	.long	0
+	.long	196630
+.globl Main.main5_info
+.type Main.main5_info, @object
+Main.main5_info:
+_c2b6:
+	movl %esi,%eax
+	leal -24(%ebp),%ecx
+	cmpl 220(%ebx),%ecx
+	jb _c2bc
+_c2bd:
+	addl $8,%edi
+	cmpl 228(%ebx),%edi
+	ja _c2bf
+_c2be:
+	movl $stg_CAF_BLACKHOLE_info,-4(%edi)
+	movl 236(%ebx),%ecx
+	movl %ecx,(%edi)
+	leal -4(%edi),%ecx
+	pushl %ecx
+	pushl %eax
+	pushl %ebx
+	movl %eax,76(%esp)
+	call newCAF
+	addl $12,%esp
+	testl %eax,%eax
+	je _c2ba
+_c2b9:
+	movl $stg_bh_upd_frame_info,-8(%ebp)
+	leal -4(%edi),%eax
+	movl %eax,-4(%ebp)
+	movl $GHC.Classes.$fOrdInt_closure,-24(%ebp)
+	movl $GHC.Classes.$fEqInt_closure,-20(%ebp)
+	movl $GHC.Num.$fNumInt_closure,-16(%ebp)
+	movl $Main.main6_closure,-12(%ebp)
+	addl $-24,%ebp
+	jmp T2902_B_PairingSum.$fSumPSumab_$cunions_info
+_c2ba:
+	movl 64(%esp),%eax
+	jmp *(%eax)
+_c2bf:
+	movl $8,252(%ebx)
+_c2bc:
+	movl %eax,%esi
+	jmp *-8(%ebx)
+	.size Main.main5_info, .-Main.main5_info
+.data
+	.align 4
+.align 1
+.globl Main.main4_closure
+.type Main.main4_closure, @object
+Main.main4_closure:
+	.long	Main.main4_info
+	.long	0
+	.long	0
+	.long	0
+.text
+	.align 4,0x90
+	.long	S26m_srt-(Main.main4_info)+20
+	.long	0
+	.long	196630
+.globl Main.main4_info
+.type Main.main4_info, @object
+Main.main4_info:
+_c2bq:
+	movl %esi,%eax
+	leal -24(%ebp),%ecx
+	cmpl 220(%ebx),%ecx
+	jb _c2bw
+_c2bx:
+	addl $8,%edi
+	cmpl 228(%ebx),%edi
+	ja _c2bz
+_c2by:
+	movl $stg_CAF_BLACKHOLE_info,-4(%edi)
+	movl 236(%ebx),%ecx
+	movl %ecx,(%edi)
+	leal -4(%edi),%ecx
+	pushl %ecx
+	pushl %eax
+	pushl %ebx
+	movl %eax,76(%esp)
+	call newCAF
+	addl $12,%esp
+	testl %eax,%eax
+	je _c2bu
+_c2bt:
+	movl $stg_bh_upd_frame_info,-8(%ebp)
+	leal -4(%edi),%eax
+	movl %eax,-4(%ebp)
+	movl $GHC.Classes.$fOrdInt_closure,-24(%ebp)
+	movl $GHC.Classes.$fEqInt_closure,-20(%ebp)
+	movl $GHC.Num.$fNumInt_closure,-16(%ebp)
+	movl $Main.main5_closure,-12(%ebp)
+	addl $-24,%ebp
+	jmp T2902_B_PairingSum.$fSumPSumab_$ctoList_info
+_c2bu:
+	movl 64(%esp),%eax
+	jmp *(%eax)
+_c2bz:
+	movl $8,252(%ebx)
+_c2bw:
+	movl %eax,%esi
+	jmp *-8(%ebx)
+	.size Main.main4_info, .-Main.main4_info
+.data
+	.align 4
+.align 1
+.globl Main.main3_closure
+.type Main.main3_closure, @object
+Main.main3_closure:
+	.long	Main.main3_info
+	.long	0
+	.long	0
+	.long	0
+.text
+	.align 4,0x90
+	.long	S26m_srt-(Main.main3_info)+28
+	.long	0
+	.long	65558
+.globl Main.main3_info
+.type Main.main3_info, @object
+Main.main3_info:
+_c2bK:
+	movl %esi,%eax
+	leal -16(%ebp),%ecx
+	cmpl 220(%ebx),%ecx
+	jb _c2bQ
+_c2bR:
+	addl $8,%edi
+	cmpl 228(%ebx),%edi
+	ja _c2bT
+_c2bS:
+	movl $stg_CAF_BLACKHOLE_info,-4(%edi)
+	movl 236(%ebx),%ecx
+	movl %ecx,(%edi)
+	leal -4(%edi),%ecx
+	pushl %ecx
+	pushl %eax
+	pushl %ebx
+	movl %eax,76(%esp)
+	call newCAF
+	addl $12,%esp
+	testl %eax,%eax
+	je _c2bO
+_c2bN:
+	movl $stg_bh_upd_frame_info,-8(%ebp)
+	leal -4(%edi),%eax
+	movl %eax,-4(%ebp)
+	movl $20,-16(%ebp)
+	movl $Main.main4_closure,-12(%ebp)
+	addl $-16,%ebp
+	jmp GHC.List.take_unsafe_UInt_info
+_c2bO:
+	movl 64(%esp),%eax
+	jmp *(%eax)
+_c2bT:
+	movl $8,252(%ebx)
+_c2bQ:
+	movl %eax,%esi
+	jmp *-8(%ebx)
+	.size Main.main3_info, .-Main.main3_info
+.data
+	.align 4
+.align 1
+.globl Main.main2_closure
+.type Main.main2_closure, @object
+Main.main2_closure:
+	.long	Main.main2_info
+	.long	0
+	.long	0
+	.long	0
+.text
+	.align 4,0x90
+	.long	S26m_srt-(Main.main2_info)+32
+	.long	0
+	.long	196630
+.globl Main.main2_info
+.type Main.main2_info, @object
+Main.main2_info:
+_c2c4:
+	movl %esi,%eax
+	leal -24(%ebp),%ecx
+	cmpl 220(%ebx),%ecx
+	jb _c2ca
+_c2cb:
+	addl $8,%edi
+	cmpl 228(%ebx),%edi
+	ja _c2cd
+_c2cc:
+	movl $stg_CAF_BLACKHOLE_info,-4(%edi)
+	movl 236(%ebx),%ecx
+	movl %ecx,(%edi)
+	leal -4(%edi),%ecx
+	pushl %ecx
+	pushl %eax
+	pushl %ebx
+	movl %eax,76(%esp)
+	call newCAF
+	addl $12,%esp
+	testl %eax,%eax
+	je _c2c8
+_c2c7:
+	movl $stg_bh_upd_frame_info,-8(%ebp)
+	leal -4(%edi),%eax
+	movl %eax,-4(%ebp)
+	movl $GHC.Show.$fShowInt_closure,-24(%ebp)
+	movl $GHC.Show.$fShowInt_closure,-20(%ebp)
+	movl $Main.main3_closure,-16(%ebp)
+	movl $GHC.Types.[]_closure+1,-12(%ebp)
+	addl $-24,%ebp
+	jmp GHC.Show.$fShow(,)_$cshowList_info
+_c2c8:
+	movl 64(%esp),%eax
+	jmp *(%eax)
+_c2cd:
+	movl $8,252(%ebx)
+_c2ca:
+	movl %eax,%esi
+	jmp *-8(%ebx)
+	.size Main.main2_info, .-Main.main2_info
+.data
+	.align 4
+.align 1
+.globl Main.main1_closure
+.type Main.main1_closure, @object
+Main.main1_closure:
+	.long	Main.main1_info
+	.long	0
+.text
+	.align 4,0x90
+	.long	S26m_srt-(Main.main1_info)+40
+	.long	65539
+	.long	0
+	.long	983055
+.globl Main.main1_info
+.type Main.main1_info, @object
+Main.main1_info:
+_c2co:
+	leal -12(%ebp),%eax
+	cmpl 220(%ebx),%eax
+	jb _c2cr
+_c2cs:
+	movl $GHC.IO.Handle.FD.stdout_closure,-12(%ebp)
+	movl $Main.main2_closure,-8(%ebp)
+	movl $GHC.Types.True_closure+2,-4(%ebp)
+	addl $-12,%ebp
+	jmp GHC.IO.Handle.Text.hPutStr2_info
+_c2cr:
+	movl $Main.main1_closure,%esi
+	jmp *-4(%ebx)
+	.size Main.main1_info, .-Main.main1_info
+.data
+	.align 4
+.align 1
+.globl Main.main_closure
+.type Main.main_closure, @object
+Main.main_closure:
+	.long	Main.main_info
+	.long	0
+.text
+	.align 4,0x90
+	.long	S26m_srt-(Main.main_info)+52
+	.long	65539
+	.long	0
+	.long	65551
+.globl Main.main_info
+.type Main.main_info, @object
+Main.main_info:
+_c2cE:
+	jmp Main.main1_info
+	.size Main.main_info, .-Main.main_info
+.data
+	.align 4
+.align 1
+.globl Main.main7_closure
+.type Main.main7_closure, @object
+Main.main7_closure:
+	.long	Main.main7_info
+	.long	0
+.text
+	.align 4,0x90
+	.long	S26m_srt-(Main.main7_info)+52
+	.long	65539
+	.long	0
+	.long	458767
+.globl Main.main7_info
+.type Main.main7_info, @object
+Main.main7_info:
+_c2cL:
+	leal -4(%ebp),%eax
+	cmpl 220(%ebx),%eax
+	jb _c2cO
+_c2cP:
+	movl $Main.main1_closure+1,-4(%ebp)
+	addl $-4,%ebp
+	jmp GHC.TopHandler.runMainIO1_info
+_c2cO:
+	movl $Main.main7_closure,%esi
+	jmp *-4(%ebx)
+	.size Main.main7_info, .-Main.main7_info
+.data
+	.align 4
+.align 1
+.globl :Main.main_closure
+.type :Main.main_closure, @object
+:Main.main_closure:
+	.long	:Main.main_info
+	.long	0
+.text
+	.align 4,0x90
+	.long	S26m_srt-(:Main.main_info)+60
+	.long	65539
+	.long	0
+	.long	65551
+.globl :Main.main_info
+.type :Main.main_info, @object
+:Main.main_info:
+_c2d1:
+	jmp Main.main7_info
+	.size :Main.main_info, .-:Main.main_info
+.section .data
+	.align 4
+.align 1
+S26m_srt:
+	.long	T2902_B_PairingSum.$fSumPSumab_$cfromList_closure
+	.long	Main.main_go_closure
+	.long	lvl1_r23Y_closure
+	.long	T2902_B_PairingSum.$fSumPSumab_$cunions_closure
+	.long	Main.main6_closure
+	.long	T2902_B_PairingSum.$fSumPSumab_$ctoList_closure
+	.long	Main.main5_closure
+	.long	Main.main4_closure
+	.long	Main.main3_closure
+	.long	GHC.Show.$fShow(,)_$cshowList_closure
+	.long	Main.main2_closure
+	.long	GHC.IO.Handle.FD.stdout_closure
+	.long	GHC.IO.Handle.Text.hPutStr2_closure
+	.long	Main.main1_closure
+	.long	GHC.TopHandler.runMainIO1_closure
+	.long	Main.main7_closure
+
+
+Linking T2902_B ...
