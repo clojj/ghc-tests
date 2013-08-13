@@ -687,7 +687,7 @@
       F64[Hp - 4] = _c2yQ::F64;
       _c2yT::P32 = Hp - 7;
       R1 = _c2yT::P32;
-      call (P32[(old + 12)])(R1) args: 12, res: 0, upd: 12;
+      call stg_upd_frame_info(R1) args: 12, res: 0, upd: 12;
   c2yh:
       I32[(old + 20)] = R1;
       I32[(old + 16)] = _s2gD::I32;
@@ -1075,7 +1075,7 @@
       F64[Hp - 4] = _c2BI::F64;
       _c2BL::P32 = Hp - 7;
       R1 = _c2BL::P32;
-      call (P32[(old + 12)])(R1) args: 12, res: 0, upd: 12;
+      call stg_upd_frame_info(R1) args: 12, res: 0, upd: 12;
   c2B9:
       I32[(old + 20)] = R1;
       I32[(old + 16)] = _s2hF::I32;
@@ -1520,7 +1520,7 @@
       P32[Hp] = _s2iC::P32;
       _c2Jt::P32 = Hp - 11;
       R1 = _c2Jt::P32;
-      call (P32[(old + 12)])(R1) args: 12, res: 0, upd: 12;
+      call stg_bh_upd_frame_info(R1) args: 12, res: 0, upd: 12;
   c2Jq:
       R1 = Main.main9_closure;
       call (I32[R1])(R1) args: 12, res: 0, upd: 12;
@@ -1748,7 +1748,7 @@
       F64[Hp - 4] = _c2MX::F64;
       _c2N0::P32 = Hp - 7;
       R1 = _c2N0::P32;
-      call (P32[(old + 12)])(R1) args: 12, res: 0, upd: 12;
+      call stg_upd_frame_info(R1) args: 12, res: 0, upd: 12;
   c2MP:
       I32[(old + 20)] = R1;
       I32[(old + 16)] = _s2iZ::I32;
@@ -2077,7 +2077,7 @@
       F64[Hp - 4] = _c2S6::F64;
       _c2S9::P32 = Hp - 7;
       R1 = _c2S9::P32;
-      call (P32[(old + 12)])(R1) args: 12, res: 0, upd: 12;
+      call stg_upd_frame_info(R1) args: 12, res: 0, upd: 12;
   c2RY:
       I32[(old + 20)] = R1;
       I32[(old + 16)] = _s2jT::I32;
