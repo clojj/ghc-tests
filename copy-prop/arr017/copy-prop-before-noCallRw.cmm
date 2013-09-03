@@ -1,193 +1,193 @@
 ==================== Before copy propagation ====================
 {offset
-  c2kw:
-      _r2es::P32 = R1;
-      _s2fa::P32 = P32[(old + 16)];
-      _s2fb::F64 = F64[(old + 12)];
-      R1 = _r2es::P32;
-      P32[(old + 16)] = _s2fa::P32;
-      F64[(old + 12)] = _s2fb::F64;
+  c2nE:
+      _r2h8::P32 = R1;
+      _s2hQ::P32 = P32[(old + 16)];
+      _s2hR::F64 = F64[(old + 12)];
+      R1 = _r2h8::P32;
+      P32[(old + 16)] = _s2hQ::P32;
+      F64[(old + 12)] = _s2hR::F64;
       call Main.$wsum'1_info(R1) args: 16, res: 0, upd: 4;
 }
 
 ==================== Before copy propagation ====================
 {offset
-  c2kJ:
-      _s2fa::P32 = P32[(old + 16)];
-      _s2fb::F64 = F64[(old + 12)];
-      goto c2kx;
-  c2kx:
-      if (Sp - <highSp> < SpLim) goto c2kK; else goto c2kL;
-  c2kK:
+  c2nR:
+      _s2hQ::P32 = P32[(old + 16)];
+      _s2hR::F64 = F64[(old + 12)];
+      goto c2nF;
+  c2nF:
+      if (Sp - <highSp> < SpLim) goto c2nS; else goto c2nT;
+  c2nS:
       R1 = Main.$wsum'1_closure;
-      P32[(old + 16)] = _s2fa::P32;
-      F64[(old + 12)] = _s2fb::F64;
+      P32[(old + 16)] = _s2hQ::P32;
+      F64[(old + 12)] = _s2hR::F64;
       call (stg_gc_fun)(R1) args: 16, res: 0, upd: 4;
-  c2kL:
-      I32[(young<c2kz> + 4)] = c2kz;
-      R1 = _s2fa::P32;
-      if (R1 & 3 != 0) goto c2kz; else goto c2kA;
-  c2kA:
-      call (I32[R1])(R1) returns to c2kz, args: 4, res: 4, upd: 4;
-  c2kz:
-      _s2fc::P32 = R1;
-      _c2kF::P32 = _s2fc::P32 & 3;
-      if (_c2kF::P32 >= 2) goto c2kE; else goto c2kD;
-  c2kE:
-      _s2fd::P32 = P32[_s2fc::P32 + 2];
-      _s2fe::P32 = P32[_s2fc::P32 + 6];
-      I32[(young<c2kR> + 4)] = c2kR;
-      R1 = _s2fd::P32;
-      if (R1 & 3 != 0) goto c2kR; else goto c2kT;
-  c2kT:
-      call (I32[R1])(R1) returns to c2kR, args: 4, res: 4, upd: 4;
-  c2kR:
-      _s2ff::P32 = R1;
-      _s2fg::F64 = F64[_s2ff::P32 + 3];
-      _c2kY::F64 = %MO_F_Add_W64(_s2fb::F64, _s2fg::F64);
-      _s2fh::F64 = _c2kY::F64;
-      P32[(old + 16)] = _s2fe::P32;
-      F64[(old + 12)] = _s2fh::F64;
+  c2nT:
+      I32[(young<c2nH> + 4)] = c2nH;
+      R1 = _s2hQ::P32;
+      if (R1 & 3 != 0) goto c2nH; else goto c2nI;
+  c2nI:
+      call (I32[R1])(R1) returns to c2nH, args: 4, res: 4, upd: 4;
+  c2nH:
+      _s2hS::P32 = R1;
+      _c2nN::P32 = _s2hS::P32 & 3;
+      if (_c2nN::P32 >= 2) goto c2nM; else goto c2nL;
+  c2nM:
+      _s2hT::P32 = P32[_s2hS::P32 + 2];
+      _s2hU::P32 = P32[_s2hS::P32 + 6];
+      I32[(young<c2nZ> + 4)] = c2nZ;
+      R1 = _s2hT::P32;
+      if (R1 & 3 != 0) goto c2nZ; else goto c2o1;
+  c2o1:
+      call (I32[R1])(R1) returns to c2nZ, args: 4, res: 4, upd: 4;
+  c2nZ:
+      _s2hV::P32 = R1;
+      _s2hW::F64 = F64[_s2hV::P32 + 3];
+      _c2o6::F64 = %MO_F_Add_W64(_s2hR::F64, _s2hW::F64);
+      _s2hX::F64 = _c2o6::F64;
+      P32[(old + 16)] = _s2hU::P32;
+      F64[(old + 12)] = _s2hX::F64;
       call Main.$wsum'1_info() args: 16, res: 0, upd: 4;
-  c2kD:
-      D1 = _s2fb::F64;
+  c2nL:
+      D1 = _s2hR::F64;
       call (P32[(old + 4)])(D1) args: 4, res: 0, upd: 4;
 }
 
 ==================== Before copy propagation ====================
 {offset
-  c2lp:
-      _s2fi::P32 = P32[(old + 12)];
-      _s2fj::P32 = P32[(old + 8)];
-      goto c2lk;
-  c2lk:
-      if (Sp - <highSp> < SpLim) goto c2lx; else goto c2ly;
-  c2lx:
+  c2ox:
+      _s2hY::P32 = P32[(old + 12)];
+      _s2hZ::P32 = P32[(old + 8)];
+      goto c2os;
+  c2os:
+      if (Sp - <highSp> < SpLim) goto c2oF; else goto c2oG;
+  c2oF:
       R1 = Main.$ssum_sum'1_closure;
-      P32[(old + 12)] = _s2fi::P32;
-      P32[(old + 8)] = _s2fj::P32;
+      P32[(old + 12)] = _s2hY::P32;
+      P32[(old + 8)] = _s2hZ::P32;
       call (stg_gc_fun)(R1) args: 12, res: 0, upd: 4;
-  c2ly:
-      I32[(young<c2lm> + 4)] = c2lm;
-      R1 = _s2fj::P32;
-      if (R1 & 3 != 0) goto c2lm; else goto c2ln;
-  c2ln:
-      call (I32[R1])(R1) returns to c2lm, args: 4, res: 4, upd: 4;
-  c2lm:
-      _s2fk::P32 = R1;
-      _s2fl::F64 = F64[_s2fk::P32 + 3];
-      I32[(young<c2ls> + 4)] = c2ls;
-      P32[(young<c2ls> + 16)] = _s2fi::P32;
-      F64[(young<c2ls> + 12)] = _s2fl::F64;
-      call Main.$wsum'1_info() returns to c2ls, args: 16, res: 4, upd: 4;
-  c2ls:
-      _s2fm::F64 = D1;
+  c2oG:
+      I32[(young<c2ou> + 4)] = c2ou;
+      R1 = _s2hZ::P32;
+      if (R1 & 3 != 0) goto c2ou; else goto c2ov;
+  c2ov:
+      call (I32[R1])(R1) returns to c2ou, args: 4, res: 4, upd: 4;
+  c2ou:
+      _s2i0::P32 = R1;
+      _s2i1::F64 = F64[_s2i0::P32 + 3];
+      I32[(young<c2oA> + 4)] = c2oA;
+      P32[(young<c2oA> + 16)] = _s2hY::P32;
+      F64[(young<c2oA> + 12)] = _s2i1::F64;
+      call Main.$wsum'1_info() returns to c2oA, args: 16, res: 4, upd: 4;
+  c2oA:
+      _s2i2::F64 = D1;
       Hp = Hp + 12;
-      if (Hp > HpLim) goto c2lC; else goto c2lB;
-  c2lC:
+      if (Hp > HpLim) goto c2oK; else goto c2oJ;
+  c2oK:
       HpAlloc = 12;
-      goto c2lA;
-  c2lA:
-      D1 = _s2fm::F64;
-      call stg_gc_d1(D1) returns to c2ls, args: 4, res: 4, upd: 4;
-  c2lB:
+      goto c2oI;
+  c2oI:
+      D1 = _s2i2::F64;
+      call stg_gc_d1(D1) returns to c2oA, args: 4, res: 4, upd: 4;
+  c2oJ:
       I32[Hp - 8] = GHC.Types.D#_con_info;
-      F64[Hp - 4] = _s2fm::F64;
-      _c2lw::P32 = Hp - 7;
-      R1 = _c2lw::P32;
+      F64[Hp - 4] = _s2i2::F64;
+      _c2oE::P32 = Hp - 7;
+      R1 = _c2oE::P32;
       call (P32[(old + 4)])(R1) args: 4, res: 0, upd: 4;
 }
 
 ==================== Before copy propagation ====================
 {offset
-  c2lU:
-      _s2fn::P32 = P32[(old + 8)];
-      goto c2lQ;
-  c2lQ:
-      if (Sp - <highSp> < SpLim) goto c2lY; else goto c2lZ;
-  c2lY:
+  c2p2:
+      _s2i3::P32 = P32[(old + 8)];
+      goto c2oY;
+  c2oY:
+      if (Sp - <highSp> < SpLim) goto c2p6; else goto c2p7;
+  c2p6:
       R1 = Main.$ssum_closure;
-      P32[(old + 8)] = _s2fn::P32;
+      P32[(old + 8)] = _s2i3::P32;
       call (stg_gc_fun)(R1) args: 8, res: 0, upd: 4;
-  c2lZ:
-      I32[(young<c2lS> + 4)] = c2lS;
-      P32[(young<c2lS> + 16)] = _s2fn::P32;
-      F64[(young<c2lS> + 12)] = 0.0 :: W64;
-      call Main.$wsum'1_info() returns to c2lS, args: 16, res: 4, upd: 4;
-  c2lS:
-      _s2fo::F64 = D1;
+  c2p7:
+      I32[(young<c2p0> + 4)] = c2p0;
+      P32[(young<c2p0> + 16)] = _s2i3::P32;
+      F64[(young<c2p0> + 12)] = 0.0 :: W64;
+      call Main.$wsum'1_info() returns to c2p0, args: 16, res: 4, upd: 4;
+  c2p0:
+      _s2i4::F64 = D1;
       Hp = Hp + 12;
-      if (Hp > HpLim) goto c2m2; else goto c2m1;
-  c2m2:
+      if (Hp > HpLim) goto c2pa; else goto c2p9;
+  c2pa:
       HpAlloc = 12;
-      goto c2m0;
-  c2m0:
-      D1 = _s2fo::F64;
-      call stg_gc_d1(D1) returns to c2lS, args: 4, res: 4, upd: 4;
-  c2m1:
+      goto c2p8;
+  c2p8:
+      D1 = _s2i4::F64;
+      call stg_gc_d1(D1) returns to c2p0, args: 4, res: 4, upd: 4;
+  c2p9:
       I32[Hp - 8] = GHC.Types.D#_con_info;
-      F64[Hp - 4] = _s2fo::F64;
-      _c2lX::P32 = Hp - 7;
-      R1 = _c2lX::P32;
+      F64[Hp - 4] = _s2i4::F64;
+      _c2p5::P32 = Hp - 7;
+      R1 = _c2p5::P32;
       call (P32[(old + 4)])(R1) args: 4, res: 0, upd: 4;
 }
 
 ==================== Before copy propagation ====================
 {offset
-  c2ml:
-      _r2eD::P32 = R1;
-      goto c2mf;
-  c2mf:
-      if (Sp - <highSp> < SpLim) goto c2mm; else goto c2mn;
-  c2mn:
+  c2pt:
+      _r2hj::P32 = R1;
+      goto c2pn;
+  c2pn:
+      if (Sp - <highSp> < SpLim) goto c2pu; else goto c2pv;
+  c2pv:
       Hp = Hp + 8;
-      if (Hp > HpLim) goto c2mp; else goto c2mo;
-  c2mp:
+      if (Hp > HpLim) goto c2px; else goto c2pw;
+  c2px:
       HpAlloc = 8;
-      goto c2mm;
-  c2mm:
-      R1 = _r2eD::P32;
+      goto c2pu;
+  c2pu:
+      R1 = _r2hj::P32;
       call (stg_gc_enter_1)(R1) args: 4, res: 0, upd: 4;
-  c2mo:
+  c2pw:
       I32[Hp - 4] = stg_CAF_BLACKHOLE_info;
       I32[Hp] = CurrentTSO;
-      (_c2mh::I32) = call "ccall" arg hints:  [PtrHint, PtrHint,
-                                               PtrHint]  result hints:  [] newCAF(BaseReg, _r2eD::P32, Hp - 4);
-      if (_c2mh::I32 == 0) goto c2mj; else goto c2mi;
-  c2mj:
-      call (I32[_r2eD::P32])() args: 4, res: 0, upd: 4;
-  c2mi:
+      (_c2pp::I32) = call "ccall" arg hints:  [PtrHint, PtrHint,
+                                               PtrHint]  result hints:  [] newCAF(BaseReg, _r2hj::P32, Hp - 4);
+      if (_c2pp::I32 == 0) goto c2pr; else goto c2pq;
+  c2pr:
+      call (I32[_r2hj::P32])() args: 4, res: 0, upd: 4;
+  c2pq:
       I32[(old + 12)] = stg_bh_upd_frame_info;
       P32[(old + 8)] = Hp - 4;
-      I32[(old + 16)] = c2mk_str;
+      I32[(old + 16)] = c2ps_str;
       call Control.Exception.Base.irrefutPatError_info() args: 16, res: 0, upd: 12;
 }
 
 ==================== Before copy propagation ====================
 {offset
-  c2mN:
-      _r2eO::P32 = R1;
-      goto c2mI;
-  c2mI:
-      if (Sp - <highSp> < SpLim) goto c2mO; else goto c2mP;
-  c2mP:
+  c2pV:
+      _r2hr::P32 = R1;
+      goto c2pQ;
+  c2pQ:
+      if (Sp - <highSp> < SpLim) goto c2pW; else goto c2pX;
+  c2pX:
       Hp = Hp + 8;
-      if (Hp > HpLim) goto c2mR; else goto c2mQ;
-  c2mR:
+      if (Hp > HpLim) goto c2pZ; else goto c2pY;
+  c2pZ:
       HpAlloc = 8;
-      goto c2mO;
-  c2mO:
-      R1 = _r2eO::P32;
+      goto c2pW;
+  c2pW:
+      R1 = _r2hr::P32;
       call (stg_gc_enter_1)(R1) args: 4, res: 0, upd: 4;
-  c2mQ:
+  c2pY:
       I32[Hp - 4] = stg_CAF_BLACKHOLE_info;
       I32[Hp] = CurrentTSO;
-      (_c2mK::I32) = call "ccall" arg hints:  [PtrHint, PtrHint,
-                                               PtrHint]  result hints:  [] newCAF(BaseReg, _r2eO::P32, Hp - 4);
-      if (_c2mK::I32 == 0) goto c2mM; else goto c2mL;
-  c2mM:
-      call (I32[_r2eO::P32])() args: 4, res: 0, upd: 4;
-  c2mL:
+      (_c2pS::I32) = call "ccall" arg hints:  [PtrHint, PtrHint,
+                                               PtrHint]  result hints:  [] newCAF(BaseReg, _r2hr::P32, Hp - 4);
+      if (_c2pS::I32 == 0) goto c2pU; else goto c2pT;
+  c2pU:
+      call (I32[_r2hr::P32])() args: 4, res: 0, upd: 4;
+  c2pT:
       I32[(old + 12)] = stg_bh_upd_frame_info;
       P32[(old + 8)] = Hp - 4;
       P32[(old + 24)] = Main.main5_closure+1;
@@ -198,29 +198,29 @@
 
 ==================== Before copy propagation ====================
 {offset
-  c2n7:
-      _r2eP::P32 = R1;
-      goto c2n2;
-  c2n2:
-      if (Sp - <highSp> < SpLim) goto c2n8; else goto c2n9;
-  c2n9:
+  c2qf:
+      _r2hs::P32 = R1;
+      goto c2qa;
+  c2qa:
+      if (Sp - <highSp> < SpLim) goto c2qg; else goto c2qh;
+  c2qh:
       Hp = Hp + 8;
-      if (Hp > HpLim) goto c2nb; else goto c2na;
-  c2nb:
+      if (Hp > HpLim) goto c2qj; else goto c2qi;
+  c2qj:
       HpAlloc = 8;
-      goto c2n8;
-  c2n8:
-      R1 = _r2eP::P32;
+      goto c2qg;
+  c2qg:
+      R1 = _r2hs::P32;
       call (stg_gc_enter_1)(R1) args: 4, res: 0, upd: 4;
-  c2na:
+  c2qi:
       I32[Hp - 4] = stg_CAF_BLACKHOLE_info;
       I32[Hp] = CurrentTSO;
-      (_c2n4::I32) = call "ccall" arg hints:  [PtrHint, PtrHint,
-                                               PtrHint]  result hints:  [] newCAF(BaseReg, _r2eP::P32, Hp - 4);
-      if (_c2n4::I32 == 0) goto c2n6; else goto c2n5;
-  c2n6:
-      call (I32[_r2eP::P32])() args: 4, res: 0, upd: 4;
-  c2n5:
+      (_c2qc::I32) = call "ccall" arg hints:  [PtrHint, PtrHint,
+                                               PtrHint]  result hints:  [] newCAF(BaseReg, _r2hs::P32, Hp - 4);
+      if (_c2qc::I32 == 0) goto c2qe; else goto c2qd;
+  c2qe:
+      call (I32[_r2hs::P32])() args: 4, res: 0, upd: 4;
+  c2qd:
       I32[(old + 12)] = stg_bh_upd_frame_info;
       P32[(old + 8)] = Hp - 4;
       P32[(old + 24)] = Main.main5_closure+1;
@@ -231,29 +231,29 @@
 
 ==================== Before copy propagation ====================
 {offset
-  c2nr:
-      _r2eQ::P32 = R1;
-      goto c2nm;
-  c2nm:
-      if (Sp - <highSp> < SpLim) goto c2ns; else goto c2nt;
-  c2nt:
+  c2qz:
+      _r2ht::P32 = R1;
+      goto c2qu;
+  c2qu:
+      if (Sp - <highSp> < SpLim) goto c2qA; else goto c2qB;
+  c2qB:
       Hp = Hp + 8;
-      if (Hp > HpLim) goto c2nv; else goto c2nu;
-  c2nv:
+      if (Hp > HpLim) goto c2qD; else goto c2qC;
+  c2qD:
       HpAlloc = 8;
-      goto c2ns;
-  c2ns:
-      R1 = _r2eQ::P32;
+      goto c2qA;
+  c2qA:
+      R1 = _r2ht::P32;
       call (stg_gc_enter_1)(R1) args: 4, res: 0, upd: 4;
-  c2nu:
+  c2qC:
       I32[Hp - 4] = stg_CAF_BLACKHOLE_info;
       I32[Hp] = CurrentTSO;
-      (_c2no::I32) = call "ccall" arg hints:  [PtrHint, PtrHint,
-                                               PtrHint]  result hints:  [] newCAF(BaseReg, _r2eQ::P32, Hp - 4);
-      if (_c2no::I32 == 0) goto c2nq; else goto c2np;
-  c2nq:
-      call (I32[_r2eQ::P32])() args: 4, res: 0, upd: 4;
-  c2np:
+      (_c2qw::I32) = call "ccall" arg hints:  [PtrHint, PtrHint,
+                                               PtrHint]  result hints:  [] newCAF(BaseReg, _r2ht::P32, Hp - 4);
+      if (_c2qw::I32 == 0) goto c2qy; else goto c2qx;
+  c2qy:
+      call (I32[_r2ht::P32])() args: 4, res: 0, upd: 4;
+  c2qx:
       I32[(old + 12)] = stg_bh_upd_frame_info;
       P32[(old + 8)] = Hp - 4;
       P32[(old + 24)] = Main.main5_closure+1;
@@ -264,29 +264,29 @@
 
 ==================== Before copy propagation ====================
 {offset
-  c2nL:
-      _r2eR::P32 = R1;
-      goto c2nG;
-  c2nG:
-      if (Sp - <highSp> < SpLim) goto c2nM; else goto c2nN;
-  c2nN:
+  c2qT:
+      _r2hu::P32 = R1;
+      goto c2qO;
+  c2qO:
+      if (Sp - <highSp> < SpLim) goto c2qU; else goto c2qV;
+  c2qV:
       Hp = Hp + 8;
-      if (Hp > HpLim) goto c2nP; else goto c2nO;
-  c2nP:
+      if (Hp > HpLim) goto c2qX; else goto c2qW;
+  c2qX:
       HpAlloc = 8;
-      goto c2nM;
-  c2nM:
-      R1 = _r2eR::P32;
+      goto c2qU;
+  c2qU:
+      R1 = _r2hu::P32;
       call (stg_gc_enter_1)(R1) args: 4, res: 0, upd: 4;
-  c2nO:
+  c2qW:
       I32[Hp - 4] = stg_CAF_BLACKHOLE_info;
       I32[Hp] = CurrentTSO;
-      (_c2nI::I32) = call "ccall" arg hints:  [PtrHint, PtrHint,
-                                               PtrHint]  result hints:  [] newCAF(BaseReg, _r2eR::P32, Hp - 4);
-      if (_c2nI::I32 == 0) goto c2nK; else goto c2nJ;
-  c2nK:
-      call (I32[_r2eR::P32])() args: 4, res: 0, upd: 4;
-  c2nJ:
+      (_c2qQ::I32) = call "ccall" arg hints:  [PtrHint, PtrHint,
+                                               PtrHint]  result hints:  [] newCAF(BaseReg, _r2hu::P32, Hp - 4);
+      if (_c2qQ::I32 == 0) goto c2qS; else goto c2qR;
+  c2qS:
+      call (I32[_r2hu::P32])() args: 4, res: 0, upd: 4;
+  c2qR:
       I32[(old + 12)] = stg_bh_upd_frame_info;
       P32[(old + 8)] = Hp - 4;
       P32[(old + 24)] = Main.main5_closure+1;
@@ -297,1137 +297,1049 @@
 
 ==================== Before copy propagation ====================
 {offset
-  c2o9:
-      _r2eT::P32 = R1;
-      goto c2o3;
-  c2o3:
-      if (Sp - <highSp> < SpLim) goto c2oa; else goto c2ob;
-  c2ob:
+  c2rh:
+      _r2hw::P32 = R1;
+      goto c2rb;
+  c2rb:
+      if (Sp - <highSp> < SpLim) goto c2ri; else goto c2rj;
+  c2rj:
       Hp = Hp + 8;
-      if (Hp > HpLim) goto c2od; else goto c2oc;
-  c2od:
+      if (Hp > HpLim) goto c2rl; else goto c2rk;
+  c2rl:
       HpAlloc = 8;
-      goto c2oa;
-  c2oa:
-      R1 = _r2eT::P32;
+      goto c2ri;
+  c2ri:
+      R1 = _r2hw::P32;
       call (stg_gc_enter_1)(R1) args: 4, res: 0, upd: 4;
-  c2oc:
+  c2rk:
       I32[Hp - 4] = stg_CAF_BLACKHOLE_info;
       I32[Hp] = CurrentTSO;
-      (_c2o5::I32) = call "ccall" arg hints:  [PtrHint, PtrHint,
-                                               PtrHint]  result hints:  [] newCAF(BaseReg, _r2eT::P32, Hp - 4);
-      if (_c2o5::I32 == 0) goto c2o7; else goto c2o6;
-  c2o7:
-      call (I32[_r2eT::P32])() args: 4, res: 0, upd: 4;
-  c2o6:
+      (_c2rd::I32) = call "ccall" arg hints:  [PtrHint, PtrHint,
+                                               PtrHint]  result hints:  [] newCAF(BaseReg, _r2hw::P32, Hp - 4);
+      if (_c2rd::I32 == 0) goto c2rf; else goto c2re;
+  c2rf:
+      call (I32[_r2hw::P32])() args: 4, res: 0, upd: 4;
+  c2re:
       I32[(old + 12)] = stg_bh_upd_frame_info;
       P32[(old + 8)] = Hp - 4;
-      I32[(old + 16)] = c2o8_str;
+      I32[(old + 16)] = c2rg_str;
       call GHC.CString.unpackCString#_info() args: 16, res: 0, upd: 12;
 }
 
 ==================== Before copy propagation ====================
 {offset
-  c2or:
-      _s2fp::P32 = P32[(old + 8)];
-      goto c2op;
-  c2op:
-      if (Sp - <highSp> < SpLim) goto c2os; else goto c2ot;
-  c2os:
-      R1 = lvl6_r2eU_closure;
-      P32[(old + 8)] = _s2fp::P32;
+  c2rz:
+      _s2i5::P32 = P32[(old + 8)];
+      goto c2rx;
+  c2rx:
+      if (Sp - <highSp> < SpLim) goto c2rA; else goto c2rB;
+  c2rA:
+      R1 = lvl6_r2hx_closure;
+      P32[(old + 8)] = _s2i5::P32;
       call (stg_gc_fun)(R1) args: 8, res: 0, upd: 4;
-  c2ot:
+  c2rB:
       P32[(old + 20)] = GHC.Show.$fShowInteger_closure;
-      P32[(old + 16)] = lvl4_r2eS_closure+1;
-      P32[(old + 12)] = _s2fp::P32;
-      P32[(old + 8)] = lvl5_r2eT_closure;
+      P32[(old + 16)] = lvl4_r2hv_closure+1;
+      P32[(old + 12)] = _s2i5::P32;
+      P32[(old + 8)] = lvl5_r2hw_closure;
       call GHC.Arr.indexError_info() args: 20, res: 0, upd: 4;
 }
 
 ==================== Before copy propagation ====================
 {offset
-  c2oE:
-      _s2fq::P32 = P32[(old + 8)];
-      goto c2oC;
-  c2oC:
-      if (Sp - <highSp> < SpLim) goto c2oF; else goto c2oG;
-  c2oF:
-      R1 = poly_$w$j_r2eV_closure;
-      P32[(old + 8)] = _s2fq::P32;
+  c2rM:
+      _s2i6::P32 = P32[(old + 8)];
+      goto c2rK;
+  c2rK:
+      if (Sp - <highSp> < SpLim) goto c2rN; else goto c2rO;
+  c2rN:
+      R1 = poly_$w$j_r2hy_closure;
+      P32[(old + 8)] = _s2i6::P32;
       call (stg_gc_fun)(R1) args: 8, res: 0, upd: 4;
-  c2oG:
-      P32[(old + 8)] = _s2fq::P32;
-      call lvl6_r2eU_info() args: 8, res: 0, upd: 4;
+  c2rO:
+      P32[(old + 8)] = _s2i6::P32;
+      call lvl6_r2hx_info() args: 8, res: 0, upd: 4;
 }
 
 ==================== Before copy propagation ====================
 {offset
-  c2oQ:
-      _s2ft::P32 = P32[(old + 16)];
-      _s2fu::P32 = P32[(old + 12)];
-      _s2fv::P32 = P32[(old + 8)];
-      goto c2oN;
-  c2oN:
-      if (Sp - <highSp> < SpLim) goto c2oR; else goto c2oS;
-  c2oS:
+  c2rY:
+      _s2i9::P32 = P32[(old + 16)];
+      _s2ia::P32 = P32[(old + 12)];
+      _s2ib::P32 = P32[(old + 8)];
+      goto c2rV;
+  c2rV:
+      if (Sp - <highSp> < SpLim) goto c2rZ; else goto c2s0;
+  c2s0:
       Hp = Hp + 12;
-      if (Hp > HpLim) goto c2oU; else goto c2oT;
-  c2oU:
+      if (Hp > HpLim) goto c2s2; else goto c2s1;
+  c2s2:
       HpAlloc = 12;
-      goto c2oR;
-  c2oR:
-      R1 = lvl7_r2eW_closure;
-      P32[(old + 16)] = _s2ft::P32;
-      P32[(old + 12)] = _s2fu::P32;
-      P32[(old + 8)] = _s2fv::P32;
+      goto c2rZ;
+  c2rZ:
+      R1 = lvl7_r2hz_closure;
+      P32[(old + 16)] = _s2i9::P32;
+      P32[(old + 12)] = _s2ia::P32;
+      P32[(old + 8)] = _s2ib::P32;
       call (stg_gc_fun)(R1) args: 16, res: 0, upd: 4;
-  c2oT:
+  c2s1:
       I32[Hp - 8] = (,)_con_info;
-      P32[Hp - 4] = _s2fu::P32;
-      P32[Hp] = _s2fv::P32;
-      _c2oP::P32 = Hp - 7;
+      P32[Hp - 4] = _s2ia::P32;
+      P32[Hp] = _s2ib::P32;
+      _c2rX::P32 = Hp - 7;
       P32[(old + 20)] = GHC.Show.$fShowInteger_closure;
-      P32[(old + 16)] = _c2oP::P32;
-      P32[(old + 12)] = _s2ft::P32;
-      P32[(old + 8)] = lvl5_r2eT_closure;
+      P32[(old + 16)] = _c2rX::P32;
+      P32[(old + 12)] = _s2i9::P32;
+      P32[(old + 8)] = lvl5_r2hw_closure;
       call GHC.Arr.indexError_info() args: 20, res: 0, upd: 4;
 }
 
 ==================== Before copy propagation ====================
 {offset
-  c2p7:
-      _s2fx::P32 = P32[(old + 16)];
-      _s2fy::P32 = P32[(old + 12)];
-      _s2fz::P32 = P32[(old + 8)];
-      goto c2p5;
-  c2p5:
-      if (Sp - <highSp> < SpLim) goto c2p8; else goto c2p9;
-  c2p8:
-      R1 = poly_$w$j1_r2eX_closure;
-      P32[(old + 16)] = _s2fx::P32;
-      P32[(old + 12)] = _s2fy::P32;
-      P32[(old + 8)] = _s2fz::P32;
+  c2sf:
+      _s2id::P32 = P32[(old + 16)];
+      _s2ie::P32 = P32[(old + 12)];
+      _s2if::P32 = P32[(old + 8)];
+      goto c2sd;
+  c2sd:
+      if (Sp - <highSp> < SpLim) goto c2sg; else goto c2sh;
+  c2sg:
+      R1 = poly_$w$j1_r2hA_closure;
+      P32[(old + 16)] = _s2id::P32;
+      P32[(old + 12)] = _s2ie::P32;
+      P32[(old + 8)] = _s2if::P32;
       call (stg_gc_fun)(R1) args: 16, res: 0, upd: 4;
-  c2p9:
-      P32[(old + 16)] = _s2fx::P32;
-      P32[(old + 12)] = _s2fy::P32;
-      P32[(old + 8)] = _s2fz::P32;
-      call lvl7_r2eW_info() args: 16, res: 0, upd: 4;
+  c2sh:
+      P32[(old + 16)] = _s2id::P32;
+      P32[(old + 12)] = _s2ie::P32;
+      P32[(old + 8)] = _s2if::P32;
+      call lvl7_r2hz_info() args: 16, res: 0, upd: 4;
 }
 
 ==================== Before copy propagation ====================
 {offset
-  c2pl:
-      _s2fC::P32 = P32[(old + 8)];
-      goto c2pj;
-  c2pj:
-      if (Sp - <highSp> < SpLim) goto c2pm; else goto c2pn;
-  c2pm:
-      R1 = lvl9_r2eZ_closure;
-      P32[(old + 8)] = _s2fC::P32;
+  c2st:
+      _s2ii::P32 = P32[(old + 8)];
+      goto c2sr;
+  c2sr:
+      if (Sp - <highSp> < SpLim) goto c2su; else goto c2sv;
+  c2su:
+      R1 = lvl9_r2hC_closure;
+      P32[(old + 8)] = _s2ii::P32;
       call (stg_gc_fun)(R1) args: 8, res: 0, upd: 4;
-  c2pn:
+  c2sv:
       P32[(old + 20)] = GHC.Show.$fShowInteger_closure;
-      P32[(old + 16)] = lvl8_r2eY_closure+1;
-      P32[(old + 12)] = _s2fC::P32;
-      P32[(old + 8)] = lvl5_r2eT_closure;
+      P32[(old + 16)] = lvl8_r2hB_closure+1;
+      P32[(old + 12)] = _s2ii::P32;
+      P32[(old + 8)] = lvl5_r2hw_closure;
       call GHC.Arr.indexError_info() args: 20, res: 0, upd: 4;
 }
 
 ==================== Before copy propagation ====================
 {offset
-  c2py:
-      _s2fD::P32 = P32[(old + 8)];
-      goto c2pw;
-  c2pw:
-      if (Sp - <highSp> < SpLim) goto c2pz; else goto c2pA;
-  c2pz:
-      R1 = poly_$w$j2_r2f0_closure;
-      P32[(old + 8)] = _s2fD::P32;
+  c2sG:
+      _s2ij::P32 = P32[(old + 8)];
+      goto c2sE;
+  c2sE:
+      if (Sp - <highSp> < SpLim) goto c2sH; else goto c2sI;
+  c2sH:
+      R1 = poly_$w$j2_r2hD_closure;
+      P32[(old + 8)] = _s2ij::P32;
       call (stg_gc_fun)(R1) args: 8, res: 0, upd: 4;
-  c2pA:
-      P32[(old + 8)] = _s2fD::P32;
-      call lvl9_r2eZ_info() args: 8, res: 0, upd: 4;
+  c2sI:
+      P32[(old + 8)] = _s2ij::P32;
+      call lvl9_r2hC_info() args: 8, res: 0, upd: 4;
 }
 
 ==================== Before copy propagation ====================
 {offset
-  c2pK:
-      _s2fG::P32 = P32[(old + 16)];
-      _s2fH::P32 = P32[(old + 12)];
-      _s2fI::P32 = P32[(old + 8)];
-      goto c2pH;
-  c2pH:
-      if (Sp - <highSp> < SpLim) goto c2pL; else goto c2pM;
-  c2pM:
+  c2sS:
+      _s2im::P32 = P32[(old + 16)];
+      _s2in::P32 = P32[(old + 12)];
+      _s2io::P32 = P32[(old + 8)];
+      goto c2sP;
+  c2sP:
+      if (Sp - <highSp> < SpLim) goto c2sT; else goto c2sU;
+  c2sU:
       Hp = Hp + 12;
-      if (Hp > HpLim) goto c2pO; else goto c2pN;
-  c2pO:
+      if (Hp > HpLim) goto c2sW; else goto c2sV;
+  c2sW:
       HpAlloc = 12;
-      goto c2pL;
-  c2pL:
-      R1 = lvl10_r2f1_closure;
-      P32[(old + 16)] = _s2fG::P32;
-      P32[(old + 12)] = _s2fH::P32;
-      P32[(old + 8)] = _s2fI::P32;
+      goto c2sT;
+  c2sT:
+      R1 = lvl10_r2hE_closure;
+      P32[(old + 16)] = _s2im::P32;
+      P32[(old + 12)] = _s2in::P32;
+      P32[(old + 8)] = _s2io::P32;
       call (stg_gc_fun)(R1) args: 16, res: 0, upd: 4;
-  c2pN:
+  c2sV:
       I32[Hp - 8] = (,)_con_info;
-      P32[Hp - 4] = _s2fH::P32;
-      P32[Hp] = _s2fI::P32;
-      _c2pJ::P32 = Hp - 7;
+      P32[Hp - 4] = _s2in::P32;
+      P32[Hp] = _s2io::P32;
+      _c2sR::P32 = Hp - 7;
       P32[(old + 20)] = GHC.Show.$fShowInteger_closure;
-      P32[(old + 16)] = _c2pJ::P32;
-      P32[(old + 12)] = _s2fG::P32;
-      P32[(old + 8)] = lvl5_r2eT_closure;
+      P32[(old + 16)] = _c2sR::P32;
+      P32[(old + 12)] = _s2im::P32;
+      P32[(old + 8)] = lvl5_r2hw_closure;
       call GHC.Arr.indexError_info() args: 20, res: 0, upd: 4;
 }
 
 ==================== Before copy propagation ====================
 {offset
-  c2q1:
-      _s2fK::P32 = P32[(old + 16)];
-      _s2fL::P32 = P32[(old + 12)];
-      _s2fM::P32 = P32[(old + 8)];
-      goto c2pZ;
-  c2pZ:
-      if (Sp - <highSp> < SpLim) goto c2q2; else goto c2q3;
-  c2q2:
-      R1 = poly_$w$j3_r2f2_closure;
-      P32[(old + 16)] = _s2fK::P32;
-      P32[(old + 12)] = _s2fL::P32;
-      P32[(old + 8)] = _s2fM::P32;
+  c2t9:
+      _s2iq::P32 = P32[(old + 16)];
+      _s2ir::P32 = P32[(old + 12)];
+      _s2is::P32 = P32[(old + 8)];
+      goto c2t7;
+  c2t7:
+      if (Sp - <highSp> < SpLim) goto c2ta; else goto c2tb;
+  c2ta:
+      R1 = poly_$w$j3_r2hF_closure;
+      P32[(old + 16)] = _s2iq::P32;
+      P32[(old + 12)] = _s2ir::P32;
+      P32[(old + 8)] = _s2is::P32;
       call (stg_gc_fun)(R1) args: 16, res: 0, upd: 4;
-  c2q3:
-      P32[(old + 16)] = _s2fK::P32;
-      P32[(old + 12)] = _s2fL::P32;
-      P32[(old + 8)] = _s2fM::P32;
-      call lvl10_r2f1_info() args: 16, res: 0, upd: 4;
+  c2tb:
+      P32[(old + 16)] = _s2iq::P32;
+      P32[(old + 12)] = _s2ir::P32;
+      P32[(old + 8)] = _s2is::P32;
+      call lvl10_r2hE_info() args: 16, res: 0, upd: 4;
 }
 
 ==================== Before copy propagation ====================
 {offset
-  c2xF:
-      _s2gd::P32 = R1;
-      goto c2xD;
-  c2xD:
-      if (Sp - <highSp> < SpLim) goto c2xG; else goto c2xH;
-  c2xG:
-      R1 = _s2gd::P32;
+  c2yK:
+      _s2iV::P32 = R1;
+      goto c2yI;
+  c2yI:
+      if (Sp - <highSp> < SpLim) goto c2yL; else goto c2yM;
+  c2yL:
+      R1 = _s2iV::P32;
       call (stg_gc_enter_1)(R1) args: 4, res: 0, upd: 4;
-  c2xH:
+  c2yM:
       I32[(old + 12)] = stg_upd_frame_info;
-      P32[(old + 8)] = _s2gd::P32;
-      _s2gb::P32 = P32[_s2gd::P32 + 8];
-      P32[(old + 20)] = Main.main5_closure+1;
-      P32[(old + 16)] = _s2gb::P32;
-      call GHC.Integer.Type.leInteger_info() args: 20, res: 0, upd: 12;
-}
-
-==================== Before copy propagation ====================
-{offset
-  c2xK:
-      _s2ge::P32 = R1;
-      goto c2xI;
-  c2xI:
-      if (Sp - <highSp> < SpLim) goto c2xL; else goto c2xM;
-  c2xL:
-      R1 = _s2ge::P32;
-      call (stg_gc_enter_1)(R1) args: 4, res: 0, upd: 4;
-  c2xM:
-      I32[(old + 12)] = stg_upd_frame_info;
-      P32[(old + 8)] = _s2ge::P32;
-      _s2gb::P32 = P32[_s2ge::P32 + 8];
-      P32[(old + 20)] = _s2gb::P32;
-      P32[(old + 16)] = Main.main_n_closure+1;
-      call GHC.Integer.Type.leInteger_info() args: 20, res: 0, upd: 12;
-}
-
-==================== Before copy propagation ====================
-{offset
-  c2xP:
-      _s2gf::P32 = R1;
-      goto c2xN;
-  c2xN:
-      if (Sp - <highSp> < SpLim) goto c2xQ; else goto c2xR;
-  c2xQ:
-      R1 = _s2gf::P32;
-      call (stg_gc_enter_1)(R1) args: 4, res: 0, upd: 4;
-  c2xR:
-      I32[(old + 12)] = stg_upd_frame_info;
-      P32[(old + 8)] = _s2gf::P32;
-      _s2gb::P32 = P32[_s2gf::P32 + 8];
-      P32[(old + 20)] = _s2gb::P32;
+      P32[(old + 8)] = _s2iV::P32;
+      _s2iT::P32 = P32[_s2iV::P32 + 8];
+      P32[(old + 20)] = _s2iT::P32;
       P32[(old + 16)] = Main.main5_closure+1;
       call GHC.Integer.Type.minusInteger_info() args: 20, res: 0, upd: 12;
 }
 
 ==================== Before copy propagation ====================
 {offset
-  c2xS:
-      _s2h1::P32 = R1;
-      goto c2wN;
-  c2wN:
-      if (Sp - <highSp> < SpLim) goto c2xT; else goto c2xU;
-  c2xT:
-      R1 = _s2h1::P32;
+  c2zz:
+      _s2jP::P32 = R1;
+      goto c2zu;
+  c2zu:
+      if (Sp - <highSp> < SpLim) goto c2zQ; else goto c2zR;
+  c2zQ:
+      R1 = _s2jP::P32;
       call (stg_gc_enter_1)(R1) args: 4, res: 0, upd: 4;
-  c2xU:
+  c2zR:
       I32[(old + 12)] = stg_upd_frame_info;
-      P32[(old + 8)] = _s2h1::P32;
-      _s2fP::P32 = P32[_s2h1::P32 + 8];
-      _s2gb::P32 = P32[_s2h1::P32 + 12];
-      _s2gk::P32 = P32[_s2h1::P32 + 16];
-      _s2gv::P32 = P32[_s2h1::P32 + 20];
-      I32[(young<c2wP> + 4)] = c2wP;
-      R1 = _s2gv::P32;
-      if (R1 & 3 != 0) goto c2wP; else goto c2wQ;
-  c2wQ:
-      call (I32[R1])(R1) returns to c2wP, args: 4, res: 4, upd: 12;
-  c2wP:
-      _s2gw::P32 = R1;
-      _s2gx::F64 = F64[_s2gw::P32 + 3];
-      I32[(young<c2wU> + 4)] = c2wU;
-      P32[(young<c2wU> + 8)] = _s2gb::P32;
-      call GHC.Integer.Type.doubleFromInteger_info() returns to c2wU, args: 8, res: 4, upd: 12;
-  c2wU:
-      _s2gy::F64 = D1;
-      I32[(young<c2wY> + 4)] = c2wY;
-      P32[(young<c2wY> + 8)] = _s2gk::P32;
-      call GHC.Integer.Type.doubleFromInteger_info() returns to c2wY, args: 8, res: 4, upd: 12;
-  c2wY:
-      _s2gz::F64 = D1;
-      I32[(young<c2x2> + 4)] = c2x2;
-      R1 = _s2fP::P32;
-      if (R1 & 3 != 0) goto c2x2; else goto c2x3;
-  c2x3:
-      call (I32[R1])(R1) returns to c2x2, args: 4, res: 4, upd: 12;
-  c2x2:
-      _s2gA::P32 = R1;
-      _s2gB::P32 = P32[_s2gA::P32 + 3];
-      _s2gC::P32 = P32[_s2gA::P32 + 7];
-      _s2gE::P32 = P32[_s2gA::P32 + 11];
-      _s2gD::I32 = I32[_s2gA::P32 + 15];
-      I32[(young<c2x7> + 4)] = c2x7;
-      P32[(young<c2x7> + 12)] = _s2gB::P32;
-      P32[(young<c2x7> + 8)] = _s2gk::P32;
-      call GHC.Integer.Type.leInteger_info() returns to c2x7, args: 12, res: 4, upd: 12;
-  c2x7:
-      _s2gF::P32 = R1;
-      _c2z9::P32 = _s2gF::P32 & 3;
-      if (_c2z9::P32 >= 2) goto c2y4; else goto c2y8;
-  c2y4:
-      I32[(young<c2xc> + 4)] = c2xc;
-      P32[(young<c2xc> + 12)] = _s2gk::P32;
-      P32[(young<c2xc> + 8)] = _s2gC::P32;
-      call GHC.Integer.Type.leInteger_info() returns to c2xc, args: 12, res: 4, upd: 12;
-  c2xc:
-      _s2gG::P32 = R1;
-      _c2z5::P32 = _s2gG::P32 & 3;
-      if (_c2z5::P32 >= 2) goto c2ya; else goto c2y8;
-  c2ya:
-      I32[(young<c2xh> + 4)] = c2xh;
-      P32[(young<c2xh> + 12)] = _s2gk::P32;
-      P32[(young<c2xh> + 8)] = _s2gB::P32;
-      call GHC.Integer.Type.minusInteger_info() returns to c2xh, args: 12, res: 4, upd: 12;
-  c2xh:
-      _s2gH::P32 = R1;
-      I32[(young<c2xl> + 4)] = c2xl;
-      P32[(young<c2xl> + 8)] = _s2gH::P32;
-      call GHC.Integer.Type.integerToInt_info() returns to c2xl, args: 8, res: 4, upd: 12;
-  c2xl:
-      _s2gI::I32 = R1;
-      _c2xp::I32 = %MO_S_Le_W32(0, _s2gI::I32);
-      if (_c2xp::I32 >= 1) goto c2yY; else goto c2yh;
-  c2yY:
-      _c2xt::I32 = %MO_S_Lt_W32(_s2gI::I32, _s2gD::I32);
-      if (_c2xt::I32 >= 1) goto c2yU; else goto c2yh;
-  c2yU:
-      _s2gO::P32 = P32[(_s2gE::P32 + 12) + (_s2gI::I32 << 2)];
-      _s2gO::P32 = _s2gO::P32;
-      I32[(young<c2yk> + 4)] = c2yk;
-      R1 = _s2gO::P32;
-      if (R1 & 3 != 0) goto c2yk; else goto c2yl;
-  c2yl:
-      call (I32[R1])(R1) returns to c2yk, args: 4, res: 4, upd: 12;
-  c2yk:
-      _s2gP::P32 = R1;
+      P32[(old + 8)] = _s2jP::P32;
+      _s2iv::P32 = P32[_s2jP::P32 + 8];
+      _s2iT::P32 = P32[_s2jP::P32 + 12];
+      _s2j0::P32 = P32[_s2jP::P32 + 16];
+      _s2jf::P32 = P32[_s2jP::P32 + 20];
+      I32[(young<c2zw> + 4)] = c2zw;
+      R1 = _s2jf::P32;
+      if (R1 & 3 != 0) goto c2zw; else goto c2zx;
+  c2zx:
+      call (I32[R1])(R1) returns to c2zw, args: 4, res: 4, upd: 12;
+  c2zw:
+      _s2jg::P32 = R1;
+      _s2jh::F64 = F64[_s2jg::P32 + 3];
+      I32[(young<c2zC> + 4)] = c2zC;
+      P32[(young<c2zC> + 8)] = _s2iT::P32;
+      call GHC.Integer.Type.doubleFromInteger_info() returns to c2zC, args: 8, res: 4, upd: 12;
+  c2zC:
+      _s2ji::F64 = D1;
+      I32[(young<c2zG> + 4)] = c2zG;
+      P32[(young<c2zG> + 8)] = _s2j0::P32;
+      call GHC.Integer.Type.doubleFromInteger_info() returns to c2zG, args: 8, res: 4, upd: 12;
+  c2zG:
+      _s2jj::F64 = D1;
+      I32[(young<c2zK> + 4)] = c2zK;
+      R1 = _s2iv::P32;
+      if (R1 & 3 != 0) goto c2zK; else goto c2zL;
+  c2zL:
+      call (I32[R1])(R1) returns to c2zK, args: 4, res: 4, upd: 12;
+  c2zK:
+      _s2jk::P32 = R1;
+      _s2jl::P32 = P32[_s2jk::P32 + 3];
+      _s2jm::P32 = P32[_s2jk::P32 + 7];
+      _s2jo::P32 = P32[_s2jk::P32 + 11];
+      _s2jn::I32 = I32[_s2jk::P32 + 15];
+      I32[(young<c2zP> + 4)] = c2zP;
+      P32[(young<c2zP> + 12)] = _s2jl::P32;
+      P32[(young<c2zP> + 8)] = _s2j0::P32;
+      call GHC.Integer.Type.leInteger#_info() returns to c2zP, args: 12, res: 4, upd: 12;
+  c2zP:
+      _s2jp::I32 = R1;
+      if (_s2jp::I32 >= 1) goto c2A6; else goto c2Ad;
+  c2A6:
+      I32[(young<c2A5> + 4)] = c2A5;
+      P32[(young<c2A5> + 12)] = _s2j0::P32;
+      P32[(young<c2A5> + 8)] = _s2jm::P32;
+      call GHC.Integer.Type.leInteger#_info() returns to c2A5, args: 12, res: 4, upd: 12;
+  c2A5:
+      _s2jr::I32 = R1;
+      if (_s2jr::I32 >= 1) goto c2Al; else goto c2Ad;
+  c2Al:
+      I32[(young<c2Ag> + 4)] = c2Ag;
+      P32[(young<c2Ag> + 12)] = _s2j0::P32;
+      P32[(young<c2Ag> + 8)] = _s2jl::P32;
+      call GHC.Integer.Type.minusInteger_info() returns to c2Ag, args: 12, res: 4, upd: 12;
+  c2Ag:
+      _s2jt::P32 = R1;
+      I32[(young<c2Ak> + 4)] = c2Ak;
+      P32[(young<c2Ak> + 8)] = _s2jt::P32;
+      call GHC.Integer.Type.integerToInt_info() returns to c2Ak, args: 8, res: 4, upd: 12;
+  c2Ak:
+      _s2ju::I32 = R1;
+      _c2Ar::I32 = %MO_S_Le_W32(0, _s2ju::I32);
+      _s2jv::I32 = _c2Ar::I32;
+      if (_s2jv::I32 >= 1) goto c2Bl; else goto c2AE;
+  c2Bl:
+      _c2Az::I32 = %MO_S_Lt_W32(_s2ju::I32, _s2jn::I32);
+      _s2jy::I32 = _c2Az::I32;
+      if (_s2jy::I32 >= 1) goto c2Bh; else goto c2AE;
+  c2Bh:
+      _s2jC::P32 = P32[(_s2jo::P32 + 12) + (_s2ju::I32 << 2)];
+      _s2jC::P32 = _s2jC::P32;
+      I32[(young<c2AH> + 4)] = c2AH;
+      R1 = _s2jC::P32;
+      if (R1 & 3 != 0) goto c2AH; else goto c2AI;
+  c2AI:
+      call (I32[R1])(R1) returns to c2AH, args: 4, res: 4, upd: 12;
+  c2AH:
+      _s2jD::P32 = R1;
       Hp = Hp + 12;
-      if (Hp > HpLim) goto c2yX; else goto c2yW;
-  c2yX:
+      if (Hp > HpLim) goto c2Bk; else goto c2Bj;
+  c2Bk:
       HpAlloc = 12;
-      goto c2yV;
-  c2yV:
-      R1 = _s2gP::P32;
-      call stg_gc_unpt_r1(R1) returns to c2yk, args: 4, res: 4, upd: 12;
-  c2yW:
-      _s2gQ::F64 = F64[_s2gP::P32 + 3];
-      _c2yp::F64 = %MO_F_Add_W64(_s2gy::F64, _s2gz::F64);
-      _s2gS::F64 = _c2yp::F64;
-      _c2ys::F64 = %MO_F_Add_W64(_s2gS::F64, 1.0 :: W64);
-      _s2gT::F64 = _c2ys::F64;
-      _c2yv::F64 = %MO_F_Add_W64(_s2gy::F64, _s2gz::F64);
-      _s2gR::F64 = _c2yv::F64;
-      _c2yy::F64 = %MO_F_Mul_W64(_s2gR::F64, _s2gT::F64);
-      _s2gU::F64 = _c2yy::F64;
-      _c2yB::F64 = %MO_F_Quot_W64(_s2gU::F64, 2.0 :: W64);
-      _s2gV::F64 = _c2yB::F64;
-      _c2yE::F64 = %MO_F_Add_W64(_s2gV::F64, _s2gy::F64);
-      _s2gW::F64 = _c2yE::F64;
-      _c2yH::F64 = %MO_F_Add_W64(_s2gW::F64, 1.0 :: W64);
-      _s2gX::F64 = _c2yH::F64;
-      _c2yK::F64 = %MO_F_Quot_W64(1.0 :: W64, _s2gX::F64);
-      _s2gY::F64 = _c2yK::F64;
-      _c2yN::F64 = %MO_F_Mul_W64(_s2gY::F64, _s2gQ::F64);
-      _s2gZ::F64 = _c2yN::F64;
-      _c2yQ::F64 = %MO_F_Add_W64(_s2gx::F64, _s2gZ::F64);
-      _s2h0::F64 = _c2yQ::F64;
+      goto c2Bi;
+  c2Bi:
+      R1 = _s2jD::P32;
+      call stg_gc_unpt_r1(R1) returns to c2AH, args: 4, res: 4, upd: 12;
+  c2Bj:
+      _s2jE::F64 = F64[_s2jD::P32 + 3];
+      _c2AM::F64 = %MO_F_Add_W64(_s2ji::F64, _s2jj::F64);
+      _s2jG::F64 = _c2AM::F64;
+      _c2AP::F64 = %MO_F_Add_W64(_s2jG::F64, 1.0 :: W64);
+      _s2jH::F64 = _c2AP::F64;
+      _c2AS::F64 = %MO_F_Add_W64(_s2ji::F64, _s2jj::F64);
+      _s2jF::F64 = _c2AS::F64;
+      _c2AV::F64 = %MO_F_Mul_W64(_s2jF::F64, _s2jH::F64);
+      _s2jI::F64 = _c2AV::F64;
+      _c2AY::F64 = %MO_F_Quot_W64(_s2jI::F64, 2.0 :: W64);
+      _s2jJ::F64 = _c2AY::F64;
+      _c2B1::F64 = %MO_F_Add_W64(_s2jJ::F64, _s2ji::F64);
+      _s2jK::F64 = _c2B1::F64;
+      _c2B4::F64 = %MO_F_Add_W64(_s2jK::F64, 1.0 :: W64);
+      _s2jL::F64 = _c2B4::F64;
+      _c2B7::F64 = %MO_F_Quot_W64(1.0 :: W64, _s2jL::F64);
+      _s2jM::F64 = _c2B7::F64;
+      _c2Ba::F64 = %MO_F_Mul_W64(_s2jM::F64, _s2jE::F64);
+      _s2jN::F64 = _c2Ba::F64;
+      _c2Bd::F64 = %MO_F_Add_W64(_s2jh::F64, _s2jN::F64);
+      _s2jO::F64 = _c2Bd::F64;
       I32[Hp - 8] = GHC.Types.D#_con_info;
-      F64[Hp - 4] = _s2h0::F64;
-      _c2yT::P32 = Hp - 7;
-      R1 = _c2yT::P32;
+      F64[Hp - 4] = _s2jO::F64;
+      _c2Bg::P32 = Hp - 7;
+      R1 = _c2Bg::P32;
       call (P32[(old + 12)])(R1) args: 12, res: 0, upd: 12;
-  c2yh:
-      I32[(old + 20)] = _s2gI::I32;
-      I32[(old + 16)] = _s2gD::I32;
+  c2AE:
+      I32[(old + 20)] = _s2ju::I32;
+      I32[(old + 16)] = _s2jn::I32;
       call GHC.Arr.badSafeIndex1_info() args: 20, res: 0, upd: 12;
-  c2y8:
-      P32[(old + 24)] = _s2gk::P32;
-      P32[(old + 20)] = _s2gB::P32;
-      P32[(old + 16)] = _s2gC::P32;
-      call poly_$w$j1_r2eX_info() args: 24, res: 0, upd: 12;
+  c2Ad:
+      P32[(old + 24)] = _s2j0::P32;
+      P32[(old + 20)] = _s2jl::P32;
+      P32[(old + 16)] = _s2jm::P32;
+      call poly_$w$j1_r2hA_info() args: 24, res: 0, upd: 12;
 }
 
 ==================== Before copy propagation ====================
 {offset
-  c2zd:
-      _s2h3::P32 = R1;
-      goto c2uP;
-  c2uP:
-      if (Sp - <highSp> < SpLim) goto c2ze; else goto c2zf;
-  c2ze:
-      R1 = _s2h3::P32;
+  c2By:
+      _s2jR::P32 = R1;
+      goto c2yr;
+  c2yr:
+      if (Sp - <highSp> < SpLim) goto c2Bz; else goto c2BA;
+  c2Bz:
+      R1 = _s2jR::P32;
       call (stg_gc_fun)(R1) args: 4, res: 0, upd: 4;
-  c2zf:
-      _s2fP::P32 = P32[_s2h3::P32 + 3];
-      _s2fX::I32 = I32[_s2h3::P32 + 7];
-      I32[(young<c2uR> + 4)] = c2uR;
-      R1 = _s2fX::I32;
-      P32[(young<c2uR> + 8)] = Main.$ssum1_closure+1;
-      call stg_newArray#(R1) returns to c2uR, args: 8, res: 4, upd: 4;
-  c2uR:
-      _s2g2::P32 = R1;
-      _s2g4::P32 = lvl1_r2eP_closure;
-      goto c2uW;
-  c2uW:
-      I32[(young<c2uY> + 4)] = c2uY;
-      R1 = _s2g4::P32;
-      if (R1 & 3 != 0) goto c2uY; else goto c2uZ;
-  c2uZ:
-      call (I32[R1])(R1) returns to c2uY, args: 4, res: 4, upd: 4;
-  c2uY:
-      _s2g6::P32 = R1;
-      _c2Ad::P32 = _s2g6::P32 & 3;
-      if (_c2Ad::P32 >= 2) goto c2zp; else goto c2zl;
-  c2zp:
-      Hp = Hp + 36;
-      if (Hp > HpLim) goto c2zs; else goto c2zr;
-  c2zs:
-      HpAlloc = 36;
-      goto c2zq;
-  c2zr:
-      _s2gb::P32 = P32[_s2g6::P32 + 2];
-      _s2gc::P32 = P32[_s2g6::P32 + 6];
-      I32[Hp - 32] = lvl14_s2gd_info;
-      P32[Hp - 24] = _s2gb::P32;
-      _c2v4::P32 = Hp - 32;
-      I32[Hp - 20] = lvl15_s2ge_info;
-      P32[Hp - 12] = _s2gb::P32;
-      _c2v6::P32 = Hp - 20;
-      I32[Hp - 8] = lvl16_s2gf_info;
-      P32[Hp] = _s2gb::P32;
-      _c2v8::P32 = Hp - 8;
-      _s2gh::P32 = lvl_r2eO_closure;
-      goto c2vd;
-  c2vd:
-      I32[(young<c2vf> + 4)] = c2vf;
-      R1 = _s2gh::P32;
-      if (R1 & 3 != 0) goto c2vf; else goto c2vg;
-  c2vg:
-      call (I32[R1])(R1) returns to c2vf, args: 4, res: 4, upd: 4;
-  c2vf:
-      _s2gj::P32 = R1;
-      _c2A9::P32 = _s2gj::P32 & 3;
-      if (_c2A9::P32 >= 2) goto c2zz; else goto c2zx;
-  c2zz:
-      _s2gk::P32 = P32[_s2gj::P32 + 2];
-      _s2gl::P32 = P32[_s2gj::P32 + 6];
-      I32[(young<c2vl> + 4)] = c2vl;
-      R1 = _c2v4::P32;
-      if (R1 & 3 != 0) goto c2vl; else goto c2vm;
-  c2vm:
-      call (I32[R1])(R1) returns to c2vl, args: 4, res: 4, upd: 4;
-  c2vl:
-      _s2gm::P32 = R1;
-      _c2A5::P32 = _s2gm::P32 & 3;
-      if (_c2A5::P32 >= 2) goto c2zF; else goto c2zJ;
-  c2zF:
-      I32[(young<c2vr> + 4)] = c2vr;
-      R1 = _c2v6::P32;
-      if (R1 & 3 != 0) goto c2vr; else goto c2vs;
-  c2vs:
-      call (I32[R1])(R1) returns to c2vr, args: 4, res: 4, upd: 4;
-  c2vr:
-      _s2gn::P32 = R1;
-      _c2A1::P32 = _s2gn::P32 & 3;
-      if (_c2A1::P32 >= 2) goto c2zL; else goto c2zJ;
-  c2zL:
-      I32[(young<c2vx> + 4)] = c2vx;
-      P32[(young<c2vx> + 8)] = _c2v8::P32;
-      call GHC.Integer.Type.integerToInt_info() returns to c2vx, args: 8, res: 4, upd: 4;
-  c2vx:
-      _s2go::I32 = R1;
+  c2BA:
+      _s2iv::P32 = P32[_s2jR::P32 + 3];
+      _s2iE::I32 = I32[_s2jR::P32 + 7];
+      I32[(young<c2yt> + 4)] = c2yt;
+      R1 = _s2iE::I32;
+      P32[(young<c2yt> + 8)] = Main.$ssum1_closure+1;
+      call stg_newArray#(R1) returns to c2yt, args: 8, res: 4, upd: 4;
+  c2yt:
+      _s2iK::P32 = R1;
+      _s2iM::P32 = lvl1_r2hs_closure;
+      goto c2yy;
+  c2yy:
+      I32[(young<c2yA> + 4)] = c2yA;
+      R1 = _s2iM::P32;
+      if (R1 & 3 != 0) goto c2yA; else goto c2yB;
+  c2yB:
+      call (I32[R1])(R1) returns to c2yA, args: 4, res: 4, upd: 4;
+  c2yA:
+      _s2iO::P32 = R1;
+      _c2Cs::P32 = _s2iO::P32 & 3;
+      if (_c2Cs::P32 >= 2) goto c2BK; else goto c2BG;
+  c2BK:
+      Hp = Hp + 12;
+      if (Hp > HpLim) goto c2BN; else goto c2BM;
+  c2BN:
+      HpAlloc = 12;
+      goto c2BL;
+  c2BM:
+      _s2iT::P32 = P32[_s2iO::P32 + 2];
+      _s2iU::P32 = P32[_s2iO::P32 + 6];
+      I32[Hp - 8] = lvl14_s2iV_info;
+      P32[Hp] = _s2iT::P32;
+      _c2yG::P32 = Hp - 8;
+      _s2iX::P32 = lvl_r2hr_closure;
+      goto c2yQ;
+  c2yQ:
+      I32[(young<c2yS> + 4)] = c2yS;
+      R1 = _s2iX::P32;
+      if (R1 & 3 != 0) goto c2yS; else goto c2yT;
+  c2yT:
+      call (I32[R1])(R1) returns to c2yS, args: 4, res: 4, upd: 4;
+  c2yS:
+      _s2iZ::P32 = R1;
+      _c2Co::P32 = _s2iZ::P32 & 3;
+      if (_c2Co::P32 >= 2) goto c2BU; else goto c2BS;
+  c2BU:
+      _s2j0::P32 = P32[_s2iZ::P32 + 2];
+      _s2j1::P32 = P32[_s2iZ::P32 + 6];
+      I32[(young<c2yY> + 4)] = c2yY;
+      P32[(young<c2yY> + 12)] = Main.main5_closure+1;
+      P32[(young<c2yY> + 8)] = _s2iT::P32;
+      call GHC.Integer.Type.leInteger#_info() returns to c2yY, args: 12, res: 4, upd: 4;
+  c2yY:
+      _s2j2::I32 = R1;
+      if (_s2j2::I32 >= 1) goto c2BY; else goto c2C1;
+  c2BY:
+      I32[(young<c2z5> + 4)] = c2z5;
+      P32[(young<c2z5> + 12)] = _s2iT::P32;
+      P32[(young<c2z5> + 8)] = Main.main_n_closure+1;
+      call GHC.Integer.Type.leInteger#_info() returns to c2z5, args: 12, res: 4, upd: 4;
+  c2z5:
+      _s2j4::I32 = R1;
+      if (_s2j4::I32 >= 1) goto c2C2; else goto c2C1;
+  c2C2:
+      I32[(young<c2zc> + 4)] = c2zc;
+      P32[(young<c2zc> + 8)] = _c2yG::P32;
+      call GHC.Integer.Type.integerToInt_info() returns to c2zc, args: 8, res: 4, upd: 4;
+  c2zc:
+      _s2j6::I32 = R1;
       Hp = Hp + 24;
-      if (Hp > HpLim) goto c2zO; else goto c2zN;
-  c2zO:
+      if (Hp > HpLim) goto c2C5; else goto c2C4;
+  c2C5:
       HpAlloc = 24;
-      goto c2zM;
-  c2zM:
-      R1 = _s2go::I32;
-      call stg_gc_unbx_r1(R1) returns to c2vx, args: 4, res: 4, upd: 4;
-  c2zN:
-      _c2vB::I32 = %MO_S_Le_W32(0, _s2go::I32);
-      if (_c2vB::I32 >= 1) goto c2zU; else goto c2zS;
-  c2zU:
-      _c2vF::I32 = %MO_S_Lt_W32(_s2go::I32, _s2fX::I32);
-      if (_c2vF::I32 >= 1) goto c2zT; else goto c2zS;
-  c2zT:
-      _s2gv::P32 = P32[(_s2g2::P32 + 12) + (_s2go::I32 << 2)];
-      _s2gv::P32 = _s2gv::P32;
-      I32[Hp - 20] = sat_s2h1_info;
-      P32[Hp - 12] = _s2fP::P32;
-      P32[Hp - 8] = _s2gb::P32;
-      P32[Hp - 4] = _s2gk::P32;
-      P32[Hp] = _s2gv::P32;
-      _c2wL::P32 = Hp - 20;
-      P32[(_s2g2::P32 + 12) + (_s2go::I32 << 2)] = _c2wL::P32;
-      I32[_s2g2::P32] = stg_MUT_ARR_PTRS_DIRTY_info;
-      I8[(_s2g2::P32 + 12) + (I32[_s2g2::P32 + 4] << 2) + (_s2go::I32 >> 7)] = 1 :: W8;
-      _s2gh::P32 = _s2gl::P32;
-      goto c2vd;
-  c2zS:
+      goto c2C3;
+  c2C3:
+      R1 = _s2j6::I32;
+      call stg_gc_unbx_r1(R1) returns to c2zc, args: 4, res: 4, upd: 4;
+  c2C4:
+      _c2zg::I32 = %MO_S_Le_W32(0, _s2j6::I32);
+      _s2j7::I32 = _c2zg::I32;
+      if (_s2j7::I32 >= 1) goto c2Cb; else goto c2C9;
+  c2Cb:
+      _c2zm::I32 = %MO_S_Lt_W32(_s2j6::I32, _s2iE::I32);
+      _s2ja::I32 = _c2zm::I32;
+      if (_s2ja::I32 >= 1) goto c2Ca; else goto c2C9;
+  c2Ca:
+      _s2jf::P32 = P32[(_s2iK::P32 + 12) + (_s2j6::I32 << 2)];
+      _s2jf::P32 = _s2jf::P32;
+      I32[Hp - 20] = sat_s2jP_info;
+      P32[Hp - 12] = _s2iv::P32;
+      P32[Hp - 8] = _s2iT::P32;
+      P32[Hp - 4] = _s2j0::P32;
+      P32[Hp] = _s2jf::P32;
+      _c2zs::P32 = Hp - 20;
+      P32[(_s2iK::P32 + 12) + (_s2j6::I32 << 2)] = _c2zs::P32;
+      I32[_s2iK::P32] = stg_MUT_ARR_PTRS_DIRTY_info;
+      I8[(_s2iK::P32 + 12) + (I32[_s2iK::P32 + 4] << 2) + (_s2j6::I32 >> 7)] = 1 :: W8;
+      _s2iX::P32 = _s2j1::P32;
+      goto c2yQ;
+  c2C9:
       Hp = Hp - 24;
-      I32[(old + 12)] = _s2go::I32;
-      I32[(old + 8)] = _s2fX::I32;
+      I32[(old + 12)] = _s2j6::I32;
+      I32[(old + 8)] = _s2iE::I32;
       call GHC.Arr.badSafeIndex1_info() args: 12, res: 0, upd: 4;
-  c2zJ:
-      P32[(old + 8)] = _s2gb::P32;
-      call poly_$w$j_r2eV_info() args: 8, res: 0, upd: 4;
-  c2zx:
-      _s2g4::P32 = _s2gc::P32;
-      goto c2uW;
-  c2zl:
+  c2C1:
+      P32[(old + 8)] = _s2iT::P32;
+      call poly_$w$j_r2hy_info() args: 8, res: 0, upd: 4;
+  c2BS:
+      _s2iM::P32 = _s2iU::P32;
+      goto c2yy;
+  c2BG:
       Hp = Hp + 20;
-      if (Hp > HpLim) goto c2zo; else goto c2zn;
-  c2zo:
+      if (Hp > HpLim) goto c2BJ; else goto c2BI;
+  c2BJ:
       HpAlloc = 20;
-      goto c2zq;
-  c2zq:
-      R1 = _s2g6::P32;
-      call stg_gc_unpt_r1(R1) returns to c2uY, args: 4, res: 4, upd: 4;
-  c2zn:
-      I32[_s2g2::P32] = stg_MUT_ARR_PTRS_FROZEN0_info;
-      _s2g9::P32 = _s2g2::P32;
-      _s2g9::P32 = _s2g9::P32;
+      goto c2BL;
+  c2BL:
+      R1 = _s2iO::P32;
+      call stg_gc_unpt_r1(R1) returns to c2yA, args: 4, res: 4, upd: 4;
+  c2BI:
+      I32[_s2iK::P32] = stg_MUT_ARR_PTRS_FROZEN0_info;
+      _s2iR::P32 = _s2iK::P32;
+      _s2iR::P32 = _s2iR::P32;
       I32[Hp - 16] = GHC.Arr.Array_con_info;
       P32[Hp - 12] = Main.main5_closure+1;
       P32[Hp - 8] = Main.main_n_closure+1;
-      P32[Hp - 4] = _s2g9::P32;
-      I32[Hp] = _s2fX::I32;
-      _c2zj::P32 = Hp - 15;
-      R1 = _c2zj::P32;
+      P32[Hp - 4] = _s2iR::P32;
+      I32[Hp] = _s2iE::I32;
+      _c2BE::P32 = Hp - 15;
+      R1 = _c2BE::P32;
       call (P32[(old + 4)])(R1) args: 4, res: 0, upd: 4;
 }
 
 ==================== Before copy propagation ====================
 {offset
-  c2Aj:
-      _s2fW::P32 = R1;
-      goto c2qK;
-  c2qK:
-      if (Sp - <highSp> < SpLim) goto c2Ak; else goto c2Al;
-  c2Ak:
-      R1 = _s2fW::P32;
+  c2Cy:
+      _s2iD::P32 = R1;
+      goto c2ye;
+  c2ye:
+      if (Sp - <highSp> < SpLim) goto c2Cz; else goto c2CA;
+  c2Cz:
+      R1 = _s2iD::P32;
       call (stg_gc_enter_1)(R1) args: 4, res: 0, upd: 4;
-  c2Al:
+  c2CA:
       I32[(old + 12)] = stg_upd_frame_info;
-      P32[(old + 8)] = _s2fW::P32;
-      _s2fP::P32 = P32[_s2fW::P32 + 8];
-      I32[(young<c2qM> + 4)] = c2qM;
-      P32[(young<c2qM> + 12)] = Main.main5_closure+1;
-      P32[(young<c2qM> + 8)] = Main.main_n_closure+1;
-      call GHC.Arr.$w$crangeSize5_info() returns to c2qM, args: 12, res: 4, upd: 12;
-  c2qM:
-      _s2fX::I32 = R1;
+      P32[(old + 8)] = _s2iD::P32;
+      _s2iv::P32 = P32[_s2iD::P32 + 8];
+      I32[(young<c2yg> + 4)] = c2yg;
+      P32[(young<c2yg> + 12)] = Main.main5_closure+1;
+      P32[(young<c2yg> + 8)] = Main.main_n_closure+1;
+      call GHC.Arr.$w$crangeSize5_info() returns to c2yg, args: 12, res: 4, upd: 12;
+  c2yg:
+      _s2iE::I32 = R1;
       Hp = Hp + 12;
-      if (Hp > HpLim) goto c2Ao; else goto c2An;
-  c2Ao:
+      if (Hp > HpLim) goto c2CD; else goto c2CC;
+  c2CD:
       HpAlloc = 12;
-      goto c2Am;
-  c2Am:
-      R1 = _s2fX::I32;
-      call stg_gc_unbx_r1(R1) returns to c2qM, args: 4, res: 4, upd: 12;
-  c2An:
-      _c2qQ::I32 = %MO_S_Lt_W32(_s2fX::I32, 0);
-      if (_c2qQ::I32 >= 1) goto c2Ar; else goto c2Aq;
-  c2Ar:
+      goto c2CB;
+  c2CB:
+      R1 = _s2iE::I32;
+      call stg_gc_unbx_r1(R1) returns to c2yg, args: 4, res: 4, upd: 12;
+  c2CC:
+      _c2yk::I32 = %MO_S_Lt_W32(_s2iE::I32, 0);
+      _s2iF::I32 = _c2yk::I32;
+      if (_s2iF::I32 >= 1) goto c2CG; else goto c2CF;
+  c2CG:
       Hp = Hp - 12;
       R1 = GHC.Arr.negRange_closure;
       call (I32[R1])(R1) args: 12, res: 0, upd: 12;
-  c2Aq:
-      I32[Hp - 8] = sat_s2h3_info;
-      P32[Hp - 4] = _s2fP::P32;
-      I32[Hp] = _s2fX::I32;
-      _c2uN::P32 = Hp - 7;
-      P32[(old + 16)] = _c2uN::P32;
+  c2CF:
+      I32[Hp - 8] = sat_s2jR_info;
+      P32[Hp - 4] = _s2iv::P32;
+      I32[Hp] = _s2iE::I32;
+      _c2yp::P32 = Hp - 7;
+      P32[(old + 16)] = _c2yp::P32;
       call GHC.ST.runSTRep_info() args: 16, res: 0, upd: 12;
 }
 
 ==================== Before copy propagation ====================
 {offset
-  c2Ax:
-      _s2hf::P32 = R1;
-      goto c2Av;
-  c2Av:
-      if (Sp - <highSp> < SpLim) goto c2Ay; else goto c2Az;
-  c2Ay:
-      R1 = _s2hf::P32;
+  c2CZ:
+      _s2k3::P32 = R1;
+      goto c2CX;
+  c2CX:
+      if (Sp - <highSp> < SpLim) goto c2D0; else goto c2D1;
+  c2D0:
+      R1 = _s2k3::P32;
       call (stg_gc_enter_1)(R1) args: 4, res: 0, upd: 4;
-  c2Az:
+  c2D1:
       I32[(old + 12)] = stg_upd_frame_info;
-      P32[(old + 8)] = _s2hf::P32;
-      _s2hd::P32 = P32[_s2hf::P32 + 8];
-      P32[(old + 20)] = Main.main5_closure+1;
-      P32[(old + 16)] = _s2hd::P32;
-      call GHC.Integer.Type.leInteger_info() args: 20, res: 0, upd: 12;
-}
-
-==================== Before copy propagation ====================
-{offset
-  c2AC:
-      _s2hg::P32 = R1;
-      goto c2AA;
-  c2AA:
-      if (Sp - <highSp> < SpLim) goto c2AD; else goto c2AE;
-  c2AD:
-      R1 = _s2hg::P32;
-      call (stg_gc_enter_1)(R1) args: 4, res: 0, upd: 4;
-  c2AE:
-      I32[(old + 12)] = stg_upd_frame_info;
-      P32[(old + 8)] = _s2hg::P32;
-      _s2hd::P32 = P32[_s2hg::P32 + 8];
-      P32[(old + 20)] = _s2hd::P32;
-      P32[(old + 16)] = Main.main_n_closure+1;
-      call GHC.Integer.Type.leInteger_info() args: 20, res: 0, upd: 12;
-}
-
-==================== Before copy propagation ====================
-{offset
-  c2AH:
-      _s2hh::P32 = R1;
-      goto c2AF;
-  c2AF:
-      if (Sp - <highSp> < SpLim) goto c2AI; else goto c2AJ;
-  c2AI:
-      R1 = _s2hh::P32;
-      call (stg_gc_enter_1)(R1) args: 4, res: 0, upd: 4;
-  c2AJ:
-      I32[(old + 12)] = stg_upd_frame_info;
-      P32[(old + 8)] = _s2hh::P32;
-      _s2hd::P32 = P32[_s2hh::P32 + 8];
-      P32[(old + 20)] = _s2hd::P32;
+      P32[(old + 8)] = _s2k3::P32;
+      _s2k1::P32 = P32[_s2k3::P32 + 8];
+      P32[(old + 20)] = _s2k1::P32;
       P32[(old + 16)] = Main.main5_closure+1;
       call GHC.Integer.Type.minusInteger_info() args: 20, res: 0, upd: 12;
 }
 
 ==================== Before copy propagation ====================
 {offset
-  c2AK:
-      _s2i3::P32 = R1;
-      goto c2tj;
-  c2tj:
-      if (Sp - <highSp> < SpLim) goto c2AL; else goto c2AM;
-  c2AL:
-      R1 = _s2i3::P32;
+  c2DO:
+      _s2kX::P32 = R1;
+      goto c2DJ;
+  c2DJ:
+      if (Sp - <highSp> < SpLim) goto c2E5; else goto c2E6;
+  c2E5:
+      R1 = _s2kX::P32;
       call (stg_gc_enter_1)(R1) args: 4, res: 0, upd: 4;
-  c2AM:
+  c2E6:
       I32[(old + 12)] = stg_upd_frame_info;
-      P32[(old + 8)] = _s2i3::P32;
-      _s2fW::P32 = P32[_s2i3::P32 + 8];
-      _s2hd::P32 = P32[_s2i3::P32 + 12];
-      _s2hm::P32 = P32[_s2i3::P32 + 16];
-      _s2hx::P32 = P32[_s2i3::P32 + 20];
-      I32[(young<c2tl> + 4)] = c2tl;
-      R1 = _s2hx::P32;
-      if (R1 & 3 != 0) goto c2tl; else goto c2tm;
-  c2tm:
-      call (I32[R1])(R1) returns to c2tl, args: 4, res: 4, upd: 12;
-  c2tl:
-      _s2hy::P32 = R1;
-      _s2hz::F64 = F64[_s2hy::P32 + 3];
-      I32[(young<c2tq> + 4)] = c2tq;
-      P32[(young<c2tq> + 8)] = _s2hm::P32;
-      call GHC.Integer.Type.doubleFromInteger_info() returns to c2tq, args: 8, res: 4, upd: 12;
-  c2tq:
-      _s2hA::F64 = D1;
-      I32[(young<c2tu> + 4)] = c2tu;
-      P32[(young<c2tu> + 8)] = _s2hd::P32;
-      call GHC.Integer.Type.doubleFromInteger_info() returns to c2tu, args: 8, res: 4, upd: 12;
-  c2tu:
-      _s2hB::F64 = D1;
-      I32[(young<c2ty> + 4)] = c2ty;
-      R1 = _s2fW::P32;
-      if (R1 & 3 != 0) goto c2ty; else goto c2tz;
-  c2tz:
-      call (I32[R1])(R1) returns to c2ty, args: 4, res: 4, upd: 12;
-  c2ty:
-      _s2hC::P32 = R1;
-      _s2hD::P32 = P32[_s2hC::P32 + 3];
-      _s2hE::P32 = P32[_s2hC::P32 + 7];
-      _s2hG::P32 = P32[_s2hC::P32 + 11];
-      _s2hF::I32 = I32[_s2hC::P32 + 15];
-      I32[(young<c2tD> + 4)] = c2tD;
-      P32[(young<c2tD> + 12)] = _s2hD::P32;
-      P32[(young<c2tD> + 8)] = _s2hm::P32;
-      call GHC.Integer.Type.leInteger_info() returns to c2tD, args: 12, res: 4, upd: 12;
-  c2tD:
-      _s2hH::P32 = R1;
-      _c2C1::P32 = _s2hH::P32 & 3;
-      if (_c2C1::P32 >= 2) goto c2AW; else goto c2B0;
-  c2AW:
-      I32[(young<c2tI> + 4)] = c2tI;
-      P32[(young<c2tI> + 12)] = _s2hm::P32;
-      P32[(young<c2tI> + 8)] = _s2hE::P32;
-      call GHC.Integer.Type.leInteger_info() returns to c2tI, args: 12, res: 4, upd: 12;
-  c2tI:
-      _s2hI::P32 = R1;
-      _c2BX::P32 = _s2hI::P32 & 3;
-      if (_c2BX::P32 >= 2) goto c2B2; else goto c2B0;
-  c2B2:
-      I32[(young<c2tN> + 4)] = c2tN;
-      P32[(young<c2tN> + 12)] = _s2hm::P32;
-      P32[(young<c2tN> + 8)] = _s2hD::P32;
-      call GHC.Integer.Type.minusInteger_info() returns to c2tN, args: 12, res: 4, upd: 12;
-  c2tN:
-      _s2hJ::P32 = R1;
-      I32[(young<c2tR> + 4)] = c2tR;
-      P32[(young<c2tR> + 8)] = _s2hJ::P32;
-      call GHC.Integer.Type.integerToInt_info() returns to c2tR, args: 8, res: 4, upd: 12;
-  c2tR:
-      _s2hK::I32 = R1;
-      _c2tV::I32 = %MO_S_Le_W32(0, _s2hK::I32);
-      if (_c2tV::I32 >= 1) goto c2BQ; else goto c2B9;
-  c2BQ:
-      _c2tZ::I32 = %MO_S_Lt_W32(_s2hK::I32, _s2hF::I32);
-      if (_c2tZ::I32 >= 1) goto c2BM; else goto c2B9;
-  c2BM:
-      _s2hQ::P32 = P32[(_s2hG::P32 + 12) + (_s2hK::I32 << 2)];
-      _s2hQ::P32 = _s2hQ::P32;
-      I32[(young<c2Bc> + 4)] = c2Bc;
-      R1 = _s2hQ::P32;
-      if (R1 & 3 != 0) goto c2Bc; else goto c2Bd;
-  c2Bd:
-      call (I32[R1])(R1) returns to c2Bc, args: 4, res: 4, upd: 12;
-  c2Bc:
-      _s2hR::P32 = R1;
+      P32[(old + 8)] = _s2kX::P32;
+      _s2iD::P32 = P32[_s2kX::P32 + 8];
+      _s2k1::P32 = P32[_s2kX::P32 + 12];
+      _s2k8::P32 = P32[_s2kX::P32 + 16];
+      _s2kn::P32 = P32[_s2kX::P32 + 20];
+      I32[(young<c2DL> + 4)] = c2DL;
+      R1 = _s2kn::P32;
+      if (R1 & 3 != 0) goto c2DL; else goto c2DM;
+  c2DM:
+      call (I32[R1])(R1) returns to c2DL, args: 4, res: 4, upd: 12;
+  c2DL:
+      _s2ko::P32 = R1;
+      _s2kp::F64 = F64[_s2ko::P32 + 3];
+      I32[(young<c2DR> + 4)] = c2DR;
+      P32[(young<c2DR> + 8)] = _s2k8::P32;
+      call GHC.Integer.Type.doubleFromInteger_info() returns to c2DR, args: 8, res: 4, upd: 12;
+  c2DR:
+      _s2kq::F64 = D1;
+      I32[(young<c2DV> + 4)] = c2DV;
+      P32[(young<c2DV> + 8)] = _s2k1::P32;
+      call GHC.Integer.Type.doubleFromInteger_info() returns to c2DV, args: 8, res: 4, upd: 12;
+  c2DV:
+      _s2kr::F64 = D1;
+      I32[(young<c2DZ> + 4)] = c2DZ;
+      R1 = _s2iD::P32;
+      if (R1 & 3 != 0) goto c2DZ; else goto c2E0;
+  c2E0:
+      call (I32[R1])(R1) returns to c2DZ, args: 4, res: 4, upd: 12;
+  c2DZ:
+      _s2ks::P32 = R1;
+      _s2kt::P32 = P32[_s2ks::P32 + 3];
+      _s2ku::P32 = P32[_s2ks::P32 + 7];
+      _s2kw::P32 = P32[_s2ks::P32 + 11];
+      _s2kv::I32 = I32[_s2ks::P32 + 15];
+      I32[(young<c2E4> + 4)] = c2E4;
+      P32[(young<c2E4> + 12)] = _s2kt::P32;
+      P32[(young<c2E4> + 8)] = _s2k8::P32;
+      call GHC.Integer.Type.leInteger#_info() returns to c2E4, args: 12, res: 4, upd: 12;
+  c2E4:
+      _s2kx::I32 = R1;
+      if (_s2kx::I32 >= 1) goto c2El; else goto c2Es;
+  c2El:
+      I32[(young<c2Ek> + 4)] = c2Ek;
+      P32[(young<c2Ek> + 12)] = _s2k8::P32;
+      P32[(young<c2Ek> + 8)] = _s2ku::P32;
+      call GHC.Integer.Type.leInteger#_info() returns to c2Ek, args: 12, res: 4, upd: 12;
+  c2Ek:
+      _s2kz::I32 = R1;
+      if (_s2kz::I32 >= 1) goto c2EA; else goto c2Es;
+  c2EA:
+      I32[(young<c2Ev> + 4)] = c2Ev;
+      P32[(young<c2Ev> + 12)] = _s2k8::P32;
+      P32[(young<c2Ev> + 8)] = _s2kt::P32;
+      call GHC.Integer.Type.minusInteger_info() returns to c2Ev, args: 12, res: 4, upd: 12;
+  c2Ev:
+      _s2kB::P32 = R1;
+      I32[(young<c2Ez> + 4)] = c2Ez;
+      P32[(young<c2Ez> + 8)] = _s2kB::P32;
+      call GHC.Integer.Type.integerToInt_info() returns to c2Ez, args: 8, res: 4, upd: 12;
+  c2Ez:
+      _s2kC::I32 = R1;
+      _c2EG::I32 = %MO_S_Le_W32(0, _s2kC::I32);
+      _s2kD::I32 = _c2EG::I32;
+      if (_s2kD::I32 >= 1) goto c2FA; else goto c2ET;
+  c2FA:
+      _c2EO::I32 = %MO_S_Lt_W32(_s2kC::I32, _s2kv::I32);
+      _s2kG::I32 = _c2EO::I32;
+      if (_s2kG::I32 >= 1) goto c2Fw; else goto c2ET;
+  c2Fw:
+      _s2kK::P32 = P32[(_s2kw::P32 + 12) + (_s2kC::I32 << 2)];
+      _s2kK::P32 = _s2kK::P32;
+      I32[(young<c2EW> + 4)] = c2EW;
+      R1 = _s2kK::P32;
+      if (R1 & 3 != 0) goto c2EW; else goto c2EX;
+  c2EX:
+      call (I32[R1])(R1) returns to c2EW, args: 4, res: 4, upd: 12;
+  c2EW:
+      _s2kL::P32 = R1;
       Hp = Hp + 12;
-      if (Hp > HpLim) goto c2BP; else goto c2BO;
-  c2BP:
+      if (Hp > HpLim) goto c2Fz; else goto c2Fy;
+  c2Fz:
       HpAlloc = 12;
-      goto c2BN;
-  c2BN:
-      R1 = _s2hR::P32;
-      call stg_gc_unpt_r1(R1) returns to c2Bc, args: 4, res: 4, upd: 12;
-  c2BO:
-      _s2hS::F64 = F64[_s2hR::P32 + 3];
-      _c2Bh::F64 = %MO_F_Add_W64(_s2hA::F64, _s2hB::F64);
-      _s2hU::F64 = _c2Bh::F64;
-      _c2Bk::F64 = %MO_F_Add_W64(_s2hU::F64, 1.0 :: W64);
-      _s2hV::F64 = _c2Bk::F64;
-      _c2Bn::F64 = %MO_F_Add_W64(_s2hA::F64, _s2hB::F64);
-      _s2hT::F64 = _c2Bn::F64;
-      _c2Bq::F64 = %MO_F_Mul_W64(_s2hT::F64, _s2hV::F64);
-      _s2hW::F64 = _c2Bq::F64;
-      _c2Bt::F64 = %MO_F_Quot_W64(_s2hW::F64, 2.0 :: W64);
-      _s2hX::F64 = _c2Bt::F64;
-      _c2Bw::F64 = %MO_F_Add_W64(_s2hX::F64, _s2hA::F64);
-      _s2hY::F64 = _c2Bw::F64;
-      _c2Bz::F64 = %MO_F_Add_W64(_s2hY::F64, 1.0 :: W64);
-      _s2hZ::F64 = _c2Bz::F64;
-      _c2BC::F64 = %MO_F_Quot_W64(1.0 :: W64, _s2hZ::F64);
-      _s2i0::F64 = _c2BC::F64;
-      _c2BF::F64 = %MO_F_Mul_W64(_s2i0::F64, _s2hS::F64);
-      _s2i1::F64 = _c2BF::F64;
-      _c2BI::F64 = %MO_F_Add_W64(_s2hz::F64, _s2i1::F64);
-      _s2i2::F64 = _c2BI::F64;
+      goto c2Fx;
+  c2Fx:
+      R1 = _s2kL::P32;
+      call stg_gc_unpt_r1(R1) returns to c2EW, args: 4, res: 4, upd: 12;
+  c2Fy:
+      _s2kM::F64 = F64[_s2kL::P32 + 3];
+      _c2F1::F64 = %MO_F_Add_W64(_s2kq::F64, _s2kr::F64);
+      _s2kO::F64 = _c2F1::F64;
+      _c2F4::F64 = %MO_F_Add_W64(_s2kO::F64, 1.0 :: W64);
+      _s2kP::F64 = _c2F4::F64;
+      _c2F7::F64 = %MO_F_Add_W64(_s2kq::F64, _s2kr::F64);
+      _s2kN::F64 = _c2F7::F64;
+      _c2Fa::F64 = %MO_F_Mul_W64(_s2kN::F64, _s2kP::F64);
+      _s2kQ::F64 = _c2Fa::F64;
+      _c2Fd::F64 = %MO_F_Quot_W64(_s2kQ::F64, 2.0 :: W64);
+      _s2kR::F64 = _c2Fd::F64;
+      _c2Fg::F64 = %MO_F_Add_W64(_s2kR::F64, _s2kq::F64);
+      _s2kS::F64 = _c2Fg::F64;
+      _c2Fj::F64 = %MO_F_Add_W64(_s2kS::F64, 1.0 :: W64);
+      _s2kT::F64 = _c2Fj::F64;
+      _c2Fm::F64 = %MO_F_Quot_W64(1.0 :: W64, _s2kT::F64);
+      _s2kU::F64 = _c2Fm::F64;
+      _c2Fp::F64 = %MO_F_Mul_W64(_s2kU::F64, _s2kM::F64);
+      _s2kV::F64 = _c2Fp::F64;
+      _c2Fs::F64 = %MO_F_Add_W64(_s2kp::F64, _s2kV::F64);
+      _s2kW::F64 = _c2Fs::F64;
       I32[Hp - 8] = GHC.Types.D#_con_info;
-      F64[Hp - 4] = _s2i2::F64;
-      _c2BL::P32 = Hp - 7;
-      R1 = _c2BL::P32;
+      F64[Hp - 4] = _s2kW::F64;
+      _c2Fv::P32 = Hp - 7;
+      R1 = _c2Fv::P32;
       call (P32[(old + 12)])(R1) args: 12, res: 0, upd: 12;
-  c2B9:
-      I32[(old + 20)] = _s2hK::I32;
-      I32[(old + 16)] = _s2hF::I32;
+  c2ET:
+      I32[(old + 20)] = _s2kC::I32;
+      I32[(old + 16)] = _s2kv::I32;
       call GHC.Arr.badSafeIndex1_info() args: 20, res: 0, upd: 12;
-  c2B0:
-      P32[(old + 24)] = _s2hm::P32;
-      P32[(old + 20)] = _s2hD::P32;
-      P32[(old + 16)] = _s2hE::P32;
-      call poly_$w$j3_r2f2_info() args: 24, res: 0, upd: 12;
+  c2Es:
+      P32[(old + 24)] = _s2k8::P32;
+      P32[(old + 20)] = _s2kt::P32;
+      P32[(old + 16)] = _s2ku::P32;
+      call poly_$w$j3_r2hF_info() args: 24, res: 0, upd: 12;
 }
 
 ==================== Before copy propagation ====================
 {offset
-  c2C5:
-      _s2i5::P32 = R1;
-      goto c2qE;
-  c2qE:
-      if (Sp - <highSp> < SpLim) goto c2C6; else goto c2C7;
-  c2C6:
-      R1 = _s2i5::P32;
+  c2FN:
+      _s2kZ::P32 = R1;
+      goto c2y8;
+  c2y8:
+      if (Sp - <highSp> < SpLim) goto c2FO; else goto c2FP;
+  c2FO:
+      R1 = _s2kZ::P32;
       call (stg_gc_fun)(R1) args: 4, res: 0, upd: 4;
-  c2C7:
-      _s2fP::P32 = P32[_s2i5::P32 + 3];
-      _s2fQ::I32 = I32[_s2i5::P32 + 7];
-      I32[(young<c2qG> + 4)] = c2qG;
-      R1 = _s2fQ::I32;
-      P32[(young<c2qG> + 8)] = Main.$ssum1_closure+1;
-      call stg_newArray#(R1) returns to c2qG, args: 8, res: 4, upd: 4;
-  c2qG:
-      _s2fV::P32 = R1;
+  c2FP:
+      _s2iv::P32 = P32[_s2kZ::P32 + 3];
+      _s2iw::I32 = I32[_s2kZ::P32 + 7];
+      I32[(young<c2ya> + 4)] = c2ya;
+      R1 = _s2iw::I32;
+      P32[(young<c2ya> + 8)] = Main.$ssum1_closure+1;
+      call stg_newArray#(R1) returns to c2ya, args: 8, res: 4, upd: 4;
+  c2ya:
+      _s2iC::P32 = R1;
       Hp = Hp + 12;
-      if (Hp > HpLim) goto c2Ca; else goto c2C9;
-  c2Ca:
+      if (Hp > HpLim) goto c2FS; else goto c2FR;
+  c2FS:
       HpAlloc = 12;
-      goto c2C8;
-  c2C8:
-      R1 = _s2fV::P32;
-      call stg_gc_unpt_r1(R1) returns to c2qG, args: 4, res: 4, upd: 4;
-  c2C9:
-      I32[Hp - 8] = u1_s2fW_info;
-      P32[Hp] = _s2fP::P32;
-      _c2qI::P32 = Hp - 8;
-      _s2h6::P32 = lvl3_r2eR_closure;
-      goto c2rs;
-  c2rs:
-      I32[(young<c2ru> + 4)] = c2ru;
-      R1 = _s2h6::P32;
-      if (R1 & 3 != 0) goto c2ru; else goto c2rv;
-  c2rv:
-      call (I32[R1])(R1) returns to c2ru, args: 4, res: 4, upd: 4;
-  c2ru:
-      _s2h8::P32 = R1;
-      _c2D7::P32 = _s2h8::P32 & 3;
-      if (_c2D7::P32 >= 2) goto c2Cj; else goto c2Cf;
-  c2Cj:
-      Hp = Hp + 36;
-      if (Hp > HpLim) goto c2Cm; else goto c2Cl;
-  c2Cm:
-      HpAlloc = 36;
-      goto c2Ck;
-  c2Cl:
-      _s2hd::P32 = P32[_s2h8::P32 + 2];
-      _s2he::P32 = P32[_s2h8::P32 + 6];
-      I32[Hp - 32] = lvl14_s2hf_info;
-      P32[Hp - 24] = _s2hd::P32;
-      _c2rA::P32 = Hp - 32;
-      I32[Hp - 20] = lvl15_s2hg_info;
-      P32[Hp - 12] = _s2hd::P32;
-      _c2rC::P32 = Hp - 20;
-      I32[Hp - 8] = lvl16_s2hh_info;
-      P32[Hp] = _s2hd::P32;
-      _c2rE::P32 = Hp - 8;
-      _s2hj::P32 = lvl2_r2eQ_closure;
-      goto c2rJ;
-  c2rJ:
-      I32[(young<c2rL> + 4)] = c2rL;
-      R1 = _s2hj::P32;
-      if (R1 & 3 != 0) goto c2rL; else goto c2rM;
-  c2rM:
-      call (I32[R1])(R1) returns to c2rL, args: 4, res: 4, upd: 4;
-  c2rL:
-      _s2hl::P32 = R1;
-      _c2D3::P32 = _s2hl::P32 & 3;
-      if (_c2D3::P32 >= 2) goto c2Ct; else goto c2Cr;
-  c2Ct:
-      _s2hm::P32 = P32[_s2hl::P32 + 2];
-      _s2hn::P32 = P32[_s2hl::P32 + 6];
-      I32[(young<c2rR> + 4)] = c2rR;
-      R1 = _c2rA::P32;
-      if (R1 & 3 != 0) goto c2rR; else goto c2rS;
-  c2rS:
-      call (I32[R1])(R1) returns to c2rR, args: 4, res: 4, upd: 4;
-  c2rR:
-      _s2ho::P32 = R1;
-      _c2CZ::P32 = _s2ho::P32 & 3;
-      if (_c2CZ::P32 >= 2) goto c2Cz; else goto c2CD;
-  c2Cz:
-      I32[(young<c2rX> + 4)] = c2rX;
-      R1 = _c2rC::P32;
-      if (R1 & 3 != 0) goto c2rX; else goto c2rY;
-  c2rY:
-      call (I32[R1])(R1) returns to c2rX, args: 4, res: 4, upd: 4;
-  c2rX:
-      _s2hp::P32 = R1;
-      _c2CV::P32 = _s2hp::P32 & 3;
-      if (_c2CV::P32 >= 2) goto c2CF; else goto c2CD;
-  c2CF:
-      I32[(young<c2s3> + 4)] = c2s3;
-      P32[(young<c2s3> + 8)] = _c2rE::P32;
-      call GHC.Integer.Type.integerToInt_info() returns to c2s3, args: 8, res: 4, upd: 4;
-  c2s3:
-      _s2hq::I32 = R1;
-      Hp = Hp + 24;
-      if (Hp > HpLim) goto c2CI; else goto c2CH;
-  c2CI:
-      HpAlloc = 24;
-      goto c2CG;
-  c2CG:
-      R1 = _s2hq::I32;
-      call stg_gc_unbx_r1(R1) returns to c2s3, args: 4, res: 4, upd: 4;
-  c2CH:
-      _c2s7::I32 = %MO_S_Le_W32(0, _s2hq::I32);
-      if (_c2s7::I32 >= 1) goto c2CO; else goto c2CM;
-  c2CO:
-      _c2sb::I32 = %MO_S_Lt_W32(_s2hq::I32, _s2fQ::I32);
-      if (_c2sb::I32 >= 1) goto c2CN; else goto c2CM;
+      goto c2FQ;
+  c2FQ:
+      R1 = _s2iC::P32;
+      call stg_gc_unpt_r1(R1) returns to c2ya, args: 4, res: 4, upd: 4;
+  c2FR:
+      I32[Hp - 8] = u2_s2iD_info;
+      P32[Hp] = _s2iv::P32;
+      _c2yc::P32 = Hp - 8;
+      _s2jU::P32 = lvl3_r2hu_closure;
+      goto c2CN;
   c2CN:
-      _s2hx::P32 = P32[(_s2fV::P32 + 12) + (_s2hq::I32 << 2)];
-      _s2hx::P32 = _s2hx::P32;
-      I32[Hp - 20] = sat_s2i3_info;
-      P32[Hp - 12] = _c2qI::P32;
-      P32[Hp - 8] = _s2hd::P32;
-      P32[Hp - 4] = _s2hm::P32;
-      P32[Hp] = _s2hx::P32;
-      _c2th::P32 = Hp - 20;
-      P32[(_s2fV::P32 + 12) + (_s2hq::I32 << 2)] = _c2th::P32;
-      I32[_s2fV::P32] = stg_MUT_ARR_PTRS_DIRTY_info;
-      I8[(_s2fV::P32 + 12) + (I32[_s2fV::P32 + 4] << 2) + (_s2hq::I32 >> 7)] = 1 :: W8;
-      _s2hj::P32 = _s2hn::P32;
-      goto c2rJ;
-  c2CM:
+      I32[(young<c2CP> + 4)] = c2CP;
+      R1 = _s2jU::P32;
+      if (R1 & 3 != 0) goto c2CP; else goto c2CQ;
+  c2CQ:
+      call (I32[R1])(R1) returns to c2CP, args: 4, res: 4, upd: 4;
+  c2CP:
+      _s2jW::P32 = R1;
+      _c2GJ::P32 = _s2jW::P32 & 3;
+      if (_c2GJ::P32 >= 2) goto c2G1; else goto c2FX;
+  c2G1:
+      Hp = Hp + 12;
+      if (Hp > HpLim) goto c2G4; else goto c2G3;
+  c2G4:
+      HpAlloc = 12;
+      goto c2G2;
+  c2G3:
+      _s2k1::P32 = P32[_s2jW::P32 + 2];
+      _s2k2::P32 = P32[_s2jW::P32 + 6];
+      I32[Hp - 8] = lvl14_s2k3_info;
+      P32[Hp] = _s2k1::P32;
+      _c2CV::P32 = Hp - 8;
+      _s2k5::P32 = lvl2_r2ht_closure;
+      goto c2D5;
+  c2D5:
+      I32[(young<c2D7> + 4)] = c2D7;
+      R1 = _s2k5::P32;
+      if (R1 & 3 != 0) goto c2D7; else goto c2D8;
+  c2D8:
+      call (I32[R1])(R1) returns to c2D7, args: 4, res: 4, upd: 4;
+  c2D7:
+      _s2k7::P32 = R1;
+      _c2GF::P32 = _s2k7::P32 & 3;
+      if (_c2GF::P32 >= 2) goto c2Gb; else goto c2G9;
+  c2Gb:
+      _s2k8::P32 = P32[_s2k7::P32 + 2];
+      _s2k9::P32 = P32[_s2k7::P32 + 6];
+      I32[(young<c2Dd> + 4)] = c2Dd;
+      P32[(young<c2Dd> + 12)] = Main.main5_closure+1;
+      P32[(young<c2Dd> + 8)] = _s2k1::P32;
+      call GHC.Integer.Type.leInteger#_info() returns to c2Dd, args: 12, res: 4, upd: 4;
+  c2Dd:
+      _s2ka::I32 = R1;
+      if (_s2ka::I32 >= 1) goto c2Gf; else goto c2Gi;
+  c2Gf:
+      I32[(young<c2Dk> + 4)] = c2Dk;
+      P32[(young<c2Dk> + 12)] = _s2k1::P32;
+      P32[(young<c2Dk> + 8)] = Main.main_n_closure+1;
+      call GHC.Integer.Type.leInteger#_info() returns to c2Dk, args: 12, res: 4, upd: 4;
+  c2Dk:
+      _s2kc::I32 = R1;
+      if (_s2kc::I32 >= 1) goto c2Gj; else goto c2Gi;
+  c2Gj:
+      I32[(young<c2Dr> + 4)] = c2Dr;
+      P32[(young<c2Dr> + 8)] = _c2CV::P32;
+      call GHC.Integer.Type.integerToInt_info() returns to c2Dr, args: 8, res: 4, upd: 4;
+  c2Dr:
+      _s2ke::I32 = R1;
+      Hp = Hp + 24;
+      if (Hp > HpLim) goto c2Gm; else goto c2Gl;
+  c2Gm:
+      HpAlloc = 24;
+      goto c2Gk;
+  c2Gk:
+      R1 = _s2ke::I32;
+      call stg_gc_unbx_r1(R1) returns to c2Dr, args: 4, res: 4, upd: 4;
+  c2Gl:
+      _c2Dv::I32 = %MO_S_Le_W32(0, _s2ke::I32);
+      _s2kf::I32 = _c2Dv::I32;
+      if (_s2kf::I32 >= 1) goto c2Gs; else goto c2Gq;
+  c2Gs:
+      _c2DB::I32 = %MO_S_Lt_W32(_s2ke::I32, _s2iw::I32);
+      _s2ki::I32 = _c2DB::I32;
+      if (_s2ki::I32 >= 1) goto c2Gr; else goto c2Gq;
+  c2Gr:
+      _s2kn::P32 = P32[(_s2iC::P32 + 12) + (_s2ke::I32 << 2)];
+      _s2kn::P32 = _s2kn::P32;
+      I32[Hp - 20] = sat_s2kX_info;
+      P32[Hp - 12] = _c2yc::P32;
+      P32[Hp - 8] = _s2k1::P32;
+      P32[Hp - 4] = _s2k8::P32;
+      P32[Hp] = _s2kn::P32;
+      _c2DH::P32 = Hp - 20;
+      P32[(_s2iC::P32 + 12) + (_s2ke::I32 << 2)] = _c2DH::P32;
+      I32[_s2iC::P32] = stg_MUT_ARR_PTRS_DIRTY_info;
+      I8[(_s2iC::P32 + 12) + (I32[_s2iC::P32 + 4] << 2) + (_s2ke::I32 >> 7)] = 1 :: W8;
+      _s2k5::P32 = _s2k9::P32;
+      goto c2D5;
+  c2Gq:
       Hp = Hp - 24;
-      I32[(old + 12)] = _s2hq::I32;
-      I32[(old + 8)] = _s2fQ::I32;
+      I32[(old + 12)] = _s2ke::I32;
+      I32[(old + 8)] = _s2iw::I32;
       call GHC.Arr.badSafeIndex1_info() args: 12, res: 0, upd: 4;
-  c2CD:
-      P32[(old + 8)] = _s2hd::P32;
-      call poly_$w$j2_r2f0_info() args: 8, res: 0, upd: 4;
-  c2Cr:
-      _s2h6::P32 = _s2he::P32;
-      goto c2rs;
-  c2Cf:
+  c2Gi:
+      P32[(old + 8)] = _s2k1::P32;
+      call poly_$w$j2_r2hD_info() args: 8, res: 0, upd: 4;
+  c2G9:
+      _s2jU::P32 = _s2k2::P32;
+      goto c2CN;
+  c2FX:
       Hp = Hp + 20;
-      if (Hp > HpLim) goto c2Ci; else goto c2Ch;
-  c2Ci:
+      if (Hp > HpLim) goto c2G0; else goto c2FZ;
+  c2G0:
       HpAlloc = 20;
-      goto c2Ck;
-  c2Ck:
-      R1 = _s2h8::P32;
-      call stg_gc_unpt_r1(R1) returns to c2ru, args: 4, res: 4, upd: 4;
-  c2Ch:
-      I32[_s2fV::P32] = stg_MUT_ARR_PTRS_FROZEN0_info;
-      _s2hb::P32 = _s2fV::P32;
-      _s2hb::P32 = _s2hb::P32;
+      goto c2G2;
+  c2G2:
+      R1 = _s2jW::P32;
+      call stg_gc_unpt_r1(R1) returns to c2CP, args: 4, res: 4, upd: 4;
+  c2FZ:
+      I32[_s2iC::P32] = stg_MUT_ARR_PTRS_FROZEN0_info;
+      _s2jZ::P32 = _s2iC::P32;
+      _s2jZ::P32 = _s2jZ::P32;
       I32[Hp - 16] = GHC.Arr.Array_con_info;
       P32[Hp - 12] = Main.main5_closure+1;
       P32[Hp - 8] = Main.main_n_closure+1;
-      P32[Hp - 4] = _s2hb::P32;
-      I32[Hp] = _s2fQ::I32;
-      _c2Cd::P32 = Hp - 15;
-      R1 = _c2Cd::P32;
+      P32[Hp - 4] = _s2jZ::P32;
+      I32[Hp] = _s2iw::I32;
+      _c2FV::P32 = Hp - 15;
+      R1 = _c2FV::P32;
       call (P32[(old + 4)])(R1) args: 4, res: 0, upd: 4;
 }
 
 ==================== Before copy propagation ====================
 {offset
-  c2Dd:
-      _s2fP::P32 = P32[(old + 8)];
-      goto c2qg;
-  c2qg:
-      if (Sp - <highSp> < SpLim) goto c2De; else goto c2Df;
-  c2De:
+  c2GP:
+      _s2iv::P32 = P32[(old + 8)];
+      goto c2xV;
+  c2xV:
+      if (Sp - <highSp> < SpLim) goto c2GQ; else goto c2GR;
+  c2GQ:
       R1 = Main.main12_closure;
-      P32[(old + 8)] = _s2fP::P32;
+      P32[(old + 8)] = _s2iv::P32;
       call (stg_gc_fun)(R1) args: 8, res: 0, upd: 4;
-  c2Df:
-      I32[(young<c2qi> + 4)] = c2qi;
-      P32[(young<c2qi> + 12)] = Main.main5_closure+1;
-      P32[(young<c2qi> + 8)] = Main.main_n_closure+1;
-      call GHC.Arr.$w$crangeSize5_info() returns to c2qi, args: 12, res: 4, upd: 4;
-  c2qi:
-      _s2fQ::I32 = R1;
+  c2GR:
+      I32[(young<c2xX> + 4)] = c2xX;
+      P32[(young<c2xX> + 12)] = Main.main5_closure+1;
+      P32[(young<c2xX> + 8)] = Main.main_n_closure+1;
+      call GHC.Arr.$w$crangeSize5_info() returns to c2xX, args: 12, res: 4, upd: 4;
+  c2xX:
+      _s2iw::I32 = R1;
       Hp = Hp + 12;
-      if (Hp > HpLim) goto c2Di; else goto c2Dh;
-  c2Di:
+      if (Hp > HpLim) goto c2GU; else goto c2GT;
+  c2GU:
       HpAlloc = 12;
-      goto c2Dg;
-  c2Dg:
-      R1 = _s2fQ::I32;
-      call stg_gc_unbx_r1(R1) returns to c2qi, args: 4, res: 4, upd: 4;
-  c2Dh:
-      _c2qm::I32 = %MO_S_Lt_W32(_s2fQ::I32, 0);
-      if (_c2qm::I32 >= 1) goto c2Dl; else goto c2Dk;
-  c2Dl:
+      goto c2GS;
+  c2GS:
+      R1 = _s2iw::I32;
+      call stg_gc_unbx_r1(R1) returns to c2xX, args: 4, res: 4, upd: 4;
+  c2GT:
+      _c2y1::I32 = %MO_S_Lt_W32(_s2iw::I32, 0);
+      _s2ix::I32 = _c2y1::I32;
+      if (_s2ix::I32 >= 1) goto c2GX; else goto c2GW;
+  c2GX:
       Hp = Hp - 12;
       R1 = GHC.Arr.negRange_closure;
       call (I32[R1])(R1) args: 4, res: 0, upd: 4;
-  c2Dk:
-      I32[Hp - 8] = sat_s2i5_info;
-      P32[Hp - 4] = _s2fP::P32;
-      I32[Hp] = _s2fQ::I32;
-      _c2qC::P32 = Hp - 7;
-      P32[(old + 8)] = _c2qC::P32;
+  c2GW:
+      I32[Hp - 8] = sat_s2kZ_info;
+      P32[Hp - 4] = _s2iv::P32;
+      I32[Hp] = _s2iw::I32;
+      _c2y6::P32 = Hp - 7;
+      P32[(old + 8)] = _c2y6::P32;
       call GHC.ST.runSTRep_info() args: 8, res: 0, upd: 4;
 }
 
 ==================== Before copy propagation ====================
 {offset
-  c2Hf:
-      _s2id::P32 = R1;
-      _s2ie::I32 = I32[(old + 12)];
-      _s2if::P32 = P32[(old + 8)];
-      goto c2H5;
-  c2H5:
-      if (Sp - <highSp> < SpLim) goto c2Hg; else goto c2Hy;
-  c2Hg:
-      R1 = _s2id::P32;
-      I32[(old + 12)] = _s2ie::I32;
-      P32[(old + 8)] = _s2if::P32;
+  c2KL:
+      _s2l8::P32 = R1;
+      _s2l9::I32 = I32[(old + 12)];
+      _s2la::P32 = P32[(old + 8)];
+      goto c2KH;
+  c2KH:
+      if (Sp - <highSp> < SpLim) goto c2KM; else goto c2L9;
+  c2KM:
+      R1 = _s2l8::P32;
+      I32[(old + 12)] = _s2l9::I32;
+      P32[(old + 8)] = _s2la::P32;
       call (stg_gc_fun)(R1) args: 12, res: 0, upd: 4;
-  c2Hy:
-      _s2ic::P32 = P32[_s2id::P32 + 1];
-      _s2i8::I32 = I32[_s2id::P32 + 5];
-      _c2H7::I32 = _s2ie::I32 == _s2i8::I32;
-      if (_c2H7::I32 >= 1) goto c2Hb; else goto c2Ha;
-  c2Ha:
-      I32[(young<c2Hi> + 4)] = c2Hi;
-      R1 = _s2if::P32;
-      if (R1 & 3 != 0) goto c2Hi; else goto c2Hj;
-  c2Hj:
-      call (I32[R1])(R1) returns to c2Hi, args: 4, res: 4, upd: 4;
-  c2Hi:
-      _s2ii::P32 = R1;
-      _c2Hu::P32 = _s2ii::P32 & 3;
-      if (_c2Hu::P32 >= 2) goto c2Ht; else goto c2Hb;
-  c2Ht:
-      _s2ij::P32 = P32[_s2ii::P32 + 2];
-      _s2ik::P32 = P32[_s2ii::P32 + 6];
-      P32[(_s2ic::P32 + 12) + (_s2ie::I32 << 2)] = _s2ij::P32;
-      I32[_s2ic::P32] = stg_MUT_ARR_PTRS_DIRTY_info;
-      I8[(_s2ic::P32 + 12) + (I32[_s2ic::P32 + 4] << 2) + (_s2ie::I32 >> 7)] = 1 :: W8;
-      _c2HB::I32 = _s2ie::I32 + 1;
-      _s2im::I32 = _c2HB::I32;
-      R1 = _s2id::P32;
-      I32[(old + 12)] = _s2im::I32;
-      P32[(old + 8)] = _s2ik::P32;
-      call fillFromList_s2id_info(R1) args: 12, res: 0, upd: 4;
-  c2Hb:
+  c2L9:
+      _s2l7::P32 = P32[_s2l8::P32 + 1];
+      _s2l2::I32 = I32[_s2l8::P32 + 5];
+      _c2KJ::I32 = _s2l9::I32 == _s2l2::I32;
+      _s2lc::I32 = _c2KJ::I32;
+      if (_s2lc::I32 >= 1) goto c2L8; else goto c2KS;
+  c2KS:
+      I32[(young<c2KQ> + 4)] = c2KQ;
+      R1 = _s2la::P32;
+      if (R1 & 3 != 0) goto c2KQ; else goto c2KT;
+  c2KT:
+      call (I32[R1])(R1) returns to c2KQ, args: 4, res: 4, upd: 4;
+  c2KQ:
+      _s2le::P32 = R1;
+      _c2L4::P32 = _s2le::P32 & 3;
+      if (_c2L4::P32 >= 2) goto c2L3; else goto c2L8;
+  c2L3:
+      _s2lf::P32 = P32[_s2le::P32 + 2];
+      _s2lg::P32 = P32[_s2le::P32 + 6];
+      P32[(_s2l7::P32 + 12) + (_s2l9::I32 << 2)] = _s2lf::P32;
+      I32[_s2l7::P32] = stg_MUT_ARR_PTRS_DIRTY_info;
+      I8[(_s2l7::P32 + 12) + (I32[_s2l7::P32 + 4] << 2) + (_s2l9::I32 >> 7)] = 1 :: W8;
+      _c2Lf::I32 = _s2l9::I32 + 1;
+      _s2li::I32 = _c2Lf::I32;
+      R1 = _s2l8::P32;
+      I32[(old + 12)] = _s2li::I32;
+      P32[(old + 8)] = _s2lg::P32;
+      call fillFromList_s2l8_info(R1) args: 12, res: 0, upd: 4;
+  c2L8:
       call (P32[(old + 4)])() args: 4, res: 0, upd: 4;
 }
 
 ==================== Before copy propagation ====================
 {offset
-  c2Gw:
-      if (Sp - <highSp> < SpLim) goto c2HE; else goto c2HF;
-  c2HE:
+  c2Ks:
+      if (Sp - <highSp> < SpLim) goto c2Li; else goto c2Lj;
+  c2Li:
       R1 = Main.main11_closure;
       call (stg_gc_fun)(R1) args: 4, res: 0, upd: 4;
-  c2HF:
-      I32[(young<c2Gy> + 4)] = c2Gy;
-      P32[(young<c2Gy> + 12)] = Main.main5_closure+1;
-      P32[(young<c2Gy> + 8)] = Main.main_n_closure+1;
-      call GHC.Arr.$w$crangeSize5_info() returns to c2Gy, args: 12, res: 4, upd: 4;
-  c2Gy:
-      _s2i8::I32 = R1;
-      _c2GC::I32 = %MO_S_Lt_W32(_s2i8::I32, 0);
-      if (_c2GC::I32 >= 1) goto c2HU; else goto c2HN;
-  c2HU:
+  c2Lj:
+      I32[(young<c2Ku> + 4)] = c2Ku;
+      P32[(young<c2Ku> + 12)] = Main.main5_closure+1;
+      P32[(young<c2Ku> + 8)] = Main.main_n_closure+1;
+      call GHC.Arr.$w$crangeSize5_info() returns to c2Ku, args: 12, res: 4, upd: 4;
+  c2Ku:
+      _s2l2::I32 = R1;
+      _c2Ky::I32 = %MO_S_Lt_W32(_s2l2::I32, 0);
+      _s2l3::I32 = _c2Ky::I32;
+      if (_s2l3::I32 >= 1) goto c2Ly; else goto c2Lr;
+  c2Ly:
       R1 = GHC.Arr.negRange_closure;
       call (I32[R1])(R1) args: 4, res: 0, upd: 4;
-  c2HN:
-      I32[(young<c2H1> + 4)] = c2H1;
-      R1 = _s2i8::I32;
-      P32[(young<c2H1> + 8)] = GHC.Arr.arrEleBottom_closure;
-      call stg_newArray#(R1) returns to c2H1, args: 8, res: 4, upd: 4;
-  c2H1:
-      _s2ic::P32 = R1;
+  c2Lr:
+      I32[(young<c2KD> + 4)] = c2KD;
+      R1 = _s2l2::I32;
+      P32[(young<c2KD> + 8)] = GHC.Arr.arrEleBottom_closure;
+      call stg_newArray#(R1) returns to c2KD, args: 8, res: 4, upd: 4;
+  c2KD:
+      _s2l7::P32 = R1;
       Hp = Hp + 12;
-      if (Hp > HpLim) goto c2HQ; else goto c2HP;
-  c2HQ:
+      if (Hp > HpLim) goto c2Lu; else goto c2Lt;
+  c2Lu:
       HpAlloc = 12;
-      goto c2HO;
-  c2HO:
-      R1 = _s2ic::P32;
-      call stg_gc_unpt_r1(R1) returns to c2H1, args: 4, res: 4, upd: 4;
-  c2HP:
-      _c2H3::P32 = Hp - 5;
-      I32[Hp - 8] = fillFromList_s2id_info;
-      P32[Hp - 4] = _s2ic::P32;
-      I32[Hp] = _s2i8::I32;
-      I32[(young<c2HH> + 4)] = c2HH;
-      R1 = _c2H3::P32;
-      I32[(young<c2HH> + 12)] = 0;
-      P32[(young<c2HH> + 8)] = Main.main_xs_closure+2;
-      call fillFromList_s2id_info(R1) returns to c2HH, args: 12, res: 4, upd: 4;
-  c2HH:
+      goto c2Ls;
+  c2Ls:
+      R1 = _s2l7::P32;
+      call stg_gc_unpt_r1(R1) returns to c2KD, args: 4, res: 4, upd: 4;
+  c2Lt:
+      _c2KF::P32 = Hp - 5;
+      I32[Hp - 8] = fillFromList_s2l8_info;
+      P32[Hp - 4] = _s2l7::P32;
+      I32[Hp] = _s2l2::I32;
+      I32[(young<c2Ll> + 4)] = c2Ll;
+      R1 = _c2KF::P32;
+      I32[(young<c2Ll> + 12)] = 0;
+      P32[(young<c2Ll> + 8)] = Main.main_xs_closure+2;
+      call fillFromList_s2l8_info(R1) returns to c2Ll, args: 12, res: 4, upd: 4;
+  c2Ll:
       Hp = Hp + 20;
-      if (Hp > HpLim) goto c2HT; else goto c2HS;
-  c2HT:
+      if (Hp > HpLim) goto c2Lx; else goto c2Lw;
+  c2Lx:
       HpAlloc = 20;
-      goto c2HR;
-  c2HR:
-      call stg_gc_noregs() returns to c2HH, args: 4, res: 4, upd: 4;
-  c2HS:
-      I32[_s2ic::P32] = stg_MUT_ARR_PTRS_FROZEN0_info;
-      _s2iq::P32 = _s2ic::P32;
-      _s2iq::P32 = _s2iq::P32;
+      goto c2Lv;
+  c2Lv:
+      call stg_gc_noregs() returns to c2Ll, args: 4, res: 4, upd: 4;
+  c2Lw:
+      I32[_s2l7::P32] = stg_MUT_ARR_PTRS_FROZEN0_info;
+      _s2lm::P32 = _s2l7::P32;
+      _s2lm::P32 = _s2lm::P32;
       I32[Hp - 16] = GHC.Arr.Array_con_info;
       P32[Hp - 12] = Main.main5_closure+1;
       P32[Hp - 8] = Main.main_n_closure+1;
-      P32[Hp - 4] = _s2iq::P32;
-      I32[Hp] = _s2i8::I32;
-      _c2HL::P32 = Hp - 15;
-      R1 = _c2HL::P32;
+      P32[Hp - 4] = _s2lm::P32;
+      I32[Hp] = _s2l2::I32;
+      _c2Lp::P32 = Hp - 15;
+      R1 = _c2Lp::P32;
       call (P32[(old + 4)])(R1) args: 4, res: 0, upd: 4;
 }
 
 ==================== Before copy propagation ====================
 {offset
-  c2Ip:
-      _r2eE::P32 = R1;
-      goto c2Ik;
-  c2Ik:
-      if (Sp - <highSp> < SpLim) goto c2Iq; else goto c2Ir;
-  c2Ir:
+  c2M7:
+      _r2hk::P32 = R1;
+      goto c2M2;
+  c2M2:
+      if (Sp - <highSp> < SpLim) goto c2M8; else goto c2M9;
+  c2M9:
       Hp = Hp + 8;
-      if (Hp > HpLim) goto c2It; else goto c2Is;
-  c2It:
+      if (Hp > HpLim) goto c2Mb; else goto c2Ma;
+  c2Mb:
       HpAlloc = 8;
-      goto c2Iq;
-  c2Iq:
-      R1 = _r2eE::P32;
+      goto c2M8;
+  c2M8:
+      R1 = _r2hk::P32;
       call (stg_gc_enter_1)(R1) args: 4, res: 0, upd: 4;
-  c2Is:
+  c2Ma:
       I32[Hp - 4] = stg_CAF_BLACKHOLE_info;
       I32[Hp] = CurrentTSO;
-      (_c2Im::I32) = call "ccall" arg hints:  [PtrHint, PtrHint,
-                                               PtrHint]  result hints:  [] newCAF(BaseReg, _r2eE::P32, Hp - 4);
-      if (_c2Im::I32 == 0) goto c2Io; else goto c2In;
-  c2Io:
-      call (I32[_r2eE::P32])() args: 4, res: 0, upd: 4;
-  c2In:
+      (_c2M4::I32) = call "ccall" arg hints:  [PtrHint, PtrHint,
+                                               PtrHint]  result hints:  [] newCAF(BaseReg, _r2hk::P32, Hp - 4);
+      if (_c2M4::I32 == 0) goto c2M6; else goto c2M5;
+  c2M6:
+      call (I32[_r2hk::P32])() args: 4, res: 0, upd: 4;
+  c2M5:
       I32[(old + 12)] = stg_bh_upd_frame_info;
       P32[(old + 8)] = Hp - 4;
       P32[(old + 16)] = Main.main11_closure+1;
@@ -1436,386 +1348,386 @@
 
 ==================== Before copy propagation ====================
 {offset
-  c2J5:
-      _r2eC::P32 = R1;
-      goto c2IO;
-  c2IO:
-      if (Sp - <highSp> < SpLim) goto c2J6; else goto c2J7;
-  c2J7:
+  c2MN:
+      _r2hi::P32 = R1;
+      goto c2Mw;
+  c2Mw:
+      if (Sp - <highSp> < SpLim) goto c2MO; else goto c2MP;
+  c2MP:
       Hp = Hp + 8;
-      if (Hp > HpLim) goto c2J9; else goto c2J8;
-  c2J9:
+      if (Hp > HpLim) goto c2MR; else goto c2MQ;
+  c2MR:
       HpAlloc = 8;
-      goto c2J6;
-  c2J6:
-      R1 = _r2eC::P32;
+      goto c2MO;
+  c2MO:
+      R1 = _r2hi::P32;
       call (stg_gc_enter_1)(R1) args: 4, res: 0, upd: 4;
-  c2J8:
+  c2MQ:
       I32[Hp - 4] = stg_CAF_BLACKHOLE_info;
       I32[Hp] = CurrentTSO;
-      (_c2IQ::I32) = call "ccall" arg hints:  [PtrHint, PtrHint,
-                                               PtrHint]  result hints:  [] newCAF(BaseReg, _r2eC::P32, Hp - 4);
-      if (_c2IQ::I32 == 0) goto c2IS; else goto c2IR;
-  c2IS:
-      call (I32[_r2eC::P32])() args: 4, res: 0, upd: 4;
-  c2IR:
+      (_c2My::I32) = call "ccall" arg hints:  [PtrHint, PtrHint,
+                                               PtrHint]  result hints:  [] newCAF(BaseReg, _r2hi::P32, Hp - 4);
+      if (_c2My::I32 == 0) goto c2MA; else goto c2Mz;
+  c2MA:
+      call (I32[_r2hi::P32])() args: 4, res: 0, upd: 4;
+  c2Mz:
       I32[(old + 12)] = stg_bh_upd_frame_info;
       P32[(old + 8)] = Hp - 4;
-      I32[(young<c2IT> + 4)] = c2IT;
-      P32[(young<c2IT> + 12)] = Main.main12_closure+1;
-      P32[(young<c2IT> + 8)] = Main.main10_closure;
-      call GHC.List.$witerate_info() returns to c2IT, args: 12, res: 8, upd: 12;
-  c2IT:
-      _s2iu::P32 = R1;
-      _s2iv::P32 = P32[(young<c2IT> + 8)];
+      I32[(young<c2MB> + 4)] = c2MB;
+      P32[(young<c2MB> + 12)] = Main.main12_closure+1;
+      P32[(young<c2MB> + 8)] = Main.main10_closure;
+      call GHC.List.$witerate_info() returns to c2MB, args: 12, res: 8, upd: 12;
+  c2MB:
+      _s2lq::P32 = R1;
+      _s2lr::P32 = P32[(young<c2MB> + 8)];
       Hp = Hp + 12;
-      if (Hp > HpLim) goto c2Jc; else goto c2Jb;
-  c2Jc:
+      if (Hp > HpLim) goto c2MU; else goto c2MT;
+  c2MU:
       HpAlloc = 12;
-      goto c2Ja;
-  c2Ja:
-      R1 = _s2iu::P32;
-      P32[(young<c2IT> + 8)] = _s2iv::P32;
-      call stg_gc_pp(R1) returns to c2IT, args: 8, res: 8, upd: 12;
-  c2Jb:
+      goto c2MS;
+  c2MS:
+      R1 = _s2lq::P32;
+      P32[(young<c2MB> + 8)] = _s2lr::P32;
+      call stg_gc_pp(R1) returns to c2MB, args: 8, res: 8, upd: 12;
+  c2MT:
       I32[Hp - 8] = :_con_info;
-      P32[Hp - 4] = _s2iu::P32;
-      P32[Hp] = _s2iv::P32;
-      _c2IV::P32 = Hp - 6;
-      I32[(young<c2IW> + 4)] = c2IW;
-      I32[(young<c2IW> + 12)] = 19;
-      P32[(young<c2IW> + 8)] = _c2IV::P32;
-      call GHC.List.drop_drop#_info() returns to c2IW, args: 12, res: 4, upd: 12;
-  c2IW:
-      _s2ix::P32 = R1;
-      _c2J1::P32 = _s2ix::P32 & 3;
-      if (_c2J1::P32 >= 2) goto c2J0; else goto c2Jq;
-  c2J0:
-      _s2iy::P32 = P32[_s2ix::P32 + 2];
-      _s2iz::P32 = P32[_s2ix::P32 + 6];
-      I32[(young<c2Ji> + 4)] = c2Ji;
-      R1 = _s2iz::P32;
-      if (R1 & 3 != 0) goto c2Ji; else goto c2Jk;
-  c2Jk:
-      call (I32[R1])(R1) returns to c2Ji, args: 4, res: 4, upd: 12;
-  c2Ji:
-      _s2iA::P32 = R1;
-      _c2Jy::P32 = _s2iA::P32 & 3;
-      if (_c2Jy::P32 >= 2) goto c2Ju; else goto c2Jq;
-  c2Ju:
+      P32[Hp - 4] = _s2lq::P32;
+      P32[Hp] = _s2lr::P32;
+      _c2MD::P32 = Hp - 6;
+      I32[(young<c2ME> + 4)] = c2ME;
+      I32[(young<c2ME> + 12)] = 19;
+      P32[(young<c2ME> + 8)] = _c2MD::P32;
+      call GHC.List.drop_drop#_info() returns to c2ME, args: 12, res: 4, upd: 12;
+  c2ME:
+      _s2lt::P32 = R1;
+      _c2MJ::P32 = _s2lt::P32 & 3;
+      if (_c2MJ::P32 >= 2) goto c2MI; else goto c2N8;
+  c2MI:
+      _s2lu::P32 = P32[_s2lt::P32 + 2];
+      _s2lv::P32 = P32[_s2lt::P32 + 6];
+      I32[(young<c2N0> + 4)] = c2N0;
+      R1 = _s2lv::P32;
+      if (R1 & 3 != 0) goto c2N0; else goto c2N2;
+  c2N2:
+      call (I32[R1])(R1) returns to c2N0, args: 4, res: 4, upd: 12;
+  c2N0:
+      _s2lw::P32 = R1;
+      _c2Ng::P32 = _s2lw::P32 & 3;
+      if (_c2Ng::P32 >= 2) goto c2Nc; else goto c2N8;
+  c2Nc:
       Hp = Hp + 16;
-      if (Hp > HpLim) goto c2Jx; else goto c2Jw;
-  c2Jx:
+      if (Hp > HpLim) goto c2Nf; else goto c2Ne;
+  c2Nf:
       HpAlloc = 16;
-      goto c2Jv;
-  c2Jv:
-      R1 = _s2iA::P32;
-      call stg_gc_unpt_r1(R1) returns to c2Ji, args: 4, res: 4, upd: 12;
-  c2Jw:
-      _s2iB::P32 = P32[_s2iA::P32 + 2];
-      _s2iC::P32 = P32[_s2iA::P32 + 6];
+      goto c2Nd;
+  c2Nd:
+      R1 = _s2lw::P32;
+      call stg_gc_unpt_r1(R1) returns to c2N0, args: 4, res: 4, upd: 12;
+  c2Ne:
+      _s2lx::P32 = P32[_s2lw::P32 + 2];
+      _s2ly::P32 = P32[_s2lw::P32 + 6];
       I32[Hp - 12] = (,,)_con_info;
-      P32[Hp - 8] = _s2iy::P32;
-      P32[Hp - 4] = _s2iB::P32;
-      P32[Hp] = _s2iC::P32;
-      _c2Jt::P32 = Hp - 11;
-      R1 = _c2Jt::P32;
+      P32[Hp - 8] = _s2lu::P32;
+      P32[Hp - 4] = _s2lx::P32;
+      P32[Hp] = _s2ly::P32;
+      _c2Nb::P32 = Hp - 11;
+      R1 = _c2Nb::P32;
       call (P32[(old + 12)])(R1) args: 12, res: 0, upd: 12;
-  c2Jq:
+  c2N8:
       R1 = Main.main9_closure;
       call (I32[R1])(R1) args: 12, res: 0, upd: 12;
 }
 
 ==================== Before copy propagation ====================
 {offset
-  c2K5:
-      _r2eM::P32 = R1;
-      goto c2JX;
-  c2JX:
-      if (Sp - <highSp> < SpLim) goto c2K6; else goto c2K7;
-  c2K7:
+  c2NN:
+      _r2hH::P32 = R1;
+      goto c2NF;
+  c2NF:
+      if (Sp - <highSp> < SpLim) goto c2NO; else goto c2NP;
+  c2NP:
       Hp = Hp + 8;
-      if (Hp > HpLim) goto c2K9; else goto c2K8;
-  c2K9:
+      if (Hp > HpLim) goto c2NR; else goto c2NQ;
+  c2NR:
       HpAlloc = 8;
-      goto c2K6;
-  c2K6:
-      R1 = _r2eM::P32;
+      goto c2NO;
+  c2NO:
+      R1 = _r2hH::P32;
       call (stg_gc_enter_1)(R1) args: 4, res: 0, upd: 4;
-  c2K8:
+  c2NQ:
       I32[Hp - 4] = stg_CAF_BLACKHOLE_info;
       I32[Hp] = CurrentTSO;
-      (_c2JZ::I32) = call "ccall" arg hints:  [PtrHint, PtrHint,
-                                               PtrHint]  result hints:  [] newCAF(BaseReg, _r2eM::P32, Hp - 4);
-      if (_c2JZ::I32 == 0) goto c2K1; else goto c2K0;
-  c2K1:
-      call (I32[_r2eM::P32])() args: 4, res: 0, upd: 4;
-  c2K0:
+      (_c2NH::I32) = call "ccall" arg hints:  [PtrHint, PtrHint,
+                                               PtrHint]  result hints:  [] newCAF(BaseReg, _r2hH::P32, Hp - 4);
+      if (_c2NH::I32 == 0) goto c2NJ; else goto c2NI;
+  c2NJ:
+      call (I32[_r2hH::P32])() args: 4, res: 0, upd: 4;
+  c2NI:
       I32[(old + 12)] = stg_bh_upd_frame_info;
       P32[(old + 8)] = Hp - 4;
-      I32[(young<c2K2> + 4)] = c2K2;
+      I32[(young<c2NK> + 4)] = c2NK;
       R1 = Main.main8_closure;
-      if (R1 & 3 != 0) goto c2K2; else goto c2K3;
-  c2K3:
-      call (I32[R1])(R1) returns to c2K2, args: 4, res: 4, upd: 12;
-  c2K2:
-      _s2iD::P32 = R1;
-      _s2iE::P32 = P32[_s2iD::P32 + 3];
-      _s2iF::P32 = P32[_s2iD::P32 + 7];
-      _s2iG::P32 = P32[_s2iD::P32 + 11];
-      R1 = _s2iF::P32 & (-4);
+      if (R1 & 3 != 0) goto c2NK; else goto c2NL;
+  c2NL:
+      call (I32[R1])(R1) returns to c2NK, args: 4, res: 4, upd: 12;
+  c2NK:
+      _s2lz::P32 = R1;
+      _s2lA::P32 = P32[_s2lz::P32 + 3];
+      _s2lB::P32 = P32[_s2lz::P32 + 7];
+      _s2lC::P32 = P32[_s2lz::P32 + 11];
+      R1 = _s2lB::P32 & (-4);
       call (I32[R1])(R1) args: 12, res: 0, upd: 12;
 }
 
 ==================== Before copy propagation ====================
 {offset
-  c2KA:
-      _r2eB::P32 = R1;
-      goto c2Ks;
-  c2Ks:
-      if (Sp - <highSp> < SpLim) goto c2KB; else goto c2KC;
-  c2KC:
+  c2Oi:
+      _r2hh::P32 = R1;
+      goto c2Oa;
+  c2Oa:
+      if (Sp - <highSp> < SpLim) goto c2Oj; else goto c2Ok;
+  c2Ok:
       Hp = Hp + 8;
-      if (Hp > HpLim) goto c2KE; else goto c2KD;
-  c2KE:
+      if (Hp > HpLim) goto c2Om; else goto c2Ol;
+  c2Om:
       HpAlloc = 8;
-      goto c2KB;
-  c2KB:
-      R1 = _r2eB::P32;
+      goto c2Oj;
+  c2Oj:
+      R1 = _r2hh::P32;
       call (stg_gc_enter_1)(R1) args: 4, res: 0, upd: 4;
-  c2KD:
+  c2Ol:
       I32[Hp - 4] = stg_CAF_BLACKHOLE_info;
       I32[Hp] = CurrentTSO;
-      (_c2Ku::I32) = call "ccall" arg hints:  [PtrHint, PtrHint,
-                                               PtrHint]  result hints:  [] newCAF(BaseReg, _r2eB::P32, Hp - 4);
-      if (_c2Ku::I32 == 0) goto c2Kw; else goto c2Kv;
-  c2Kw:
-      call (I32[_r2eB::P32])() args: 4, res: 0, upd: 4;
-  c2Kv:
+      (_c2Oc::I32) = call "ccall" arg hints:  [PtrHint, PtrHint,
+                                               PtrHint]  result hints:  [] newCAF(BaseReg, _r2hh::P32, Hp - 4);
+      if (_c2Oc::I32 == 0) goto c2Oe; else goto c2Od;
+  c2Oe:
+      call (I32[_r2hh::P32])() args: 4, res: 0, upd: 4;
+  c2Od:
       I32[(old + 12)] = stg_bh_upd_frame_info;
       P32[(old + 8)] = Hp - 4;
-      I32[(young<c2Kx> + 4)] = c2Kx;
+      I32[(young<c2Of> + 4)] = c2Of;
       R1 = Main.main8_closure;
-      if (R1 & 3 != 0) goto c2Kx; else goto c2Ky;
-  c2Ky:
-      call (I32[R1])(R1) returns to c2Kx, args: 4, res: 4, upd: 12;
-  c2Kx:
-      _s2iH::P32 = R1;
-      _s2iI::P32 = P32[_s2iH::P32 + 3];
-      _s2iJ::P32 = P32[_s2iH::P32 + 7];
-      _s2iK::P32 = P32[_s2iH::P32 + 11];
-      R1 = _s2iI::P32 & (-4);
+      if (R1 & 3 != 0) goto c2Of; else goto c2Og;
+  c2Og:
+      call (I32[R1])(R1) returns to c2Of, args: 4, res: 4, upd: 12;
+  c2Of:
+      _s2lD::P32 = R1;
+      _s2lE::P32 = P32[_s2lD::P32 + 3];
+      _s2lF::P32 = P32[_s2lD::P32 + 7];
+      _s2lG::P32 = P32[_s2lD::P32 + 11];
+      R1 = _s2lE::P32 & (-4);
       call (I32[R1])(R1) args: 12, res: 0, upd: 12;
 }
 
 ==================== Before copy propagation ====================
 {offset
-  c2KX:
-      _s2iL::P32 = P32[(old + 16)];
-      _s2iM::P32 = P32[(old + 12)];
-      _s2iN::P32 = P32[(old + 8)];
-      goto c2KU;
-  c2KU:
-      if (Sp - <highSp> < SpLim) goto c2KY; else goto c2KZ;
-  c2KZ:
+  c2OF:
+      _s2lH::P32 = P32[(old + 16)];
+      _s2lI::P32 = P32[(old + 12)];
+      _s2lJ::P32 = P32[(old + 8)];
+      goto c2OC;
+  c2OC:
+      if (Sp - <highSp> < SpLim) goto c2OG; else goto c2OH;
+  c2OH:
       Hp = Hp + 12;
-      if (Hp > HpLim) goto c2L1; else goto c2L0;
-  c2L1:
+      if (Hp > HpLim) goto c2OJ; else goto c2OI;
+  c2OJ:
       HpAlloc = 12;
-      goto c2KY;
-  c2KY:
-      R1 = lvl11_r2f4_closure;
-      P32[(old + 16)] = _s2iL::P32;
-      P32[(old + 12)] = _s2iM::P32;
-      P32[(old + 8)] = _s2iN::P32;
+      goto c2OG;
+  c2OG:
+      R1 = lvl11_r2hI_closure;
+      P32[(old + 16)] = _s2lH::P32;
+      P32[(old + 12)] = _s2lI::P32;
+      P32[(old + 8)] = _s2lJ::P32;
       call (stg_gc_fun)(R1) args: 16, res: 0, upd: 4;
-  c2L0:
+  c2OI:
       I32[Hp - 8] = (,)_con_info;
-      P32[Hp - 4] = _s2iL::P32;
-      P32[Hp] = _s2iM::P32;
-      _c2KW::P32 = Hp - 7;
+      P32[Hp - 4] = _s2lH::P32;
+      P32[Hp] = _s2lI::P32;
+      _c2OE::P32 = Hp - 7;
       P32[(old + 20)] = GHC.Show.$fShowInteger_closure;
-      P32[(old + 16)] = _c2KW::P32;
-      P32[(old + 12)] = _s2iN::P32;
-      P32[(old + 8)] = lvl5_r2eT_closure;
+      P32[(old + 16)] = _c2OE::P32;
+      P32[(old + 12)] = _s2lJ::P32;
+      P32[(old + 8)] = lvl5_r2hw_closure;
       call GHC.Arr.indexError_info() args: 20, res: 0, upd: 4;
 }
 
 ==================== Before copy propagation ====================
 {offset
-  c2Lf:
-      _s2iP::P32 = P32[(old + 16)];
-      _s2iQ::P32 = P32[(old + 12)];
-      _s2iR::P32 = P32[(old + 8)];
-      goto c2Ld;
-  c2Ld:
-      if (Sp - <highSp> < SpLim) goto c2Lg; else goto c2Lh;
-  c2Lg:
+  c2OX:
+      _s2lL::P32 = P32[(old + 16)];
+      _s2lM::P32 = P32[(old + 12)];
+      _s2lN::P32 = P32[(old + 8)];
+      goto c2OV;
+  c2OV:
+      if (Sp - <highSp> < SpLim) goto c2OY; else goto c2OZ;
+  c2OY:
       R1 = Main.main7_closure;
-      P32[(old + 16)] = _s2iP::P32;
-      P32[(old + 12)] = _s2iQ::P32;
-      P32[(old + 8)] = _s2iR::P32;
+      P32[(old + 16)] = _s2lL::P32;
+      P32[(old + 12)] = _s2lM::P32;
+      P32[(old + 8)] = _s2lN::P32;
       call (stg_gc_fun)(R1) args: 16, res: 0, upd: 4;
-  c2Lh:
-      P32[(old + 16)] = _s2iP::P32;
-      P32[(old + 12)] = _s2iQ::P32;
-      P32[(old + 8)] = _s2iR::P32;
-      call lvl11_r2f4_info() args: 16, res: 0, upd: 4;
+  c2OZ:
+      P32[(old + 16)] = _s2lL::P32;
+      P32[(old + 12)] = _s2lM::P32;
+      P32[(old + 8)] = _s2lN::P32;
+      call lvl11_r2hI_info() args: 16, res: 0, upd: 4;
 }
 
 ==================== Before copy propagation ====================
 {offset
-  c2Mt:
-      _s2je::P32 = R1;
-      goto c2LT;
-  c2LT:
-      if (Sp - <highSp> < SpLim) goto c2Mu; else goto c2Mv;
-  c2Mu:
-      R1 = _s2je::P32;
+  c2PY:
+      _s2me::P32 = R1;
+      goto c2PT;
+  c2PT:
+      if (Sp - <highSp> < SpLim) goto c2Q2; else goto c2Q3;
+  c2Q2:
+      R1 = _s2me::P32;
       call (stg_gc_enter_1)(R1) args: 4, res: 0, upd: 4;
-  c2Mv:
+  c2Q3:
       I32[(old + 12)] = stg_upd_frame_info;
-      P32[(old + 8)] = _s2je::P32;
-      _s2iU::P32 = P32[_s2je::P32 + 8];
-      I32[(young<c2LV> + 4)] = c2LV;
+      P32[(old + 8)] = _s2me::P32;
+      _s2lQ::P32 = P32[_s2me::P32 + 8];
+      I32[(young<c2PV> + 4)] = c2PV;
       R1 = Main.main_v_closure;
-      if (R1 & 3 != 0) goto c2LV; else goto c2LW;
-  c2LW:
-      call (I32[R1])(R1) returns to c2LV, args: 4, res: 4, upd: 12;
-  c2LV:
-      _s2iW::P32 = R1;
-      _s2iX::P32 = P32[_s2iW::P32 + 3];
-      _s2iY::P32 = P32[_s2iW::P32 + 7];
-      _s2j0::P32 = P32[_s2iW::P32 + 11];
-      _s2iZ::I32 = I32[_s2iW::P32 + 15];
-      I32[(young<c2M0> + 4)] = c2M0;
-      P32[(young<c2M0> + 12)] = _s2iX::P32;
-      P32[(young<c2M0> + 8)] = _s2iU::P32;
-      call GHC.Integer.Type.leInteger_info() returns to c2M0, args: 12, res: 4, upd: 12;
-  c2M0:
-      _s2j1::P32 = R1;
-      _c2Ng::P32 = _s2j1::P32 & 3;
-      if (_c2Ng::P32 >= 2) goto c2MC; else goto c2MG;
-  c2MC:
-      I32[(young<c2M5> + 4)] = c2M5;
-      P32[(young<c2M5> + 12)] = _s2iU::P32;
-      P32[(young<c2M5> + 8)] = _s2iY::P32;
-      call GHC.Integer.Type.leInteger_info() returns to c2M5, args: 12, res: 4, upd: 12;
-  c2M5:
-      _s2j2::P32 = R1;
-      _c2Nc::P32 = _s2j2::P32 & 3;
-      if (_c2Nc::P32 >= 2) goto c2MI; else goto c2MG;
-  c2MI:
-      I32[(young<c2Ma> + 4)] = c2Ma;
-      P32[(young<c2Ma> + 12)] = _s2iU::P32;
-      P32[(young<c2Ma> + 8)] = _s2iX::P32;
-      call GHC.Integer.Type.minusInteger_info() returns to c2Ma, args: 12, res: 4, upd: 12;
-  c2Ma:
-      _s2j3::P32 = R1;
-      I32[(young<c2Me> + 4)] = c2Me;
-      P32[(young<c2Me> + 8)] = _s2j3::P32;
-      call GHC.Integer.Type.integerToInt_info() returns to c2Me, args: 8, res: 4, upd: 12;
-  c2Me:
-      _s2j4::I32 = R1;
-      _c2Mi::I32 = %MO_S_Le_W32(0, _s2j4::I32);
-      if (_c2Mi::I32 >= 1) goto c2N5; else goto c2MP;
-  c2N5:
-      _c2Mm::I32 = %MO_S_Lt_W32(_s2j4::I32, _s2iZ::I32);
-      if (_c2Mm::I32 >= 1) goto c2N1; else goto c2MP;
-  c2N1:
-      _s2ja::P32 = P32[(_s2j0::P32 + 12) + (_s2j4::I32 << 2)];
-      _s2ja::P32 = _s2ja::P32;
-      I32[(young<c2MS> + 4)] = c2MS;
-      R1 = _s2ja::P32;
-      if (R1 & 3 != 0) goto c2MS; else goto c2MT;
-  c2MT:
-      call (I32[R1])(R1) returns to c2MS, args: 4, res: 4, upd: 12;
-  c2MS:
-      _s2jb::P32 = R1;
+      if (R1 & 3 != 0) goto c2PV; else goto c2PW;
+  c2PW:
+      call (I32[R1])(R1) returns to c2PV, args: 4, res: 4, upd: 12;
+  c2PV:
+      _s2lS::P32 = R1;
+      _s2lT::P32 = P32[_s2lS::P32 + 3];
+      _s2lU::P32 = P32[_s2lS::P32 + 7];
+      _s2lW::P32 = P32[_s2lS::P32 + 11];
+      _s2lV::I32 = I32[_s2lS::P32 + 15];
+      I32[(young<c2Q1> + 4)] = c2Q1;
+      P32[(young<c2Q1> + 12)] = _s2lT::P32;
+      P32[(young<c2Q1> + 8)] = _s2lQ::P32;
+      call GHC.Integer.Type.leInteger#_info() returns to c2Q1, args: 12, res: 4, upd: 12;
+  c2Q1:
+      _s2lX::I32 = R1;
+      if (_s2lX::I32 >= 1) goto c2Qf; else goto c2Qm;
+  c2Qf:
+      I32[(young<c2Qe> + 4)] = c2Qe;
+      P32[(young<c2Qe> + 12)] = _s2lQ::P32;
+      P32[(young<c2Qe> + 8)] = _s2lU::P32;
+      call GHC.Integer.Type.leInteger#_info() returns to c2Qe, args: 12, res: 4, upd: 12;
+  c2Qe:
+      _s2lZ::I32 = R1;
+      if (_s2lZ::I32 >= 1) goto c2Qu; else goto c2Qm;
+  c2Qu:
+      I32[(young<c2Qp> + 4)] = c2Qp;
+      P32[(young<c2Qp> + 12)] = _s2lQ::P32;
+      P32[(young<c2Qp> + 8)] = _s2lT::P32;
+      call GHC.Integer.Type.minusInteger_info() returns to c2Qp, args: 12, res: 4, upd: 12;
+  c2Qp:
+      _s2m1::P32 = R1;
+      I32[(young<c2Qt> + 4)] = c2Qt;
+      P32[(young<c2Qt> + 8)] = _s2m1::P32;
+      call GHC.Integer.Type.integerToInt_info() returns to c2Qt, args: 8, res: 4, upd: 12;
+  c2Qt:
+      _s2m2::I32 = R1;
+      _c2QA::I32 = %MO_S_Le_W32(0, _s2m2::I32);
+      _s2m3::I32 = _c2QA::I32;
+      if (_s2m3::I32 >= 1) goto c2R3; else goto c2QN;
+  c2R3:
+      _c2QI::I32 = %MO_S_Lt_W32(_s2m2::I32, _s2lV::I32);
+      _s2m6::I32 = _c2QI::I32;
+      if (_s2m6::I32 >= 1) goto c2QZ; else goto c2QN;
+  c2QZ:
+      _s2ma::P32 = P32[(_s2lW::P32 + 12) + (_s2m2::I32 << 2)];
+      _s2ma::P32 = _s2ma::P32;
+      I32[(young<c2QQ> + 4)] = c2QQ;
+      R1 = _s2ma::P32;
+      if (R1 & 3 != 0) goto c2QQ; else goto c2QR;
+  c2QR:
+      call (I32[R1])(R1) returns to c2QQ, args: 4, res: 4, upd: 12;
+  c2QQ:
+      _s2mb::P32 = R1;
       Hp = Hp + 12;
-      if (Hp > HpLim) goto c2N4; else goto c2N3;
-  c2N4:
+      if (Hp > HpLim) goto c2R2; else goto c2R1;
+  c2R2:
       HpAlloc = 12;
-      goto c2N2;
-  c2N2:
-      R1 = _s2jb::P32;
-      call stg_gc_unpt_r1(R1) returns to c2MS, args: 4, res: 4, upd: 12;
-  c2N3:
-      _s2jc::F64 = F64[_s2jb::P32 + 3];
-      _c2MX::F64 = %MO_F_Mul_W64(_s2jc::F64, _s2jc::F64);
-      _s2jd::F64 = _c2MX::F64;
+      goto c2R0;
+  c2R0:
+      R1 = _s2mb::P32;
+      call stg_gc_unpt_r1(R1) returns to c2QQ, args: 4, res: 4, upd: 12;
+  c2R1:
+      _s2mc::F64 = F64[_s2mb::P32 + 3];
+      _c2QV::F64 = %MO_F_Mul_W64(_s2mc::F64, _s2mc::F64);
+      _s2md::F64 = _c2QV::F64;
       I32[Hp - 8] = GHC.Types.D#_con_info;
-      F64[Hp - 4] = _s2jd::F64;
-      _c2N0::P32 = Hp - 7;
-      R1 = _c2N0::P32;
+      F64[Hp - 4] = _s2md::F64;
+      _c2QY::P32 = Hp - 7;
+      R1 = _c2QY::P32;
       call (P32[(old + 12)])(R1) args: 12, res: 0, upd: 12;
-  c2MP:
-      I32[(old + 20)] = _s2j4::I32;
-      I32[(old + 16)] = _s2iZ::I32;
+  c2QN:
+      I32[(old + 20)] = _s2m2::I32;
+      I32[(old + 16)] = _s2lV::I32;
       call GHC.Arr.badSafeIndex1_info() args: 20, res: 0, upd: 12;
-  c2MG:
-      P32[(old + 24)] = _s2iX::P32;
-      P32[(old + 20)] = _s2iY::P32;
-      P32[(old + 16)] = _s2iU::P32;
+  c2Qm:
+      P32[(old + 24)] = _s2lT::P32;
+      P32[(old + 20)] = _s2lU::P32;
+      P32[(old + 16)] = _s2lQ::P32;
       call Main.main7_info() args: 24, res: 0, upd: 12;
 }
 
 ==================== Before copy propagation ====================
 {offset
-  c2Nl:
-      _s2iU::P32 = P32[(old + 12)];
-      _s2iV::P32 = P32[(old + 8)];
-      goto c2LP;
-  c2LP:
-      if (Sp - <highSp> < SpLim) goto c2Nm; else goto c2Nn;
-  c2Nn:
+  c2Rh:
+      _s2lQ::P32 = P32[(old + 12)];
+      _s2lR::P32 = P32[(old + 8)];
+      goto c2PP;
+  c2PP:
+      if (Sp - <highSp> < SpLim) goto c2Ri; else goto c2Rj;
+  c2Rj:
       Hp = Hp + 24;
-      if (Hp > HpLim) goto c2Np; else goto c2No;
-  c2Np:
+      if (Hp > HpLim) goto c2Rl; else goto c2Rk;
+  c2Rl:
       HpAlloc = 24;
-      goto c2Nm;
-  c2Nm:
+      goto c2Ri;
+  c2Ri:
       R1 = Main.main6_closure;
-      P32[(old + 12)] = _s2iU::P32;
-      P32[(old + 8)] = _s2iV::P32;
+      P32[(old + 12)] = _s2lQ::P32;
+      P32[(old + 8)] = _s2lR::P32;
       call (stg_gc_fun)(R1) args: 12, res: 0, upd: 4;
-  c2No:
-      I32[Hp - 20] = sat_s2je_info;
-      P32[Hp - 12] = _s2iU::P32;
-      _c2LR::P32 = Hp - 20;
+  c2Rk:
+      I32[Hp - 20] = sat_s2me_info;
+      P32[Hp - 12] = _s2lQ::P32;
+      _c2PR::P32 = Hp - 20;
       I32[Hp - 8] = :_con_info;
-      P32[Hp - 4] = _c2LR::P32;
-      P32[Hp] = _s2iV::P32;
-      _c2Nk::P32 = Hp - 6;
-      R1 = _c2Nk::P32;
+      P32[Hp - 4] = _c2PR::P32;
+      P32[Hp] = _s2lR::P32;
+      _c2Rg::P32 = Hp - 6;
+      R1 = _c2Rg::P32;
       call (P32[(old + 4)])(R1) args: 4, res: 0, upd: 4;
 }
 
 ==================== Before copy propagation ====================
 {offset
-  c2NU:
-      _r2ev::P32 = R1;
-      goto c2NP;
-  c2NP:
-      if (Sp - <highSp> < SpLim) goto c2NV; else goto c2NW;
-  c2NW:
+  c2RM:
+      _r2hb::P32 = R1;
+      goto c2RH;
+  c2RH:
+      if (Sp - <highSp> < SpLim) goto c2RN; else goto c2RO;
+  c2RO:
       Hp = Hp + 8;
-      if (Hp > HpLim) goto c2NY; else goto c2NX;
-  c2NY:
+      if (Hp > HpLim) goto c2RQ; else goto c2RP;
+  c2RQ:
       HpAlloc = 8;
-      goto c2NV;
-  c2NV:
-      R1 = _r2ev::P32;
+      goto c2RN;
+  c2RN:
+      R1 = _r2hb::P32;
       call (stg_gc_enter_1)(R1) args: 4, res: 0, upd: 4;
-  c2NX:
+  c2RP:
       I32[Hp - 4] = stg_CAF_BLACKHOLE_info;
       I32[Hp] = CurrentTSO;
-      (_c2NR::I32) = call "ccall" arg hints:  [PtrHint, PtrHint,
-                                               PtrHint]  result hints:  [] newCAF(BaseReg, _r2ev::P32, Hp - 4);
-      if (_c2NR::I32 == 0) goto c2NT; else goto c2NS;
-  c2NT:
-      call (I32[_r2ev::P32])() args: 4, res: 0, upd: 4;
-  c2NS:
+      (_c2RJ::I32) = call "ccall" arg hints:  [PtrHint, PtrHint,
+                                               PtrHint]  result hints:  [] newCAF(BaseReg, _r2hb::P32, Hp - 4);
+      if (_c2RJ::I32 == 0) goto c2RL; else goto c2RK;
+  c2RL:
+      call (I32[_r2hb::P32])() args: 4, res: 0, upd: 4;
+  c2RK:
       I32[(old + 12)] = stg_bh_upd_frame_info;
       P32[(old + 8)] = Hp - 4;
       P32[(old + 32)] = Main.main6_closure+2;
@@ -1828,332 +1740,332 @@
 
 ==================== Before copy propagation ====================
 {offset
-  c2Oe:
-      _s2jf::P32 = P32[(old + 16)];
-      _s2jg::P32 = P32[(old + 12)];
-      _s2jh::P32 = P32[(old + 8)];
-      goto c2Ob;
-  c2Ob:
-      if (Sp - <highSp> < SpLim) goto c2Of; else goto c2Og;
-  c2Og:
+  c2S6:
+      _s2mf::P32 = P32[(old + 16)];
+      _s2mg::P32 = P32[(old + 12)];
+      _s2mh::P32 = P32[(old + 8)];
+      goto c2S3;
+  c2S3:
+      if (Sp - <highSp> < SpLim) goto c2S7; else goto c2S8;
+  c2S8:
       Hp = Hp + 12;
-      if (Hp > HpLim) goto c2Oi; else goto c2Oh;
-  c2Oi:
-      HpAlloc = 12;
-      goto c2Of;
-  c2Of:
-      R1 = lvl12_r2f5_closure;
-      P32[(old + 16)] = _s2jf::P32;
-      P32[(old + 12)] = _s2jg::P32;
-      P32[(old + 8)] = _s2jh::P32;
-      call (stg_gc_fun)(R1) args: 16, res: 0, upd: 4;
-  c2Oh:
-      I32[Hp - 8] = (,)_con_info;
-      P32[Hp - 4] = _s2jf::P32;
-      P32[Hp] = _s2jg::P32;
-      _c2Od::P32 = Hp - 7;
-      P32[(old + 20)] = GHC.Show.$fShowInteger_closure;
-      P32[(old + 16)] = _c2Od::P32;
-      P32[(old + 12)] = _s2jh::P32;
-      P32[(old + 8)] = lvl5_r2eT_closure;
-      call GHC.Arr.indexError_info() args: 20, res: 0, upd: 4;
-}
-
-==================== Before copy propagation ====================
-{offset
-  c2Ow:
-      _s2jj::P32 = P32[(old + 16)];
-      _s2jk::P32 = P32[(old + 12)];
-      _s2jl::P32 = P32[(old + 8)];
-      goto c2Ou;
-  c2Ou:
-      if (Sp - <highSp> < SpLim) goto c2Ox; else goto c2Oy;
-  c2Ox:
-      R1 = Main.main16_closure;
-      P32[(old + 16)] = _s2jj::P32;
-      P32[(old + 12)] = _s2jk::P32;
-      P32[(old + 8)] = _s2jl::P32;
-      call (stg_gc_fun)(R1) args: 16, res: 0, upd: 4;
-  c2Oy:
-      P32[(old + 16)] = _s2jj::P32;
-      P32[(old + 12)] = _s2jk::P32;
-      P32[(old + 8)] = _s2jl::P32;
-      call lvl12_r2f5_info() args: 16, res: 0, upd: 4;
-}
-
-==================== Before copy propagation ====================
-{offset
-  c2OI:
-      _s2jo::P32 = P32[(old + 16)];
-      _s2jp::P32 = P32[(old + 12)];
-      _s2jq::P32 = P32[(old + 8)];
-      goto c2OF;
-  c2OF:
-      if (Sp - <highSp> < SpLim) goto c2OJ; else goto c2OK;
-  c2OK:
-      Hp = Hp + 12;
-      if (Hp > HpLim) goto c2OM; else goto c2OL;
-  c2OM:
-      HpAlloc = 12;
-      goto c2OJ;
-  c2OJ:
-      R1 = lvl13_r2f6_closure;
-      P32[(old + 16)] = _s2jo::P32;
-      P32[(old + 12)] = _s2jp::P32;
-      P32[(old + 8)] = _s2jq::P32;
-      call (stg_gc_fun)(R1) args: 16, res: 0, upd: 4;
-  c2OL:
-      I32[Hp - 8] = (,)_con_info;
-      P32[Hp - 4] = _s2jo::P32;
-      P32[Hp] = _s2jp::P32;
-      _c2OH::P32 = Hp - 7;
-      P32[(old + 20)] = GHC.Show.$fShowInteger_closure;
-      P32[(old + 16)] = _c2OH::P32;
-      P32[(old + 12)] = _s2jq::P32;
-      P32[(old + 8)] = lvl5_r2eT_closure;
-      call GHC.Arr.indexError_info() args: 20, res: 0, upd: 4;
-}
-
-==================== Before copy propagation ====================
-{offset
-  c2P0:
-      _s2js::P32 = P32[(old + 16)];
-      _s2jt::P32 = P32[(old + 12)];
-      _s2ju::P32 = P32[(old + 8)];
-      goto c2OY;
-  c2OY:
-      if (Sp - <highSp> < SpLim) goto c2P1; else goto c2P2;
-  c2P1:
-      R1 = Main.main15_closure;
-      P32[(old + 16)] = _s2js::P32;
-      P32[(old + 12)] = _s2jt::P32;
-      P32[(old + 8)] = _s2ju::P32;
-      call (stg_gc_fun)(R1) args: 16, res: 0, upd: 4;
-  c2P2:
-      P32[(old + 16)] = _s2js::P32;
-      P32[(old + 12)] = _s2jt::P32;
-      P32[(old + 8)] = _s2ju::P32;
-      call lvl13_r2f6_info() args: 16, res: 0, upd: 4;
-}
-
-==================== Before copy propagation ====================
-{offset
-  c2Rh:
-      _s2k8::P32 = R1;
-      goto c2PZ;
-  c2PZ:
-      if (Sp - <highSp> < SpLim) goto c2Ri; else goto c2Rj;
-  c2Ri:
-      R1 = _s2k8::P32;
-      call (stg_gc_enter_1)(R1) args: 4, res: 0, upd: 4;
-  c2Rj:
-      I32[(old + 12)] = stg_upd_frame_info;
-      P32[(old + 8)] = _s2k8::P32;
-      _s2jx::P32 = P32[_s2k8::P32 + 8];
-      I32[(young<c2Q1> + 4)] = c2Q1;
-      R1 = Main.main_u_closure;
-      if (R1 & 3 != 0) goto c2Q1; else goto c2Q2;
-  c2Q2:
-      call (I32[R1])(R1) returns to c2Q1, args: 4, res: 4, upd: 12;
-  c2Q1:
-      _s2jz::P32 = R1;
-      _s2jA::P32 = P32[_s2jz::P32 + 3];
-      _s2jB::P32 = P32[_s2jz::P32 + 7];
-      _s2jD::P32 = P32[_s2jz::P32 + 11];
-      _s2jC::I32 = I32[_s2jz::P32 + 15];
-      I32[(young<c2Q6> + 4)] = c2Q6;
-      P32[(young<c2Q6> + 12)] = _s2jA::P32;
-      P32[(young<c2Q6> + 8)] = _s2jx::P32;
-      call GHC.Integer.Type.leInteger_info() returns to c2Q6, args: 12, res: 4, upd: 12;
-  c2Q6:
-      _s2jE::P32 = R1;
-      _c2SE::P32 = _s2jE::P32 & 3;
-      if (_c2SE::P32 >= 2) goto c2Rq; else goto c2Ru;
-  c2Rq:
-      I32[(young<c2Qb> + 4)] = c2Qb;
-      P32[(young<c2Qb> + 12)] = _s2jx::P32;
-      P32[(young<c2Qb> + 8)] = _s2jB::P32;
-      call GHC.Integer.Type.leInteger_info() returns to c2Qb, args: 12, res: 4, upd: 12;
-  c2Qb:
-      _s2jF::P32 = R1;
-      _c2SA::P32 = _s2jF::P32 & 3;
-      if (_c2SA::P32 >= 2) goto c2Rw; else goto c2Ru;
-  c2Rw:
-      I32[(young<c2Qg> + 4)] = c2Qg;
-      P32[(young<c2Qg> + 12)] = _s2jx::P32;
-      P32[(young<c2Qg> + 8)] = _s2jA::P32;
-      call GHC.Integer.Type.minusInteger_info() returns to c2Qg, args: 12, res: 4, upd: 12;
-  c2Qg:
-      _s2jG::P32 = R1;
-      I32[(young<c2Qk> + 4)] = c2Qk;
-      P32[(young<c2Qk> + 8)] = _s2jG::P32;
-      call GHC.Integer.Type.integerToInt_info() returns to c2Qk, args: 8, res: 4, upd: 12;
-  c2Qk:
-      _s2jH::I32 = R1;
-      _c2Qo::I32 = %MO_S_Le_W32(0, _s2jH::I32);
-      if (_c2Qo::I32 >= 1) goto c2St; else goto c2RC;
-  c2St:
-      _c2Qs::I32 = %MO_S_Lt_W32(_s2jH::I32, _s2jC::I32);
-      if (_c2Qs::I32 >= 1) goto c2RD; else goto c2RC;
-  c2RD:
-      _s2jN::P32 = P32[(_s2jD::P32 + 12) + (_s2jH::I32 << 2)];
-      _s2jN::P32 = _s2jN::P32;
-      I32[(young<c2Qw> + 4)] = c2Qw;
-      R1 = _s2jN::P32;
-      if (R1 & 3 != 0) goto c2Qw; else goto c2Qx;
-  c2Qx:
-      call (I32[R1])(R1) returns to c2Qw, args: 4, res: 4, upd: 12;
-  c2Qw:
-      _s2jO::P32 = R1;
-      _s2jP::F64 = F64[_s2jO::P32 + 3];
-      I32[(young<c2QB> + 4)] = c2QB;
-      R1 = Main.main_v_closure;
-      if (R1 & 3 != 0) goto c2QB; else goto c2QC;
-  c2QC:
-      call (I32[R1])(R1) returns to c2QB, args: 4, res: 4, upd: 12;
-  c2QB:
-      _s2jQ::P32 = R1;
-      _s2jR::P32 = P32[_s2jQ::P32 + 3];
-      _s2jS::P32 = P32[_s2jQ::P32 + 7];
-      _s2jU::P32 = P32[_s2jQ::P32 + 11];
-      _s2jT::I32 = I32[_s2jQ::P32 + 15];
-      I32[(young<c2QG> + 4)] = c2QG;
-      P32[(young<c2QG> + 12)] = _s2jR::P32;
-      P32[(young<c2QG> + 8)] = _s2jx::P32;
-      call GHC.Integer.Type.leInteger_info() returns to c2QG, args: 12, res: 4, upd: 12;
-  c2QG:
-      _s2jV::P32 = R1;
-      _c2Sp::P32 = _s2jV::P32 & 3;
-      if (_c2Sp::P32 >= 2) goto c2RL; else goto c2RP;
-  c2RL:
-      I32[(young<c2QL> + 4)] = c2QL;
-      P32[(young<c2QL> + 12)] = _s2jx::P32;
-      P32[(young<c2QL> + 8)] = _s2jS::P32;
-      call GHC.Integer.Type.leInteger_info() returns to c2QL, args: 12, res: 4, upd: 12;
-  c2QL:
-      _s2jW::P32 = R1;
-      _c2Sl::P32 = _s2jW::P32 & 3;
-      if (_c2Sl::P32 >= 2) goto c2RR; else goto c2RP;
-  c2RR:
-      I32[(young<c2QQ> + 4)] = c2QQ;
-      P32[(young<c2QQ> + 12)] = _s2jx::P32;
-      P32[(young<c2QQ> + 8)] = _s2jR::P32;
-      call GHC.Integer.Type.minusInteger_info() returns to c2QQ, args: 12, res: 4, upd: 12;
-  c2QQ:
-      _s2jX::P32 = R1;
-      I32[(young<c2QU> + 4)] = c2QU;
-      P32[(young<c2QU> + 8)] = _s2jX::P32;
-      call GHC.Integer.Type.integerToInt_info() returns to c2QU, args: 8, res: 4, upd: 12;
-  c2QU:
-      _s2jY::I32 = R1;
-      _c2QY::I32 = %MO_S_Le_W32(0, _s2jY::I32);
-      if (_c2QY::I32 >= 1) goto c2Se; else goto c2RY;
-  c2Se:
-      _c2R2::I32 = %MO_S_Lt_W32(_s2jY::I32, _s2jT::I32);
-      if (_c2R2::I32 >= 1) goto c2Sa; else goto c2RY;
+      if (Hp > HpLim) goto c2Sa; else goto c2S9;
   c2Sa:
-      _s2k4::P32 = P32[(_s2jU::P32 + 12) + (_s2jY::I32 << 2)];
-      _s2k4::P32 = _s2k4::P32;
-      I32[(young<c2S1> + 4)] = c2S1;
-      R1 = _s2k4::P32;
-      if (R1 & 3 != 0) goto c2S1; else goto c2S2;
-  c2S2:
-      call (I32[R1])(R1) returns to c2S1, args: 4, res: 4, upd: 12;
-  c2S1:
-      _s2k5::P32 = R1;
-      Hp = Hp + 12;
-      if (Hp > HpLim) goto c2Sd; else goto c2Sc;
-  c2Sd:
       HpAlloc = 12;
-      goto c2Sb;
-  c2Sb:
-      R1 = _s2k5::P32;
-      call stg_gc_unpt_r1(R1) returns to c2S1, args: 4, res: 4, upd: 12;
-  c2Sc:
-      _s2k6::F64 = F64[_s2k5::P32 + 3];
-      _c2S6::F64 = %MO_F_Mul_W64(_s2jP::F64, _s2k6::F64);
-      _s2k7::F64 = _c2S6::F64;
-      I32[Hp - 8] = GHC.Types.D#_con_info;
-      F64[Hp - 4] = _s2k7::F64;
-      _c2S9::P32 = Hp - 7;
-      R1 = _c2S9::P32;
-      call (P32[(old + 12)])(R1) args: 12, res: 0, upd: 12;
-  c2RY:
-      I32[(old + 20)] = _s2jY::I32;
-      I32[(old + 16)] = _s2jT::I32;
-      call GHC.Arr.badSafeIndex1_info() args: 20, res: 0, upd: 12;
-  c2RP:
-      P32[(old + 24)] = _s2jR::P32;
-      P32[(old + 20)] = _s2jS::P32;
-      P32[(old + 16)] = _s2jx::P32;
-      call Main.main15_info() args: 24, res: 0, upd: 12;
-  c2RC:
-      I32[(old + 20)] = _s2jH::I32;
-      I32[(old + 16)] = _s2jC::I32;
-      call GHC.Arr.badSafeIndex1_info() args: 20, res: 0, upd: 12;
-  c2Ru:
-      P32[(old + 24)] = _s2jA::P32;
-      P32[(old + 20)] = _s2jB::P32;
-      P32[(old + 16)] = _s2jx::P32;
-      call Main.main16_info() args: 24, res: 0, upd: 12;
+      goto c2S7;
+  c2S7:
+      R1 = lvl12_r2hJ_closure;
+      P32[(old + 16)] = _s2mf::P32;
+      P32[(old + 12)] = _s2mg::P32;
+      P32[(old + 8)] = _s2mh::P32;
+      call (stg_gc_fun)(R1) args: 16, res: 0, upd: 4;
+  c2S9:
+      I32[Hp - 8] = (,)_con_info;
+      P32[Hp - 4] = _s2mf::P32;
+      P32[Hp] = _s2mg::P32;
+      _c2S5::P32 = Hp - 7;
+      P32[(old + 20)] = GHC.Show.$fShowInteger_closure;
+      P32[(old + 16)] = _c2S5::P32;
+      P32[(old + 12)] = _s2mh::P32;
+      P32[(old + 8)] = lvl5_r2hw_closure;
+      call GHC.Arr.indexError_info() args: 20, res: 0, upd: 4;
 }
 
 ==================== Before copy propagation ====================
 {offset
-  c2SJ:
-      _s2jx::P32 = P32[(old + 12)];
-      _s2jy::P32 = P32[(old + 8)];
-      goto c2PV;
-  c2PV:
-      if (Sp - <highSp> < SpLim) goto c2SK; else goto c2SL;
-  c2SL:
+  c2So:
+      _s2mj::P32 = P32[(old + 16)];
+      _s2mk::P32 = P32[(old + 12)];
+      _s2ml::P32 = P32[(old + 8)];
+      goto c2Sm;
+  c2Sm:
+      if (Sp - <highSp> < SpLim) goto c2Sp; else goto c2Sq;
+  c2Sp:
+      R1 = poly_$w$j4_r2hK_closure;
+      P32[(old + 16)] = _s2mj::P32;
+      P32[(old + 12)] = _s2mk::P32;
+      P32[(old + 8)] = _s2ml::P32;
+      call (stg_gc_fun)(R1) args: 16, res: 0, upd: 4;
+  c2Sq:
+      P32[(old + 16)] = _s2mj::P32;
+      P32[(old + 12)] = _s2mk::P32;
+      P32[(old + 8)] = _s2ml::P32;
+      call lvl12_r2hJ_info() args: 16, res: 0, upd: 4;
+}
+
+==================== Before copy propagation ====================
+{offset
+  c2SA:
+      _s2mo::P32 = P32[(old + 16)];
+      _s2mp::P32 = P32[(old + 12)];
+      _s2mq::P32 = P32[(old + 8)];
+      goto c2Sx;
+  c2Sx:
+      if (Sp - <highSp> < SpLim) goto c2SB; else goto c2SC;
+  c2SC:
+      Hp = Hp + 12;
+      if (Hp > HpLim) goto c2SE; else goto c2SD;
+  c2SE:
+      HpAlloc = 12;
+      goto c2SB;
+  c2SB:
+      R1 = lvl13_r2hL_closure;
+      P32[(old + 16)] = _s2mo::P32;
+      P32[(old + 12)] = _s2mp::P32;
+      P32[(old + 8)] = _s2mq::P32;
+      call (stg_gc_fun)(R1) args: 16, res: 0, upd: 4;
+  c2SD:
+      I32[Hp - 8] = (,)_con_info;
+      P32[Hp - 4] = _s2mo::P32;
+      P32[Hp] = _s2mp::P32;
+      _c2Sz::P32 = Hp - 7;
+      P32[(old + 20)] = GHC.Show.$fShowInteger_closure;
+      P32[(old + 16)] = _c2Sz::P32;
+      P32[(old + 12)] = _s2mq::P32;
+      P32[(old + 8)] = lvl5_r2hw_closure;
+      call GHC.Arr.indexError_info() args: 20, res: 0, upd: 4;
+}
+
+==================== Before copy propagation ====================
+{offset
+  c2SS:
+      _s2ms::P32 = P32[(old + 16)];
+      _s2mt::P32 = P32[(old + 12)];
+      _s2mu::P32 = P32[(old + 8)];
+      goto c2SQ;
+  c2SQ:
+      if (Sp - <highSp> < SpLim) goto c2ST; else goto c2SU;
+  c2ST:
+      R1 = poly_$w$j5_r2hM_closure;
+      P32[(old + 16)] = _s2ms::P32;
+      P32[(old + 12)] = _s2mt::P32;
+      P32[(old + 8)] = _s2mu::P32;
+      call (stg_gc_fun)(R1) args: 16, res: 0, upd: 4;
+  c2SU:
+      P32[(old + 16)] = _s2ms::P32;
+      P32[(old + 12)] = _s2mt::P32;
+      P32[(old + 8)] = _s2mu::P32;
+      call lvl13_r2hL_info() args: 16, res: 0, upd: 4;
+}
+
+==================== Before copy propagation ====================
+{offset
+  c2Uy:
+      _s2ng::P32 = R1;
+      goto c2Ut;
+  c2Ut:
+      if (Sp - <highSp> < SpLim) goto c2UC; else goto c2UD;
+  c2UC:
+      R1 = _s2ng::P32;
+      call (stg_gc_enter_1)(R1) args: 4, res: 0, upd: 4;
+  c2UD:
+      I32[(old + 12)] = stg_upd_frame_info;
+      P32[(old + 8)] = _s2ng::P32;
+      _s2mx::P32 = P32[_s2ng::P32 + 8];
+      I32[(young<c2Uv> + 4)] = c2Uv;
+      R1 = u_r2hH_closure;
+      if (R1 & 3 != 0) goto c2Uv; else goto c2Uw;
+  c2Uw:
+      call (I32[R1])(R1) returns to c2Uv, args: 4, res: 4, upd: 12;
+  c2Uv:
+      _s2mz::P32 = R1;
+      _s2mA::P32 = P32[_s2mz::P32 + 3];
+      _s2mB::P32 = P32[_s2mz::P32 + 7];
+      _s2mD::P32 = P32[_s2mz::P32 + 11];
+      _s2mC::I32 = I32[_s2mz::P32 + 15];
+      I32[(young<c2UB> + 4)] = c2UB;
+      P32[(young<c2UB> + 12)] = _s2mA::P32;
+      P32[(young<c2UB> + 8)] = _s2mx::P32;
+      call GHC.Integer.Type.leInteger#_info() returns to c2UB, args: 12, res: 4, upd: 12;
+  c2UB:
+      _s2mE::I32 = R1;
+      if (_s2mE::I32 >= 1) goto c2UP; else goto c2UW;
+  c2UP:
+      I32[(young<c2UO> + 4)] = c2UO;
+      P32[(young<c2UO> + 12)] = _s2mx::P32;
+      P32[(young<c2UO> + 8)] = _s2mB::P32;
+      call GHC.Integer.Type.leInteger#_info() returns to c2UO, args: 12, res: 4, upd: 12;
+  c2UO:
+      _s2mG::I32 = R1;
+      if (_s2mG::I32 >= 1) goto c2V4; else goto c2UW;
+  c2V4:
+      I32[(young<c2UZ> + 4)] = c2UZ;
+      P32[(young<c2UZ> + 12)] = _s2mx::P32;
+      P32[(young<c2UZ> + 8)] = _s2mA::P32;
+      call GHC.Integer.Type.minusInteger_info() returns to c2UZ, args: 12, res: 4, upd: 12;
+  c2UZ:
+      _s2mI::P32 = R1;
+      I32[(young<c2V3> + 4)] = c2V3;
+      P32[(young<c2V3> + 8)] = _s2mI::P32;
+      call GHC.Integer.Type.integerToInt_info() returns to c2V3, args: 8, res: 4, upd: 12;
+  c2V3:
+      _s2mJ::I32 = R1;
+      _c2Va::I32 = %MO_S_Le_W32(0, _s2mJ::I32);
+      _s2mK::I32 = _c2Va::I32;
+      if (_s2mK::I32 >= 1) goto c2WP; else goto c2Vn;
+  c2WP:
+      _c2Vi::I32 = %MO_S_Lt_W32(_s2mJ::I32, _s2mC::I32);
+      _s2mN::I32 = _c2Vi::I32;
+      if (_s2mN::I32 >= 1) goto c2VB; else goto c2Vn;
+  c2VB:
+      _s2mR::P32 = P32[(_s2mD::P32 + 12) + (_s2mJ::I32 << 2)];
+      _s2mR::P32 = _s2mR::P32;
+      I32[(young<c2Vq> + 4)] = c2Vq;
+      R1 = _s2mR::P32;
+      if (R1 & 3 != 0) goto c2Vq; else goto c2Vr;
+  c2Vr:
+      call (I32[R1])(R1) returns to c2Vq, args: 4, res: 4, upd: 12;
+  c2Vq:
+      _s2mS::P32 = R1;
+      _s2mT::F64 = F64[_s2mS::P32 + 3];
+      I32[(young<c2Vv> + 4)] = c2Vv;
+      R1 = Main.main_v_closure;
+      if (R1 & 3 != 0) goto c2Vv; else goto c2Vw;
+  c2Vw:
+      call (I32[R1])(R1) returns to c2Vv, args: 4, res: 4, upd: 12;
+  c2Vv:
+      _s2mU::P32 = R1;
+      _s2mV::P32 = P32[_s2mU::P32 + 3];
+      _s2mW::P32 = P32[_s2mU::P32 + 7];
+      _s2mY::P32 = P32[_s2mU::P32 + 11];
+      _s2mX::I32 = I32[_s2mU::P32 + 15];
+      I32[(young<c2VA> + 4)] = c2VA;
+      P32[(young<c2VA> + 12)] = _s2mV::P32;
+      P32[(young<c2VA> + 8)] = _s2mx::P32;
+      call GHC.Integer.Type.leInteger#_info() returns to c2VA, args: 12, res: 4, upd: 12;
+  c2VA:
+      _s2mZ::I32 = R1;
+      if (_s2mZ::I32 >= 1) goto c2VO; else goto c2VV;
+  c2VO:
+      I32[(young<c2VN> + 4)] = c2VN;
+      P32[(young<c2VN> + 12)] = _s2mx::P32;
+      P32[(young<c2VN> + 8)] = _s2mW::P32;
+      call GHC.Integer.Type.leInteger#_info() returns to c2VN, args: 12, res: 4, upd: 12;
+  c2VN:
+      _s2n1::I32 = R1;
+      if (_s2n1::I32 >= 1) goto c2W3; else goto c2VV;
+  c2W3:
+      I32[(young<c2VY> + 4)] = c2VY;
+      P32[(young<c2VY> + 12)] = _s2mx::P32;
+      P32[(young<c2VY> + 8)] = _s2mV::P32;
+      call GHC.Integer.Type.minusInteger_info() returns to c2VY, args: 12, res: 4, upd: 12;
+  c2VY:
+      _s2n3::P32 = R1;
+      I32[(young<c2W2> + 4)] = c2W2;
+      P32[(young<c2W2> + 8)] = _s2n3::P32;
+      call GHC.Integer.Type.integerToInt_info() returns to c2W2, args: 8, res: 4, upd: 12;
+  c2W2:
+      _s2n4::I32 = R1;
+      _c2W9::I32 = %MO_S_Le_W32(0, _s2n4::I32);
+      _s2n5::I32 = _c2W9::I32;
+      if (_s2n5::I32 >= 1) goto c2WC; else goto c2Wm;
+  c2WC:
+      _c2Wh::I32 = %MO_S_Lt_W32(_s2n4::I32, _s2mX::I32);
+      _s2n8::I32 = _c2Wh::I32;
+      if (_s2n8::I32 >= 1) goto c2Wy; else goto c2Wm;
+  c2Wy:
+      _s2nc::P32 = P32[(_s2mY::P32 + 12) + (_s2n4::I32 << 2)];
+      _s2nc::P32 = _s2nc::P32;
+      I32[(young<c2Wp> + 4)] = c2Wp;
+      R1 = _s2nc::P32;
+      if (R1 & 3 != 0) goto c2Wp; else goto c2Wq;
+  c2Wq:
+      call (I32[R1])(R1) returns to c2Wp, args: 4, res: 4, upd: 12;
+  c2Wp:
+      _s2nd::P32 = R1;
+      Hp = Hp + 12;
+      if (Hp > HpLim) goto c2WB; else goto c2WA;
+  c2WB:
+      HpAlloc = 12;
+      goto c2Wz;
+  c2Wz:
+      R1 = _s2nd::P32;
+      call stg_gc_unpt_r1(R1) returns to c2Wp, args: 4, res: 4, upd: 12;
+  c2WA:
+      _s2ne::F64 = F64[_s2nd::P32 + 3];
+      _c2Wu::F64 = %MO_F_Mul_W64(_s2mT::F64, _s2ne::F64);
+      _s2nf::F64 = _c2Wu::F64;
+      I32[Hp - 8] = GHC.Types.D#_con_info;
+      F64[Hp - 4] = _s2nf::F64;
+      _c2Wx::P32 = Hp - 7;
+      R1 = _c2Wx::P32;
+      call (P32[(old + 12)])(R1) args: 12, res: 0, upd: 12;
+  c2Wm:
+      I32[(old + 20)] = _s2n4::I32;
+      I32[(old + 16)] = _s2mX::I32;
+      call GHC.Arr.badSafeIndex1_info() args: 20, res: 0, upd: 12;
+  c2VV:
+      P32[(old + 24)] = _s2mV::P32;
+      P32[(old + 20)] = _s2mW::P32;
+      P32[(old + 16)] = _s2mx::P32;
+      call poly_$w$j5_r2hM_info() args: 24, res: 0, upd: 12;
+  c2Vn:
+      I32[(old + 20)] = _s2mJ::I32;
+      I32[(old + 16)] = _s2mC::I32;
+      call GHC.Arr.badSafeIndex1_info() args: 20, res: 0, upd: 12;
+  c2UW:
+      P32[(old + 24)] = _s2mA::P32;
+      P32[(old + 20)] = _s2mB::P32;
+      P32[(old + 16)] = _s2mx::P32;
+      call poly_$w$j4_r2hK_info() args: 24, res: 0, upd: 12;
+}
+
+==================== Before copy propagation ====================
+{offset
+  c2X3:
+      _s2mx::P32 = P32[(old + 12)];
+      _s2my::P32 = P32[(old + 8)];
+      goto c2Up;
+  c2Up:
+      if (Sp - <highSp> < SpLim) goto c2X4; else goto c2X5;
+  c2X5:
       Hp = Hp + 24;
-      if (Hp > HpLim) goto c2SN; else goto c2SM;
-  c2SN:
+      if (Hp > HpLim) goto c2X7; else goto c2X6;
+  c2X7:
       HpAlloc = 24;
-      goto c2SK;
-  c2SK:
+      goto c2X4;
+  c2X4:
       R1 = Main.main14_closure;
-      P32[(old + 12)] = _s2jx::P32;
-      P32[(old + 8)] = _s2jy::P32;
+      P32[(old + 12)] = _s2mx::P32;
+      P32[(old + 8)] = _s2my::P32;
       call (stg_gc_fun)(R1) args: 12, res: 0, upd: 4;
-  c2SM:
-      I32[Hp - 20] = sat_s2k8_info;
-      P32[Hp - 12] = _s2jx::P32;
-      _c2PX::P32 = Hp - 20;
+  c2X6:
+      I32[Hp - 20] = sat_s2ng_info;
+      P32[Hp - 12] = _s2mx::P32;
+      _c2Ur::P32 = Hp - 20;
       I32[Hp - 8] = :_con_info;
-      P32[Hp - 4] = _c2PX::P32;
-      P32[Hp] = _s2jy::P32;
-      _c2SI::P32 = Hp - 6;
-      R1 = _c2SI::P32;
+      P32[Hp - 4] = _c2Ur::P32;
+      P32[Hp] = _s2my::P32;
+      _c2X2::P32 = Hp - 6;
+      R1 = _c2X2::P32;
       call (P32[(old + 4)])(R1) args: 4, res: 0, upd: 4;
 }
 
 ==================== Before copy propagation ====================
 {offset
-  c2Tv:
-      _r2eI::P32 = R1;
-      goto c2Tq;
-  c2Tq:
-      if (Sp - <highSp> < SpLim) goto c2Tw; else goto c2Tx;
-  c2Tx:
+  c2XH:
+      _r2ho::P32 = R1;
+      goto c2XC;
+  c2XC:
+      if (Sp - <highSp> < SpLim) goto c2XI; else goto c2XJ;
+  c2XJ:
       Hp = Hp + 8;
-      if (Hp > HpLim) goto c2Tz; else goto c2Ty;
-  c2Tz:
+      if (Hp > HpLim) goto c2XL; else goto c2XK;
+  c2XL:
       HpAlloc = 8;
-      goto c2Tw;
-  c2Tw:
-      R1 = _r2eI::P32;
+      goto c2XI;
+  c2XI:
+      R1 = _r2ho::P32;
       call (stg_gc_enter_1)(R1) args: 4, res: 0, upd: 4;
-  c2Ty:
+  c2XK:
       I32[Hp - 4] = stg_CAF_BLACKHOLE_info;
       I32[Hp] = CurrentTSO;
-      (_c2Ts::I32) = call "ccall" arg hints:  [PtrHint, PtrHint,
-                                               PtrHint]  result hints:  [] newCAF(BaseReg, _r2eI::P32, Hp - 4);
-      if (_c2Ts::I32 == 0) goto c2Tu; else goto c2Tt;
-  c2Tu:
-      call (I32[_r2eI::P32])() args: 4, res: 0, upd: 4;
-  c2Tt:
+      (_c2XE::I32) = call "ccall" arg hints:  [PtrHint, PtrHint,
+                                               PtrHint]  result hints:  [] newCAF(BaseReg, _r2ho::P32, Hp - 4);
+      if (_c2XE::I32 == 0) goto c2XG; else goto c2XF;
+  c2XG:
+      call (I32[_r2ho::P32])() args: 4, res: 0, upd: 4;
+  c2XF:
       I32[(old + 12)] = stg_bh_upd_frame_info;
       P32[(old + 8)] = Hp - 4;
       P32[(old + 32)] = Main.main14_closure+2;
@@ -2166,51 +2078,51 @@
 
 ==================== Before copy propagation ====================
 {offset
-  c2U5:
-      _r2eu::P32 = R1;
-      goto c2TY;
-  c2TY:
-      if (Sp - <highSp> < SpLim) goto c2U9; else goto c2Ua;
-  c2Ua:
+  c2Yh:
+      _r2ha::P32 = R1;
+      goto c2Ya;
+  c2Ya:
+      if (Sp - <highSp> < SpLim) goto c2Yl; else goto c2Ym;
+  c2Ym:
       Hp = Hp + 8;
-      if (Hp > HpLim) goto c2Uc; else goto c2Ub;
-  c2Uc:
+      if (Hp > HpLim) goto c2Yo; else goto c2Yn;
+  c2Yo:
       HpAlloc = 8;
-      goto c2U9;
-  c2U9:
-      R1 = _r2eu::P32;
+      goto c2Yl;
+  c2Yl:
+      R1 = _r2ha::P32;
       call (stg_gc_enter_1)(R1) args: 4, res: 0, upd: 4;
-  c2Ub:
+  c2Yn:
       I32[Hp - 4] = stg_CAF_BLACKHOLE_info;
       I32[Hp] = CurrentTSO;
-      (_c2U0::I32) = call "ccall" arg hints:  [PtrHint, PtrHint,
-                                               PtrHint]  result hints:  [] newCAF(BaseReg, _r2eu::P32, Hp - 4);
-      if (_c2U0::I32 == 0) goto c2U2; else goto c2U1;
-  c2U2:
-      call (I32[_r2eu::P32])() args: 4, res: 0, upd: 4;
-  c2U1:
+      (_c2Yc::I32) = call "ccall" arg hints:  [PtrHint, PtrHint,
+                                               PtrHint]  result hints:  [] newCAF(BaseReg, _r2ha::P32, Hp - 4);
+      if (_c2Yc::I32 == 0) goto c2Ye; else goto c2Yd;
+  c2Ye:
+      call (I32[_r2ha::P32])() args: 4, res: 0, upd: 4;
+  c2Yd:
       I32[(old + 12)] = stg_bh_upd_frame_info;
       P32[(old + 8)] = Hp - 4;
-      I32[(young<c2U3> + 4)] = c2U3;
-      P32[(young<c2U3> + 16)] = Main.main13_closure;
-      F64[(young<c2U3> + 12)] = 0.0 :: W64;
-      call Main.$wsum'1_info() returns to c2U3, args: 16, res: 4, upd: 12;
-  c2U3:
-      _s2k9::F64 = D1;
-      I32[(young<c2U8> + 4)] = c2U8;
-      P32[(young<c2U8> + 16)] = Main.main3_closure;
-      F64[(young<c2U8> + 12)] = 0.0 :: W64;
-      call Main.$wsum'1_info() returns to c2U8, args: 16, res: 4, upd: 12;
-  c2U8:
-      _s2ka::F64 = D1;
-      _c2Ui::F64 = %MO_F_Quot_W64(_s2k9::F64, _s2ka::F64);
-      _s2kb::F64 = _c2Ui::F64;
-      _c2Um::F64 = _s2kb::F64;
-      (_c2Ul::F64) = call MO_F64_Sqrt(_c2Um::F64);
-      _s2kc::F64 = _c2Ul::F64;
+      I32[(young<c2Yf> + 4)] = c2Yf;
+      P32[(young<c2Yf> + 16)] = Main.main13_closure;
+      F64[(young<c2Yf> + 12)] = 0.0 :: W64;
+      call Main.$wsum'1_info() returns to c2Yf, args: 16, res: 4, upd: 12;
+  c2Yf:
+      _s2nh::F64 = D1;
+      I32[(young<c2Yk> + 4)] = c2Yk;
+      P32[(young<c2Yk> + 16)] = Main.main3_closure;
+      F64[(young<c2Yk> + 12)] = 0.0 :: W64;
+      call Main.$wsum'1_info() returns to c2Yk, args: 16, res: 4, upd: 12;
+  c2Yk:
+      _s2ni::F64 = D1;
+      _c2Yu::F64 = %MO_F_Quot_W64(_s2nh::F64, _s2ni::F64);
+      _s2nj::F64 = _c2Yu::F64;
+      _c2Yy::F64 = _s2nj::F64;
+      (_c2Yx::F64) = call MO_F64_Sqrt(_c2Yy::F64);
+      _s2nk::F64 = _c2Yx::F64;
       P32[(old + 36)] = GHC.Float.$fShowDouble_$sshowFloat_closure+1;
       P32[(old + 32)] = GHC.Show.shows25_closure;
-      F64[(old + 28)] = _s2kc::F64;
+      F64[(old + 28)] = _s2nk::F64;
       I32[(old + 20)] = stg_ap_p_info;
       P32[(old + 16)] = GHC.Types.[]_closure+1;
       call GHC.Float.$w$sshowSignedFloat_info() args: 36, res: 0, upd: 12;
@@ -2218,12 +2130,12 @@
 
 ==================== Before copy propagation ====================
 {offset
-  c2UE:
-      if (Sp - <highSp> < SpLim) goto c2UH; else goto c2UI;
-  c2UH:
+  c2YQ:
+      if (Sp - <highSp> < SpLim) goto c2YT; else goto c2YU;
+  c2YT:
       R1 = Main.main1_closure;
       call (stg_gc_fun)(R1) args: 4, res: 0, upd: 4;
-  c2UI:
+  c2YU:
       P32[(old + 16)] = GHC.IO.Handle.FD.stdout_closure;
       P32[(old + 12)] = Main.main2_closure;
       P32[(old + 8)] = GHC.Types.True_closure+2;
@@ -2232,35 +2144,35 @@
 
 ==================== Before copy propagation ====================
 {offset
-  c2UQ:
-      if (Sp - <highSp> < SpLim) goto c2UT; else goto c2UU;
-  c2UT:
+  c2Z2:
+      if (Sp - <highSp> < SpLim) goto c2Z5; else goto c2Z6;
+  c2Z5:
       R1 = Main.main_closure;
       call (stg_gc_fun)(R1) args: 4, res: 0, upd: 4;
-  c2UU:
+  c2Z6:
       call Main.main1_info() args: 4, res: 0, upd: 4;
 }
 
 ==================== Before copy propagation ====================
 {offset
-  c2V1:
-      if (Sp - <highSp> < SpLim) goto c2V4; else goto c2V5;
-  c2V4:
-      R1 = Main.main17_closure;
+  c2Zd:
+      if (Sp - <highSp> < SpLim) goto c2Zg; else goto c2Zh;
+  c2Zg:
+      R1 = Main.main15_closure;
       call (stg_gc_fun)(R1) args: 4, res: 0, upd: 4;
-  c2V5:
+  c2Zh:
       P32[(old + 8)] = Main.main1_closure+1;
       call GHC.TopHandler.runMainIO1_info() args: 8, res: 0, upd: 4;
 }
 
 ==================== Before copy propagation ====================
 {offset
-  c2Vd:
-      if (Sp - <highSp> < SpLim) goto c2Vg; else goto c2Vh;
-  c2Vg:
+  c2Zp:
+      if (Sp - <highSp> < SpLim) goto c2Zs; else goto c2Zt;
+  c2Zs:
       R1 = :Main.main_closure;
       call (stg_gc_fun)(R1) args: 4, res: 0, upd: 4;
-  c2Vh:
-      call Main.main17_info() args: 4, res: 0, upd: 4;
+  c2Zt:
+      call Main.main15_info() args: 4, res: 0, upd: 4;
 }
 
