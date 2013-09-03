@@ -1,7 +1,7 @@
 Various backend tests
 =====================
 
-## Suboptimality of generated Cmm (hashStr.hs)
+## Suboptimality of generated Cmm (cmm-sink/hashStr.hs)
 
 This is a piece of code extracted from FastString module in GHC. Currently
 GHC compiles it in a suboptimal way:
