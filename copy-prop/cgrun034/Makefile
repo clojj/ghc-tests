@@ -16,4 +16,4 @@ copy-prop-dump.cmm: $(MAIN)
 	$(GHC) $(HC_FLAGS) $(MAIN) -fcmm-copy-propagation -ddump-cmm-copy-prop -ddump-cmm-before-cp > copy-prop-dump.cmm 2>&1
 
 clean:
-	rm *.hi *.o cgrun034 *.cmm
+	rm *.hi *.o cgrun034 copy-prop-dump.cmm copy-prop-before.cmm copy-prop-after.cmm
