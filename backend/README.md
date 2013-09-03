@@ -1,6 +1,36 @@
 Various backend tests
 =====================
 
+## Suboptimality of generated Cmm (hashStr.hs)
+
+This is a piece of code extracted from FastString module in GHC. Currently
+GHC compiles it in a suboptimal way:
+
+```
+{offset
+  cut:
+      goto cux;
+  cux:
+      _stC::I64 = R3;
+      _stB::I64 = R2;
+      _stF::I64 = 0;
+      _stE::I64 = 0;
+      goto stD;
+  stD:
+      if (_stF::I64 == _stC::I64) goto cuH; else goto cuI;
+  cuH:
+      R1 = _stE::I64;
+      call (P64[Sp])(R1) args: 8, res: 0, upd: 8;
+  cuI:
+      _stM::I64 = %MO_S_Rem_W64(%MO_UU_Conv_W8_W64(I8[_stB::I64 + _stF::I64]) + (_stE::I64 << 7),
+                                4091);
+      _stF::I64 = _stF::I64 + 1;
+      _stE::I64 = _stM::I64;
+      goto stD;
+}
+```
+Notice the silly assignment at the end of last block.
+
 ## Heap checks (heap-checks.hs)
 
 Program for testing heap checks in tail-recursive functions.
