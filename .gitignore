@@ -2,6 +2,10 @@
 fact/fact
 sumSqrFusion/sumSqrFusion
 
+# Build artifacts
+*.o
+*.hi
+
 # Dumped Cmm, Core, assembly, etc.
 *_dump
 *.s
