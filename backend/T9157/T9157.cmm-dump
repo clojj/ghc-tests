@@ -1,0 +1,5106 @@
+[1 of 1] Compiling T9157            ( T9157.hs, T9157.o )
+
+==================== Cmm produced by new codegen ====================
+[section "data" { __stginit_main:T9157:
+ }]
+
+
+
+==================== Post CPS Cmm ====================
+[section "data" { __stginit_main:T9157:
+ }]
+
+
+
+==================== Output Cmm ====================
+[section "data" { __stginit_main:T9157:
+ }]
+
+
+
+==================== Cmm produced by new codegen ====================
+[section "data" {
+     T9157.toTuple#_closure:
+         const T9157.toTuple#_info;
+         const 0;
+ },
+ section "readonly" {
+     c1Dc_str:
+         I8[] [84,57,49,53,55,46,104,115,58,40,50,52,44,49,48,41,45,40,51,49,44,51,57,41,124,102,117,110,99,116,105,111,110,32,119,111,114,100,115,35]
+ },
+ T9157.toTuple#_entry() //  [R2]
+         { info_tbl: [(c1Dv,
+                       label: T9157.toTuple#_info
+                       rep:HeapRep static { Fun {arity: 1 fun_type: ArgSpec 5} })]
+           stack_info: arg_space: 8 updfr_space: Just 8
+         }
+     {offset
+       c1Dv:
+           _s1Cv::P64 = R2;
+           goto c1D5;
+       c1D5:
+           if ((old + 0) - <highSp> < SpLim) goto c1Dw; else goto c1Dx;
+       c1Dw:
+           R2 = _s1Cv::P64;
+           R1 = T9157.toTuple#_closure;
+           call (stg_gc_fun)(R2, R1) args: 8, res: 0, upd: 8;
+       c1Dx:
+           goto c1D4;
+       c1D4:
+           I64[(young<c1D7> + 8)] = c1D7;
+           R1 = _s1Cv::P64;
+           if (R1 & 7 != 0) goto c1D7; else goto c1D8;
+       c1D8:
+           call (I64[R1])(R1) returns to c1D7, args: 8, res: 8, upd: 8;
+       c1D7:
+           _s1Cy::P64 = R1;
+           _c1Dn::I64 = %MO_UU_Conv_W32_W64(I32[I64[_s1Cy::P64 - 1] - 4]);
+           switch [0 .. 8] _c1Dn::I64 {
+               case 0 : goto c1De;
+               case 1 : goto c1Df;
+               case 2 : goto c1Dg;
+               case 3 : goto c1Dh;
+               case 4 : goto c1Di;
+               case 5 : goto c1Dj;
+               case 6 : goto c1Dk;
+               case 7 : goto c1Dl;
+               case 8 : goto c1Dm;
+           }
+       c1Dm:
+           _s1CG::I64 = I64[_s1Cy::P64 + 7];
+           _g1CN::I64 = _s1CG::I64;
+           goto c1Dd;
+       c1Dl:
+           _s1CF::I64 = I64[_s1Cy::P64 + 7];
+           _g1CN::I64 = _s1CF::I64;
+           goto c1Dd;
+       c1Dk:
+           _s1CE::I64 = I64[_s1Cy::P64 + 7];
+           _g1CN::I64 = _s1CE::I64;
+           goto c1Dd;
+       c1Dj:
+           _s1CD::I64 = I64[_s1Cy::P64 + 7];
+           _g1CN::I64 = _s1CD::I64;
+           goto c1Dd;
+       c1Di:
+           _s1CC::I64 = I64[_s1Cy::P64 + 7];
+           _g1CN::I64 = _s1CC::I64;
+           goto c1Dd;
+       c1Dh:
+           _s1CB::I64 = I64[_s1Cy::P64 + 7];
+           _g1CN::I64 = _s1CB::I64;
+           goto c1Dd;
+       c1Dg:
+           _s1CA::I64 = I64[_s1Cy::P64 + 7];
+           _g1CN::I64 = _s1CA::I64;
+           goto c1Dd;
+       c1Df:
+           _s1Cz::I64 = I64[_s1Cy::P64 + 7];
+           _g1CN::I64 = _s1Cz::I64;
+           goto c1Dd;
+       c1De:
+           I64[(young<c1Dy> + 8)] = c1Dy;
+           R2 = c1Dc_str;
+           call Control.Exception.Base.patError_info(R2) returns to c1Dy, args: 8, res: 8, upd: 8;
+       c1Dy:
+           _g1CN::I64 = R1;
+           goto c1Dd;
+       c1Dd:
+           goto c1Dp;
+       c1Dp:
+           I64[(young<c1Dr> + 8)] = c1Dr;
+           R1 = _s1Cv::P64;
+           if (R1 & 7 != 0) goto c1Dr; else goto c1Ds;
+       c1Ds:
+           call (I64[R1])(R1) returns to c1Dr, args: 8, res: 8, upd: 8;
+       c1Dr:
+           _s1Cw::P64 = R1;
+           _c1E7::I64 = %MO_UU_Conv_W32_W64(I32[I64[_s1Cw::P64 & (-8)] - 4]);
+           _s1Cx::I64 = _c1E7::I64;
+           goto c1E4;
+       c1E4:
+           R2 = _g1CN::I64;
+           R1 = _s1Cx::I64;
+           call (P64[(old + 8)])(R2, R1) args: 8, res: 0, upd: 8;
+     }
+ }]
+
+
+
+==================== Post control-flow optimisations ====================
+{offset
+  c1Dv:
+      _s1Cv::P64 = R2;
+      if ((old + 0) - <highSp> < SpLim) goto c1Dw; else goto c1Dx;
+  c1Dw:
+      R2 = _s1Cv::P64;
+      R1 = T9157.toTuple#_closure;
+      call (stg_gc_fun)(R2, R1) args: 8, res: 0, upd: 8;
+  c1Dx:
+      I64[(young<c1D7> + 8)] = c1D7;
+      R1 = _s1Cv::P64;
+      if (R1 & 7 != 0) goto c1D7; else goto c1D8;
+  c1D8:
+      call (I64[R1])(R1) returns to c1D7, args: 8, res: 8, upd: 8;
+  c1D7:
+      _s1Cy::P64 = R1;
+      _c1Dn::I64 = %MO_UU_Conv_W32_W64(I32[I64[_s1Cy::P64 - 1] - 4]);
+      switch [0 .. 8] _c1Dn::I64 {
+          case 0 : goto c1De;
+          case 1 : goto c1Df;
+          case 2 : goto c1Dg;
+          case 3 : goto c1Dh;
+          case 4 : goto c1Di;
+          case 5 : goto c1Dj;
+          case 6 : goto c1Dk;
+          case 7 : goto c1Dl;
+          case 8 : goto c1Dm;
+      }
+  c1Dm:
+      _s1CG::I64 = I64[_s1Cy::P64 + 7];
+      _g1CN::I64 = _s1CG::I64;
+      goto c1Dd;
+  c1Dl:
+      _s1CF::I64 = I64[_s1Cy::P64 + 7];
+      _g1CN::I64 = _s1CF::I64;
+      goto c1Dd;
+  c1Dk:
+      _s1CE::I64 = I64[_s1Cy::P64 + 7];
+      _g1CN::I64 = _s1CE::I64;
+      goto c1Dd;
+  c1Dj:
+      _s1CD::I64 = I64[_s1Cy::P64 + 7];
+      _g1CN::I64 = _s1CD::I64;
+      goto c1Dd;
+  c1Di:
+      _s1CC::I64 = I64[_s1Cy::P64 + 7];
+      _g1CN::I64 = _s1CC::I64;
+      goto c1Dd;
+  c1Dh:
+      _s1CB::I64 = I64[_s1Cy::P64 + 7];
+      _g1CN::I64 = _s1CB::I64;
+      goto c1Dd;
+  c1Dg:
+      _s1CA::I64 = I64[_s1Cy::P64 + 7];
+      _g1CN::I64 = _s1CA::I64;
+      goto c1Dd;
+  c1Df:
+      _s1Cz::I64 = I64[_s1Cy::P64 + 7];
+      _g1CN::I64 = _s1Cz::I64;
+      goto c1Dd;
+  c1De:
+      I64[(young<c1Dy> + 8)] = c1Dy;
+      R2 = c1Dc_str;
+      call Control.Exception.Base.patError_info(R2) returns to c1Dy, args: 8, res: 8, upd: 8;
+  c1Dy:
+      _g1CN::I64 = R1;
+      goto c1Dd;
+  c1Dd:
+      I64[(young<c1Dr> + 8)] = c1Dr;
+      R1 = _s1Cv::P64;
+      if (R1 & 7 != 0) goto c1Dr; else goto c1Ds;
+  c1Ds:
+      call (I64[R1])(R1) returns to c1Dr, args: 8, res: 8, upd: 8;
+  c1Dr:
+      _s1Cw::P64 = R1;
+      _c1E7::I64 = %MO_UU_Conv_W32_W64(I32[I64[_s1Cw::P64 & (-8)] - 4]);
+      _s1Cx::I64 = _c1E7::I64;
+      R2 = _g1CN::I64;
+      R1 = _s1Cx::I64;
+      call (P64[(old + 8)])(R2, R1) args: 8, res: 0, upd: 8;
+}
+
+
+
+==================== Post common block elimination ====================
+{offset
+  c1Dv:
+      _s1Cv::P64 = R2;
+      if ((old + 0) - <highSp> < SpLim) goto c1Dw; else goto c1Dx;
+  c1Dw:
+      R2 = _s1Cv::P64;
+      R1 = T9157.toTuple#_closure;
+      call (stg_gc_fun)(R2, R1) args: 8, res: 0, upd: 8;
+  c1Dx:
+      I64[(young<c1D7> + 8)] = c1D7;
+      R1 = _s1Cv::P64;
+      if (R1 & 7 != 0) goto c1D7; else goto c1D8;
+  c1D8:
+      call (I64[R1])(R1) returns to c1D7, args: 8, res: 8, upd: 8;
+  c1D7:
+      _s1Cy::P64 = R1;
+      _c1Dn::I64 = %MO_UU_Conv_W32_W64(I32[I64[_s1Cy::P64 - 1] - 4]);
+      switch [0 .. 8] _c1Dn::I64 {
+          case 0 : goto c1De;
+          case 1 : goto c1Df;
+          case 2 : goto c1Dg;
+          case 3 : goto c1Dh;
+          case 4 : goto c1Di;
+          case 5 : goto c1Dj;
+          case 6 : goto c1Dk;
+          case 7 : goto c1Dl;
+          case 8 : goto c1Dm;
+      }
+  c1Dm:
+      _s1CG::I64 = I64[_s1Cy::P64 + 7];
+      _g1CN::I64 = _s1CG::I64;
+      goto c1Dd;
+  c1Dl:
+      _s1CF::I64 = I64[_s1Cy::P64 + 7];
+      _g1CN::I64 = _s1CF::I64;
+      goto c1Dd;
+  c1Dk:
+      _s1CE::I64 = I64[_s1Cy::P64 + 7];
+      _g1CN::I64 = _s1CE::I64;
+      goto c1Dd;
+  c1Dj:
+      _s1CD::I64 = I64[_s1Cy::P64 + 7];
+      _g1CN::I64 = _s1CD::I64;
+      goto c1Dd;
+  c1Di:
+      _s1CC::I64 = I64[_s1Cy::P64 + 7];
+      _g1CN::I64 = _s1CC::I64;
+      goto c1Dd;
+  c1Dh:
+      _s1CB::I64 = I64[_s1Cy::P64 + 7];
+      _g1CN::I64 = _s1CB::I64;
+      goto c1Dd;
+  c1Dg:
+      _s1CA::I64 = I64[_s1Cy::P64 + 7];
+      _g1CN::I64 = _s1CA::I64;
+      goto c1Dd;
+  c1Df:
+      _s1Cz::I64 = I64[_s1Cy::P64 + 7];
+      _g1CN::I64 = _s1Cz::I64;
+      goto c1Dd;
+  c1De:
+      I64[(young<c1Dy> + 8)] = c1Dy;
+      R2 = c1Dc_str;
+      call Control.Exception.Base.patError_info(R2) returns to c1Dy, args: 8, res: 8, upd: 8;
+  c1Dy:
+      _g1CN::I64 = R1;
+      goto c1Dd;
+  c1Dd:
+      I64[(young<c1Dr> + 8)] = c1Dr;
+      R1 = _s1Cv::P64;
+      if (R1 & 7 != 0) goto c1Dr; else goto c1Ds;
+  c1Ds:
+      call (I64[R1])(R1) returns to c1Dr, args: 8, res: 8, upd: 8;
+  c1Dr:
+      _s1Cw::P64 = R1;
+      _c1E7::I64 = %MO_UU_Conv_W32_W64(I32[I64[_s1Cw::P64 & (-8)] - 4]);
+      _s1Cx::I64 = _c1E7::I64;
+      R2 = _g1CN::I64;
+      R1 = _s1Cx::I64;
+      call (P64[(old + 8)])(R2, R1) args: 8, res: 0, upd: 8;
+}
+
+
+
+==================== Layout Stack ====================
+{offset
+  c1Dv:
+      _s1Cv::P64 = R2;
+      if ((Sp + 8) - 24 < SpLim) goto c1Dw; else goto c1Dx;
+  c1Dw:
+      R2 = _s1Cv::P64;
+      R1 = T9157.toTuple#_closure;
+      call (stg_gc_fun)(R2, R1) args: 8, res: 0, upd: 8;
+  c1Dx:
+      I64[Sp - 16] = c1D7;
+      R1 = _s1Cv::P64;
+      P64[Sp - 8] = _s1Cv::P64;
+      Sp = Sp - 16;
+      if (R1 & 7 != 0) goto c1D7; else goto c1D8;
+  c1D8:
+      call (I64[R1])(R1) returns to c1D7, args: 8, res: 8, upd: 8;
+  c1D7:
+      _s1Cv::P64 = P64[Sp + 8];
+      _s1Cy::P64 = R1;
+      _c1Dn::I64 = %MO_UU_Conv_W32_W64(I32[I64[_s1Cy::P64 - 1] - 4]);
+      switch [0 .. 8] _c1Dn::I64 {
+          case 0 : goto c1De;
+          case 1 : goto c1Df;
+          case 2 : goto c1Dg;
+          case 3 : goto c1Dh;
+          case 4 : goto c1Di;
+          case 5 : goto c1Dj;
+          case 6 : goto c1Dk;
+          case 7 : goto c1Dl;
+          case 8 : goto c1Dm;
+      }
+  c1Dm:
+      _s1CG::I64 = I64[_s1Cy::P64 + 7];
+      _g1CN::I64 = _s1CG::I64;
+      goto c1Dd;
+  c1Dl:
+      _s1CF::I64 = I64[_s1Cy::P64 + 7];
+      _g1CN::I64 = _s1CF::I64;
+      goto c1Dd;
+  c1Dk:
+      _s1CE::I64 = I64[_s1Cy::P64 + 7];
+      _g1CN::I64 = _s1CE::I64;
+      goto c1Dd;
+  c1Dj:
+      _s1CD::I64 = I64[_s1Cy::P64 + 7];
+      _g1CN::I64 = _s1CD::I64;
+      goto c1Dd;
+  c1Di:
+      _s1CC::I64 = I64[_s1Cy::P64 + 7];
+      _g1CN::I64 = _s1CC::I64;
+      goto c1Dd;
+  c1Dh:
+      _s1CB::I64 = I64[_s1Cy::P64 + 7];
+      _g1CN::I64 = _s1CB::I64;
+      goto c1Dd;
+  c1Dg:
+      _s1CA::I64 = I64[_s1Cy::P64 + 7];
+      _g1CN::I64 = _s1CA::I64;
+      goto c1Dd;
+  c1Df:
+      _s1Cz::I64 = I64[_s1Cy::P64 + 7];
+      _g1CN::I64 = _s1Cz::I64;
+      goto c1Dd;
+  c1De:
+      I64[Sp] = c1Dy;
+      R2 = c1Dc_str;
+      call Control.Exception.Base.patError_info(R2) returns to c1Dy, args: 8, res: 8, upd: 8;
+  c1Dy:
+      _s1Cv::P64 = P64[Sp + 8];
+      _g1CN::I64 = R1;
+      goto c1Dd;
+  c1Dd:
+      I64[Sp] = c1Dr;
+      R1 = _s1Cv::P64;
+      I64[Sp + 8] = _g1CN::I64;
+      if (R1 & 7 != 0) goto c1Dr; else goto c1Ds;
+  c1Ds:
+      call (I64[R1])(R1) returns to c1Dr, args: 8, res: 8, upd: 8;
+  c1Dr:
+      _g1CN::I64 = I64[Sp + 8];
+      _s1Cw::P64 = R1;
+      _c1E7::I64 = %MO_UU_Conv_W32_W64(I32[I64[_s1Cw::P64 & (-8)] - 4]);
+      _s1Cx::I64 = _c1E7::I64;
+      R2 = _g1CN::I64;
+      R1 = _s1Cx::I64;
+      Sp = Sp + 16;
+      call (P64[Sp])(R2, R1) args: 8, res: 0, upd: 8;
+}
+
+
+
+==================== Sink assignments ====================
+{offset
+  c1Dv:
+      if ((Sp + -16) < SpLim) goto c1Dw; else goto c1Dx;
+  c1Dw:
+      R2 = R2;
+      R1 = T9157.toTuple#_closure;
+      call (stg_gc_fun)(R2, R1) args: 8, res: 0, upd: 8;
+  c1Dx:
+      I64[Sp - 16] = c1D7;
+      R1 = R2;
+      P64[Sp - 8] = R2;
+      Sp = Sp - 16;
+      if (R1 & 7 != 0) goto c1D7; else goto c1D8;
+  c1D8:
+      call (I64[R1])(R1) returns to c1D7, args: 8, res: 8, upd: 8;
+  c1D7:
+      _s1Cv::P64 = P64[Sp + 8];
+      switch [0 .. 8] (%MO_UU_Conv_W32_W64(I32[I64[R1 - 1] - 4])) {
+          case 0 : goto c1De;
+          case 1 : goto c1Df;
+          case 2 : goto c1Dg;
+          case 3 : goto c1Dh;
+          case 4 : goto c1Di;
+          case 5 : goto c1Dj;
+          case 6 : goto c1Dk;
+          case 7 : goto c1Dl;
+          case 8 : goto c1Dm;
+      }
+  c1Dm:
+      _g1CN::I64 = I64[R1 + 7];
+      goto c1Dd;
+  c1Dl:
+      _g1CN::I64 = I64[R1 + 7];
+      goto c1Dd;
+  c1Dk:
+      _g1CN::I64 = I64[R1 + 7];
+      goto c1Dd;
+  c1Dj:
+      _g1CN::I64 = I64[R1 + 7];
+      goto c1Dd;
+  c1Di:
+      _g1CN::I64 = I64[R1 + 7];
+      goto c1Dd;
+  c1Dh:
+      _g1CN::I64 = I64[R1 + 7];
+      goto c1Dd;
+  c1Dg:
+      _g1CN::I64 = I64[R1 + 7];
+      goto c1Dd;
+  c1Df:
+      _g1CN::I64 = I64[R1 + 7];
+      goto c1Dd;
+  c1De:
+      I64[Sp] = c1Dy;
+      R2 = c1Dc_str;
+      call Control.Exception.Base.patError_info(R2) returns to c1Dy, args: 8, res: 8, upd: 8;
+  c1Dy:
+      _s1Cv::P64 = P64[Sp + 8];
+      _g1CN::I64 = R1;
+      goto c1Dd;
+  c1Dd:
+      I64[Sp] = c1Dr;
+      R1 = _s1Cv::P64;
+      I64[Sp + 8] = _g1CN::I64;
+      if (R1 & 7 != 0) goto c1Dr; else goto c1Ds;
+  c1Ds:
+      call (I64[R1])(R1) returns to c1Dr, args: 8, res: 8, upd: 8;
+  c1Dr:
+      R2 = I64[Sp + 8];
+      R1 = %MO_UU_Conv_W32_W64(I32[I64[R1 & (-8)] - 4]);
+      Sp = Sp + 16;
+      call (P64[Sp])(R2, R1) args: 8, res: 0, upd: 8;
+}
+
+
+
+==================== CAFEnv ====================
+[(c1D7, {Control.Exception.Base.patError_closure}),
+ (c1D8, {Control.Exception.Base.patError_closure}), (c1Dd, {}),
+ (c1De, {Control.Exception.Base.patError_closure}), (c1Df, {}),
+ (c1Dg, {}), (c1Dh, {}), (c1Di, {}), (c1Dj, {}), (c1Dk, {}),
+ (c1Dl, {}), (c1Dm, {}), (c1Dr, {}), (c1Ds, {}),
+ (c1Dv,
+  {Control.Exception.Base.patError_closure, T9157.toTuple#_closure}),
+ (c1Dw, {T9157.toTuple#_closure}),
+ (c1Dx, {Control.Exception.Base.patError_closure}), (c1Dy, {})]
+
+
+
+==================== after setInfoTableStackMap ====================
+T9157.toTuple#_entry() //  [R2]
+        { info_tbl: [(c1D7,
+                      label: block_c1D7_info
+                      rep:StackRep [False]),
+                     (c1Dr,
+                      label: block_c1Dr_info
+                      rep:StackRep [True]),
+                     (c1Dv,
+                      label: T9157.toTuple#_info
+                      rep:HeapRep static { Fun {arity: 1 fun_type: ArgSpec 5} }),
+                     (c1Dy,
+                      label: block_c1Dy_info
+                      rep:StackRep [False])]
+          stack_info: arg_space: 8 updfr_space: Just 8
+        }
+    {offset
+      c1Dv:
+          if ((Sp + -16) < SpLim) goto c1Dw; else goto c1Dx;
+      c1Dw:
+          R2 = R2;
+          R1 = T9157.toTuple#_closure;
+          call (stg_gc_fun)(R2, R1) args: 8, res: 0, upd: 8;
+      c1Dx:
+          I64[Sp - 16] = c1D7;
+          R1 = R2;
+          P64[Sp - 8] = R2;
+          Sp = Sp - 16;
+          if (R1 & 7 != 0) goto c1D7; else goto c1D8;
+      c1D8:
+          call (I64[R1])(R1) returns to c1D7, args: 8, res: 8, upd: 8;
+      c1D7:
+          _s1Cv::P64 = P64[Sp + 8];
+          switch [0 .. 8] (%MO_UU_Conv_W32_W64(I32[I64[R1 - 1] - 4])) {
+              case 0 : goto c1De;
+              case 1 : goto c1Df;
+              case 2 : goto c1Dg;
+              case 3 : goto c1Dh;
+              case 4 : goto c1Di;
+              case 5 : goto c1Dj;
+              case 6 : goto c1Dk;
+              case 7 : goto c1Dl;
+              case 8 : goto c1Dm;
+          }
+      c1Dm:
+          _g1CN::I64 = I64[R1 + 7];
+          goto c1Dd;
+      c1Dl:
+          _g1CN::I64 = I64[R1 + 7];
+          goto c1Dd;
+      c1Dk:
+          _g1CN::I64 = I64[R1 + 7];
+          goto c1Dd;
+      c1Dj:
+          _g1CN::I64 = I64[R1 + 7];
+          goto c1Dd;
+      c1Di:
+          _g1CN::I64 = I64[R1 + 7];
+          goto c1Dd;
+      c1Dh:
+          _g1CN::I64 = I64[R1 + 7];
+          goto c1Dd;
+      c1Dg:
+          _g1CN::I64 = I64[R1 + 7];
+          goto c1Dd;
+      c1Df:
+          _g1CN::I64 = I64[R1 + 7];
+          goto c1Dd;
+      c1De:
+          I64[Sp] = c1Dy;
+          R2 = c1Dc_str;
+          call Control.Exception.Base.patError_info(R2) returns to c1Dy, args: 8, res: 8, upd: 8;
+      c1Dy:
+          _s1Cv::P64 = P64[Sp + 8];
+          _g1CN::I64 = R1;
+          goto c1Dd;
+      c1Dd:
+          I64[Sp] = c1Dr;
+          R1 = _s1Cv::P64;
+          I64[Sp + 8] = _g1CN::I64;
+          if (R1 & 7 != 0) goto c1Dr; else goto c1Ds;
+      c1Ds:
+          call (I64[R1])(R1) returns to c1Dr, args: 8, res: 8, upd: 8;
+      c1Dr:
+          R2 = I64[Sp + 8];
+          R1 = %MO_UU_Conv_W32_W64(I32[I64[R1 & (-8)] - 4]);
+          Sp = Sp + 16;
+          call (P64[Sp])(R2, R1) args: 8, res: 0, upd: 8;
+    }
+}
+
+
+
+==================== Post control-flow optimisations ====================
+T9157.toTuple#_entry() //  [R2]
+        { info_tbl: [(c1D7,
+                      label: block_c1D7_info
+                      rep:StackRep [False]),
+                     (c1Dr,
+                      label: block_c1Dr_info
+                      rep:StackRep [True]),
+                     (c1Dv,
+                      label: T9157.toTuple#_info
+                      rep:HeapRep static { Fun {arity: 1 fun_type: ArgSpec 5} }),
+                     (c1Dy,
+                      label: block_c1Dy_info
+                      rep:StackRep [False])]
+          stack_info: arg_space: 8 updfr_space: Just 8
+        }
+    {offset
+      c1Dv:
+          if ((Sp + -16) < SpLim) goto c1Dw; else goto c1Dx;
+      c1Dw:
+          R2 = R2;
+          R1 = T9157.toTuple#_closure;
+          call (stg_gc_fun)(R2, R1) args: 8, res: 0, upd: 8;
+      c1Dx:
+          I64[Sp - 16] = c1D7;
+          R1 = R2;
+          P64[Sp - 8] = R2;
+          Sp = Sp - 16;
+          if (R1 & 7 != 0) goto c1D7; else goto c1D8;
+      c1D8:
+          call (I64[R1])(R1) returns to c1D7, args: 8, res: 8, upd: 8;
+      c1D7:
+          _s1Cv::P64 = P64[Sp + 8];
+          switch [0 .. 8] (%MO_UU_Conv_W32_W64(I32[I64[R1 - 1] - 4])) {
+              case 0 : goto c1De;
+              case 1 : goto c1Df;
+              case 2 : goto c1Dg;
+              case 3 : goto c1Dh;
+              case 4 : goto c1Di;
+              case 5 : goto c1Dj;
+              case 6 : goto c1Dk;
+              case 7 : goto c1Dl;
+              case 8 : goto c1Dm;
+          }
+      c1Dm:
+          _g1CN::I64 = I64[R1 + 7];
+          goto c1Dd;
+      c1Dl:
+          _g1CN::I64 = I64[R1 + 7];
+          goto c1Dd;
+      c1Dk:
+          _g1CN::I64 = I64[R1 + 7];
+          goto c1Dd;
+      c1Dj:
+          _g1CN::I64 = I64[R1 + 7];
+          goto c1Dd;
+      c1Di:
+          _g1CN::I64 = I64[R1 + 7];
+          goto c1Dd;
+      c1Dh:
+          _g1CN::I64 = I64[R1 + 7];
+          goto c1Dd;
+      c1Dg:
+          _g1CN::I64 = I64[R1 + 7];
+          goto c1Dd;
+      c1Df:
+          _g1CN::I64 = I64[R1 + 7];
+          goto c1Dd;
+      c1De:
+          I64[Sp] = c1Dy;
+          R2 = c1Dc_str;
+          call Control.Exception.Base.patError_info(R2) returns to c1Dy, args: 8, res: 8, upd: 8;
+      c1Dy:
+          _s1Cv::P64 = P64[Sp + 8];
+          _g1CN::I64 = R1;
+          goto c1Dd;
+      c1Dd:
+          I64[Sp] = c1Dr;
+          R1 = _s1Cv::P64;
+          I64[Sp + 8] = _g1CN::I64;
+          if (R1 & 7 != 0) goto c1Dr; else goto c1Ds;
+      c1Ds:
+          call (I64[R1])(R1) returns to c1Dr, args: 8, res: 8, upd: 8;
+      c1Dr:
+          R2 = I64[Sp + 8];
+          R1 = %MO_UU_Conv_W32_W64(I32[I64[R1 & (-8)] - 4]);
+          Sp = Sp + 16;
+          call (P64[Sp])(R2, R1) args: 8, res: 0, upd: 8;
+    }
+}
+
+
+
+==================== Post CPS Cmm ====================
+[section "data" {
+     T9157.toTuple#_closure:
+         const T9157.toTuple#_info;
+         const 0;
+ },
+ section "readonly" {
+     c1Dc_str:
+         I8[] [84,57,49,53,55,46,104,115,58,40,50,52,44,49,48,41,45,40,51,49,44,51,57,41,124,102,117,110,99,116,105,111,110,32,119,111,114,100,115,35]
+ },
+ T9157.toTuple#_entry() //  [R2]
+         { info_tbl: [(c1D7,
+                       label: block_c1D7_info
+                       rep:StackRep [False]),
+                      (c1Dr,
+                       label: block_c1Dr_info
+                       rep:StackRep [True]),
+                      (c1Dv,
+                       label: T9157.toTuple#_info
+                       rep:HeapRep static { Fun {arity: 1 fun_type: ArgSpec 5} }),
+                      (c1Dy,
+                       label: block_c1Dy_info
+                       rep:StackRep [False])]
+           stack_info: arg_space: 8 updfr_space: Just 8
+         }
+     {offset
+       c1Dv:
+           if ((Sp + -16) < SpLim) goto c1Dw; else goto c1Dx;
+       c1Dw:
+           R2 = R2;
+           R1 = T9157.toTuple#_closure;
+           call (stg_gc_fun)(R2, R1) args: 8, res: 0, upd: 8;
+       c1Dx:
+           I64[Sp - 16] = c1D7;
+           R1 = R2;
+           P64[Sp - 8] = R2;
+           Sp = Sp - 16;
+           if (R1 & 7 != 0) goto c1D7; else goto c1D8;
+       c1D8:
+           call (I64[R1])(R1) returns to c1D7, args: 8, res: 8, upd: 8;
+       c1D7:
+           _s1Cv::P64 = P64[Sp + 8];
+           switch [0 .. 8] (%MO_UU_Conv_W32_W64(I32[I64[R1 - 1] - 4])) {
+               case 0 : goto c1De;
+               case 1 : goto c1Df;
+               case 2 : goto c1Dg;
+               case 3 : goto c1Dh;
+               case 4 : goto c1Di;
+               case 5 : goto c1Dj;
+               case 6 : goto c1Dk;
+               case 7 : goto c1Dl;
+               case 8 : goto c1Dm;
+           }
+       c1Dm:
+           _g1CN::I64 = I64[R1 + 7];
+           goto c1Dd;
+       c1Dl:
+           _g1CN::I64 = I64[R1 + 7];
+           goto c1Dd;
+       c1Dk:
+           _g1CN::I64 = I64[R1 + 7];
+           goto c1Dd;
+       c1Dj:
+           _g1CN::I64 = I64[R1 + 7];
+           goto c1Dd;
+       c1Di:
+           _g1CN::I64 = I64[R1 + 7];
+           goto c1Dd;
+       c1Dh:
+           _g1CN::I64 = I64[R1 + 7];
+           goto c1Dd;
+       c1Dg:
+           _g1CN::I64 = I64[R1 + 7];
+           goto c1Dd;
+       c1Df:
+           _g1CN::I64 = I64[R1 + 7];
+           goto c1Dd;
+       c1De:
+           I64[Sp] = c1Dy;
+           R2 = c1Dc_str;
+           call Control.Exception.Base.patError_info(R2) returns to c1Dy, args: 8, res: 8, upd: 8;
+       c1Dy:
+           _s1Cv::P64 = P64[Sp + 8];
+           _g1CN::I64 = R1;
+           goto c1Dd;
+       c1Dd:
+           I64[Sp] = c1Dr;
+           R1 = _s1Cv::P64;
+           I64[Sp + 8] = _g1CN::I64;
+           if (R1 & 7 != 0) goto c1Dr; else goto c1Ds;
+       c1Ds:
+           call (I64[R1])(R1) returns to c1Dr, args: 8, res: 8, upd: 8;
+       c1Dr:
+           R2 = I64[Sp + 8];
+           R1 = %MO_UU_Conv_W32_W64(I32[I64[R1 & (-8)] - 4]);
+           Sp = Sp + 16;
+           call (P64[Sp])(R2, R1) args: 8, res: 0, upd: 8;
+     }
+ }]
+
+
+
+==================== Output Cmm ====================
+[section "data" {
+     T9157.toTuple#_closure:
+         const T9157.toTuple#_info;
+         const 0;
+ },
+ section "readonly" {
+     c1Dc_str:
+         I8[] [84,57,49,53,55,46,104,115,58,40,50,52,44,49,48,41,45,40,51,49,44,51,57,41,124,102,117,110,99,116,105,111,110,32,119,111,114,100,115,35]
+ },
+ T9157.toTuple#_entry() //  [R2]
+         { info_tbl: [(c1D7,
+                       label: block_c1D7_info
+                       rep:StackRep [False]),
+                      (c1Dr,
+                       label: block_c1Dr_info
+                       rep:StackRep [True]),
+                      (c1Dv,
+                       label: T9157.toTuple#_info
+                       rep:HeapRep static { Fun {arity: 1 fun_type: ArgSpec 5} }),
+                      (c1Dy,
+                       label: block_c1Dy_info
+                       rep:StackRep [False])]
+           stack_info: arg_space: 8 updfr_space: Just 8
+         }
+     {offset
+       c1Dv:
+           if ((Sp + -16) < SpLim) goto c1Dw; else goto c1Dx;
+       c1Dw:
+           R2 = R2;
+           R1 = T9157.toTuple#_closure;
+           call (stg_gc_fun)(R2, R1) args: 8, res: 0, upd: 8;
+       c1Dx:
+           I64[Sp - 16] = c1D7;
+           R1 = R2;
+           P64[Sp - 8] = R2;
+           Sp = Sp - 16;
+           if (R1 & 7 != 0) goto c1D7; else goto c1D8;
+       c1D8:
+           call (I64[R1])(R1) returns to c1D7, args: 8, res: 8, upd: 8;
+       c1D7:
+           _s1Cv::P64 = P64[Sp + 8];
+           switch [0 .. 8] (%MO_UU_Conv_W32_W64(I32[I64[R1 - 1] - 4])) {
+               case 0 : goto c1De;
+               case 1 : goto c1Df;
+               case 2 : goto c1Dg;
+               case 3 : goto c1Dh;
+               case 4 : goto c1Di;
+               case 5 : goto c1Dj;
+               case 6 : goto c1Dk;
+               case 7 : goto c1Dl;
+               case 8 : goto c1Dm;
+           }
+       c1Dm:
+           _g1CN::I64 = I64[R1 + 7];
+           goto c1Dd;
+       c1Dl:
+           _g1CN::I64 = I64[R1 + 7];
+           goto c1Dd;
+       c1Dk:
+           _g1CN::I64 = I64[R1 + 7];
+           goto c1Dd;
+       c1Dj:
+           _g1CN::I64 = I64[R1 + 7];
+           goto c1Dd;
+       c1Di:
+           _g1CN::I64 = I64[R1 + 7];
+           goto c1Dd;
+       c1Dh:
+           _g1CN::I64 = I64[R1 + 7];
+           goto c1Dd;
+       c1Dg:
+           _g1CN::I64 = I64[R1 + 7];
+           goto c1Dd;
+       c1Df:
+           _g1CN::I64 = I64[R1 + 7];
+           goto c1Dd;
+       c1De:
+           I64[Sp] = c1Dy;
+           R2 = c1Dc_str;
+           call Control.Exception.Base.patError_info(R2) returns to c1Dy, args: 8, res: 8, upd: 8;
+       c1Dy:
+           _s1Cv::P64 = P64[Sp + 8];
+           _g1CN::I64 = R1;
+           goto c1Dd;
+       c1Dd:
+           I64[Sp] = c1Dr;
+           R1 = _s1Cv::P64;
+           I64[Sp + 8] = _g1CN::I64;
+           if (R1 & 7 != 0) goto c1Dr; else goto c1Ds;
+       c1Ds:
+           call (I64[R1])(R1) returns to c1Dr, args: 8, res: 8, upd: 8;
+       c1Dr:
+           R2 = I64[Sp + 8];
+           R1 = %MO_UU_Conv_W32_W64(I32[I64[R1 & (-8)] - 4]);
+           Sp = Sp + 16;
+           call (P64[Sp])(R2, R1) args: 8, res: 0, upd: 8;
+     }
+ }]
+
+
+
+==================== Cmm produced by new codegen ====================
+[section "data" {
+     T9157.Chunk00_closure:
+         const T9157.Chunk00_static_info;
+ }]
+
+
+
+==================== Post CPS Cmm ====================
+[section "data" {
+     T9157.Chunk00_closure:
+         const T9157.Chunk00_static_info;
+ }]
+
+
+
+==================== Output Cmm ====================
+[section "data" {
+     T9157.Chunk00_closure:
+         const T9157.Chunk00_static_info;
+ }]
+
+
+
+==================== Cmm produced by new codegen ====================
+[section "data" {
+     T9157.Chunk01_closure:
+         const T9157.Chunk01_info;
+ },
+ T9157.Chunk01_entry() //  [R2]
+         { info_tbl: [(c1Es,
+                       label: T9157.Chunk01_info
+                       rep:HeapRep static { Fun {arity: 1 fun_type: ArgSpec 4} })]
+           stack_info: arg_space: 8 updfr_space: Just 8
+         }
+     {offset
+       c1Es:
+           _B1::I64 = R2;
+           goto c1Ep;
+       c1Ep:
+           if ((old + 0) - <highSp> < SpLim) goto c1Et; else goto c1Eu;
+       c1Eu:
+           goto c1Eo;
+       c1Eo:
+           Hp = Hp + 16;
+           if (Hp > HpLim) goto c1Ew; else goto c1Ev;
+       c1Ew:
+           HpAlloc = 16;
+           goto c1Et;
+       c1Et:
+           R2 = _B1::I64;
+           R1 = T9157.Chunk01_closure;
+           call (stg_gc_fun)(R2, R1) args: 8, res: 0, upd: 8;
+       c1Ev:
+           I64[Hp - 8] = T9157.Chunk01_con_info;
+           I64[Hp] = _B1::I64;
+           _c1Er::P64 = Hp - 7;
+           R1 = _c1Er::P64;
+           call (P64[(old + 8)])(R1) args: 8, res: 0, upd: 8;
+     }
+ }]
+
+
+
+==================== Post control-flow optimisations ====================
+{offset
+  c1Es:
+      _B1::I64 = R2;
+      if ((old + 0) - <highSp> < SpLim) goto c1Et; else goto c1Eu;
+  c1Eu:
+      Hp = Hp + 16;
+      if (Hp > HpLim) goto c1Ew; else goto c1Ev;
+  c1Ew:
+      HpAlloc = 16;
+      goto c1Et;
+  c1Et:
+      R2 = _B1::I64;
+      R1 = T9157.Chunk01_closure;
+      call (stg_gc_fun)(R2, R1) args: 8, res: 0, upd: 8;
+  c1Ev:
+      I64[Hp - 8] = T9157.Chunk01_con_info;
+      I64[Hp] = _B1::I64;
+      _c1Er::P64 = Hp - 7;
+      R1 = _c1Er::P64;
+      call (P64[(old + 8)])(R1) args: 8, res: 0, upd: 8;
+}
+
+
+
+==================== Post common block elimination ====================
+{offset
+  c1Es:
+      _B1::I64 = R2;
+      if ((old + 0) - <highSp> < SpLim) goto c1Et; else goto c1Eu;
+  c1Eu:
+      Hp = Hp + 16;
+      if (Hp > HpLim) goto c1Ew; else goto c1Ev;
+  c1Ew:
+      HpAlloc = 16;
+      goto c1Et;
+  c1Et:
+      R2 = _B1::I64;
+      R1 = T9157.Chunk01_closure;
+      call (stg_gc_fun)(R2, R1) args: 8, res: 0, upd: 8;
+  c1Ev:
+      I64[Hp - 8] = T9157.Chunk01_con_info;
+      I64[Hp] = _B1::I64;
+      _c1Er::P64 = Hp - 7;
+      R1 = _c1Er::P64;
+      call (P64[(old + 8)])(R1) args: 8, res: 0, upd: 8;
+}
+
+
+
+==================== Layout Stack ====================
+{offset
+  c1Es:
+      _B1::I64 = R2;
+      goto c1Eu;
+  c1Eu:
+      Hp = Hp + 16;
+      if (Hp > HpLim) goto c1Ew; else goto c1Ev;
+  c1Ew:
+      HpAlloc = 16;
+      goto c1Et;
+  c1Et:
+      R2 = _B1::I64;
+      R1 = T9157.Chunk01_closure;
+      call (stg_gc_fun)(R2, R1) args: 8, res: 0, upd: 8;
+  c1Ev:
+      I64[Hp - 8] = T9157.Chunk01_con_info;
+      I64[Hp] = _B1::I64;
+      _c1Er::P64 = Hp - 7;
+      R1 = _c1Er::P64;
+      call (P64[Sp])(R1) args: 8, res: 0, upd: 8;
+}
+
+
+
+==================== Sink assignments ====================
+{offset
+  c1Es:
+      goto c1Eu;
+  c1Eu:
+      Hp = Hp + 16;
+      if (Hp > HpLim) goto c1Ew; else goto c1Ev;
+  c1Ew:
+      HpAlloc = 16;
+      goto c1Et;
+  c1Et:
+      R2 = R2;
+      R1 = T9157.Chunk01_closure;
+      call (stg_gc_fun)(R2, R1) args: 8, res: 0, upd: 8;
+  c1Ev:
+      I64[Hp - 8] = T9157.Chunk01_con_info;
+      I64[Hp] = R2;
+      R1 = Hp - 7;
+      call (P64[Sp])(R1) args: 8, res: 0, upd: 8;
+}
+
+
+
+==================== CAFEnv ====================
+[(c1Es, {}), (c1Et, {}), (c1Eu, {}), (c1Ev, {}), (c1Ew, {})]
+
+
+
+==================== after setInfoTableStackMap ====================
+T9157.Chunk01_entry() //  [R2]
+        { info_tbl: [(c1Es,
+                      label: T9157.Chunk01_info
+                      rep:HeapRep static { Fun {arity: 1 fun_type: ArgSpec 4} })]
+          stack_info: arg_space: 8 updfr_space: Just 8
+        }
+    {offset
+      c1Es:
+          goto c1Eu;
+      c1Eu:
+          Hp = Hp + 16;
+          if (Hp > HpLim) goto c1Ew; else goto c1Ev;
+      c1Ew:
+          HpAlloc = 16;
+          goto c1Et;
+      c1Et:
+          R2 = R2;
+          R1 = T9157.Chunk01_closure;
+          call (stg_gc_fun)(R2, R1) args: 8, res: 0, upd: 8;
+      c1Ev:
+          I64[Hp - 8] = T9157.Chunk01_con_info;
+          I64[Hp] = R2;
+          R1 = Hp - 7;
+          call (P64[Sp])(R1) args: 8, res: 0, upd: 8;
+    }
+}
+
+
+
+==================== Post control-flow optimisations ====================
+T9157.Chunk01_entry() //  [R2]
+        { info_tbl: [(c1Es,
+                      label: T9157.Chunk01_info
+                      rep:HeapRep static { Fun {arity: 1 fun_type: ArgSpec 4} })]
+          stack_info: arg_space: 8 updfr_space: Just 8
+        }
+    {offset
+      c1Es:
+          Hp = Hp + 16;
+          if (Hp > HpLim) goto c1Ew; else goto c1Ev;
+      c1Ew:
+          HpAlloc = 16;
+          R2 = R2;
+          R1 = T9157.Chunk01_closure;
+          call (stg_gc_fun)(R2, R1) args: 8, res: 0, upd: 8;
+      c1Ev:
+          I64[Hp - 8] = T9157.Chunk01_con_info;
+          I64[Hp] = R2;
+          R1 = Hp - 7;
+          call (P64[Sp])(R1) args: 8, res: 0, upd: 8;
+    }
+}
+
+
+
+==================== Post CPS Cmm ====================
+[section "data" {
+     T9157.Chunk01_closure:
+         const T9157.Chunk01_info;
+ },
+ T9157.Chunk01_entry() //  [R2]
+         { info_tbl: [(c1Es,
+                       label: T9157.Chunk01_info
+                       rep:HeapRep static { Fun {arity: 1 fun_type: ArgSpec 4} })]
+           stack_info: arg_space: 8 updfr_space: Just 8
+         }
+     {offset
+       c1Es:
+           Hp = Hp + 16;
+           if (Hp > HpLim) goto c1Ew; else goto c1Ev;
+       c1Ew:
+           HpAlloc = 16;
+           R2 = R2;
+           R1 = T9157.Chunk01_closure;
+           call (stg_gc_fun)(R2, R1) args: 8, res: 0, upd: 8;
+       c1Ev:
+           I64[Hp - 8] = T9157.Chunk01_con_info;
+           I64[Hp] = R2;
+           R1 = Hp - 7;
+           call (P64[Sp])(R1) args: 8, res: 0, upd: 8;
+     }
+ }]
+
+
+
+==================== Output Cmm ====================
+[section "data" {
+     T9157.Chunk01_closure:
+         const T9157.Chunk01_info;
+ },
+ T9157.Chunk01_entry() //  [R2]
+         { info_tbl: [(c1Es,
+                       label: T9157.Chunk01_info
+                       rep:HeapRep static { Fun {arity: 1 fun_type: ArgSpec 4} })]
+           stack_info: arg_space: 8 updfr_space: Just 8
+         }
+     {offset
+       c1Es:
+           Hp = Hp + 16;
+           if (Hp > HpLim) goto c1Ew; else goto c1Ev;
+       c1Ew:
+           HpAlloc = 16;
+           R2 = R2;
+           R1 = T9157.Chunk01_closure;
+           call (stg_gc_fun)(R2, R1) args: 8, res: 0, upd: 8;
+       c1Ev:
+           I64[Hp - 8] = T9157.Chunk01_con_info;
+           I64[Hp] = R2;
+           R1 = Hp - 7;
+           call (P64[Sp])(R1) args: 8, res: 0, upd: 8;
+     }
+ }]
+
+
+
+==================== Cmm produced by new codegen ====================
+[section "data" {
+     T9157.Chunk02_closure:
+         const T9157.Chunk02_info;
+ },
+ T9157.Chunk02_entry() //  [R2]
+         { info_tbl: [(c1EG,
+                       label: T9157.Chunk02_info
+                       rep:HeapRep static { Fun {arity: 1 fun_type: ArgSpec 4} })]
+           stack_info: arg_space: 8 updfr_space: Just 8
+         }
+     {offset
+       c1EG:
+           _B1::I64 = R2;
+           goto c1ED;
+       c1ED:
+           if ((old + 0) - <highSp> < SpLim) goto c1EH; else goto c1EI;
+       c1EI:
+           goto c1EC;
+       c1EC:
+           Hp = Hp + 16;
+           if (Hp > HpLim) goto c1EK; else goto c1EJ;
+       c1EK:
+           HpAlloc = 16;
+           goto c1EH;
+       c1EH:
+           R2 = _B1::I64;
+           R1 = T9157.Chunk02_closure;
+           call (stg_gc_fun)(R2, R1) args: 8, res: 0, upd: 8;
+       c1EJ:
+           I64[Hp - 8] = T9157.Chunk02_con_info;
+           I64[Hp] = _B1::I64;
+           _c1EF::P64 = Hp - 7;
+           R1 = _c1EF::P64;
+           call (P64[(old + 8)])(R1) args: 8, res: 0, upd: 8;
+     }
+ }]
+
+
+
+==================== Post control-flow optimisations ====================
+{offset
+  c1EG:
+      _B1::I64 = R2;
+      if ((old + 0) - <highSp> < SpLim) goto c1EH; else goto c1EI;
+  c1EI:
+      Hp = Hp + 16;
+      if (Hp > HpLim) goto c1EK; else goto c1EJ;
+  c1EK:
+      HpAlloc = 16;
+      goto c1EH;
+  c1EH:
+      R2 = _B1::I64;
+      R1 = T9157.Chunk02_closure;
+      call (stg_gc_fun)(R2, R1) args: 8, res: 0, upd: 8;
+  c1EJ:
+      I64[Hp - 8] = T9157.Chunk02_con_info;
+      I64[Hp] = _B1::I64;
+      _c1EF::P64 = Hp - 7;
+      R1 = _c1EF::P64;
+      call (P64[(old + 8)])(R1) args: 8, res: 0, upd: 8;
+}
+
+
+
+==================== Post common block elimination ====================
+{offset
+  c1EG:
+      _B1::I64 = R2;
+      if ((old + 0) - <highSp> < SpLim) goto c1EH; else goto c1EI;
+  c1EI:
+      Hp = Hp + 16;
+      if (Hp > HpLim) goto c1EK; else goto c1EJ;
+  c1EK:
+      HpAlloc = 16;
+      goto c1EH;
+  c1EH:
+      R2 = _B1::I64;
+      R1 = T9157.Chunk02_closure;
+      call (stg_gc_fun)(R2, R1) args: 8, res: 0, upd: 8;
+  c1EJ:
+      I64[Hp - 8] = T9157.Chunk02_con_info;
+      I64[Hp] = _B1::I64;
+      _c1EF::P64 = Hp - 7;
+      R1 = _c1EF::P64;
+      call (P64[(old + 8)])(R1) args: 8, res: 0, upd: 8;
+}
+
+
+
+==================== Layout Stack ====================
+{offset
+  c1EG:
+      _B1::I64 = R2;
+      goto c1EI;
+  c1EI:
+      Hp = Hp + 16;
+      if (Hp > HpLim) goto c1EK; else goto c1EJ;
+  c1EK:
+      HpAlloc = 16;
+      goto c1EH;
+  c1EH:
+      R2 = _B1::I64;
+      R1 = T9157.Chunk02_closure;
+      call (stg_gc_fun)(R2, R1) args: 8, res: 0, upd: 8;
+  c1EJ:
+      I64[Hp - 8] = T9157.Chunk02_con_info;
+      I64[Hp] = _B1::I64;
+      _c1EF::P64 = Hp - 7;
+      R1 = _c1EF::P64;
+      call (P64[Sp])(R1) args: 8, res: 0, upd: 8;
+}
+
+
+
+==================== Sink assignments ====================
+{offset
+  c1EG:
+      goto c1EI;
+  c1EI:
+      Hp = Hp + 16;
+      if (Hp > HpLim) goto c1EK; else goto c1EJ;
+  c1EK:
+      HpAlloc = 16;
+      goto c1EH;
+  c1EH:
+      R2 = R2;
+      R1 = T9157.Chunk02_closure;
+      call (stg_gc_fun)(R2, R1) args: 8, res: 0, upd: 8;
+  c1EJ:
+      I64[Hp - 8] = T9157.Chunk02_con_info;
+      I64[Hp] = R2;
+      R1 = Hp - 7;
+      call (P64[Sp])(R1) args: 8, res: 0, upd: 8;
+}
+
+
+
+==================== CAFEnv ====================
+[(c1EG, {}), (c1EH, {}), (c1EI, {}), (c1EJ, {}), (c1EK, {})]
+
+
+
+==================== after setInfoTableStackMap ====================
+T9157.Chunk02_entry() //  [R2]
+        { info_tbl: [(c1EG,
+                      label: T9157.Chunk02_info
+                      rep:HeapRep static { Fun {arity: 1 fun_type: ArgSpec 4} })]
+          stack_info: arg_space: 8 updfr_space: Just 8
+        }
+    {offset
+      c1EG:
+          goto c1EI;
+      c1EI:
+          Hp = Hp + 16;
+          if (Hp > HpLim) goto c1EK; else goto c1EJ;
+      c1EK:
+          HpAlloc = 16;
+          goto c1EH;
+      c1EH:
+          R2 = R2;
+          R1 = T9157.Chunk02_closure;
+          call (stg_gc_fun)(R2, R1) args: 8, res: 0, upd: 8;
+      c1EJ:
+          I64[Hp - 8] = T9157.Chunk02_con_info;
+          I64[Hp] = R2;
+          R1 = Hp - 7;
+          call (P64[Sp])(R1) args: 8, res: 0, upd: 8;
+    }
+}
+
+
+
+==================== Post control-flow optimisations ====================
+T9157.Chunk02_entry() //  [R2]
+        { info_tbl: [(c1EG,
+                      label: T9157.Chunk02_info
+                      rep:HeapRep static { Fun {arity: 1 fun_type: ArgSpec 4} })]
+          stack_info: arg_space: 8 updfr_space: Just 8
+        }
+    {offset
+      c1EG:
+          Hp = Hp + 16;
+          if (Hp > HpLim) goto c1EK; else goto c1EJ;
+      c1EK:
+          HpAlloc = 16;
+          R2 = R2;
+          R1 = T9157.Chunk02_closure;
+          call (stg_gc_fun)(R2, R1) args: 8, res: 0, upd: 8;
+      c1EJ:
+          I64[Hp - 8] = T9157.Chunk02_con_info;
+          I64[Hp] = R2;
+          R1 = Hp - 7;
+          call (P64[Sp])(R1) args: 8, res: 0, upd: 8;
+    }
+}
+
+
+
+==================== Post CPS Cmm ====================
+[section "data" {
+     T9157.Chunk02_closure:
+         const T9157.Chunk02_info;
+ },
+ T9157.Chunk02_entry() //  [R2]
+         { info_tbl: [(c1EG,
+                       label: T9157.Chunk02_info
+                       rep:HeapRep static { Fun {arity: 1 fun_type: ArgSpec 4} })]
+           stack_info: arg_space: 8 updfr_space: Just 8
+         }
+     {offset
+       c1EG:
+           Hp = Hp + 16;
+           if (Hp > HpLim) goto c1EK; else goto c1EJ;
+       c1EK:
+           HpAlloc = 16;
+           R2 = R2;
+           R1 = T9157.Chunk02_closure;
+           call (stg_gc_fun)(R2, R1) args: 8, res: 0, upd: 8;
+       c1EJ:
+           I64[Hp - 8] = T9157.Chunk02_con_info;
+           I64[Hp] = R2;
+           R1 = Hp - 7;
+           call (P64[Sp])(R1) args: 8, res: 0, upd: 8;
+     }
+ }]
+
+
+
+==================== Output Cmm ====================
+[section "data" {
+     T9157.Chunk02_closure:
+         const T9157.Chunk02_info;
+ },
+ T9157.Chunk02_entry() //  [R2]
+         { info_tbl: [(c1EG,
+                       label: T9157.Chunk02_info
+                       rep:HeapRep static { Fun {arity: 1 fun_type: ArgSpec 4} })]
+           stack_info: arg_space: 8 updfr_space: Just 8
+         }
+     {offset
+       c1EG:
+           Hp = Hp + 16;
+           if (Hp > HpLim) goto c1EK; else goto c1EJ;
+       c1EK:
+           HpAlloc = 16;
+           R2 = R2;
+           R1 = T9157.Chunk02_closure;
+           call (stg_gc_fun)(R2, R1) args: 8, res: 0, upd: 8;
+       c1EJ:
+           I64[Hp - 8] = T9157.Chunk02_con_info;
+           I64[Hp] = R2;
+           R1 = Hp - 7;
+           call (P64[Sp])(R1) args: 8, res: 0, upd: 8;
+     }
+ }]
+
+
+
+==================== Cmm produced by new codegen ====================
+[section "data" {
+     T9157.Chunk03_closure:
+         const T9157.Chunk03_info;
+ },
+ T9157.Chunk03_entry() //  [R2]
+         { info_tbl: [(c1EU,
+                       label: T9157.Chunk03_info
+                       rep:HeapRep static { Fun {arity: 1 fun_type: ArgSpec 4} })]
+           stack_info: arg_space: 8 updfr_space: Just 8
+         }
+     {offset
+       c1EU:
+           _B1::I64 = R2;
+           goto c1ER;
+       c1ER:
+           if ((old + 0) - <highSp> < SpLim) goto c1EV; else goto c1EW;
+       c1EW:
+           goto c1EQ;
+       c1EQ:
+           Hp = Hp + 16;
+           if (Hp > HpLim) goto c1EY; else goto c1EX;
+       c1EY:
+           HpAlloc = 16;
+           goto c1EV;
+       c1EV:
+           R2 = _B1::I64;
+           R1 = T9157.Chunk03_closure;
+           call (stg_gc_fun)(R2, R1) args: 8, res: 0, upd: 8;
+       c1EX:
+           I64[Hp - 8] = T9157.Chunk03_con_info;
+           I64[Hp] = _B1::I64;
+           _c1ET::P64 = Hp - 7;
+           R1 = _c1ET::P64;
+           call (P64[(old + 8)])(R1) args: 8, res: 0, upd: 8;
+     }
+ }]
+
+
+
+==================== Post control-flow optimisations ====================
+{offset
+  c1EU:
+      _B1::I64 = R2;
+      if ((old + 0) - <highSp> < SpLim) goto c1EV; else goto c1EW;
+  c1EW:
+      Hp = Hp + 16;
+      if (Hp > HpLim) goto c1EY; else goto c1EX;
+  c1EY:
+      HpAlloc = 16;
+      goto c1EV;
+  c1EV:
+      R2 = _B1::I64;
+      R1 = T9157.Chunk03_closure;
+      call (stg_gc_fun)(R2, R1) args: 8, res: 0, upd: 8;
+  c1EX:
+      I64[Hp - 8] = T9157.Chunk03_con_info;
+      I64[Hp] = _B1::I64;
+      _c1ET::P64 = Hp - 7;
+      R1 = _c1ET::P64;
+      call (P64[(old + 8)])(R1) args: 8, res: 0, upd: 8;
+}
+
+
+
+==================== Post common block elimination ====================
+{offset
+  c1EU:
+      _B1::I64 = R2;
+      if ((old + 0) - <highSp> < SpLim) goto c1EV; else goto c1EW;
+  c1EW:
+      Hp = Hp + 16;
+      if (Hp > HpLim) goto c1EY; else goto c1EX;
+  c1EY:
+      HpAlloc = 16;
+      goto c1EV;
+  c1EV:
+      R2 = _B1::I64;
+      R1 = T9157.Chunk03_closure;
+      call (stg_gc_fun)(R2, R1) args: 8, res: 0, upd: 8;
+  c1EX:
+      I64[Hp - 8] = T9157.Chunk03_con_info;
+      I64[Hp] = _B1::I64;
+      _c1ET::P64 = Hp - 7;
+      R1 = _c1ET::P64;
+      call (P64[(old + 8)])(R1) args: 8, res: 0, upd: 8;
+}
+
+
+
+==================== Layout Stack ====================
+{offset
+  c1EU:
+      _B1::I64 = R2;
+      goto c1EW;
+  c1EW:
+      Hp = Hp + 16;
+      if (Hp > HpLim) goto c1EY; else goto c1EX;
+  c1EY:
+      HpAlloc = 16;
+      goto c1EV;
+  c1EV:
+      R2 = _B1::I64;
+      R1 = T9157.Chunk03_closure;
+      call (stg_gc_fun)(R2, R1) args: 8, res: 0, upd: 8;
+  c1EX:
+      I64[Hp - 8] = T9157.Chunk03_con_info;
+      I64[Hp] = _B1::I64;
+      _c1ET::P64 = Hp - 7;
+      R1 = _c1ET::P64;
+      call (P64[Sp])(R1) args: 8, res: 0, upd: 8;
+}
+
+
+
+==================== Sink assignments ====================
+{offset
+  c1EU:
+      goto c1EW;
+  c1EW:
+      Hp = Hp + 16;
+      if (Hp > HpLim) goto c1EY; else goto c1EX;
+  c1EY:
+      HpAlloc = 16;
+      goto c1EV;
+  c1EV:
+      R2 = R2;
+      R1 = T9157.Chunk03_closure;
+      call (stg_gc_fun)(R2, R1) args: 8, res: 0, upd: 8;
+  c1EX:
+      I64[Hp - 8] = T9157.Chunk03_con_info;
+      I64[Hp] = R2;
+      R1 = Hp - 7;
+      call (P64[Sp])(R1) args: 8, res: 0, upd: 8;
+}
+
+
+
+==================== CAFEnv ====================
+[(c1EU, {}), (c1EV, {}), (c1EW, {}), (c1EX, {}), (c1EY, {})]
+
+
+
+==================== after setInfoTableStackMap ====================
+T9157.Chunk03_entry() //  [R2]
+        { info_tbl: [(c1EU,
+                      label: T9157.Chunk03_info
+                      rep:HeapRep static { Fun {arity: 1 fun_type: ArgSpec 4} })]
+          stack_info: arg_space: 8 updfr_space: Just 8
+        }
+    {offset
+      c1EU:
+          goto c1EW;
+      c1EW:
+          Hp = Hp + 16;
+          if (Hp > HpLim) goto c1EY; else goto c1EX;
+      c1EY:
+          HpAlloc = 16;
+          goto c1EV;
+      c1EV:
+          R2 = R2;
+          R1 = T9157.Chunk03_closure;
+          call (stg_gc_fun)(R2, R1) args: 8, res: 0, upd: 8;
+      c1EX:
+          I64[Hp - 8] = T9157.Chunk03_con_info;
+          I64[Hp] = R2;
+          R1 = Hp - 7;
+          call (P64[Sp])(R1) args: 8, res: 0, upd: 8;
+    }
+}
+
+
+
+==================== Post control-flow optimisations ====================
+T9157.Chunk03_entry() //  [R2]
+        { info_tbl: [(c1EU,
+                      label: T9157.Chunk03_info
+                      rep:HeapRep static { Fun {arity: 1 fun_type: ArgSpec 4} })]
+          stack_info: arg_space: 8 updfr_space: Just 8
+        }
+    {offset
+      c1EU:
+          Hp = Hp + 16;
+          if (Hp > HpLim) goto c1EY; else goto c1EX;
+      c1EY:
+          HpAlloc = 16;
+          R2 = R2;
+          R1 = T9157.Chunk03_closure;
+          call (stg_gc_fun)(R2, R1) args: 8, res: 0, upd: 8;
+      c1EX:
+          I64[Hp - 8] = T9157.Chunk03_con_info;
+          I64[Hp] = R2;
+          R1 = Hp - 7;
+          call (P64[Sp])(R1) args: 8, res: 0, upd: 8;
+    }
+}
+
+
+
+==================== Post CPS Cmm ====================
+[section "data" {
+     T9157.Chunk03_closure:
+         const T9157.Chunk03_info;
+ },
+ T9157.Chunk03_entry() //  [R2]
+         { info_tbl: [(c1EU,
+                       label: T9157.Chunk03_info
+                       rep:HeapRep static { Fun {arity: 1 fun_type: ArgSpec 4} })]
+           stack_info: arg_space: 8 updfr_space: Just 8
+         }
+     {offset
+       c1EU:
+           Hp = Hp + 16;
+           if (Hp > HpLim) goto c1EY; else goto c1EX;
+       c1EY:
+           HpAlloc = 16;
+           R2 = R2;
+           R1 = T9157.Chunk03_closure;
+           call (stg_gc_fun)(R2, R1) args: 8, res: 0, upd: 8;
+       c1EX:
+           I64[Hp - 8] = T9157.Chunk03_con_info;
+           I64[Hp] = R2;
+           R1 = Hp - 7;
+           call (P64[Sp])(R1) args: 8, res: 0, upd: 8;
+     }
+ }]
+
+
+
+==================== Output Cmm ====================
+[section "data" {
+     T9157.Chunk03_closure:
+         const T9157.Chunk03_info;
+ },
+ T9157.Chunk03_entry() //  [R2]
+         { info_tbl: [(c1EU,
+                       label: T9157.Chunk03_info
+                       rep:HeapRep static { Fun {arity: 1 fun_type: ArgSpec 4} })]
+           stack_info: arg_space: 8 updfr_space: Just 8
+         }
+     {offset
+       c1EU:
+           Hp = Hp + 16;
+           if (Hp > HpLim) goto c1EY; else goto c1EX;
+       c1EY:
+           HpAlloc = 16;
+           R2 = R2;
+           R1 = T9157.Chunk03_closure;
+           call (stg_gc_fun)(R2, R1) args: 8, res: 0, upd: 8;
+       c1EX:
+           I64[Hp - 8] = T9157.Chunk03_con_info;
+           I64[Hp] = R2;
+           R1 = Hp - 7;
+           call (P64[Sp])(R1) args: 8, res: 0, upd: 8;
+     }
+ }]
+
+
+
+==================== Cmm produced by new codegen ====================
+[section "data" {
+     T9157.Chunk04_closure:
+         const T9157.Chunk04_info;
+ },
+ T9157.Chunk04_entry() //  [R2]
+         { info_tbl: [(c1F8,
+                       label: T9157.Chunk04_info
+                       rep:HeapRep static { Fun {arity: 1 fun_type: ArgSpec 4} })]
+           stack_info: arg_space: 8 updfr_space: Just 8
+         }
+     {offset
+       c1F8:
+           _B1::I64 = R2;
+           goto c1F5;
+       c1F5:
+           if ((old + 0) - <highSp> < SpLim) goto c1F9; else goto c1Fa;
+       c1Fa:
+           goto c1F4;
+       c1F4:
+           Hp = Hp + 16;
+           if (Hp > HpLim) goto c1Fc; else goto c1Fb;
+       c1Fc:
+           HpAlloc = 16;
+           goto c1F9;
+       c1F9:
+           R2 = _B1::I64;
+           R1 = T9157.Chunk04_closure;
+           call (stg_gc_fun)(R2, R1) args: 8, res: 0, upd: 8;
+       c1Fb:
+           I64[Hp - 8] = T9157.Chunk04_con_info;
+           I64[Hp] = _B1::I64;
+           _c1F7::P64 = Hp - 7;
+           R1 = _c1F7::P64;
+           call (P64[(old + 8)])(R1) args: 8, res: 0, upd: 8;
+     }
+ }]
+
+
+
+==================== Post control-flow optimisations ====================
+{offset
+  c1F8:
+      _B1::I64 = R2;
+      if ((old + 0) - <highSp> < SpLim) goto c1F9; else goto c1Fa;
+  c1Fa:
+      Hp = Hp + 16;
+      if (Hp > HpLim) goto c1Fc; else goto c1Fb;
+  c1Fc:
+      HpAlloc = 16;
+      goto c1F9;
+  c1F9:
+      R2 = _B1::I64;
+      R1 = T9157.Chunk04_closure;
+      call (stg_gc_fun)(R2, R1) args: 8, res: 0, upd: 8;
+  c1Fb:
+      I64[Hp - 8] = T9157.Chunk04_con_info;
+      I64[Hp] = _B1::I64;
+      _c1F7::P64 = Hp - 7;
+      R1 = _c1F7::P64;
+      call (P64[(old + 8)])(R1) args: 8, res: 0, upd: 8;
+}
+
+
+
+==================== Post common block elimination ====================
+{offset
+  c1F8:
+      _B1::I64 = R2;
+      if ((old + 0) - <highSp> < SpLim) goto c1F9; else goto c1Fa;
+  c1Fa:
+      Hp = Hp + 16;
+      if (Hp > HpLim) goto c1Fc; else goto c1Fb;
+  c1Fc:
+      HpAlloc = 16;
+      goto c1F9;
+  c1F9:
+      R2 = _B1::I64;
+      R1 = T9157.Chunk04_closure;
+      call (stg_gc_fun)(R2, R1) args: 8, res: 0, upd: 8;
+  c1Fb:
+      I64[Hp - 8] = T9157.Chunk04_con_info;
+      I64[Hp] = _B1::I64;
+      _c1F7::P64 = Hp - 7;
+      R1 = _c1F7::P64;
+      call (P64[(old + 8)])(R1) args: 8, res: 0, upd: 8;
+}
+
+
+
+==================== Layout Stack ====================
+{offset
+  c1F8:
+      _B1::I64 = R2;
+      goto c1Fa;
+  c1Fa:
+      Hp = Hp + 16;
+      if (Hp > HpLim) goto c1Fc; else goto c1Fb;
+  c1Fc:
+      HpAlloc = 16;
+      goto c1F9;
+  c1F9:
+      R2 = _B1::I64;
+      R1 = T9157.Chunk04_closure;
+      call (stg_gc_fun)(R2, R1) args: 8, res: 0, upd: 8;
+  c1Fb:
+      I64[Hp - 8] = T9157.Chunk04_con_info;
+      I64[Hp] = _B1::I64;
+      _c1F7::P64 = Hp - 7;
+      R1 = _c1F7::P64;
+      call (P64[Sp])(R1) args: 8, res: 0, upd: 8;
+}
+
+
+
+==================== Sink assignments ====================
+{offset
+  c1F8:
+      goto c1Fa;
+  c1Fa:
+      Hp = Hp + 16;
+      if (Hp > HpLim) goto c1Fc; else goto c1Fb;
+  c1Fc:
+      HpAlloc = 16;
+      goto c1F9;
+  c1F9:
+      R2 = R2;
+      R1 = T9157.Chunk04_closure;
+      call (stg_gc_fun)(R2, R1) args: 8, res: 0, upd: 8;
+  c1Fb:
+      I64[Hp - 8] = T9157.Chunk04_con_info;
+      I64[Hp] = R2;
+      R1 = Hp - 7;
+      call (P64[Sp])(R1) args: 8, res: 0, upd: 8;
+}
+
+
+
+==================== CAFEnv ====================
+[(c1F8, {}), (c1F9, {}), (c1Fa, {}), (c1Fb, {}), (c1Fc, {})]
+
+
+
+==================== after setInfoTableStackMap ====================
+T9157.Chunk04_entry() //  [R2]
+        { info_tbl: [(c1F8,
+                      label: T9157.Chunk04_info
+                      rep:HeapRep static { Fun {arity: 1 fun_type: ArgSpec 4} })]
+          stack_info: arg_space: 8 updfr_space: Just 8
+        }
+    {offset
+      c1F8:
+          goto c1Fa;
+      c1Fa:
+          Hp = Hp + 16;
+          if (Hp > HpLim) goto c1Fc; else goto c1Fb;
+      c1Fc:
+          HpAlloc = 16;
+          goto c1F9;
+      c1F9:
+          R2 = R2;
+          R1 = T9157.Chunk04_closure;
+          call (stg_gc_fun)(R2, R1) args: 8, res: 0, upd: 8;
+      c1Fb:
+          I64[Hp - 8] = T9157.Chunk04_con_info;
+          I64[Hp] = R2;
+          R1 = Hp - 7;
+          call (P64[Sp])(R1) args: 8, res: 0, upd: 8;
+    }
+}
+
+
+
+==================== Post control-flow optimisations ====================
+T9157.Chunk04_entry() //  [R2]
+        { info_tbl: [(c1F8,
+                      label: T9157.Chunk04_info
+                      rep:HeapRep static { Fun {arity: 1 fun_type: ArgSpec 4} })]
+          stack_info: arg_space: 8 updfr_space: Just 8
+        }
+    {offset
+      c1F8:
+          Hp = Hp + 16;
+          if (Hp > HpLim) goto c1Fc; else goto c1Fb;
+      c1Fc:
+          HpAlloc = 16;
+          R2 = R2;
+          R1 = T9157.Chunk04_closure;
+          call (stg_gc_fun)(R2, R1) args: 8, res: 0, upd: 8;
+      c1Fb:
+          I64[Hp - 8] = T9157.Chunk04_con_info;
+          I64[Hp] = R2;
+          R1 = Hp - 7;
+          call (P64[Sp])(R1) args: 8, res: 0, upd: 8;
+    }
+}
+
+
+
+==================== Post CPS Cmm ====================
+[section "data" {
+     T9157.Chunk04_closure:
+         const T9157.Chunk04_info;
+ },
+ T9157.Chunk04_entry() //  [R2]
+         { info_tbl: [(c1F8,
+                       label: T9157.Chunk04_info
+                       rep:HeapRep static { Fun {arity: 1 fun_type: ArgSpec 4} })]
+           stack_info: arg_space: 8 updfr_space: Just 8
+         }
+     {offset
+       c1F8:
+           Hp = Hp + 16;
+           if (Hp > HpLim) goto c1Fc; else goto c1Fb;
+       c1Fc:
+           HpAlloc = 16;
+           R2 = R2;
+           R1 = T9157.Chunk04_closure;
+           call (stg_gc_fun)(R2, R1) args: 8, res: 0, upd: 8;
+       c1Fb:
+           I64[Hp - 8] = T9157.Chunk04_con_info;
+           I64[Hp] = R2;
+           R1 = Hp - 7;
+           call (P64[Sp])(R1) args: 8, res: 0, upd: 8;
+     }
+ }]
+
+
+
+==================== Output Cmm ====================
+[section "data" {
+     T9157.Chunk04_closure:
+         const T9157.Chunk04_info;
+ },
+ T9157.Chunk04_entry() //  [R2]
+         { info_tbl: [(c1F8,
+                       label: T9157.Chunk04_info
+                       rep:HeapRep static { Fun {arity: 1 fun_type: ArgSpec 4} })]
+           stack_info: arg_space: 8 updfr_space: Just 8
+         }
+     {offset
+       c1F8:
+           Hp = Hp + 16;
+           if (Hp > HpLim) goto c1Fc; else goto c1Fb;
+       c1Fc:
+           HpAlloc = 16;
+           R2 = R2;
+           R1 = T9157.Chunk04_closure;
+           call (stg_gc_fun)(R2, R1) args: 8, res: 0, upd: 8;
+       c1Fb:
+           I64[Hp - 8] = T9157.Chunk04_con_info;
+           I64[Hp] = R2;
+           R1 = Hp - 7;
+           call (P64[Sp])(R1) args: 8, res: 0, upd: 8;
+     }
+ }]
+
+
+
+==================== Cmm produced by new codegen ====================
+[section "data" {
+     T9157.Chunk05_closure:
+         const T9157.Chunk05_info;
+ },
+ T9157.Chunk05_entry() //  [R2]
+         { info_tbl: [(c1Fm,
+                       label: T9157.Chunk05_info
+                       rep:HeapRep static { Fun {arity: 1 fun_type: ArgSpec 4} })]
+           stack_info: arg_space: 8 updfr_space: Just 8
+         }
+     {offset
+       c1Fm:
+           _B1::I64 = R2;
+           goto c1Fj;
+       c1Fj:
+           if ((old + 0) - <highSp> < SpLim) goto c1Fn; else goto c1Fo;
+       c1Fo:
+           goto c1Fi;
+       c1Fi:
+           Hp = Hp + 16;
+           if (Hp > HpLim) goto c1Fq; else goto c1Fp;
+       c1Fq:
+           HpAlloc = 16;
+           goto c1Fn;
+       c1Fn:
+           R2 = _B1::I64;
+           R1 = T9157.Chunk05_closure;
+           call (stg_gc_fun)(R2, R1) args: 8, res: 0, upd: 8;
+       c1Fp:
+           I64[Hp - 8] = T9157.Chunk05_con_info;
+           I64[Hp] = _B1::I64;
+           _c1Fl::P64 = Hp - 7;
+           R1 = _c1Fl::P64;
+           call (P64[(old + 8)])(R1) args: 8, res: 0, upd: 8;
+     }
+ }]
+
+
+
+==================== Post control-flow optimisations ====================
+{offset
+  c1Fm:
+      _B1::I64 = R2;
+      if ((old + 0) - <highSp> < SpLim) goto c1Fn; else goto c1Fo;
+  c1Fo:
+      Hp = Hp + 16;
+      if (Hp > HpLim) goto c1Fq; else goto c1Fp;
+  c1Fq:
+      HpAlloc = 16;
+      goto c1Fn;
+  c1Fn:
+      R2 = _B1::I64;
+      R1 = T9157.Chunk05_closure;
+      call (stg_gc_fun)(R2, R1) args: 8, res: 0, upd: 8;
+  c1Fp:
+      I64[Hp - 8] = T9157.Chunk05_con_info;
+      I64[Hp] = _B1::I64;
+      _c1Fl::P64 = Hp - 7;
+      R1 = _c1Fl::P64;
+      call (P64[(old + 8)])(R1) args: 8, res: 0, upd: 8;
+}
+
+
+
+==================== Post common block elimination ====================
+{offset
+  c1Fm:
+      _B1::I64 = R2;
+      if ((old + 0) - <highSp> < SpLim) goto c1Fn; else goto c1Fo;
+  c1Fo:
+      Hp = Hp + 16;
+      if (Hp > HpLim) goto c1Fq; else goto c1Fp;
+  c1Fq:
+      HpAlloc = 16;
+      goto c1Fn;
+  c1Fn:
+      R2 = _B1::I64;
+      R1 = T9157.Chunk05_closure;
+      call (stg_gc_fun)(R2, R1) args: 8, res: 0, upd: 8;
+  c1Fp:
+      I64[Hp - 8] = T9157.Chunk05_con_info;
+      I64[Hp] = _B1::I64;
+      _c1Fl::P64 = Hp - 7;
+      R1 = _c1Fl::P64;
+      call (P64[(old + 8)])(R1) args: 8, res: 0, upd: 8;
+}
+
+
+
+==================== Layout Stack ====================
+{offset
+  c1Fm:
+      _B1::I64 = R2;
+      goto c1Fo;
+  c1Fo:
+      Hp = Hp + 16;
+      if (Hp > HpLim) goto c1Fq; else goto c1Fp;
+  c1Fq:
+      HpAlloc = 16;
+      goto c1Fn;
+  c1Fn:
+      R2 = _B1::I64;
+      R1 = T9157.Chunk05_closure;
+      call (stg_gc_fun)(R2, R1) args: 8, res: 0, upd: 8;
+  c1Fp:
+      I64[Hp - 8] = T9157.Chunk05_con_info;
+      I64[Hp] = _B1::I64;
+      _c1Fl::P64 = Hp - 7;
+      R1 = _c1Fl::P64;
+      call (P64[Sp])(R1) args: 8, res: 0, upd: 8;
+}
+
+
+
+==================== Sink assignments ====================
+{offset
+  c1Fm:
+      goto c1Fo;
+  c1Fo:
+      Hp = Hp + 16;
+      if (Hp > HpLim) goto c1Fq; else goto c1Fp;
+  c1Fq:
+      HpAlloc = 16;
+      goto c1Fn;
+  c1Fn:
+      R2 = R2;
+      R1 = T9157.Chunk05_closure;
+      call (stg_gc_fun)(R2, R1) args: 8, res: 0, upd: 8;
+  c1Fp:
+      I64[Hp - 8] = T9157.Chunk05_con_info;
+      I64[Hp] = R2;
+      R1 = Hp - 7;
+      call (P64[Sp])(R1) args: 8, res: 0, upd: 8;
+}
+
+
+
+==================== CAFEnv ====================
+[(c1Fm, {}), (c1Fn, {}), (c1Fo, {}), (c1Fp, {}), (c1Fq, {})]
+
+
+
+==================== after setInfoTableStackMap ====================
+T9157.Chunk05_entry() //  [R2]
+        { info_tbl: [(c1Fm,
+                      label: T9157.Chunk05_info
+                      rep:HeapRep static { Fun {arity: 1 fun_type: ArgSpec 4} })]
+          stack_info: arg_space: 8 updfr_space: Just 8
+        }
+    {offset
+      c1Fm:
+          goto c1Fo;
+      c1Fo:
+          Hp = Hp + 16;
+          if (Hp > HpLim) goto c1Fq; else goto c1Fp;
+      c1Fq:
+          HpAlloc = 16;
+          goto c1Fn;
+      c1Fn:
+          R2 = R2;
+          R1 = T9157.Chunk05_closure;
+          call (stg_gc_fun)(R2, R1) args: 8, res: 0, upd: 8;
+      c1Fp:
+          I64[Hp - 8] = T9157.Chunk05_con_info;
+          I64[Hp] = R2;
+          R1 = Hp - 7;
+          call (P64[Sp])(R1) args: 8, res: 0, upd: 8;
+    }
+}
+
+
+
+==================== Post control-flow optimisations ====================
+T9157.Chunk05_entry() //  [R2]
+        { info_tbl: [(c1Fm,
+                      label: T9157.Chunk05_info
+                      rep:HeapRep static { Fun {arity: 1 fun_type: ArgSpec 4} })]
+          stack_info: arg_space: 8 updfr_space: Just 8
+        }
+    {offset
+      c1Fm:
+          Hp = Hp + 16;
+          if (Hp > HpLim) goto c1Fq; else goto c1Fp;
+      c1Fq:
+          HpAlloc = 16;
+          R2 = R2;
+          R1 = T9157.Chunk05_closure;
+          call (stg_gc_fun)(R2, R1) args: 8, res: 0, upd: 8;
+      c1Fp:
+          I64[Hp - 8] = T9157.Chunk05_con_info;
+          I64[Hp] = R2;
+          R1 = Hp - 7;
+          call (P64[Sp])(R1) args: 8, res: 0, upd: 8;
+    }
+}
+
+
+
+==================== Post CPS Cmm ====================
+[section "data" {
+     T9157.Chunk05_closure:
+         const T9157.Chunk05_info;
+ },
+ T9157.Chunk05_entry() //  [R2]
+         { info_tbl: [(c1Fm,
+                       label: T9157.Chunk05_info
+                       rep:HeapRep static { Fun {arity: 1 fun_type: ArgSpec 4} })]
+           stack_info: arg_space: 8 updfr_space: Just 8
+         }
+     {offset
+       c1Fm:
+           Hp = Hp + 16;
+           if (Hp > HpLim) goto c1Fq; else goto c1Fp;
+       c1Fq:
+           HpAlloc = 16;
+           R2 = R2;
+           R1 = T9157.Chunk05_closure;
+           call (stg_gc_fun)(R2, R1) args: 8, res: 0, upd: 8;
+       c1Fp:
+           I64[Hp - 8] = T9157.Chunk05_con_info;
+           I64[Hp] = R2;
+           R1 = Hp - 7;
+           call (P64[Sp])(R1) args: 8, res: 0, upd: 8;
+     }
+ }]
+
+
+
+==================== Output Cmm ====================
+[section "data" {
+     T9157.Chunk05_closure:
+         const T9157.Chunk05_info;
+ },
+ T9157.Chunk05_entry() //  [R2]
+         { info_tbl: [(c1Fm,
+                       label: T9157.Chunk05_info
+                       rep:HeapRep static { Fun {arity: 1 fun_type: ArgSpec 4} })]
+           stack_info: arg_space: 8 updfr_space: Just 8
+         }
+     {offset
+       c1Fm:
+           Hp = Hp + 16;
+           if (Hp > HpLim) goto c1Fq; else goto c1Fp;
+       c1Fq:
+           HpAlloc = 16;
+           R2 = R2;
+           R1 = T9157.Chunk05_closure;
+           call (stg_gc_fun)(R2, R1) args: 8, res: 0, upd: 8;
+       c1Fp:
+           I64[Hp - 8] = T9157.Chunk05_con_info;
+           I64[Hp] = R2;
+           R1 = Hp - 7;
+           call (P64[Sp])(R1) args: 8, res: 0, upd: 8;
+     }
+ }]
+
+
+
+==================== Cmm produced by new codegen ====================
+[section "data" {
+     T9157.Chunk06_closure:
+         const T9157.Chunk06_info;
+ },
+ T9157.Chunk06_entry() //  [R2]
+         { info_tbl: [(c1FA,
+                       label: T9157.Chunk06_info
+                       rep:HeapRep static { Fun {arity: 1 fun_type: ArgSpec 4} })]
+           stack_info: arg_space: 8 updfr_space: Just 8
+         }
+     {offset
+       c1FA:
+           _B1::I64 = R2;
+           goto c1Fx;
+       c1Fx:
+           if ((old + 0) - <highSp> < SpLim) goto c1FB; else goto c1FC;
+       c1FC:
+           goto c1Fw;
+       c1Fw:
+           Hp = Hp + 16;
+           if (Hp > HpLim) goto c1FE; else goto c1FD;
+       c1FE:
+           HpAlloc = 16;
+           goto c1FB;
+       c1FB:
+           R2 = _B1::I64;
+           R1 = T9157.Chunk06_closure;
+           call (stg_gc_fun)(R2, R1) args: 8, res: 0, upd: 8;
+       c1FD:
+           I64[Hp - 8] = T9157.Chunk06_con_info;
+           I64[Hp] = _B1::I64;
+           _c1Fz::P64 = Hp - 7;
+           R1 = _c1Fz::P64;
+           call (P64[(old + 8)])(R1) args: 8, res: 0, upd: 8;
+     }
+ }]
+
+
+
+==================== Post control-flow optimisations ====================
+{offset
+  c1FA:
+      _B1::I64 = R2;
+      if ((old + 0) - <highSp> < SpLim) goto c1FB; else goto c1FC;
+  c1FC:
+      Hp = Hp + 16;
+      if (Hp > HpLim) goto c1FE; else goto c1FD;
+  c1FE:
+      HpAlloc = 16;
+      goto c1FB;
+  c1FB:
+      R2 = _B1::I64;
+      R1 = T9157.Chunk06_closure;
+      call (stg_gc_fun)(R2, R1) args: 8, res: 0, upd: 8;
+  c1FD:
+      I64[Hp - 8] = T9157.Chunk06_con_info;
+      I64[Hp] = _B1::I64;
+      _c1Fz::P64 = Hp - 7;
+      R1 = _c1Fz::P64;
+      call (P64[(old + 8)])(R1) args: 8, res: 0, upd: 8;
+}
+
+
+
+==================== Post common block elimination ====================
+{offset
+  c1FA:
+      _B1::I64 = R2;
+      if ((old + 0) - <highSp> < SpLim) goto c1FB; else goto c1FC;
+  c1FC:
+      Hp = Hp + 16;
+      if (Hp > HpLim) goto c1FE; else goto c1FD;
+  c1FE:
+      HpAlloc = 16;
+      goto c1FB;
+  c1FB:
+      R2 = _B1::I64;
+      R1 = T9157.Chunk06_closure;
+      call (stg_gc_fun)(R2, R1) args: 8, res: 0, upd: 8;
+  c1FD:
+      I64[Hp - 8] = T9157.Chunk06_con_info;
+      I64[Hp] = _B1::I64;
+      _c1Fz::P64 = Hp - 7;
+      R1 = _c1Fz::P64;
+      call (P64[(old + 8)])(R1) args: 8, res: 0, upd: 8;
+}
+
+
+
+==================== Layout Stack ====================
+{offset
+  c1FA:
+      _B1::I64 = R2;
+      goto c1FC;
+  c1FC:
+      Hp = Hp + 16;
+      if (Hp > HpLim) goto c1FE; else goto c1FD;
+  c1FE:
+      HpAlloc = 16;
+      goto c1FB;
+  c1FB:
+      R2 = _B1::I64;
+      R1 = T9157.Chunk06_closure;
+      call (stg_gc_fun)(R2, R1) args: 8, res: 0, upd: 8;
+  c1FD:
+      I64[Hp - 8] = T9157.Chunk06_con_info;
+      I64[Hp] = _B1::I64;
+      _c1Fz::P64 = Hp - 7;
+      R1 = _c1Fz::P64;
+      call (P64[Sp])(R1) args: 8, res: 0, upd: 8;
+}
+
+
+
+==================== Sink assignments ====================
+{offset
+  c1FA:
+      goto c1FC;
+  c1FC:
+      Hp = Hp + 16;
+      if (Hp > HpLim) goto c1FE; else goto c1FD;
+  c1FE:
+      HpAlloc = 16;
+      goto c1FB;
+  c1FB:
+      R2 = R2;
+      R1 = T9157.Chunk06_closure;
+      call (stg_gc_fun)(R2, R1) args: 8, res: 0, upd: 8;
+  c1FD:
+      I64[Hp - 8] = T9157.Chunk06_con_info;
+      I64[Hp] = R2;
+      R1 = Hp - 7;
+      call (P64[Sp])(R1) args: 8, res: 0, upd: 8;
+}
+
+
+
+==================== CAFEnv ====================
+[(c1FA, {}), (c1FB, {}), (c1FC, {}), (c1FD, {}), (c1FE, {})]
+
+
+
+==================== after setInfoTableStackMap ====================
+T9157.Chunk06_entry() //  [R2]
+        { info_tbl: [(c1FA,
+                      label: T9157.Chunk06_info
+                      rep:HeapRep static { Fun {arity: 1 fun_type: ArgSpec 4} })]
+          stack_info: arg_space: 8 updfr_space: Just 8
+        }
+    {offset
+      c1FA:
+          goto c1FC;
+      c1FC:
+          Hp = Hp + 16;
+          if (Hp > HpLim) goto c1FE; else goto c1FD;
+      c1FE:
+          HpAlloc = 16;
+          goto c1FB;
+      c1FB:
+          R2 = R2;
+          R1 = T9157.Chunk06_closure;
+          call (stg_gc_fun)(R2, R1) args: 8, res: 0, upd: 8;
+      c1FD:
+          I64[Hp - 8] = T9157.Chunk06_con_info;
+          I64[Hp] = R2;
+          R1 = Hp - 7;
+          call (P64[Sp])(R1) args: 8, res: 0, upd: 8;
+    }
+}
+
+
+
+==================== Post control-flow optimisations ====================
+T9157.Chunk06_entry() //  [R2]
+        { info_tbl: [(c1FA,
+                      label: T9157.Chunk06_info
+                      rep:HeapRep static { Fun {arity: 1 fun_type: ArgSpec 4} })]
+          stack_info: arg_space: 8 updfr_space: Just 8
+        }
+    {offset
+      c1FA:
+          Hp = Hp + 16;
+          if (Hp > HpLim) goto c1FE; else goto c1FD;
+      c1FE:
+          HpAlloc = 16;
+          R2 = R2;
+          R1 = T9157.Chunk06_closure;
+          call (stg_gc_fun)(R2, R1) args: 8, res: 0, upd: 8;
+      c1FD:
+          I64[Hp - 8] = T9157.Chunk06_con_info;
+          I64[Hp] = R2;
+          R1 = Hp - 7;
+          call (P64[Sp])(R1) args: 8, res: 0, upd: 8;
+    }
+}
+
+
+
+==================== Post CPS Cmm ====================
+[section "data" {
+     T9157.Chunk06_closure:
+         const T9157.Chunk06_info;
+ },
+ T9157.Chunk06_entry() //  [R2]
+         { info_tbl: [(c1FA,
+                       label: T9157.Chunk06_info
+                       rep:HeapRep static { Fun {arity: 1 fun_type: ArgSpec 4} })]
+           stack_info: arg_space: 8 updfr_space: Just 8
+         }
+     {offset
+       c1FA:
+           Hp = Hp + 16;
+           if (Hp > HpLim) goto c1FE; else goto c1FD;
+       c1FE:
+           HpAlloc = 16;
+           R2 = R2;
+           R1 = T9157.Chunk06_closure;
+           call (stg_gc_fun)(R2, R1) args: 8, res: 0, upd: 8;
+       c1FD:
+           I64[Hp - 8] = T9157.Chunk06_con_info;
+           I64[Hp] = R2;
+           R1 = Hp - 7;
+           call (P64[Sp])(R1) args: 8, res: 0, upd: 8;
+     }
+ }]
+
+
+
+==================== Output Cmm ====================
+[section "data" {
+     T9157.Chunk06_closure:
+         const T9157.Chunk06_info;
+ },
+ T9157.Chunk06_entry() //  [R2]
+         { info_tbl: [(c1FA,
+                       label: T9157.Chunk06_info
+                       rep:HeapRep static { Fun {arity: 1 fun_type: ArgSpec 4} })]
+           stack_info: arg_space: 8 updfr_space: Just 8
+         }
+     {offset
+       c1FA:
+           Hp = Hp + 16;
+           if (Hp > HpLim) goto c1FE; else goto c1FD;
+       c1FE:
+           HpAlloc = 16;
+           R2 = R2;
+           R1 = T9157.Chunk06_closure;
+           call (stg_gc_fun)(R2, R1) args: 8, res: 0, upd: 8;
+       c1FD:
+           I64[Hp - 8] = T9157.Chunk06_con_info;
+           I64[Hp] = R2;
+           R1 = Hp - 7;
+           call (P64[Sp])(R1) args: 8, res: 0, upd: 8;
+     }
+ }]
+
+
+
+==================== Cmm produced by new codegen ====================
+[section "data" {
+     T9157.Chunk07_closure:
+         const T9157.Chunk07_info;
+ },
+ T9157.Chunk07_entry() //  [R2]
+         { info_tbl: [(c1FO,
+                       label: T9157.Chunk07_info
+                       rep:HeapRep static { Fun {arity: 1 fun_type: ArgSpec 4} })]
+           stack_info: arg_space: 8 updfr_space: Just 8
+         }
+     {offset
+       c1FO:
+           _B1::I64 = R2;
+           goto c1FL;
+       c1FL:
+           if ((old + 0) - <highSp> < SpLim) goto c1FP; else goto c1FQ;
+       c1FQ:
+           goto c1FK;
+       c1FK:
+           Hp = Hp + 16;
+           if (Hp > HpLim) goto c1FS; else goto c1FR;
+       c1FS:
+           HpAlloc = 16;
+           goto c1FP;
+       c1FP:
+           R2 = _B1::I64;
+           R1 = T9157.Chunk07_closure;
+           call (stg_gc_fun)(R2, R1) args: 8, res: 0, upd: 8;
+       c1FR:
+           I64[Hp - 8] = T9157.Chunk07_con_info;
+           I64[Hp] = _B1::I64;
+           _c1FN::P64 = Hp - 7;
+           R1 = _c1FN::P64;
+           call (P64[(old + 8)])(R1) args: 8, res: 0, upd: 8;
+     }
+ }]
+
+
+
+==================== Post control-flow optimisations ====================
+{offset
+  c1FO:
+      _B1::I64 = R2;
+      if ((old + 0) - <highSp> < SpLim) goto c1FP; else goto c1FQ;
+  c1FQ:
+      Hp = Hp + 16;
+      if (Hp > HpLim) goto c1FS; else goto c1FR;
+  c1FS:
+      HpAlloc = 16;
+      goto c1FP;
+  c1FP:
+      R2 = _B1::I64;
+      R1 = T9157.Chunk07_closure;
+      call (stg_gc_fun)(R2, R1) args: 8, res: 0, upd: 8;
+  c1FR:
+      I64[Hp - 8] = T9157.Chunk07_con_info;
+      I64[Hp] = _B1::I64;
+      _c1FN::P64 = Hp - 7;
+      R1 = _c1FN::P64;
+      call (P64[(old + 8)])(R1) args: 8, res: 0, upd: 8;
+}
+
+
+
+==================== Post common block elimination ====================
+{offset
+  c1FO:
+      _B1::I64 = R2;
+      if ((old + 0) - <highSp> < SpLim) goto c1FP; else goto c1FQ;
+  c1FQ:
+      Hp = Hp + 16;
+      if (Hp > HpLim) goto c1FS; else goto c1FR;
+  c1FS:
+      HpAlloc = 16;
+      goto c1FP;
+  c1FP:
+      R2 = _B1::I64;
+      R1 = T9157.Chunk07_closure;
+      call (stg_gc_fun)(R2, R1) args: 8, res: 0, upd: 8;
+  c1FR:
+      I64[Hp - 8] = T9157.Chunk07_con_info;
+      I64[Hp] = _B1::I64;
+      _c1FN::P64 = Hp - 7;
+      R1 = _c1FN::P64;
+      call (P64[(old + 8)])(R1) args: 8, res: 0, upd: 8;
+}
+
+
+
+==================== Layout Stack ====================
+{offset
+  c1FO:
+      _B1::I64 = R2;
+      goto c1FQ;
+  c1FQ:
+      Hp = Hp + 16;
+      if (Hp > HpLim) goto c1FS; else goto c1FR;
+  c1FS:
+      HpAlloc = 16;
+      goto c1FP;
+  c1FP:
+      R2 = _B1::I64;
+      R1 = T9157.Chunk07_closure;
+      call (stg_gc_fun)(R2, R1) args: 8, res: 0, upd: 8;
+  c1FR:
+      I64[Hp - 8] = T9157.Chunk07_con_info;
+      I64[Hp] = _B1::I64;
+      _c1FN::P64 = Hp - 7;
+      R1 = _c1FN::P64;
+      call (P64[Sp])(R1) args: 8, res: 0, upd: 8;
+}
+
+
+
+==================== Sink assignments ====================
+{offset
+  c1FO:
+      goto c1FQ;
+  c1FQ:
+      Hp = Hp + 16;
+      if (Hp > HpLim) goto c1FS; else goto c1FR;
+  c1FS:
+      HpAlloc = 16;
+      goto c1FP;
+  c1FP:
+      R2 = R2;
+      R1 = T9157.Chunk07_closure;
+      call (stg_gc_fun)(R2, R1) args: 8, res: 0, upd: 8;
+  c1FR:
+      I64[Hp - 8] = T9157.Chunk07_con_info;
+      I64[Hp] = R2;
+      R1 = Hp - 7;
+      call (P64[Sp])(R1) args: 8, res: 0, upd: 8;
+}
+
+
+
+==================== CAFEnv ====================
+[(c1FO, {}), (c1FP, {}), (c1FQ, {}), (c1FR, {}), (c1FS, {})]
+
+
+
+==================== after setInfoTableStackMap ====================
+T9157.Chunk07_entry() //  [R2]
+        { info_tbl: [(c1FO,
+                      label: T9157.Chunk07_info
+                      rep:HeapRep static { Fun {arity: 1 fun_type: ArgSpec 4} })]
+          stack_info: arg_space: 8 updfr_space: Just 8
+        }
+    {offset
+      c1FO:
+          goto c1FQ;
+      c1FQ:
+          Hp = Hp + 16;
+          if (Hp > HpLim) goto c1FS; else goto c1FR;
+      c1FS:
+          HpAlloc = 16;
+          goto c1FP;
+      c1FP:
+          R2 = R2;
+          R1 = T9157.Chunk07_closure;
+          call (stg_gc_fun)(R2, R1) args: 8, res: 0, upd: 8;
+      c1FR:
+          I64[Hp - 8] = T9157.Chunk07_con_info;
+          I64[Hp] = R2;
+          R1 = Hp - 7;
+          call (P64[Sp])(R1) args: 8, res: 0, upd: 8;
+    }
+}
+
+
+
+==================== Post control-flow optimisations ====================
+T9157.Chunk07_entry() //  [R2]
+        { info_tbl: [(c1FO,
+                      label: T9157.Chunk07_info
+                      rep:HeapRep static { Fun {arity: 1 fun_type: ArgSpec 4} })]
+          stack_info: arg_space: 8 updfr_space: Just 8
+        }
+    {offset
+      c1FO:
+          Hp = Hp + 16;
+          if (Hp > HpLim) goto c1FS; else goto c1FR;
+      c1FS:
+          HpAlloc = 16;
+          R2 = R2;
+          R1 = T9157.Chunk07_closure;
+          call (stg_gc_fun)(R2, R1) args: 8, res: 0, upd: 8;
+      c1FR:
+          I64[Hp - 8] = T9157.Chunk07_con_info;
+          I64[Hp] = R2;
+          R1 = Hp - 7;
+          call (P64[Sp])(R1) args: 8, res: 0, upd: 8;
+    }
+}
+
+
+
+==================== Post CPS Cmm ====================
+[section "data" {
+     T9157.Chunk07_closure:
+         const T9157.Chunk07_info;
+ },
+ T9157.Chunk07_entry() //  [R2]
+         { info_tbl: [(c1FO,
+                       label: T9157.Chunk07_info
+                       rep:HeapRep static { Fun {arity: 1 fun_type: ArgSpec 4} })]
+           stack_info: arg_space: 8 updfr_space: Just 8
+         }
+     {offset
+       c1FO:
+           Hp = Hp + 16;
+           if (Hp > HpLim) goto c1FS; else goto c1FR;
+       c1FS:
+           HpAlloc = 16;
+           R2 = R2;
+           R1 = T9157.Chunk07_closure;
+           call (stg_gc_fun)(R2, R1) args: 8, res: 0, upd: 8;
+       c1FR:
+           I64[Hp - 8] = T9157.Chunk07_con_info;
+           I64[Hp] = R2;
+           R1 = Hp - 7;
+           call (P64[Sp])(R1) args: 8, res: 0, upd: 8;
+     }
+ }]
+
+
+
+==================== Output Cmm ====================
+[section "data" {
+     T9157.Chunk07_closure:
+         const T9157.Chunk07_info;
+ },
+ T9157.Chunk07_entry() //  [R2]
+         { info_tbl: [(c1FO,
+                       label: T9157.Chunk07_info
+                       rep:HeapRep static { Fun {arity: 1 fun_type: ArgSpec 4} })]
+           stack_info: arg_space: 8 updfr_space: Just 8
+         }
+     {offset
+       c1FO:
+           Hp = Hp + 16;
+           if (Hp > HpLim) goto c1FS; else goto c1FR;
+       c1FS:
+           HpAlloc = 16;
+           R2 = R2;
+           R1 = T9157.Chunk07_closure;
+           call (stg_gc_fun)(R2, R1) args: 8, res: 0, upd: 8;
+       c1FR:
+           I64[Hp - 8] = T9157.Chunk07_con_info;
+           I64[Hp] = R2;
+           R1 = Hp - 7;
+           call (P64[Sp])(R1) args: 8, res: 0, upd: 8;
+     }
+ }]
+
+
+
+==================== Cmm produced by new codegen ====================
+[section "data" {
+     T9157.Chunk08_closure:
+         const T9157.Chunk08_info;
+ },
+ T9157.Chunk08_entry() //  [R2]
+         { info_tbl: [(c1G2,
+                       label: T9157.Chunk08_info
+                       rep:HeapRep static { Fun {arity: 1 fun_type: ArgSpec 4} })]
+           stack_info: arg_space: 8 updfr_space: Just 8
+         }
+     {offset
+       c1G2:
+           _B1::I64 = R2;
+           goto c1FZ;
+       c1FZ:
+           if ((old + 0) - <highSp> < SpLim) goto c1G3; else goto c1G4;
+       c1G4:
+           goto c1FY;
+       c1FY:
+           Hp = Hp + 16;
+           if (Hp > HpLim) goto c1G6; else goto c1G5;
+       c1G6:
+           HpAlloc = 16;
+           goto c1G3;
+       c1G3:
+           R2 = _B1::I64;
+           R1 = T9157.Chunk08_closure;
+           call (stg_gc_fun)(R2, R1) args: 8, res: 0, upd: 8;
+       c1G5:
+           I64[Hp - 8] = T9157.Chunk08_con_info;
+           I64[Hp] = _B1::I64;
+           _c1G1::P64 = Hp - 7;
+           R1 = _c1G1::P64;
+           call (P64[(old + 8)])(R1) args: 8, res: 0, upd: 8;
+     }
+ }]
+
+
+
+==================== Post control-flow optimisations ====================
+{offset
+  c1G2:
+      _B1::I64 = R2;
+      if ((old + 0) - <highSp> < SpLim) goto c1G3; else goto c1G4;
+  c1G4:
+      Hp = Hp + 16;
+      if (Hp > HpLim) goto c1G6; else goto c1G5;
+  c1G6:
+      HpAlloc = 16;
+      goto c1G3;
+  c1G3:
+      R2 = _B1::I64;
+      R1 = T9157.Chunk08_closure;
+      call (stg_gc_fun)(R2, R1) args: 8, res: 0, upd: 8;
+  c1G5:
+      I64[Hp - 8] = T9157.Chunk08_con_info;
+      I64[Hp] = _B1::I64;
+      _c1G1::P64 = Hp - 7;
+      R1 = _c1G1::P64;
+      call (P64[(old + 8)])(R1) args: 8, res: 0, upd: 8;
+}
+
+
+
+==================== Post common block elimination ====================
+{offset
+  c1G2:
+      _B1::I64 = R2;
+      if ((old + 0) - <highSp> < SpLim) goto c1G3; else goto c1G4;
+  c1G4:
+      Hp = Hp + 16;
+      if (Hp > HpLim) goto c1G6; else goto c1G5;
+  c1G6:
+      HpAlloc = 16;
+      goto c1G3;
+  c1G3:
+      R2 = _B1::I64;
+      R1 = T9157.Chunk08_closure;
+      call (stg_gc_fun)(R2, R1) args: 8, res: 0, upd: 8;
+  c1G5:
+      I64[Hp - 8] = T9157.Chunk08_con_info;
+      I64[Hp] = _B1::I64;
+      _c1G1::P64 = Hp - 7;
+      R1 = _c1G1::P64;
+      call (P64[(old + 8)])(R1) args: 8, res: 0, upd: 8;
+}
+
+
+
+==================== Layout Stack ====================
+{offset
+  c1G2:
+      _B1::I64 = R2;
+      goto c1G4;
+  c1G4:
+      Hp = Hp + 16;
+      if (Hp > HpLim) goto c1G6; else goto c1G5;
+  c1G6:
+      HpAlloc = 16;
+      goto c1G3;
+  c1G3:
+      R2 = _B1::I64;
+      R1 = T9157.Chunk08_closure;
+      call (stg_gc_fun)(R2, R1) args: 8, res: 0, upd: 8;
+  c1G5:
+      I64[Hp - 8] = T9157.Chunk08_con_info;
+      I64[Hp] = _B1::I64;
+      _c1G1::P64 = Hp - 7;
+      R1 = _c1G1::P64;
+      call (P64[Sp])(R1) args: 8, res: 0, upd: 8;
+}
+
+
+
+==================== Sink assignments ====================
+{offset
+  c1G2:
+      goto c1G4;
+  c1G4:
+      Hp = Hp + 16;
+      if (Hp > HpLim) goto c1G6; else goto c1G5;
+  c1G6:
+      HpAlloc = 16;
+      goto c1G3;
+  c1G3:
+      R2 = R2;
+      R1 = T9157.Chunk08_closure;
+      call (stg_gc_fun)(R2, R1) args: 8, res: 0, upd: 8;
+  c1G5:
+      I64[Hp - 8] = T9157.Chunk08_con_info;
+      I64[Hp] = R2;
+      R1 = Hp - 7;
+      call (P64[Sp])(R1) args: 8, res: 0, upd: 8;
+}
+
+
+
+==================== CAFEnv ====================
+[(c1G2, {}), (c1G3, {}), (c1G4, {}), (c1G5, {}), (c1G6, {})]
+
+
+
+==================== after setInfoTableStackMap ====================
+T9157.Chunk08_entry() //  [R2]
+        { info_tbl: [(c1G2,
+                      label: T9157.Chunk08_info
+                      rep:HeapRep static { Fun {arity: 1 fun_type: ArgSpec 4} })]
+          stack_info: arg_space: 8 updfr_space: Just 8
+        }
+    {offset
+      c1G2:
+          goto c1G4;
+      c1G4:
+          Hp = Hp + 16;
+          if (Hp > HpLim) goto c1G6; else goto c1G5;
+      c1G6:
+          HpAlloc = 16;
+          goto c1G3;
+      c1G3:
+          R2 = R2;
+          R1 = T9157.Chunk08_closure;
+          call (stg_gc_fun)(R2, R1) args: 8, res: 0, upd: 8;
+      c1G5:
+          I64[Hp - 8] = T9157.Chunk08_con_info;
+          I64[Hp] = R2;
+          R1 = Hp - 7;
+          call (P64[Sp])(R1) args: 8, res: 0, upd: 8;
+    }
+}
+
+
+
+==================== Post control-flow optimisations ====================
+T9157.Chunk08_entry() //  [R2]
+        { info_tbl: [(c1G2,
+                      label: T9157.Chunk08_info
+                      rep:HeapRep static { Fun {arity: 1 fun_type: ArgSpec 4} })]
+          stack_info: arg_space: 8 updfr_space: Just 8
+        }
+    {offset
+      c1G2:
+          Hp = Hp + 16;
+          if (Hp > HpLim) goto c1G6; else goto c1G5;
+      c1G6:
+          HpAlloc = 16;
+          R2 = R2;
+          R1 = T9157.Chunk08_closure;
+          call (stg_gc_fun)(R2, R1) args: 8, res: 0, upd: 8;
+      c1G5:
+          I64[Hp - 8] = T9157.Chunk08_con_info;
+          I64[Hp] = R2;
+          R1 = Hp - 7;
+          call (P64[Sp])(R1) args: 8, res: 0, upd: 8;
+    }
+}
+
+
+
+==================== Post CPS Cmm ====================
+[section "data" {
+     T9157.Chunk08_closure:
+         const T9157.Chunk08_info;
+ },
+ T9157.Chunk08_entry() //  [R2]
+         { info_tbl: [(c1G2,
+                       label: T9157.Chunk08_info
+                       rep:HeapRep static { Fun {arity: 1 fun_type: ArgSpec 4} })]
+           stack_info: arg_space: 8 updfr_space: Just 8
+         }
+     {offset
+       c1G2:
+           Hp = Hp + 16;
+           if (Hp > HpLim) goto c1G6; else goto c1G5;
+       c1G6:
+           HpAlloc = 16;
+           R2 = R2;
+           R1 = T9157.Chunk08_closure;
+           call (stg_gc_fun)(R2, R1) args: 8, res: 0, upd: 8;
+       c1G5:
+           I64[Hp - 8] = T9157.Chunk08_con_info;
+           I64[Hp] = R2;
+           R1 = Hp - 7;
+           call (P64[Sp])(R1) args: 8, res: 0, upd: 8;
+     }
+ }]
+
+
+
+==================== Output Cmm ====================
+[section "data" {
+     T9157.Chunk08_closure:
+         const T9157.Chunk08_info;
+ },
+ T9157.Chunk08_entry() //  [R2]
+         { info_tbl: [(c1G2,
+                       label: T9157.Chunk08_info
+                       rep:HeapRep static { Fun {arity: 1 fun_type: ArgSpec 4} })]
+           stack_info: arg_space: 8 updfr_space: Just 8
+         }
+     {offset
+       c1G2:
+           Hp = Hp + 16;
+           if (Hp > HpLim) goto c1G6; else goto c1G5;
+       c1G6:
+           HpAlloc = 16;
+           R2 = R2;
+           R1 = T9157.Chunk08_closure;
+           call (stg_gc_fun)(R2, R1) args: 8, res: 0, upd: 8;
+       c1G5:
+           I64[Hp - 8] = T9157.Chunk08_con_info;
+           I64[Hp] = R2;
+           R1 = Hp - 7;
+           call (P64[Sp])(R1) args: 8, res: 0, upd: 8;
+     }
+ }]
+
+
+
+==================== Cmm produced by new codegen ====================
+[T9157.Chunk00_static_entry() //  []
+         { info_tbl: [(c1Gb,
+                       label: T9157.Chunk00_static_info
+                       rep:HeapRep static {
+                             Con {tag: 0
+                                  descr:[109,97,105,110,58,84,57,49,53,55,46,67,104,117,110,107,48,48]} })]
+           stack_info: arg_space: 8 updfr_space: Just 8
+         }
+     {offset
+       c1Gb:
+           R1 = R1 + 1;
+           call (P64[(old + 8)])(R1) args: 8, res: 0, upd: 8;
+     }
+ }]
+
+
+
+==================== Post control-flow optimisations ====================
+{offset
+  c1Gb:
+      R1 = R1 + 1;
+      call (P64[(old + 8)])(R1) args: 8, res: 0, upd: 8;
+}
+
+
+
+==================== Post common block elimination ====================
+{offset
+  c1Gb:
+      R1 = R1 + 1;
+      call (P64[(old + 8)])(R1) args: 8, res: 0, upd: 8;
+}
+
+
+
+==================== Layout Stack ====================
+{offset
+  c1Gb:
+      R1 = R1 + 1;
+      call (P64[Sp])(R1) args: 8, res: 0, upd: 8;
+}
+
+
+
+==================== Sink assignments ====================
+{offset
+  c1Gb:
+      R1 = R1 + 1;
+      call (P64[Sp])(R1) args: 8, res: 0, upd: 8;
+}
+
+
+
+==================== CAFEnv ====================
+[(c1Gb, {})]
+
+
+
+==================== after setInfoTableStackMap ====================
+T9157.Chunk00_static_entry() //  []
+        { info_tbl: [(c1Gb,
+                      label: T9157.Chunk00_static_info
+                      rep:HeapRep static {
+                            Con {tag: 0
+                                 descr:[109,97,105,110,58,84,57,49,53,55,46,67,104,117,110,107,48,48]} })]
+          stack_info: arg_space: 8 updfr_space: Just 8
+        }
+    {offset
+      c1Gb:
+          R1 = R1 + 1;
+          call (P64[Sp])(R1) args: 8, res: 0, upd: 8;
+    }
+}
+
+
+
+==================== Post control-flow optimisations ====================
+T9157.Chunk00_static_entry() //  []
+        { info_tbl: [(c1Gb,
+                      label: T9157.Chunk00_static_info
+                      rep:HeapRep static {
+                            Con {tag: 0
+                                 descr:[109,97,105,110,58,84,57,49,53,55,46,67,104,117,110,107,48,48]} })]
+          stack_info: arg_space: 8 updfr_space: Just 8
+        }
+    {offset
+      c1Gb:
+          R1 = R1 + 1;
+          call (P64[Sp])(R1) args: 8, res: 0, upd: 8;
+    }
+}
+
+
+
+==================== Post CPS Cmm ====================
+[T9157.Chunk00_static_entry() //  []
+         { info_tbl: [(c1Gb,
+                       label: T9157.Chunk00_static_info
+                       rep:HeapRep static {
+                             Con {tag: 0
+                                  descr:[109,97,105,110,58,84,57,49,53,55,46,67,104,117,110,107,48,48]} })]
+           stack_info: arg_space: 8 updfr_space: Just 8
+         }
+     {offset
+       c1Gb:
+           R1 = R1 + 1;
+           call (P64[Sp])(R1) args: 8, res: 0, upd: 8;
+     }
+ }]
+
+
+
+==================== Output Cmm ====================
+[T9157.Chunk00_static_entry() //  []
+         { info_tbl: [(c1Gb,
+                       label: T9157.Chunk00_static_info
+                       rep:HeapRep static {
+                             Con {tag: 0
+                                  descr:[109,97,105,110,58,84,57,49,53,55,46,67,104,117,110,107,48,48]} })]
+           stack_info: arg_space: 8 updfr_space: Just 8
+         }
+     {offset
+       c1Gb:
+           R1 = R1 + 1;
+           call (P64[Sp])(R1) args: 8, res: 0, upd: 8;
+     }
+ }]
+
+
+
+==================== Cmm produced by new codegen ====================
+[T9157.Chunk01_con_entry() //  []
+         { info_tbl: [(c1Gg,
+                       label: T9157.Chunk01_con_info
+                       rep:HeapRep 1 nonptrs {
+                             Con {tag: 1
+                                  descr:[109,97,105,110,58,84,57,49,53,55,46,67,104,117,110,107,48,49]} })]
+           stack_info: arg_space: 8 updfr_space: Just 8
+         }
+     {offset
+       c1Gg:
+           R1 = R1 + 1;
+           call (P64[(old + 8)])(R1) args: 8, res: 0, upd: 8;
+     }
+ },
+ T9157.Chunk01_static_entry() //  []
+         { info_tbl: [(c1Gh,
+                       label: T9157.Chunk01_static_info
+                       rep:HeapRep static {
+                             Con {tag: 1
+                                  descr:[109,97,105,110,58,84,57,49,53,55,46,67,104,117,110,107,48,49]} })]
+           stack_info: arg_space: 8 updfr_space: Just 8
+         }
+     {offset
+       c1Gh:
+           R1 = R1 + 1;
+           call (P64[(old + 8)])(R1) args: 8, res: 0, upd: 8;
+     }
+ }]
+
+
+
+==================== Post control-flow optimisations ====================
+{offset
+  c1Gg:
+      R1 = R1 + 1;
+      call (P64[(old + 8)])(R1) args: 8, res: 0, upd: 8;
+}
+
+
+
+==================== Post common block elimination ====================
+{offset
+  c1Gg:
+      R1 = R1 + 1;
+      call (P64[(old + 8)])(R1) args: 8, res: 0, upd: 8;
+}
+
+
+
+==================== Layout Stack ====================
+{offset
+  c1Gg:
+      R1 = R1 + 1;
+      call (P64[Sp])(R1) args: 8, res: 0, upd: 8;
+}
+
+
+
+==================== Sink assignments ====================
+{offset
+  c1Gg:
+      R1 = R1 + 1;
+      call (P64[Sp])(R1) args: 8, res: 0, upd: 8;
+}
+
+
+
+==================== CAFEnv ====================
+[(c1Gg, {})]
+
+
+
+==================== after setInfoTableStackMap ====================
+T9157.Chunk01_con_entry() //  []
+        { info_tbl: [(c1Gg,
+                      label: T9157.Chunk01_con_info
+                      rep:HeapRep 1 nonptrs {
+                            Con {tag: 1
+                                 descr:[109,97,105,110,58,84,57,49,53,55,46,67,104,117,110,107,48,49]} })]
+          stack_info: arg_space: 8 updfr_space: Just 8
+        }
+    {offset
+      c1Gg:
+          R1 = R1 + 1;
+          call (P64[Sp])(R1) args: 8, res: 0, upd: 8;
+    }
+}
+
+
+
+==================== Post control-flow optimisations ====================
+T9157.Chunk01_con_entry() //  []
+        { info_tbl: [(c1Gg,
+                      label: T9157.Chunk01_con_info
+                      rep:HeapRep 1 nonptrs {
+                            Con {tag: 1
+                                 descr:[109,97,105,110,58,84,57,49,53,55,46,67,104,117,110,107,48,49]} })]
+          stack_info: arg_space: 8 updfr_space: Just 8
+        }
+    {offset
+      c1Gg:
+          R1 = R1 + 1;
+          call (P64[Sp])(R1) args: 8, res: 0, upd: 8;
+    }
+}
+
+
+
+==================== Post control-flow optimisations ====================
+{offset
+  c1Gh:
+      R1 = R1 + 1;
+      call (P64[(old + 8)])(R1) args: 8, res: 0, upd: 8;
+}
+
+
+
+==================== Post common block elimination ====================
+{offset
+  c1Gh:
+      R1 = R1 + 1;
+      call (P64[(old + 8)])(R1) args: 8, res: 0, upd: 8;
+}
+
+
+
+==================== Layout Stack ====================
+{offset
+  c1Gh:
+      R1 = R1 + 1;
+      call (P64[Sp])(R1) args: 8, res: 0, upd: 8;
+}
+
+
+
+==================== Sink assignments ====================
+{offset
+  c1Gh:
+      R1 = R1 + 1;
+      call (P64[Sp])(R1) args: 8, res: 0, upd: 8;
+}
+
+
+
+==================== CAFEnv ====================
+[(c1Gh, {})]
+
+
+
+==================== after setInfoTableStackMap ====================
+T9157.Chunk01_static_entry() //  []
+        { info_tbl: [(c1Gh,
+                      label: T9157.Chunk01_static_info
+                      rep:HeapRep static {
+                            Con {tag: 1
+                                 descr:[109,97,105,110,58,84,57,49,53,55,46,67,104,117,110,107,48,49]} })]
+          stack_info: arg_space: 8 updfr_space: Just 8
+        }
+    {offset
+      c1Gh:
+          R1 = R1 + 1;
+          call (P64[Sp])(R1) args: 8, res: 0, upd: 8;
+    }
+}
+
+
+
+==================== Post control-flow optimisations ====================
+T9157.Chunk01_static_entry() //  []
+        { info_tbl: [(c1Gh,
+                      label: T9157.Chunk01_static_info
+                      rep:HeapRep static {
+                            Con {tag: 1
+                                 descr:[109,97,105,110,58,84,57,49,53,55,46,67,104,117,110,107,48,49]} })]
+          stack_info: arg_space: 8 updfr_space: Just 8
+        }
+    {offset
+      c1Gh:
+          R1 = R1 + 1;
+          call (P64[Sp])(R1) args: 8, res: 0, upd: 8;
+    }
+}
+
+
+
+==================== Post CPS Cmm ====================
+[T9157.Chunk01_con_entry() //  []
+         { info_tbl: [(c1Gg,
+                       label: T9157.Chunk01_con_info
+                       rep:HeapRep 1 nonptrs {
+                             Con {tag: 1
+                                  descr:[109,97,105,110,58,84,57,49,53,55,46,67,104,117,110,107,48,49]} })]
+           stack_info: arg_space: 8 updfr_space: Just 8
+         }
+     {offset
+       c1Gg:
+           R1 = R1 + 1;
+           call (P64[Sp])(R1) args: 8, res: 0, upd: 8;
+     }
+ },
+ T9157.Chunk01_static_entry() //  []
+         { info_tbl: [(c1Gh,
+                       label: T9157.Chunk01_static_info
+                       rep:HeapRep static {
+                             Con {tag: 1
+                                  descr:[109,97,105,110,58,84,57,49,53,55,46,67,104,117,110,107,48,49]} })]
+           stack_info: arg_space: 8 updfr_space: Just 8
+         }
+     {offset
+       c1Gh:
+           R1 = R1 + 1;
+           call (P64[Sp])(R1) args: 8, res: 0, upd: 8;
+     }
+ }]
+
+
+
+==================== Output Cmm ====================
+[T9157.Chunk01_con_entry() //  []
+         { info_tbl: [(c1Gg,
+                       label: T9157.Chunk01_con_info
+                       rep:HeapRep 1 nonptrs {
+                             Con {tag: 1
+                                  descr:[109,97,105,110,58,84,57,49,53,55,46,67,104,117,110,107,48,49]} })]
+           stack_info: arg_space: 8 updfr_space: Just 8
+         }
+     {offset
+       c1Gg:
+           R1 = R1 + 1;
+           call (P64[Sp])(R1) args: 8, res: 0, upd: 8;
+     }
+ },
+ T9157.Chunk01_static_entry() //  []
+         { info_tbl: [(c1Gh,
+                       label: T9157.Chunk01_static_info
+                       rep:HeapRep static {
+                             Con {tag: 1
+                                  descr:[109,97,105,110,58,84,57,49,53,55,46,67,104,117,110,107,48,49]} })]
+           stack_info: arg_space: 8 updfr_space: Just 8
+         }
+     {offset
+       c1Gh:
+           R1 = R1 + 1;
+           call (P64[Sp])(R1) args: 8, res: 0, upd: 8;
+     }
+ }]
+
+
+
+==================== Cmm produced by new codegen ====================
+[T9157.Chunk02_con_entry() //  []
+         { info_tbl: [(c1Gq,
+                       label: T9157.Chunk02_con_info
+                       rep:HeapRep 1 nonptrs {
+                             Con {tag: 2
+                                  descr:[109,97,105,110,58,84,57,49,53,55,46,67,104,117,110,107,48,50]} })]
+           stack_info: arg_space: 8 updfr_space: Just 8
+         }
+     {offset
+       c1Gq:
+           R1 = R1 + 1;
+           call (P64[(old + 8)])(R1) args: 8, res: 0, upd: 8;
+     }
+ },
+ T9157.Chunk02_static_entry() //  []
+         { info_tbl: [(c1Gr,
+                       label: T9157.Chunk02_static_info
+                       rep:HeapRep static {
+                             Con {tag: 2
+                                  descr:[109,97,105,110,58,84,57,49,53,55,46,67,104,117,110,107,48,50]} })]
+           stack_info: arg_space: 8 updfr_space: Just 8
+         }
+     {offset
+       c1Gr:
+           R1 = R1 + 1;
+           call (P64[(old + 8)])(R1) args: 8, res: 0, upd: 8;
+     }
+ }]
+
+
+
+==================== Post control-flow optimisations ====================
+{offset
+  c1Gq:
+      R1 = R1 + 1;
+      call (P64[(old + 8)])(R1) args: 8, res: 0, upd: 8;
+}
+
+
+
+==================== Post common block elimination ====================
+{offset
+  c1Gq:
+      R1 = R1 + 1;
+      call (P64[(old + 8)])(R1) args: 8, res: 0, upd: 8;
+}
+
+
+
+==================== Layout Stack ====================
+{offset
+  c1Gq:
+      R1 = R1 + 1;
+      call (P64[Sp])(R1) args: 8, res: 0, upd: 8;
+}
+
+
+
+==================== Sink assignments ====================
+{offset
+  c1Gq:
+      R1 = R1 + 1;
+      call (P64[Sp])(R1) args: 8, res: 0, upd: 8;
+}
+
+
+
+==================== CAFEnv ====================
+[(c1Gq, {})]
+
+
+
+==================== after setInfoTableStackMap ====================
+T9157.Chunk02_con_entry() //  []
+        { info_tbl: [(c1Gq,
+                      label: T9157.Chunk02_con_info
+                      rep:HeapRep 1 nonptrs {
+                            Con {tag: 2
+                                 descr:[109,97,105,110,58,84,57,49,53,55,46,67,104,117,110,107,48,50]} })]
+          stack_info: arg_space: 8 updfr_space: Just 8
+        }
+    {offset
+      c1Gq:
+          R1 = R1 + 1;
+          call (P64[Sp])(R1) args: 8, res: 0, upd: 8;
+    }
+}
+
+
+
+==================== Post control-flow optimisations ====================
+T9157.Chunk02_con_entry() //  []
+        { info_tbl: [(c1Gq,
+                      label: T9157.Chunk02_con_info
+                      rep:HeapRep 1 nonptrs {
+                            Con {tag: 2
+                                 descr:[109,97,105,110,58,84,57,49,53,55,46,67,104,117,110,107,48,50]} })]
+          stack_info: arg_space: 8 updfr_space: Just 8
+        }
+    {offset
+      c1Gq:
+          R1 = R1 + 1;
+          call (P64[Sp])(R1) args: 8, res: 0, upd: 8;
+    }
+}
+
+
+
+==================== Post control-flow optimisations ====================
+{offset
+  c1Gr:
+      R1 = R1 + 1;
+      call (P64[(old + 8)])(R1) args: 8, res: 0, upd: 8;
+}
+
+
+
+==================== Post common block elimination ====================
+{offset
+  c1Gr:
+      R1 = R1 + 1;
+      call (P64[(old + 8)])(R1) args: 8, res: 0, upd: 8;
+}
+
+
+
+==================== Layout Stack ====================
+{offset
+  c1Gr:
+      R1 = R1 + 1;
+      call (P64[Sp])(R1) args: 8, res: 0, upd: 8;
+}
+
+
+
+==================== Sink assignments ====================
+{offset
+  c1Gr:
+      R1 = R1 + 1;
+      call (P64[Sp])(R1) args: 8, res: 0, upd: 8;
+}
+
+
+
+==================== CAFEnv ====================
+[(c1Gr, {})]
+
+
+
+==================== after setInfoTableStackMap ====================
+T9157.Chunk02_static_entry() //  []
+        { info_tbl: [(c1Gr,
+                      label: T9157.Chunk02_static_info
+                      rep:HeapRep static {
+                            Con {tag: 2
+                                 descr:[109,97,105,110,58,84,57,49,53,55,46,67,104,117,110,107,48,50]} })]
+          stack_info: arg_space: 8 updfr_space: Just 8
+        }
+    {offset
+      c1Gr:
+          R1 = R1 + 1;
+          call (P64[Sp])(R1) args: 8, res: 0, upd: 8;
+    }
+}
+
+
+
+==================== Post control-flow optimisations ====================
+T9157.Chunk02_static_entry() //  []
+        { info_tbl: [(c1Gr,
+                      label: T9157.Chunk02_static_info
+                      rep:HeapRep static {
+                            Con {tag: 2
+                                 descr:[109,97,105,110,58,84,57,49,53,55,46,67,104,117,110,107,48,50]} })]
+          stack_info: arg_space: 8 updfr_space: Just 8
+        }
+    {offset
+      c1Gr:
+          R1 = R1 + 1;
+          call (P64[Sp])(R1) args: 8, res: 0, upd: 8;
+    }
+}
+
+
+
+==================== Post CPS Cmm ====================
+[T9157.Chunk02_con_entry() //  []
+         { info_tbl: [(c1Gq,
+                       label: T9157.Chunk02_con_info
+                       rep:HeapRep 1 nonptrs {
+                             Con {tag: 2
+                                  descr:[109,97,105,110,58,84,57,49,53,55,46,67,104,117,110,107,48,50]} })]
+           stack_info: arg_space: 8 updfr_space: Just 8
+         }
+     {offset
+       c1Gq:
+           R1 = R1 + 1;
+           call (P64[Sp])(R1) args: 8, res: 0, upd: 8;
+     }
+ },
+ T9157.Chunk02_static_entry() //  []
+         { info_tbl: [(c1Gr,
+                       label: T9157.Chunk02_static_info
+                       rep:HeapRep static {
+                             Con {tag: 2
+                                  descr:[109,97,105,110,58,84,57,49,53,55,46,67,104,117,110,107,48,50]} })]
+           stack_info: arg_space: 8 updfr_space: Just 8
+         }
+     {offset
+       c1Gr:
+           R1 = R1 + 1;
+           call (P64[Sp])(R1) args: 8, res: 0, upd: 8;
+     }
+ }]
+
+
+
+==================== Output Cmm ====================
+[T9157.Chunk02_con_entry() //  []
+         { info_tbl: [(c1Gq,
+                       label: T9157.Chunk02_con_info
+                       rep:HeapRep 1 nonptrs {
+                             Con {tag: 2
+                                  descr:[109,97,105,110,58,84,57,49,53,55,46,67,104,117,110,107,48,50]} })]
+           stack_info: arg_space: 8 updfr_space: Just 8
+         }
+     {offset
+       c1Gq:
+           R1 = R1 + 1;
+           call (P64[Sp])(R1) args: 8, res: 0, upd: 8;
+     }
+ },
+ T9157.Chunk02_static_entry() //  []
+         { info_tbl: [(c1Gr,
+                       label: T9157.Chunk02_static_info
+                       rep:HeapRep static {
+                             Con {tag: 2
+                                  descr:[109,97,105,110,58,84,57,49,53,55,46,67,104,117,110,107,48,50]} })]
+           stack_info: arg_space: 8 updfr_space: Just 8
+         }
+     {offset
+       c1Gr:
+           R1 = R1 + 1;
+           call (P64[Sp])(R1) args: 8, res: 0, upd: 8;
+     }
+ }]
+
+
+
+==================== Cmm produced by new codegen ====================
+[T9157.Chunk03_con_entry() //  []
+         { info_tbl: [(c1GA,
+                       label: T9157.Chunk03_con_info
+                       rep:HeapRep 1 nonptrs {
+                             Con {tag: 3
+                                  descr:[109,97,105,110,58,84,57,49,53,55,46,67,104,117,110,107,48,51]} })]
+           stack_info: arg_space: 8 updfr_space: Just 8
+         }
+     {offset
+       c1GA:
+           R1 = R1 + 1;
+           call (P64[(old + 8)])(R1) args: 8, res: 0, upd: 8;
+     }
+ },
+ T9157.Chunk03_static_entry() //  []
+         { info_tbl: [(c1GB,
+                       label: T9157.Chunk03_static_info
+                       rep:HeapRep static {
+                             Con {tag: 3
+                                  descr:[109,97,105,110,58,84,57,49,53,55,46,67,104,117,110,107,48,51]} })]
+           stack_info: arg_space: 8 updfr_space: Just 8
+         }
+     {offset
+       c1GB:
+           R1 = R1 + 1;
+           call (P64[(old + 8)])(R1) args: 8, res: 0, upd: 8;
+     }
+ }]
+
+
+
+==================== Post control-flow optimisations ====================
+{offset
+  c1GA:
+      R1 = R1 + 1;
+      call (P64[(old + 8)])(R1) args: 8, res: 0, upd: 8;
+}
+
+
+
+==================== Post common block elimination ====================
+{offset
+  c1GA:
+      R1 = R1 + 1;
+      call (P64[(old + 8)])(R1) args: 8, res: 0, upd: 8;
+}
+
+
+
+==================== Layout Stack ====================
+{offset
+  c1GA:
+      R1 = R1 + 1;
+      call (P64[Sp])(R1) args: 8, res: 0, upd: 8;
+}
+
+
+
+==================== Sink assignments ====================
+{offset
+  c1GA:
+      R1 = R1 + 1;
+      call (P64[Sp])(R1) args: 8, res: 0, upd: 8;
+}
+
+
+
+==================== CAFEnv ====================
+[(c1GA, {})]
+
+
+
+==================== after setInfoTableStackMap ====================
+T9157.Chunk03_con_entry() //  []
+        { info_tbl: [(c1GA,
+                      label: T9157.Chunk03_con_info
+                      rep:HeapRep 1 nonptrs {
+                            Con {tag: 3
+                                 descr:[109,97,105,110,58,84,57,49,53,55,46,67,104,117,110,107,48,51]} })]
+          stack_info: arg_space: 8 updfr_space: Just 8
+        }
+    {offset
+      c1GA:
+          R1 = R1 + 1;
+          call (P64[Sp])(R1) args: 8, res: 0, upd: 8;
+    }
+}
+
+
+
+==================== Post control-flow optimisations ====================
+T9157.Chunk03_con_entry() //  []
+        { info_tbl: [(c1GA,
+                      label: T9157.Chunk03_con_info
+                      rep:HeapRep 1 nonptrs {
+                            Con {tag: 3
+                                 descr:[109,97,105,110,58,84,57,49,53,55,46,67,104,117,110,107,48,51]} })]
+          stack_info: arg_space: 8 updfr_space: Just 8
+        }
+    {offset
+      c1GA:
+          R1 = R1 + 1;
+          call (P64[Sp])(R1) args: 8, res: 0, upd: 8;
+    }
+}
+
+
+
+==================== Post control-flow optimisations ====================
+{offset
+  c1GB:
+      R1 = R1 + 1;
+      call (P64[(old + 8)])(R1) args: 8, res: 0, upd: 8;
+}
+
+
+
+==================== Post common block elimination ====================
+{offset
+  c1GB:
+      R1 = R1 + 1;
+      call (P64[(old + 8)])(R1) args: 8, res: 0, upd: 8;
+}
+
+
+
+==================== Layout Stack ====================
+{offset
+  c1GB:
+      R1 = R1 + 1;
+      call (P64[Sp])(R1) args: 8, res: 0, upd: 8;
+}
+
+
+
+==================== Sink assignments ====================
+{offset
+  c1GB:
+      R1 = R1 + 1;
+      call (P64[Sp])(R1) args: 8, res: 0, upd: 8;
+}
+
+
+
+==================== CAFEnv ====================
+[(c1GB, {})]
+
+
+
+==================== after setInfoTableStackMap ====================
+T9157.Chunk03_static_entry() //  []
+        { info_tbl: [(c1GB,
+                      label: T9157.Chunk03_static_info
+                      rep:HeapRep static {
+                            Con {tag: 3
+                                 descr:[109,97,105,110,58,84,57,49,53,55,46,67,104,117,110,107,48,51]} })]
+          stack_info: arg_space: 8 updfr_space: Just 8
+        }
+    {offset
+      c1GB:
+          R1 = R1 + 1;
+          call (P64[Sp])(R1) args: 8, res: 0, upd: 8;
+    }
+}
+
+
+
+==================== Post control-flow optimisations ====================
+T9157.Chunk03_static_entry() //  []
+        { info_tbl: [(c1GB,
+                      label: T9157.Chunk03_static_info
+                      rep:HeapRep static {
+                            Con {tag: 3
+                                 descr:[109,97,105,110,58,84,57,49,53,55,46,67,104,117,110,107,48,51]} })]
+          stack_info: arg_space: 8 updfr_space: Just 8
+        }
+    {offset
+      c1GB:
+          R1 = R1 + 1;
+          call (P64[Sp])(R1) args: 8, res: 0, upd: 8;
+    }
+}
+
+
+
+==================== Post CPS Cmm ====================
+[T9157.Chunk03_con_entry() //  []
+         { info_tbl: [(c1GA,
+                       label: T9157.Chunk03_con_info
+                       rep:HeapRep 1 nonptrs {
+                             Con {tag: 3
+                                  descr:[109,97,105,110,58,84,57,49,53,55,46,67,104,117,110,107,48,51]} })]
+           stack_info: arg_space: 8 updfr_space: Just 8
+         }
+     {offset
+       c1GA:
+           R1 = R1 + 1;
+           call (P64[Sp])(R1) args: 8, res: 0, upd: 8;
+     }
+ },
+ T9157.Chunk03_static_entry() //  []
+         { info_tbl: [(c1GB,
+                       label: T9157.Chunk03_static_info
+                       rep:HeapRep static {
+                             Con {tag: 3
+                                  descr:[109,97,105,110,58,84,57,49,53,55,46,67,104,117,110,107,48,51]} })]
+           stack_info: arg_space: 8 updfr_space: Just 8
+         }
+     {offset
+       c1GB:
+           R1 = R1 + 1;
+           call (P64[Sp])(R1) args: 8, res: 0, upd: 8;
+     }
+ }]
+
+
+
+==================== Output Cmm ====================
+[T9157.Chunk03_con_entry() //  []
+         { info_tbl: [(c1GA,
+                       label: T9157.Chunk03_con_info
+                       rep:HeapRep 1 nonptrs {
+                             Con {tag: 3
+                                  descr:[109,97,105,110,58,84,57,49,53,55,46,67,104,117,110,107,48,51]} })]
+           stack_info: arg_space: 8 updfr_space: Just 8
+         }
+     {offset
+       c1GA:
+           R1 = R1 + 1;
+           call (P64[Sp])(R1) args: 8, res: 0, upd: 8;
+     }
+ },
+ T9157.Chunk03_static_entry() //  []
+         { info_tbl: [(c1GB,
+                       label: T9157.Chunk03_static_info
+                       rep:HeapRep static {
+                             Con {tag: 3
+                                  descr:[109,97,105,110,58,84,57,49,53,55,46,67,104,117,110,107,48,51]} })]
+           stack_info: arg_space: 8 updfr_space: Just 8
+         }
+     {offset
+       c1GB:
+           R1 = R1 + 1;
+           call (P64[Sp])(R1) args: 8, res: 0, upd: 8;
+     }
+ }]
+
+
+
+==================== Cmm produced by new codegen ====================
+[T9157.Chunk04_con_entry() //  []
+         { info_tbl: [(c1GK,
+                       label: T9157.Chunk04_con_info
+                       rep:HeapRep 1 nonptrs {
+                             Con {tag: 4
+                                  descr:[109,97,105,110,58,84,57,49,53,55,46,67,104,117,110,107,48,52]} })]
+           stack_info: arg_space: 8 updfr_space: Just 8
+         }
+     {offset
+       c1GK:
+           R1 = R1 + 1;
+           call (P64[(old + 8)])(R1) args: 8, res: 0, upd: 8;
+     }
+ },
+ T9157.Chunk04_static_entry() //  []
+         { info_tbl: [(c1GL,
+                       label: T9157.Chunk04_static_info
+                       rep:HeapRep static {
+                             Con {tag: 4
+                                  descr:[109,97,105,110,58,84,57,49,53,55,46,67,104,117,110,107,48,52]} })]
+           stack_info: arg_space: 8 updfr_space: Just 8
+         }
+     {offset
+       c1GL:
+           R1 = R1 + 1;
+           call (P64[(old + 8)])(R1) args: 8, res: 0, upd: 8;
+     }
+ }]
+
+
+
+==================== Post control-flow optimisations ====================
+{offset
+  c1GK:
+      R1 = R1 + 1;
+      call (P64[(old + 8)])(R1) args: 8, res: 0, upd: 8;
+}
+
+
+
+==================== Post common block elimination ====================
+{offset
+  c1GK:
+      R1 = R1 + 1;
+      call (P64[(old + 8)])(R1) args: 8, res: 0, upd: 8;
+}
+
+
+
+==================== Layout Stack ====================
+{offset
+  c1GK:
+      R1 = R1 + 1;
+      call (P64[Sp])(R1) args: 8, res: 0, upd: 8;
+}
+
+
+
+==================== Sink assignments ====================
+{offset
+  c1GK:
+      R1 = R1 + 1;
+      call (P64[Sp])(R1) args: 8, res: 0, upd: 8;
+}
+
+
+
+==================== CAFEnv ====================
+[(c1GK, {})]
+
+
+
+==================== after setInfoTableStackMap ====================
+T9157.Chunk04_con_entry() //  []
+        { info_tbl: [(c1GK,
+                      label: T9157.Chunk04_con_info
+                      rep:HeapRep 1 nonptrs {
+                            Con {tag: 4
+                                 descr:[109,97,105,110,58,84,57,49,53,55,46,67,104,117,110,107,48,52]} })]
+          stack_info: arg_space: 8 updfr_space: Just 8
+        }
+    {offset
+      c1GK:
+          R1 = R1 + 1;
+          call (P64[Sp])(R1) args: 8, res: 0, upd: 8;
+    }
+}
+
+
+
+==================== Post control-flow optimisations ====================
+T9157.Chunk04_con_entry() //  []
+        { info_tbl: [(c1GK,
+                      label: T9157.Chunk04_con_info
+                      rep:HeapRep 1 nonptrs {
+                            Con {tag: 4
+                                 descr:[109,97,105,110,58,84,57,49,53,55,46,67,104,117,110,107,48,52]} })]
+          stack_info: arg_space: 8 updfr_space: Just 8
+        }
+    {offset
+      c1GK:
+          R1 = R1 + 1;
+          call (P64[Sp])(R1) args: 8, res: 0, upd: 8;
+    }
+}
+
+
+
+==================== Post control-flow optimisations ====================
+{offset
+  c1GL:
+      R1 = R1 + 1;
+      call (P64[(old + 8)])(R1) args: 8, res: 0, upd: 8;
+}
+
+
+
+==================== Post common block elimination ====================
+{offset
+  c1GL:
+      R1 = R1 + 1;
+      call (P64[(old + 8)])(R1) args: 8, res: 0, upd: 8;
+}
+
+
+
+==================== Layout Stack ====================
+{offset
+  c1GL:
+      R1 = R1 + 1;
+      call (P64[Sp])(R1) args: 8, res: 0, upd: 8;
+}
+
+
+
+==================== Sink assignments ====================
+{offset
+  c1GL:
+      R1 = R1 + 1;
+      call (P64[Sp])(R1) args: 8, res: 0, upd: 8;
+}
+
+
+
+==================== CAFEnv ====================
+[(c1GL, {})]
+
+
+
+==================== after setInfoTableStackMap ====================
+T9157.Chunk04_static_entry() //  []
+        { info_tbl: [(c1GL,
+                      label: T9157.Chunk04_static_info
+                      rep:HeapRep static {
+                            Con {tag: 4
+                                 descr:[109,97,105,110,58,84,57,49,53,55,46,67,104,117,110,107,48,52]} })]
+          stack_info: arg_space: 8 updfr_space: Just 8
+        }
+    {offset
+      c1GL:
+          R1 = R1 + 1;
+          call (P64[Sp])(R1) args: 8, res: 0, upd: 8;
+    }
+}
+
+
+
+==================== Post control-flow optimisations ====================
+T9157.Chunk04_static_entry() //  []
+        { info_tbl: [(c1GL,
+                      label: T9157.Chunk04_static_info
+                      rep:HeapRep static {
+                            Con {tag: 4
+                                 descr:[109,97,105,110,58,84,57,49,53,55,46,67,104,117,110,107,48,52]} })]
+          stack_info: arg_space: 8 updfr_space: Just 8
+        }
+    {offset
+      c1GL:
+          R1 = R1 + 1;
+          call (P64[Sp])(R1) args: 8, res: 0, upd: 8;
+    }
+}
+
+
+
+==================== Post CPS Cmm ====================
+[T9157.Chunk04_con_entry() //  []
+         { info_tbl: [(c1GK,
+                       label: T9157.Chunk04_con_info
+                       rep:HeapRep 1 nonptrs {
+                             Con {tag: 4
+                                  descr:[109,97,105,110,58,84,57,49,53,55,46,67,104,117,110,107,48,52]} })]
+           stack_info: arg_space: 8 updfr_space: Just 8
+         }
+     {offset
+       c1GK:
+           R1 = R1 + 1;
+           call (P64[Sp])(R1) args: 8, res: 0, upd: 8;
+     }
+ },
+ T9157.Chunk04_static_entry() //  []
+         { info_tbl: [(c1GL,
+                       label: T9157.Chunk04_static_info
+                       rep:HeapRep static {
+                             Con {tag: 4
+                                  descr:[109,97,105,110,58,84,57,49,53,55,46,67,104,117,110,107,48,52]} })]
+           stack_info: arg_space: 8 updfr_space: Just 8
+         }
+     {offset
+       c1GL:
+           R1 = R1 + 1;
+           call (P64[Sp])(R1) args: 8, res: 0, upd: 8;
+     }
+ }]
+
+
+
+==================== Output Cmm ====================
+[T9157.Chunk04_con_entry() //  []
+         { info_tbl: [(c1GK,
+                       label: T9157.Chunk04_con_info
+                       rep:HeapRep 1 nonptrs {
+                             Con {tag: 4
+                                  descr:[109,97,105,110,58,84,57,49,53,55,46,67,104,117,110,107,48,52]} })]
+           stack_info: arg_space: 8 updfr_space: Just 8
+         }
+     {offset
+       c1GK:
+           R1 = R1 + 1;
+           call (P64[Sp])(R1) args: 8, res: 0, upd: 8;
+     }
+ },
+ T9157.Chunk04_static_entry() //  []
+         { info_tbl: [(c1GL,
+                       label: T9157.Chunk04_static_info
+                       rep:HeapRep static {
+                             Con {tag: 4
+                                  descr:[109,97,105,110,58,84,57,49,53,55,46,67,104,117,110,107,48,52]} })]
+           stack_info: arg_space: 8 updfr_space: Just 8
+         }
+     {offset
+       c1GL:
+           R1 = R1 + 1;
+           call (P64[Sp])(R1) args: 8, res: 0, upd: 8;
+     }
+ }]
+
+
+
+==================== Cmm produced by new codegen ====================
+[T9157.Chunk05_con_entry() //  []
+         { info_tbl: [(c1GU,
+                       label: T9157.Chunk05_con_info
+                       rep:HeapRep 1 nonptrs {
+                             Con {tag: 5
+                                  descr:[109,97,105,110,58,84,57,49,53,55,46,67,104,117,110,107,48,53]} })]
+           stack_info: arg_space: 8 updfr_space: Just 8
+         }
+     {offset
+       c1GU:
+           R1 = R1 + 1;
+           call (P64[(old + 8)])(R1) args: 8, res: 0, upd: 8;
+     }
+ },
+ T9157.Chunk05_static_entry() //  []
+         { info_tbl: [(c1GV,
+                       label: T9157.Chunk05_static_info
+                       rep:HeapRep static {
+                             Con {tag: 5
+                                  descr:[109,97,105,110,58,84,57,49,53,55,46,67,104,117,110,107,48,53]} })]
+           stack_info: arg_space: 8 updfr_space: Just 8
+         }
+     {offset
+       c1GV:
+           R1 = R1 + 1;
+           call (P64[(old + 8)])(R1) args: 8, res: 0, upd: 8;
+     }
+ }]
+
+
+
+==================== Post control-flow optimisations ====================
+{offset
+  c1GU:
+      R1 = R1 + 1;
+      call (P64[(old + 8)])(R1) args: 8, res: 0, upd: 8;
+}
+
+
+
+==================== Post common block elimination ====================
+{offset
+  c1GU:
+      R1 = R1 + 1;
+      call (P64[(old + 8)])(R1) args: 8, res: 0, upd: 8;
+}
+
+
+
+==================== Layout Stack ====================
+{offset
+  c1GU:
+      R1 = R1 + 1;
+      call (P64[Sp])(R1) args: 8, res: 0, upd: 8;
+}
+
+
+
+==================== Sink assignments ====================
+{offset
+  c1GU:
+      R1 = R1 + 1;
+      call (P64[Sp])(R1) args: 8, res: 0, upd: 8;
+}
+
+
+
+==================== CAFEnv ====================
+[(c1GU, {})]
+
+
+
+==================== after setInfoTableStackMap ====================
+T9157.Chunk05_con_entry() //  []
+        { info_tbl: [(c1GU,
+                      label: T9157.Chunk05_con_info
+                      rep:HeapRep 1 nonptrs {
+                            Con {tag: 5
+                                 descr:[109,97,105,110,58,84,57,49,53,55,46,67,104,117,110,107,48,53]} })]
+          stack_info: arg_space: 8 updfr_space: Just 8
+        }
+    {offset
+      c1GU:
+          R1 = R1 + 1;
+          call (P64[Sp])(R1) args: 8, res: 0, upd: 8;
+    }
+}
+
+
+
+==================== Post control-flow optimisations ====================
+T9157.Chunk05_con_entry() //  []
+        { info_tbl: [(c1GU,
+                      label: T9157.Chunk05_con_info
+                      rep:HeapRep 1 nonptrs {
+                            Con {tag: 5
+                                 descr:[109,97,105,110,58,84,57,49,53,55,46,67,104,117,110,107,48,53]} })]
+          stack_info: arg_space: 8 updfr_space: Just 8
+        }
+    {offset
+      c1GU:
+          R1 = R1 + 1;
+          call (P64[Sp])(R1) args: 8, res: 0, upd: 8;
+    }
+}
+
+
+
+==================== Post control-flow optimisations ====================
+{offset
+  c1GV:
+      R1 = R1 + 1;
+      call (P64[(old + 8)])(R1) args: 8, res: 0, upd: 8;
+}
+
+
+
+==================== Post common block elimination ====================
+{offset
+  c1GV:
+      R1 = R1 + 1;
+      call (P64[(old + 8)])(R1) args: 8, res: 0, upd: 8;
+}
+
+
+
+==================== Layout Stack ====================
+{offset
+  c1GV:
+      R1 = R1 + 1;
+      call (P64[Sp])(R1) args: 8, res: 0, upd: 8;
+}
+
+
+
+==================== Sink assignments ====================
+{offset
+  c1GV:
+      R1 = R1 + 1;
+      call (P64[Sp])(R1) args: 8, res: 0, upd: 8;
+}
+
+
+
+==================== CAFEnv ====================
+[(c1GV, {})]
+
+
+
+==================== after setInfoTableStackMap ====================
+T9157.Chunk05_static_entry() //  []
+        { info_tbl: [(c1GV,
+                      label: T9157.Chunk05_static_info
+                      rep:HeapRep static {
+                            Con {tag: 5
+                                 descr:[109,97,105,110,58,84,57,49,53,55,46,67,104,117,110,107,48,53]} })]
+          stack_info: arg_space: 8 updfr_space: Just 8
+        }
+    {offset
+      c1GV:
+          R1 = R1 + 1;
+          call (P64[Sp])(R1) args: 8, res: 0, upd: 8;
+    }
+}
+
+
+
+==================== Post control-flow optimisations ====================
+T9157.Chunk05_static_entry() //  []
+        { info_tbl: [(c1GV,
+                      label: T9157.Chunk05_static_info
+                      rep:HeapRep static {
+                            Con {tag: 5
+                                 descr:[109,97,105,110,58,84,57,49,53,55,46,67,104,117,110,107,48,53]} })]
+          stack_info: arg_space: 8 updfr_space: Just 8
+        }
+    {offset
+      c1GV:
+          R1 = R1 + 1;
+          call (P64[Sp])(R1) args: 8, res: 0, upd: 8;
+    }
+}
+
+
+
+==================== Post CPS Cmm ====================
+[T9157.Chunk05_con_entry() //  []
+         { info_tbl: [(c1GU,
+                       label: T9157.Chunk05_con_info
+                       rep:HeapRep 1 nonptrs {
+                             Con {tag: 5
+                                  descr:[109,97,105,110,58,84,57,49,53,55,46,67,104,117,110,107,48,53]} })]
+           stack_info: arg_space: 8 updfr_space: Just 8
+         }
+     {offset
+       c1GU:
+           R1 = R1 + 1;
+           call (P64[Sp])(R1) args: 8, res: 0, upd: 8;
+     }
+ },
+ T9157.Chunk05_static_entry() //  []
+         { info_tbl: [(c1GV,
+                       label: T9157.Chunk05_static_info
+                       rep:HeapRep static {
+                             Con {tag: 5
+                                  descr:[109,97,105,110,58,84,57,49,53,55,46,67,104,117,110,107,48,53]} })]
+           stack_info: arg_space: 8 updfr_space: Just 8
+         }
+     {offset
+       c1GV:
+           R1 = R1 + 1;
+           call (P64[Sp])(R1) args: 8, res: 0, upd: 8;
+     }
+ }]
+
+
+
+==================== Output Cmm ====================
+[T9157.Chunk05_con_entry() //  []
+         { info_tbl: [(c1GU,
+                       label: T9157.Chunk05_con_info
+                       rep:HeapRep 1 nonptrs {
+                             Con {tag: 5
+                                  descr:[109,97,105,110,58,84,57,49,53,55,46,67,104,117,110,107,48,53]} })]
+           stack_info: arg_space: 8 updfr_space: Just 8
+         }
+     {offset
+       c1GU:
+           R1 = R1 + 1;
+           call (P64[Sp])(R1) args: 8, res: 0, upd: 8;
+     }
+ },
+ T9157.Chunk05_static_entry() //  []
+         { info_tbl: [(c1GV,
+                       label: T9157.Chunk05_static_info
+                       rep:HeapRep static {
+                             Con {tag: 5
+                                  descr:[109,97,105,110,58,84,57,49,53,55,46,67,104,117,110,107,48,53]} })]
+           stack_info: arg_space: 8 updfr_space: Just 8
+         }
+     {offset
+       c1GV:
+           R1 = R1 + 1;
+           call (P64[Sp])(R1) args: 8, res: 0, upd: 8;
+     }
+ }]
+
+
+
+==================== Cmm produced by new codegen ====================
+[T9157.Chunk06_con_entry() //  []
+         { info_tbl: [(c1H4,
+                       label: T9157.Chunk06_con_info
+                       rep:HeapRep 1 nonptrs {
+                             Con {tag: 6
+                                  descr:[109,97,105,110,58,84,57,49,53,55,46,67,104,117,110,107,48,54]} })]
+           stack_info: arg_space: 8 updfr_space: Just 8
+         }
+     {offset
+       c1H4:
+           R1 = R1 + 1;
+           call (P64[(old + 8)])(R1) args: 8, res: 0, upd: 8;
+     }
+ },
+ T9157.Chunk06_static_entry() //  []
+         { info_tbl: [(c1H5,
+                       label: T9157.Chunk06_static_info
+                       rep:HeapRep static {
+                             Con {tag: 6
+                                  descr:[109,97,105,110,58,84,57,49,53,55,46,67,104,117,110,107,48,54]} })]
+           stack_info: arg_space: 8 updfr_space: Just 8
+         }
+     {offset
+       c1H5:
+           R1 = R1 + 1;
+           call (P64[(old + 8)])(R1) args: 8, res: 0, upd: 8;
+     }
+ }]
+
+
+
+==================== Post control-flow optimisations ====================
+{offset
+  c1H4:
+      R1 = R1 + 1;
+      call (P64[(old + 8)])(R1) args: 8, res: 0, upd: 8;
+}
+
+
+
+==================== Post common block elimination ====================
+{offset
+  c1H4:
+      R1 = R1 + 1;
+      call (P64[(old + 8)])(R1) args: 8, res: 0, upd: 8;
+}
+
+
+
+==================== Layout Stack ====================
+{offset
+  c1H4:
+      R1 = R1 + 1;
+      call (P64[Sp])(R1) args: 8, res: 0, upd: 8;
+}
+
+
+
+==================== Sink assignments ====================
+{offset
+  c1H4:
+      R1 = R1 + 1;
+      call (P64[Sp])(R1) args: 8, res: 0, upd: 8;
+}
+
+
+
+==================== CAFEnv ====================
+[(c1H4, {})]
+
+
+
+==================== after setInfoTableStackMap ====================
+T9157.Chunk06_con_entry() //  []
+        { info_tbl: [(c1H4,
+                      label: T9157.Chunk06_con_info
+                      rep:HeapRep 1 nonptrs {
+                            Con {tag: 6
+                                 descr:[109,97,105,110,58,84,57,49,53,55,46,67,104,117,110,107,48,54]} })]
+          stack_info: arg_space: 8 updfr_space: Just 8
+        }
+    {offset
+      c1H4:
+          R1 = R1 + 1;
+          call (P64[Sp])(R1) args: 8, res: 0, upd: 8;
+    }
+}
+
+
+
+==================== Post control-flow optimisations ====================
+T9157.Chunk06_con_entry() //  []
+        { info_tbl: [(c1H4,
+                      label: T9157.Chunk06_con_info
+                      rep:HeapRep 1 nonptrs {
+                            Con {tag: 6
+                                 descr:[109,97,105,110,58,84,57,49,53,55,46,67,104,117,110,107,48,54]} })]
+          stack_info: arg_space: 8 updfr_space: Just 8
+        }
+    {offset
+      c1H4:
+          R1 = R1 + 1;
+          call (P64[Sp])(R1) args: 8, res: 0, upd: 8;
+    }
+}
+
+
+
+==================== Post control-flow optimisations ====================
+{offset
+  c1H5:
+      R1 = R1 + 1;
+      call (P64[(old + 8)])(R1) args: 8, res: 0, upd: 8;
+}
+
+
+
+==================== Post common block elimination ====================
+{offset
+  c1H5:
+      R1 = R1 + 1;
+      call (P64[(old + 8)])(R1) args: 8, res: 0, upd: 8;
+}
+
+
+
+==================== Layout Stack ====================
+{offset
+  c1H5:
+      R1 = R1 + 1;
+      call (P64[Sp])(R1) args: 8, res: 0, upd: 8;
+}
+
+
+
+==================== Sink assignments ====================
+{offset
+  c1H5:
+      R1 = R1 + 1;
+      call (P64[Sp])(R1) args: 8, res: 0, upd: 8;
+}
+
+
+
+==================== CAFEnv ====================
+[(c1H5, {})]
+
+
+
+==================== after setInfoTableStackMap ====================
+T9157.Chunk06_static_entry() //  []
+        { info_tbl: [(c1H5,
+                      label: T9157.Chunk06_static_info
+                      rep:HeapRep static {
+                            Con {tag: 6
+                                 descr:[109,97,105,110,58,84,57,49,53,55,46,67,104,117,110,107,48,54]} })]
+          stack_info: arg_space: 8 updfr_space: Just 8
+        }
+    {offset
+      c1H5:
+          R1 = R1 + 1;
+          call (P64[Sp])(R1) args: 8, res: 0, upd: 8;
+    }
+}
+
+
+
+==================== Post control-flow optimisations ====================
+T9157.Chunk06_static_entry() //  []
+        { info_tbl: [(c1H5,
+                      label: T9157.Chunk06_static_info
+                      rep:HeapRep static {
+                            Con {tag: 6
+                                 descr:[109,97,105,110,58,84,57,49,53,55,46,67,104,117,110,107,48,54]} })]
+          stack_info: arg_space: 8 updfr_space: Just 8
+        }
+    {offset
+      c1H5:
+          R1 = R1 + 1;
+          call (P64[Sp])(R1) args: 8, res: 0, upd: 8;
+    }
+}
+
+
+
+==================== Post CPS Cmm ====================
+[T9157.Chunk06_con_entry() //  []
+         { info_tbl: [(c1H4,
+                       label: T9157.Chunk06_con_info
+                       rep:HeapRep 1 nonptrs {
+                             Con {tag: 6
+                                  descr:[109,97,105,110,58,84,57,49,53,55,46,67,104,117,110,107,48,54]} })]
+           stack_info: arg_space: 8 updfr_space: Just 8
+         }
+     {offset
+       c1H4:
+           R1 = R1 + 1;
+           call (P64[Sp])(R1) args: 8, res: 0, upd: 8;
+     }
+ },
+ T9157.Chunk06_static_entry() //  []
+         { info_tbl: [(c1H5,
+                       label: T9157.Chunk06_static_info
+                       rep:HeapRep static {
+                             Con {tag: 6
+                                  descr:[109,97,105,110,58,84,57,49,53,55,46,67,104,117,110,107,48,54]} })]
+           stack_info: arg_space: 8 updfr_space: Just 8
+         }
+     {offset
+       c1H5:
+           R1 = R1 + 1;
+           call (P64[Sp])(R1) args: 8, res: 0, upd: 8;
+     }
+ }]
+
+
+
+==================== Output Cmm ====================
+[T9157.Chunk06_con_entry() //  []
+         { info_tbl: [(c1H4,
+                       label: T9157.Chunk06_con_info
+                       rep:HeapRep 1 nonptrs {
+                             Con {tag: 6
+                                  descr:[109,97,105,110,58,84,57,49,53,55,46,67,104,117,110,107,48,54]} })]
+           stack_info: arg_space: 8 updfr_space: Just 8
+         }
+     {offset
+       c1H4:
+           R1 = R1 + 1;
+           call (P64[Sp])(R1) args: 8, res: 0, upd: 8;
+     }
+ },
+ T9157.Chunk06_static_entry() //  []
+         { info_tbl: [(c1H5,
+                       label: T9157.Chunk06_static_info
+                       rep:HeapRep static {
+                             Con {tag: 6
+                                  descr:[109,97,105,110,58,84,57,49,53,55,46,67,104,117,110,107,48,54]} })]
+           stack_info: arg_space: 8 updfr_space: Just 8
+         }
+     {offset
+       c1H5:
+           R1 = R1 + 1;
+           call (P64[Sp])(R1) args: 8, res: 0, upd: 8;
+     }
+ }]
+
+
+
+==================== Cmm produced by new codegen ====================
+[T9157.Chunk07_con_entry() //  []
+         { info_tbl: [(c1He,
+                       label: T9157.Chunk07_con_info
+                       rep:HeapRep 1 nonptrs {
+                             Con {tag: 7
+                                  descr:[109,97,105,110,58,84,57,49,53,55,46,67,104,117,110,107,48,55]} })]
+           stack_info: arg_space: 8 updfr_space: Just 8
+         }
+     {offset
+       c1He:
+           R1 = R1 + 1;
+           call (P64[(old + 8)])(R1) args: 8, res: 0, upd: 8;
+     }
+ },
+ T9157.Chunk07_static_entry() //  []
+         { info_tbl: [(c1Hf,
+                       label: T9157.Chunk07_static_info
+                       rep:HeapRep static {
+                             Con {tag: 7
+                                  descr:[109,97,105,110,58,84,57,49,53,55,46,67,104,117,110,107,48,55]} })]
+           stack_info: arg_space: 8 updfr_space: Just 8
+         }
+     {offset
+       c1Hf:
+           R1 = R1 + 1;
+           call (P64[(old + 8)])(R1) args: 8, res: 0, upd: 8;
+     }
+ }]
+
+
+
+==================== Post control-flow optimisations ====================
+{offset
+  c1He:
+      R1 = R1 + 1;
+      call (P64[(old + 8)])(R1) args: 8, res: 0, upd: 8;
+}
+
+
+
+==================== Post common block elimination ====================
+{offset
+  c1He:
+      R1 = R1 + 1;
+      call (P64[(old + 8)])(R1) args: 8, res: 0, upd: 8;
+}
+
+
+
+==================== Layout Stack ====================
+{offset
+  c1He:
+      R1 = R1 + 1;
+      call (P64[Sp])(R1) args: 8, res: 0, upd: 8;
+}
+
+
+
+==================== Sink assignments ====================
+{offset
+  c1He:
+      R1 = R1 + 1;
+      call (P64[Sp])(R1) args: 8, res: 0, upd: 8;
+}
+
+
+
+==================== CAFEnv ====================
+[(c1He, {})]
+
+
+
+==================== after setInfoTableStackMap ====================
+T9157.Chunk07_con_entry() //  []
+        { info_tbl: [(c1He,
+                      label: T9157.Chunk07_con_info
+                      rep:HeapRep 1 nonptrs {
+                            Con {tag: 7
+                                 descr:[109,97,105,110,58,84,57,49,53,55,46,67,104,117,110,107,48,55]} })]
+          stack_info: arg_space: 8 updfr_space: Just 8
+        }
+    {offset
+      c1He:
+          R1 = R1 + 1;
+          call (P64[Sp])(R1) args: 8, res: 0, upd: 8;
+    }
+}
+
+
+
+==================== Post control-flow optimisations ====================
+T9157.Chunk07_con_entry() //  []
+        { info_tbl: [(c1He,
+                      label: T9157.Chunk07_con_info
+                      rep:HeapRep 1 nonptrs {
+                            Con {tag: 7
+                                 descr:[109,97,105,110,58,84,57,49,53,55,46,67,104,117,110,107,48,55]} })]
+          stack_info: arg_space: 8 updfr_space: Just 8
+        }
+    {offset
+      c1He:
+          R1 = R1 + 1;
+          call (P64[Sp])(R1) args: 8, res: 0, upd: 8;
+    }
+}
+
+
+
+==================== Post control-flow optimisations ====================
+{offset
+  c1Hf:
+      R1 = R1 + 1;
+      call (P64[(old + 8)])(R1) args: 8, res: 0, upd: 8;
+}
+
+
+
+==================== Post common block elimination ====================
+{offset
+  c1Hf:
+      R1 = R1 + 1;
+      call (P64[(old + 8)])(R1) args: 8, res: 0, upd: 8;
+}
+
+
+
+==================== Layout Stack ====================
+{offset
+  c1Hf:
+      R1 = R1 + 1;
+      call (P64[Sp])(R1) args: 8, res: 0, upd: 8;
+}
+
+
+
+==================== Sink assignments ====================
+{offset
+  c1Hf:
+      R1 = R1 + 1;
+      call (P64[Sp])(R1) args: 8, res: 0, upd: 8;
+}
+
+
+
+==================== CAFEnv ====================
+[(c1Hf, {})]
+
+
+
+==================== after setInfoTableStackMap ====================
+T9157.Chunk07_static_entry() //  []
+        { info_tbl: [(c1Hf,
+                      label: T9157.Chunk07_static_info
+                      rep:HeapRep static {
+                            Con {tag: 7
+                                 descr:[109,97,105,110,58,84,57,49,53,55,46,67,104,117,110,107,48,55]} })]
+          stack_info: arg_space: 8 updfr_space: Just 8
+        }
+    {offset
+      c1Hf:
+          R1 = R1 + 1;
+          call (P64[Sp])(R1) args: 8, res: 0, upd: 8;
+    }
+}
+
+
+
+==================== Post control-flow optimisations ====================
+T9157.Chunk07_static_entry() //  []
+        { info_tbl: [(c1Hf,
+                      label: T9157.Chunk07_static_info
+                      rep:HeapRep static {
+                            Con {tag: 7
+                                 descr:[109,97,105,110,58,84,57,49,53,55,46,67,104,117,110,107,48,55]} })]
+          stack_info: arg_space: 8 updfr_space: Just 8
+        }
+    {offset
+      c1Hf:
+          R1 = R1 + 1;
+          call (P64[Sp])(R1) args: 8, res: 0, upd: 8;
+    }
+}
+
+
+
+==================== Post CPS Cmm ====================
+[T9157.Chunk07_con_entry() //  []
+         { info_tbl: [(c1He,
+                       label: T9157.Chunk07_con_info
+                       rep:HeapRep 1 nonptrs {
+                             Con {tag: 7
+                                  descr:[109,97,105,110,58,84,57,49,53,55,46,67,104,117,110,107,48,55]} })]
+           stack_info: arg_space: 8 updfr_space: Just 8
+         }
+     {offset
+       c1He:
+           R1 = R1 + 1;
+           call (P64[Sp])(R1) args: 8, res: 0, upd: 8;
+     }
+ },
+ T9157.Chunk07_static_entry() //  []
+         { info_tbl: [(c1Hf,
+                       label: T9157.Chunk07_static_info
+                       rep:HeapRep static {
+                             Con {tag: 7
+                                  descr:[109,97,105,110,58,84,57,49,53,55,46,67,104,117,110,107,48,55]} })]
+           stack_info: arg_space: 8 updfr_space: Just 8
+         }
+     {offset
+       c1Hf:
+           R1 = R1 + 1;
+           call (P64[Sp])(R1) args: 8, res: 0, upd: 8;
+     }
+ }]
+
+
+
+==================== Output Cmm ====================
+[T9157.Chunk07_con_entry() //  []
+         { info_tbl: [(c1He,
+                       label: T9157.Chunk07_con_info
+                       rep:HeapRep 1 nonptrs {
+                             Con {tag: 7
+                                  descr:[109,97,105,110,58,84,57,49,53,55,46,67,104,117,110,107,48,55]} })]
+           stack_info: arg_space: 8 updfr_space: Just 8
+         }
+     {offset
+       c1He:
+           R1 = R1 + 1;
+           call (P64[Sp])(R1) args: 8, res: 0, upd: 8;
+     }
+ },
+ T9157.Chunk07_static_entry() //  []
+         { info_tbl: [(c1Hf,
+                       label: T9157.Chunk07_static_info
+                       rep:HeapRep static {
+                             Con {tag: 7
+                                  descr:[109,97,105,110,58,84,57,49,53,55,46,67,104,117,110,107,48,55]} })]
+           stack_info: arg_space: 8 updfr_space: Just 8
+         }
+     {offset
+       c1Hf:
+           R1 = R1 + 1;
+           call (P64[Sp])(R1) args: 8, res: 0, upd: 8;
+     }
+ }]
+
+
+
+==================== Cmm produced by new codegen ====================
+[T9157.Chunk08_con_entry() //  []
+         { info_tbl: [(c1Ho,
+                       label: T9157.Chunk08_con_info
+                       rep:HeapRep 1 nonptrs {
+                             Con {tag: 8
+                                  descr:[109,97,105,110,58,84,57,49,53,55,46,67,104,117,110,107,48,56]} })]
+           stack_info: arg_space: 8 updfr_space: Just 8
+         }
+     {offset
+       c1Ho:
+           R1 = R1 + 1;
+           call (P64[(old + 8)])(R1) args: 8, res: 0, upd: 8;
+     }
+ },
+ T9157.Chunk08_static_entry() //  []
+         { info_tbl: [(c1Hp,
+                       label: T9157.Chunk08_static_info
+                       rep:HeapRep static {
+                             Con {tag: 8
+                                  descr:[109,97,105,110,58,84,57,49,53,55,46,67,104,117,110,107,48,56]} })]
+           stack_info: arg_space: 8 updfr_space: Just 8
+         }
+     {offset
+       c1Hp:
+           R1 = R1 + 1;
+           call (P64[(old + 8)])(R1) args: 8, res: 0, upd: 8;
+     }
+ }]
+
+
+
+==================== Post control-flow optimisations ====================
+{offset
+  c1Ho:
+      R1 = R1 + 1;
+      call (P64[(old + 8)])(R1) args: 8, res: 0, upd: 8;
+}
+
+
+
+==================== Post common block elimination ====================
+{offset
+  c1Ho:
+      R1 = R1 + 1;
+      call (P64[(old + 8)])(R1) args: 8, res: 0, upd: 8;
+}
+
+
+
+==================== Layout Stack ====================
+{offset
+  c1Ho:
+      R1 = R1 + 1;
+      call (P64[Sp])(R1) args: 8, res: 0, upd: 8;
+}
+
+
+
+==================== Sink assignments ====================
+{offset
+  c1Ho:
+      R1 = R1 + 1;
+      call (P64[Sp])(R1) args: 8, res: 0, upd: 8;
+}
+
+
+
+==================== CAFEnv ====================
+[(c1Ho, {})]
+
+
+
+==================== after setInfoTableStackMap ====================
+T9157.Chunk08_con_entry() //  []
+        { info_tbl: [(c1Ho,
+                      label: T9157.Chunk08_con_info
+                      rep:HeapRep 1 nonptrs {
+                            Con {tag: 8
+                                 descr:[109,97,105,110,58,84,57,49,53,55,46,67,104,117,110,107,48,56]} })]
+          stack_info: arg_space: 8 updfr_space: Just 8
+        }
+    {offset
+      c1Ho:
+          R1 = R1 + 1;
+          call (P64[Sp])(R1) args: 8, res: 0, upd: 8;
+    }
+}
+
+
+
+==================== Post control-flow optimisations ====================
+T9157.Chunk08_con_entry() //  []
+        { info_tbl: [(c1Ho,
+                      label: T9157.Chunk08_con_info
+                      rep:HeapRep 1 nonptrs {
+                            Con {tag: 8
+                                 descr:[109,97,105,110,58,84,57,49,53,55,46,67,104,117,110,107,48,56]} })]
+          stack_info: arg_space: 8 updfr_space: Just 8
+        }
+    {offset
+      c1Ho:
+          R1 = R1 + 1;
+          call (P64[Sp])(R1) args: 8, res: 0, upd: 8;
+    }
+}
+
+
+
+==================== Post control-flow optimisations ====================
+{offset
+  c1Hp:
+      R1 = R1 + 1;
+      call (P64[(old + 8)])(R1) args: 8, res: 0, upd: 8;
+}
+
+
+
+==================== Post common block elimination ====================
+{offset
+  c1Hp:
+      R1 = R1 + 1;
+      call (P64[(old + 8)])(R1) args: 8, res: 0, upd: 8;
+}
+
+
+
+==================== Layout Stack ====================
+{offset
+  c1Hp:
+      R1 = R1 + 1;
+      call (P64[Sp])(R1) args: 8, res: 0, upd: 8;
+}
+
+
+
+==================== Sink assignments ====================
+{offset
+  c1Hp:
+      R1 = R1 + 1;
+      call (P64[Sp])(R1) args: 8, res: 0, upd: 8;
+}
+
+
+
+==================== CAFEnv ====================
+[(c1Hp, {})]
+
+
+
+==================== after setInfoTableStackMap ====================
+T9157.Chunk08_static_entry() //  []
+        { info_tbl: [(c1Hp,
+                      label: T9157.Chunk08_static_info
+                      rep:HeapRep static {
+                            Con {tag: 8
+                                 descr:[109,97,105,110,58,84,57,49,53,55,46,67,104,117,110,107,48,56]} })]
+          stack_info: arg_space: 8 updfr_space: Just 8
+        }
+    {offset
+      c1Hp:
+          R1 = R1 + 1;
+          call (P64[Sp])(R1) args: 8, res: 0, upd: 8;
+    }
+}
+
+
+
+==================== Post control-flow optimisations ====================
+T9157.Chunk08_static_entry() //  []
+        { info_tbl: [(c1Hp,
+                      label: T9157.Chunk08_static_info
+                      rep:HeapRep static {
+                            Con {tag: 8
+                                 descr:[109,97,105,110,58,84,57,49,53,55,46,67,104,117,110,107,48,56]} })]
+          stack_info: arg_space: 8 updfr_space: Just 8
+        }
+    {offset
+      c1Hp:
+          R1 = R1 + 1;
+          call (P64[Sp])(R1) args: 8, res: 0, upd: 8;
+    }
+}
+
+
+
+==================== Post CPS Cmm ====================
+[T9157.Chunk08_con_entry() //  []
+         { info_tbl: [(c1Ho,
+                       label: T9157.Chunk08_con_info
+                       rep:HeapRep 1 nonptrs {
+                             Con {tag: 8
+                                  descr:[109,97,105,110,58,84,57,49,53,55,46,67,104,117,110,107,48,56]} })]
+           stack_info: arg_space: 8 updfr_space: Just 8
+         }
+     {offset
+       c1Ho:
+           R1 = R1 + 1;
+           call (P64[Sp])(R1) args: 8, res: 0, upd: 8;
+     }
+ },
+ T9157.Chunk08_static_entry() //  []
+         { info_tbl: [(c1Hp,
+                       label: T9157.Chunk08_static_info
+                       rep:HeapRep static {
+                             Con {tag: 8
+                                  descr:[109,97,105,110,58,84,57,49,53,55,46,67,104,117,110,107,48,56]} })]
+           stack_info: arg_space: 8 updfr_space: Just 8
+         }
+     {offset
+       c1Hp:
+           R1 = R1 + 1;
+           call (P64[Sp])(R1) args: 8, res: 0, upd: 8;
+     }
+ }]
+
+
+
+==================== Output Cmm ====================
+[T9157.Chunk08_con_entry() //  []
+         { info_tbl: [(c1Ho,
+                       label: T9157.Chunk08_con_info
+                       rep:HeapRep 1 nonptrs {
+                             Con {tag: 8
+                                  descr:[109,97,105,110,58,84,57,49,53,55,46,67,104,117,110,107,48,56]} })]
+           stack_info: arg_space: 8 updfr_space: Just 8
+         }
+     {offset
+       c1Ho:
+           R1 = R1 + 1;
+           call (P64[Sp])(R1) args: 8, res: 0, upd: 8;
+     }
+ },
+ T9157.Chunk08_static_entry() //  []
+         { info_tbl: [(c1Hp,
+                       label: T9157.Chunk08_static_info
+                       rep:HeapRep static {
+                             Con {tag: 8
+                                  descr:[109,97,105,110,58,84,57,49,53,55,46,67,104,117,110,107,48,56]} })]
+           stack_info: arg_space: 8 updfr_space: Just 8
+         }
+     {offset
+       c1Hp:
+           R1 = R1 + 1;
+           call (P64[Sp])(R1) args: 8, res: 0, upd: 8;
+     }
+ }]
+
+
+
+==================== Output Cmm ====================
+[section "relreadonly" {
+     S1E8_srt:
+         const Control.Exception.Base.patError_closure;
+         const T9157.toTuple#_closure;
+ }]
+
+
