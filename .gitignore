@@ -10,6 +10,10 @@ sumSqrFusion/sumSqrFusion
 *_dump
 *.s
 *.cmm
+*.hi
+*.o
+*.simpl
+*.hcr
 
 # notes
 *.txt
