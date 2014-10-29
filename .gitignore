@@ -14,6 +14,7 @@ sumSqrFusion/sumSqrFusion
 *.o
 *.simpl
 *.hcr
+*.tc-trace
 
 # notes
 *.txt
