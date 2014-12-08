@@ -82,37 +82,29 @@ type family Case f q0 x xs t where
   Case f q0 x xs '[]       = ErrorSym0 @@ "empty list"
   Case f q0 x xs (q ': qs) = ConsSym0 @@ (f @@ x @@ q) @@ (ConsSym0 @@ q @@ qs)
 
+-- type-level scanr
+type ScanrSym3 (t1 :: TyFun a (TyFun b b -> *) -> *) (t2 :: b) (t3 :: [a]) =
+    Scanr t1 t2 t3
 
-type ScanrSym3 (t_a3CU :: TyFun a_a3CJ (TyFun b_a3CK b_a3CK -> *)
-                          -> *)
-               (t_a3CV :: b_a3CK)
-               (t_a3CW :: [a_a3CJ]) =
-    Scanr t_a3CU t_a3CV t_a3CW
-data ScanrSym2 (l_a3D3 :: TyFun a_a3CJ (TyFun b_a3CK b_a3CK -> *)
-                          -> *)
-               (l_a3D4 :: b_a3CK)
-               (l_a3D2 :: TyFun ([a_a3CJ]) ([b_a3CK]))
-  = forall arg_a3D5. (KindOf (Apply (ScanrSym2 l_a3D3 l_a3D4) arg_a3D5)) ~ (KindOf (ScanrSym3 l_a3D3 l_a3D4 arg_a3D5)) =>
+data ScanrSym2 (l1 :: TyFun a (TyFun b b -> *) -> *) (l2 :: b) (l3 :: TyFun [a] [b])
+  = forall a. (KindOf (Apply (ScanrSym2 l1 l2) a)) ~ (KindOf (ScanrSym3 l1 l2 a)) =>
     ScanrSym2KindInference
-type instance Apply (ScanrSym2 l_a3D3 l_a3D4) l_a3D2 = ScanrSym3 l_a3D3 l_a3D4 l_a3D2
-data ScanrSym1 (l_a3D0 :: TyFun a_a3CJ (TyFun b_a3CK b_a3CK -> *)
-                          -> *)
+type instance Apply (ScanrSym2 l1 l2) l3 = ScanrSym3 l1 l2 l3
+
+data ScanrSym1 (l_a3D0 :: TyFun a_a3CJ (TyFun b_a3CK b_a3CK -> *) -> *)
                (l_a3CZ :: TyFun b_a3CK (TyFun ([a_a3CJ]) ([b_a3CK])
                                         -> *))
   = forall arg_a3D1. (KindOf (Apply (ScanrSym1 l_a3D0) arg_a3D1)) ~ (KindOf (ScanrSym2 l_a3D0 arg_a3D1)) =>
     ScanrSym1KindInference
 type instance Apply (ScanrSym1 l_a3D0) l_a3CZ = ScanrSym2 l_a3D0 l_a3CZ
-data ScanrSym0 (l_a3CX :: TyFun (TyFun a_a3CJ (TyFun b_a3CK b_a3CK -> *)
-                                 -> *) (TyFun b_a3CK (TyFun ([a_a3CJ]) ([b_a3CK])
-                                                      -> *)
-                                        -> *))
-  = forall arg_a3CY. (KindOf (Apply ScanrSym0 arg_a3CY)) ~ (KindOf (ScanrSym1 arg_a3CY)) =>
-    ScanrSym0KindInference
 
-type instance Apply ScanrSym0 l_a3CX = ScanrSym1 l_a3CX
-type family Scanr (a_a3D6 :: TyFun a_a3CJ (TyFun b_a3CK b_a3CK
-                                           -> *)
-                             -> *)
+data ScanrSym0 (l :: TyFun (TyFun a (TyFun  b   b  -> *) -> *)
+                           (TyFun b (TyFun [a] [b] -> *) -> *))
+  = forall a. (KindOf (Apply ScanrSym0 a)) ~ (KindOf (ScanrSym1 a)) =>
+    ScanrSym0KindInference
+type instance Apply ScanrSym0 l1 = ScanrSym1 l2
+
+type family Scanr (a_a3D6 :: TyFun a_a3CJ (TyFun b_a3CK b_a3CK -> *) -> *)
                   (a_a3D7 :: b_a3CK)
                   (a_a3D8 :: [a_a3CJ]) :: [b_a3CK] where
   Scanr _z_1627403911_a3Db q0_a3Dc '[] = Apply (Apply ConsSym0 q0_a3Dc) NilSym0
