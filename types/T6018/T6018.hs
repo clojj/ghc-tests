@@ -2,14 +2,17 @@
 {- LANGUAGE AllowAmbiguousTypes #-}
 module T6018 where
 
-import T6018a
+import {-# SOURCE #-} T6018a
+
 
 
 --type family F a b c = (result :: *) | result -> a b c
+--type family G a = (r :: k)
+--type family H a b c = (r :: k) | r -> a c
 --type instance F Int  Char Bool = Bool
 --type instance F Char Bool Int  = Int
 
-type instance F Bool Int  Char = Int
+--type instance F Bool Int  Char = Int
 
 {-
 type family D a b c = (result :: *) | result -> a b c
