@@ -5,6 +5,8 @@ sumSqrFusion/sumSqrFusion
 # Build artifacts
 *.o
 *.hi
+*.o-boot
+*.hi-boot
 
 # Dumped Cmm, Core, assembly, etc.
 *_dump
