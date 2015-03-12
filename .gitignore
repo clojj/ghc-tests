@@ -7,6 +7,10 @@ sumSqrFusion/sumSqrFusion
 *.hi
 *.o-boot
 *.hi-boot
+*.dyn_hi
+*.dyn_hi-boot
+*.dyn_o
+*.cabal-sandbox
 
 # Dumped Cmm, Core, assembly, etc.
 *_dump
