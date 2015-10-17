@@ -1,5 +1,9 @@
-{-# LANGUAGE TypeFamilies, UndecidableInstances, ScopedTypeVariables #-}
+{-# LANGUAGE TypeFamilies, UndecidableInstances, ScopedTypeVariables, MultiParamTypeClasses, FunctionalDependencies #-}
 module T01832 where
+
+type family F a = r | r -> a
+
+--class G a b r | a b -> r, r -> a b, r -> a b
 
 {-
 class G a b r | a b -> r, r a -> b
@@ -71,9 +75,13 @@ Corner cases to test:
        type family Foo a b | result -> a, result -> a b ...
        type family Foo a b | result -> a b, result -> a ...
 
+NOTE: none of the above four corner cases gives any warnings for functional
+      dependencies
+
   * everything above with associated types, eg.:
 
        class Foo d e where
            type D d e | result d -> e
+
 
 -}
