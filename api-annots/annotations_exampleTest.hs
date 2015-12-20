@@ -1,6 +1,5 @@
 {-# LANGUAGE RankNTypes #-}
 
--- This program must be called with GHC's libdir as the single command line argument
 module Main where
 
 import Data.Data
@@ -28,12 +27,14 @@ testOneFile libdir module_name = do
                         let dflags' = gopt_set dflags Opt_KeepRawTokenStream
 
                         _ <- setSessionDynFlags dflags'
+
                         let mn = mkModuleName module_name
                         addTarget Target { targetId = TargetModule mn
                                          , targetAllowObjCode = True
                                          , targetContents = Nothing }
                         _ <- load LoadAllTargets
                         modSum <- getModSummary mn
+
                         p <- parseModule modSum
                         t <- typecheckModule p
                         d <- desugarModule t
