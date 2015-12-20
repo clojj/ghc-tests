@@ -7,7 +7,6 @@ import Data.Data
 import Data.List
 import GHC
 import DynFlags
-import MonadUtils
 import Outputable
 import ApiAnnotation
 import System.Environment( getArgs )
@@ -18,74 +17,91 @@ import GHC.SYB.Utils
 
 main::IO()
 main = do
-        [libdir] <- getArgs
-        testOneFile libdir "Test"
+        [libdir, name] <- getArgs
+        testOneFile libdir name
 
 testOneFile :: FilePath -> String -> IO ()
-testOneFile libdir fileName = do
-       ((anns,cs),p) <- runGhc (Just libdir) $ do
+testOneFile libdir module_name = do
+       ((anns, cs), p, ts, r) <- runGhc (Just libdir) $ do
 
                         dflags <- getSessionDynFlags
                         let dflags' = gopt_set dflags Opt_KeepRawTokenStream
 
-                        setSessionDynFlags dflags'
-                        let mn =mkModuleName fileName
+                        _ <- setSessionDynFlags dflags'
+                        let mn = mkModuleName module_name
                         addTarget Target { targetId = TargetModule mn
                                          , targetAllowObjCode = True
                                          , targetContents = Nothing }
-                        load LoadAllTargets
+                        _ <- load LoadAllTargets
                         modSum <- getModSummary mn
                         p <- parseModule modSum
                         t <- typecheckModule p
                         d <- desugarModule t
-                        l <- loadModule d
-                        let ts=typecheckedSource l
-                            r =renamedSource l
-                        return (pm_annotations p,p)
+                        lm <- loadModule d
+                        let ts = typecheckedSource lm
+                            r  = renamedSource lm
+                        return (pm_annotations p, p, ts, r)
 
-       putStrLn $ "---pm_parsed_source---------------------"
-       liftIO (putStr $ showData Parser 2 $ pm_parsed_source p)
+       let parsed_source = pm_parsed_source p
 
-       let spans = Set.fromList $ getAllSrcSpans (pm_parsed_source p)
+       putStrLn "---showData parsed_source---------------"
+       putStrLn $ showData Parser 2 parsed_source
+       putStrLn "---pp parsed_source---------------------"
+       putStrLn $ pp parsed_source
+       putStrLn "---pp renamed_source--------------------"
+       putStrLn $ pp r
 
-       -- putStrLn (pp spans)
-           problems = filter (\(s,a) -> not (Set.member s spans))
+       putStrLn "---typecheckedSource--------------------"
+       putStrLn $ pp ts
+
+       let src_spans = Set.fromList $ getAllSrcSpans parsed_source
+
+           problems = filter (\(s, _) -> not (Set.member s src_spans))
                              $ getAnnSrcSpans (anns,cs)
+
+       putStrLn "---src_spans--------------------"
+       putStrLn $ pp src_spans
+
        putStrLn "---Problems---------------------"
        putStrLn (intercalate "\n" [showAnns $ Map.fromList $ map snd problems])
-       putStrLn "--------------------------------"
+
+       putStrLn "---ApiAnns----------------------"
        putStrLn (intercalate "\n" [showAnns anns])
-       putStrLn "---comments---------------------"
-       let annsComments = pm_annotations p
-       putStrLn (intercalate "\n" [showAnnsComments annsComments])
+
+       putStrLn "---ApiAnns Comments-------------"
+       putStrLn (intercalate "\n" [showAnnsComments (anns, cs)])
 
     where
       getAnnSrcSpans :: ApiAnns -> [(SrcSpan,(ApiAnnKey,[SrcSpan]))]
       getAnnSrcSpans (anns,_) = map (\a@((ss,_),_) -> (ss,a)) $ Map.toList anns
 
       getAllSrcSpans :: (Data t) => t -> [SrcSpan]
-      getAllSrcSpans ast = everything (++) ([] `mkQ` getSrcSpan) ast
+      getAllSrcSpans = everything (++) ([] `mkQ` getSrcSpan)
         where
           getSrcSpan :: SrcSpan -> [SrcSpan]
           getSrcSpan ss = [ss]
 
+showAnns :: Map.Map ApiAnnKey [SrcSpan] -> String
+showAnns anns =
+  "[\n" ++
+  intercalate "\n" (map (\((s,k),v) -> ("(AK " ++ pp s ++ " " ++ show k ++" = " ++ pp v ++ ")\n")) $ Map.toList anns)
+  ++ "]\n"
 
-showAnns anns = "[\n" ++ (intercalate "\n"
-   $ map (\((s,k),v)
-              -> ("(AK " ++ pp s ++ " " ++ show k ++" = " ++ pp v ++ ")\n"))
-   $ Map.toList anns)
-    ++ "]\n"
-
-pp a = showPpr unsafeGlobalDynFlags a
+pp :: forall a. Outputable a => a -> String
+pp = showPpr unsafeGlobalDynFlags
 
 --
-showAnnsComments (_,anns) =
+showAnnsComments :: forall t a a1 a2.
+                      (Show a, Show a1, Show a2) =>
+                      (t, Map.Map a [GenLocated a1 a2]) -> String
+showAnnsComments (_, anns) =
   "[\n" ++
-  (intercalate "\n" $
-   map (\(s,v) -> ("( " ++ show s ++ " =\n[" ++ showToks v ++ "])\n")) $
-   Map.toList anns) ++
-  "]\n"
+  intercalate "\n" (map (\(s,v) -> ("( " ++ show s ++ " =\n[" ++ showToks v ++ "])\n")) $ Map.toList anns)
+  ++ "]\n"
 
+showToks :: forall a a1.
+              (Show a, Show a1) =>
+              [GenLocated a a1] -> String
 showToks ts =
   intercalate ",\n\n" $
   map (\(L p t) -> "(" ++ show p ++ "," ++ show t ++ ")") ts
